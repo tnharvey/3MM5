@@ -1,0 +1,440 @@
+/* DOM styles */
+.empty {
+
+}
+    
+span {
+    font-size: 16px;
+    font-weight: 400;
+}
+  
+/* Container styles */
+.container {
+  width: 1000px;
+  height: 580px;
+  perspective: 650px;
+  margin: 80px auto 0px auto;
+  overflow: hidden;
+  color:white;
+  /* z-index: 4; */
+}
+
+#dashContainer {
+  display:grid;
+  grid-template-columns: 33% 33% 33%;
+  justify-items: center;
+  width: 1000px;
+  margin: auto;
+  /* background-color: lightgray; */
+}
+
+#healthContainer {
+  position: relative;
+  width: 10%;
+  padding: 10px;
+}
+
+.grid-container {
+  display: inline-grid;
+  grid-template-columns: auto auto auto;
+  padding: 10px;
+}
+
+.grid-item {
+  height: 22px;
+  width: 22px;
+  padding: 4px;
+  font-size: 18px;
+  text-align: center;
+  border-radius: 5px;
+  margin: 5px;
+}
+
+/* Interactive element styles (buttons, popups, etc.) */
+.interactive {
+  cursor: pointer;
+}
+
+.button {
+  background-color: black;
+  color: white;
+}
+
+.button:hover {
+  background-color:darkgray;
+}
+
+.button:active {
+  background-color:red;
+}
+
+.keys {
+  position: relative;
+  width: 80px;
+  margin: auto;
+}
+
+.key {
+  position: relative;
+  width: 50px;
+  height: 50px;
+  padding: 1px;
+  font-size: 14px;
+  overflow: hidden;
+  margin-top: 6px;
+  border: 1px solid;
+  border-radius: 8px;
+  text-align: center;
+  box-sizing: border-box;
+  -webkit-transition: color 0.25s ease, background 0.25s ease;
+}
+
+.key .activated :not(.inactive):hover {
+  background: whiteSmoke;
+  color: #222;
+  background-clip: padding-box;
+  font-weight: 300;
+  cursor: pointer;
+  -webkit-transition: 
+      color 0s ease, 
+      background 0s ease;
+  
+}
+
+.key .inactive {
+  opacity: 0.5;
+}
+  
+.key :nth-child(2n+2) {
+  position: absolute; 
+  bottom: 0;
+  left: 104%;
+}
+  
+.key :nth-child(4n) {
+  left: -104%;
+}
+
+.popup {
+    width: 900px;
+    height: 450px;
+    display: none;
+    top: 10px;
+    left:15%;
+    background: lightcyan;
+    border: 1px solid black;
+    color:black;
+    position: fixed;
+    opacity: 1;
+    align-items: center;
+    justify-content: center;
+    font-family: Arial, sans-serif;
+    font-size: 1.5rem;
+    text-align: center;
+    transform: translate3D(0px,-550px,-1000px);
+}
+
+#popupA {
+  margin: 5%;
+  font-size: 1.5rem;
+}
+
+#popupB {
+  margin: 5%;
+  font-size: 1.5rem;
+}
+
+#closePopB {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  background-color:red;
+}
+
+/* 3D element styling */
+
+/* 3D Health Bar styling */
+.chart {
+  font-size: 1em;
+  -webkit-perspective: 1000px;
+  perspective: 1000px;
+  -webkit-perspective-origin: -20% 50%;
+  perspective-origin: -20% 50%;
+  -webkit-backface-visibility: visible;
+  backface-visibility: visible;
+  position: relative;
+  z-index: 1;
+}
+
+.bar {
+  font-size: 0.5em;
+  position: relative;
+  height: 14em;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  -webkit-transform: rotateX(60deg) rotateY(0deg);
+  /* transform: translate3d(240px, 170px, 630px); */
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+}
+
+.bar .bface {
+  font-size: 2em;
+  position: relative;
+  width: 100px;
+  height: 2em;
+  background-color: rgba(254, 254, 254, 0.9);
+}
+
+.bar .bface.side-a,
+.bar .bface.side-b {
+  width: 2em;
+}
+
+.bar .side-a {
+  -webkit-transform: rotateX(90deg) rotateY(-90deg) translateX(2em) translateY(1em) translateZ(1em);
+  transform: rotateX(90deg) rotateY(-90deg) translateX(2em) translateY(1em) translateZ(1em);
+}
+
+.bar .side-b {
+  -webkit-transform: rotateX(90deg) rotateY(-90deg) translateX(4em) translateY(1em) translateZ(-1em);
+  transform: rotateX(90deg) rotateY(-90deg) translateX(4em) translateY(1em) translateZ(1em);
+  position: absolute;
+  right: 0;
+}
+
+.bar .side-0 {
+  -webkit-transform: rotateX(90deg) rotateY(0) translateX(0) translateY(1em) translateZ(-1em);
+  transform: rotateX(90deg) rotateY(0) translateX(0) translateY(1em) translateZ(-1em);
+}
+
+.bar .side-1 {
+  -webkit-transform: rotateX(90deg) rotateY(0) translateX(0) translateY(1em) translateZ(3em);
+  transform: rotateX(90deg) rotateY(0) translateX(0) translateY(1em) translateZ(3em);
+}
+
+.bar .top {
+  -webkit-transform: rotateX(0deg) rotateY(0) translateX(0em) translateY(4em) translateZ(2em);
+  transform: rotateX(0deg) rotateY(0) translateX(0em) translateY(4em) translateZ(2em);
+}
+
+.bar .floor {
+  box-shadow: 0 0.1em 0.6em rgba(0, 0, 0, 0.3), 0.6em -0.5em 3em rgba(0, 0, 0, 0.3), 1em -1em 8em #fefefe;
+}
+
+.growing-bar {
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  background-color: rgba(118, 201, 0, 0.6);
+  height: 2em;
+  animation-name: loader;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in-out;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes loader {
+  0% {   width: 0%;  }
+  100% {  width: 100%;  }
+}
+@-keyframes loader {
+  0% {   width: 0%;  }
+  100% {  width: 100%;  }
+}
+
+.bar.lime .side-0 .growing-bar {
+  box-shadow: -0.5em -1.5em 4em #76c900;
+}
+
+.bar.lime .floor .growing-bar {
+  box-shadow: 0em 0em 2em #76c900;
+}
+/*END 3D Health Bar styling */
+
+/* Primary Scene styling */
+.scene, .shape, .face, .face-wrapper, .cr {
+  position: absolute;
+  transform-style: preserve-3d;
+}
+.scene {
+  width: 80em;
+  height: 80em;
+  top: 90%;
+  left: 10%;
+  margin: -40em 0 0 -40em;
+  transition: transform 1.3s;
+}
+
+/* background cube */
+.cube {
+  position: relative;
+  width: 800px;
+  height: 400px;
+  left: 30%;
+  transform-style: preserve-3d;
+  transform: translate3d(10px, 200px, 200px); 
+}
+
+.shape {
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  transform-origin: 50%;
+  transform:rotateX(30deg) translateY(-20px);
+}
+
+.c3dContainer {
+  transform-style: preserve-3d;
+}
+
+.face, .face-wrapper {
+  overflow: hidden;
+  transform-origin: 0 0;
+  backface-visibility: hidden;
+  /* hidden by default, prevent blinking and other weird rendering glitchs */
+}
+.face {
+  background-size: 100% 100%!important;
+  background-position: center;
+}
+
+/* movement classes */
+.face-front {
+  transform: translate3d(250px, 40px, 250px) rotateY(0deg);
+}
+.face-front-table {
+  transform: translate3d(400px, -30px, 450px) rotateX(-60deg) rotateY(0deg);
+}
+.face-left {
+  transform: translate3d(600px, 20px, 200px) rotateY(-90deg);
+}
+.face-right {
+  transform: translate3d(200px, 20px, 500px) rotateY(90deg);
+}
+/* END movement classes */
+
+.myCube-hide {
+  visibility:hidden;
+}
+.myCube-show {
+  visibility:visible;
+}
+
+.myCube-face {
+  width: 800px;
+  height: 400px;
+  background: skyblue;
+  border: 0px solid black;
+  position: absolute;
+  opacity: .9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: Arial, sans-serif;
+  font-size: 2rem;
+  background-size: contain;
+  background-repeat:no-repeat;
+}
+
+.myCube-bt {
+  width: 800px;
+  height: 800px;
+  background: skyblue;
+  border: 0px solid black;
+  position: absolute;
+  opacity: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: Arial, sans-serif;
+  font-size: 2rem;
+}
+
+.myCube-front {
+  transform: translateZ(400px) rotateY(180deg);
+  background-image: url(imgs/backFaceTexture.jpg);
+}
+
+.myCube-back {
+  transform: translateZ(-400px);
+  background-image: url(imgs/frontFaceTexture.jpg);
+}
+
+.myCube-left {
+  transform: translateX(-400px) rotateY(-270deg);
+  background-image: url(imgs/leftFaceTexture.jpg);
+}
+
+.myCube-right {
+  transform: translateX(400px) rotateY(270deg);
+  background-image: url(imgs/rightFaceTexture.jpg);
+}
+
+.myCube-top {
+  transform: translateY(-400px) rotateX(270deg);
+  background-image: url(imgs/ceilingTexture.jpg);
+}
+
+.myCube-bottom {
+  transform: translateY(000px) rotateX(-270deg);
+  background-image: url(imgs/floorTexture.jpg);
+  background-size: contain;
+  background-repeat:repeat;
+}
+
+/* tridiv styles */
+
+.face-wrapper .face {
+  left: 100%;
+  width: 100%;
+  height: 100%
+}
+.photon-shader {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+.side {
+  left: 50%;
+}
+.cr, .cr .side {
+  height: 100%;
+}
+[class*="cuboid"] .ft, [class*="cuboid"] .bk {
+  width: 100%;
+  height: 100%;
+}
+[class*="cuboid"] .bk {
+  left: 100%;
+}
+[class*="cuboid"] .rt {
+  transform: rotateY(-90deg) translateX(-50%);
+}
+[class*="cuboid"] .lt {
+  transform: rotateY(90deg) translateX(-50%);
+}
+[class*="cuboid"] .tp {
+  transform: rotateX(90deg) translateY(-50%);
+}
+[class*="cuboid"] .bm {
+  transform: rotateX(-90deg) translateY(-50%);
+}
+[class*="cuboid"] .lt {
+  left: 100%;
+}
+[class*="cuboid"] .bm {
+  top: 100%;
+}
+
+/* Object Styles */
+
+#table01 {
+  transform: translate3d(10px,240px,10px);
+}
+
+#docCab01 {
+  transform: translate3d(-10px,80px,10px);
+}
