@@ -353,32 +353,32 @@ span {
 
 .myCube-front {
   transform: translateZ(400px) rotateY(180deg);
-  background-image: url(imgs/backFaceTexture.jpg);
+  background-image: url(https://cdn.jsdelivr.net/gh/tnharvey/3DCSSTrainingRoom@main/imgs/backFaceTexture.jpg);
 }
 
 .myCube-back {
   transform: translateZ(-400px);
-  background-image: url(imgs/frontFaceTexture.jpg);
+  background-image: url(https://cdn.jsdelivr.net/gh/tnharvey/3DCSSTrainingRoom@main/imgs/frontFaceTexture.jpg);
 }
 
 .myCube-left {
   transform: translateX(-400px) rotateY(-270deg);
-  background-image: url(imgs/leftFaceTexture.jpg);
+  background-image: url(https://cdn.jsdelivr.net/gh/tnharvey/3DCSSTrainingRoom@main/imgs/leftFaceTexture.jpg);
 }
 
 .myCube-right {
   transform: translateX(400px) rotateY(270deg);
-  background-image: url(imgs/rightFaceTexture.jpg);
+  background-image: url(https://cdn.jsdelivr.net/gh/tnharvey/3DCSSTrainingRoom@main/imgs/rightFaceTexture.jpg);
 }
 
 .myCube-top {
   transform: translateY(-400px) rotateX(270deg);
-  background-image: url(imgs/ceilingTexture.jpg);
+  background-image: url(https://cdn.jsdelivr.net/gh/tnharvey/3DCSSTrainingRoom@main/imgs/ceilingTexture2.jpg);
 }
 
 .myCube-bottom {
   transform: translateY(000px) rotateX(-270deg);
-  background-image: url(imgs/floorTexture.jpg);
+  background-image: url(https://cdn.jsdelivr.net/gh/tnharvey/3DCSSTrainingRoom@main/imgs/floorTexture.jpg);
   background-size: contain;
   background-repeat:repeat;
 }
@@ -436,5 +436,17 @@ span {
 }
 
 #docCab01 {
-  transform: translate3d(-10px,80px,10px);
+  transform: translate3d(-80px,133px,-170px);
+}
+
+#flLight01 {
+  transform: translate3d(-100px,-193px,329px) rotateY(90deg);
+}
+
+#flLight02 {
+  transform: translate3d(100px,-193px,329px) rotateY(90deg);
+}
+
+#flLight03 {
+  transform: translate3d(400px,-193px,329px) rotateY(90deg);
 }

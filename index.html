@@ -5,17 +5,57 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" ></script>
     </head>
     <body>
-      <div class="container">
-        <div id="scene1" class="scene face-front">
-          <div class="cube myCube-show">
-            <div class="myCube-bt myCube-top">Top</div>
-            <div class="myCube-bt myCube-bottom">Bottom</div>
-            <div class="myCube-face myCube-left">Left</div>
-            <div class="myCube-face myCube-right">Right</div>
-            <div class="myCube-face myCube-front">Back</div>
-            <div class="myCube-face myCube-back"><img class="interactive" style="margin: auto; width:20%; height: auto;" src="imgs/floatingWallObject.png" onclick="wallClick();"></div>
-          </div>            
+      <div id="appContainer">
+        <div class="container">
+          <div id="scene1" class="scene face-front">
+            <div class="cube myCube-show">
+              <div class="myCube-bt myCube-top">Top</div>
+              <div class="myCube-bt myCube-bottom">Bottom</div>
+              <div class="myCube-face myCube-left">Left</div>
+              <div class="myCube-face myCube-right">Right</div>
+              <div class="myCube-face myCube-front">Back</div>
+              <div class="myCube-face myCube-back"><img class="interactive" style="margin: auto; width:20%; height: auto;" src="https://cdn.jsdelivr.net/gh/tnharvey/3DCubeRoom@main/imgs/floatingWallObject.jpg" onclick="wallClick();"></div>
+            </div>            
+          </div>
         </div>
-      </div>
+        <div id="popupContainer">
+          <div id="popupA" class="popup interactive"  onclick="hidePopup('popupA');">This is the apple popup. </br>Click inside the popup to close it.</div>
+          <div id="popupB" class="popup" onclick="hidePopup('popupB');"><button id="closePopB" onclick="popupBClick();">x</button>This is the table popup. Press the Enter key on your keyboard to close it.</div>
+        </div>
+        <div id="dashContainer">
+          <div id="messagesContainer" class="3col-1">
+            <span id="message">messages</span>
+          </div>
+          <div id="controlsContainer" class="3col-1">
+              <div class="grid-container">
+                <div class="grid-item empty"></div>
+                <div id="ArrowUp" onclick="userAction('ArrowUp')" class="grid-item button interactive">&uarr;</div>
+                <div class="grid-item empty"></div>  
+                <div id="ArrowLeft" onclick="userAction('ArrowLeft')" class="grid-item button interactive">&larr;</div>
+                <div id="ArrowDown" onclick="userAction('ArrowDown')" class="grid-item button interactive">&darr;</div>
+                <div id="ArrowRight" onclick="userAction('ArrowRight')" class="grid-item button interactive">&rarr;</div>    
+              </div>
+          </div>
+          <div id="healthContainer" class="3col-1">
+            <div class="chart">
+              <div class="bar bar-30 lime">
+                <div class="bface top">
+                  <div class="growing-bar"></div>
+                </div>
+                <div class="bface side-0">
+                  <div class="growing-bar"></div>
+                </div>
+                <div class="bface floor">
+                  <div class="growing-bar"></div>
+                </div>
+                <div class="bface side-a"></div>
+                <div class="bface side-b"></div>
+                <div class="bface side-1">
+                  <div class="growing-bar"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
     </body>
 </html>

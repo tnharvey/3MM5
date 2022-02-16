@@ -1,0 +1,40 @@
+/* .flLight styles */
+.flLight {
+    transform: translate3D(8.25em, -0.225em, 0.65em) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+    opacity: 1;
+    width: 16.5em;
+    height: 0.45em;
+    margin: -0.225em 0 0 -8.25em;
+}
+
+.flLight .ft {
+    transform: translateZ(0.65em);
+}
+
+.flLight .bk {
+    transform: translateZ(-0.65em) rotateY(180deg);
+}
+
+.flLight .bm {
+  background-image: url(https://cdn.jsdelivr.net/gh/tnharvey/3DCSSTrainingRoom@main/models/flLight/flLight.jpg);
+}
+
+.flLight .rt,
+.flLight .lt {
+    width: 1.3em;
+    height: 0.45em;
+}
+
+.flLight .tp,
+.flLight .bm {
+    width: 16.5em;
+    height: 1.3em;
+}
+
+.flLight .face {
+    background-color: #FFFFFF;
+}
+
+.flLight .rt {
+    background-color: #FFFFFF;
+}

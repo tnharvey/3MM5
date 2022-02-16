@@ -4,12 +4,20 @@ window.onload = function(){
 
     var tableCode = $('<div id="table01" class="c3dContainer">');
     var docCabCode = $('<div id="docCab01" class="c3dContainer">');
-    tableCode.load("table/tableDom.html");
-    docCabCode.load("documentCabinet/docCabDom.html");
+    var flLightCode1 = $('<div id="flLight01" class="c3dContainer">');
+    var flLightCode2 = $('<div id="flLight02" class="c3dContainer">');
+    var flLightCode3 = $('<div id="flLight03" class="c3dContainer">');
+
+    tableCode.load("models/table/tableDom.html");
+    docCabCode.load("models/documentCabinet/docCabDom.html");
+    flLightCode1.load("models/flLight/flLightDom.html");
+    flLightCode2.load("models/flLight/flLightDom.html");
+    flLightCode3.load("models/flLight/flLightDom.html");
     
-    $("#scene1").append(tableCode,docCabCode);
-    $("head").append('<link rel="stylesheet" href="table/tableStyle.css" />');
-    $("head").append('<link rel="stylesheet" href="documentCabinet/docCabStyle.css" />');
+    $("#scene1").append(tableCode,docCabCode,flLightCode1,flLightCode2,flLightCode3);
+    $("head").append('<link rel="stylesheet" href="models/table/tableStyle.css" />');
+    $("head").append('<link rel="stylesheet" href="models/documentCabinet/docCabStyle.css" />');
+    $("head").append('<link rel="stylesheet" href="models/flLight/flLightStyle.css" />');
 }
 
 /* Inline click funcions, need to set up with listeners */
@@ -69,16 +77,6 @@ function userAction (input) {
             else if (cube.classList.contains("face-front")) {
                 cube.classList.remove("face-front");
                 cube.classList.add("face-right");
-            }
-        }
-        if (uAction === "h") {
-            if (cube.classList.contains("show")) {
-                cube.classList.remove("show");
-                cube.classList.add("hide");
-            }
-            else if (cube.classList.contains("hide")) {
-                cube.classList.remove("hide");
-                cube.classList.add("show");
             }
         }
         if(uAction === "ArrowUp") {
