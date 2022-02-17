@@ -9,6 +9,14 @@ span {
 }
   
 /* Container styles */
+#appContainer {
+  width:95%;
+  height: 95%;
+  margin: auto;
+  padding-top: 5px;
+  background-color: #e6e6e6;
+}
+
 .container {
   width: 1000px;
   height: 580px;
@@ -56,16 +64,16 @@ span {
 }
 
 .button {
-  background-color: black;
+  background-color: #d04b2a;
   color: white;
 }
 
 .button:hover {
-  background-color:darkgray;
+  background-color:#e75e26;
 }
 
 .button:active {
-  background-color:red;
+  background-color:#fbae08;
 }
 
 .keys {
@@ -119,8 +127,8 @@ span {
     width: 900px;
     height: 450px;
     display: none;
-    top: 10px;
-    left:15%;
+    top: 600px;
+    left:21.5%;
     background: lightcyan;
     border: 1px solid black;
     color:black;

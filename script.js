@@ -84,28 +84,28 @@ function userAction (input) {
                 cube.classList.remove("face-front");
                 cube.classList.add("face-front-table");
             }
-            else if (cube.classList.contains("face-left")) {
+            /*else if (cube.classList.contains("face-left")) {
                 cube.classList.remove("face-left");
                 cube.classList.add("face-left-table");
             }
             else if (cube.classList.contains("face-right")) {
                 cube.classList.remove("face-right");
                 cube.classList.add("face-right-table");
-            }
+            }*/
         }
         if(uAction === "ArrowDown") {
             if (cube.classList.contains("face-front-table")) {
                 cube.classList.remove("face-front-table");
                 cube.classList.add("face-front");
             }
-            else if (cube.classList.contains("face-left-table")) {
+            /*else if (cube.classList.contains("face-left-table")) {
                 cube.classList.remove("face-left-table");
                 cube.classList.add("face-left");
             }
             else if (cube.classList.contains("face-right-table")) {
                 cube.classList.remove("face-right-table");
                 cube.classList.add("face-right");
-            }
+            }*/
         }
         if(uAction === "Enter") {
             if(document.getElementById('popupB').style.visibility === "visible")
