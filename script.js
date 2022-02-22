@@ -68,7 +68,7 @@ function userAction (input) {
         if(uAction === "ArrowUp") {
             if (cube.classList.contains("face-front")) {
                 cube.classList.remove("face-front");
-                cube.classList.add("face-front-table");
+                cube.classList.add("face-front-equipment");
                 afssDoor.classList.add("afssDoor-open");
             }
             /*else if (cube.classList.contains("face-left")) {
@@ -81,8 +81,8 @@ function userAction (input) {
             }*/
         }
         if(uAction === "ArrowDown") {
-            if (cube.classList.contains("face-front-table")) {
-                cube.classList.remove("face-front-table");
+            if (cube.classList.contains("face-front-equipment")) {
+                cube.classList.remove("face-front-equipment");
                 cube.classList.remove("afssDoor-open");
                 cube.classList.add("face-front");
             }

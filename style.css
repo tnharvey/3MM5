@@ -18,16 +18,16 @@ span {
   
 /* Container styles */
 #appContainer {
-  width:1020px;
-  height: 700px;
+  width:940px;
+  height: 633px;
   margin: auto;
   padding-top: 5px;
   background-color: var(--bg-gray);
 }
 
 .container {
-  width: 1000px;
-  height: 580px;
+  width: 900px;
+  height: 500px;
   perspective: 650px;
   margin: 10px auto 0px auto;
   overflow: hidden;
@@ -39,7 +39,7 @@ span {
   display:grid;
   grid-template-columns: 33% 33% 33%;
   justify-items: center;
-  width: 1000px;
+  width: 100%;
   margin: auto;
   /* background-color: lightgray; */
 }
@@ -286,10 +286,10 @@ span {
 
 /* movement classes */
 .face-front {
-  transform: translate3d(250px, 40px, 250px) rotateY(0deg);
+  transform: translate3d(200px, 40px, 250px) rotateY(0deg);
 }
-.face-front-table {
-  transform: translate3d(295px, -1px, 677px) rotateX(-12deg) rotateY(0deg);
+.face-front-equipment {
+  transform: translate3d(256px, 17px, 677px) rotateX(-12deg) rotateY(0deg);
 }
 .face-left {
   transform: translate3d(600px, 20px, 200px) rotateY(-90deg);
