@@ -1,0 +1,94 @@
+/* .afssBody styles */
+.afssBody {
+  transform:translate3D(0em, 0em, 0em) rotateX(-90deg) rotateY(0deg) rotateZ(0deg);
+  opacity:1;
+  width:2.5em;
+  height:4em;
+  margin:-2em 0 0 -1.25em;
+}
+.afssBody .ft {
+  transform:translateZ(1.5em);
+}
+.afssBody .bk {
+  transform:translateZ(-1.5em) rotateY(180deg);
+}
+.afssBody .rt, .afssBody .lt {
+  width:3em;
+  height:4em;
+}
+.afssBody .tp, .afssBody .bm {
+  width:2.5em;
+  height:3em;
+}
+.afssBody .face {
+  background-color:#b6b17c;
+}
+.afssBody .ft {
+  width:2em;
+  margin-left:0.25em;
+}
+.afssBody .bk {
+  width:2em;
+  margin-left:-0.25em;
+}
+.afssBody .rt, .afssBody .lt {
+  width:2.5em;
+}
+.afssBody .tp, .afssBody .bm, .afssBody .tp .photon-shader, .afssBody .bm .photon-shader {
+  border-radius:0.25em;
+}
+.afssBody .cr {
+  width:0.25em;
+  left:0.125em;
+}
+.afssBody .cr-0 {
+  transform: translate3D(2em, 0, 1.25em);
+}
+.afssBody .cr-1 {
+  transform: translate3D(2em, 0, -1.25em);
+}
+.afssBody .cr-2 {
+  transform: translate3D(0, 0, -1.25em);
+}
+.afssBody .cr-3 {
+  transform: translate3D(0, 0, 1.25em);
+}
+.afssBody .cr-0 .s0 {
+  transform: rotateY(15deg) translate3D(-50%, 0, 0.225em);
+}
+.afssBody .cr-0 .s1 {
+  transform: rotateY(45deg) translate3D(-50%, 0, 0.225em);
+}
+.afssBody .cr-0 .s2 {
+  transform: rotateY(75deg) translate3D(-50%, 0, 0.225em);
+}
+.afssBody .cr-1 .s0 {
+  transform: rotateY(105deg) translate3D(-50%, 0, 0.225em);
+}
+.afssBody .cr-1 .s1 {
+  transform: rotateY(135deg) translate3D(-50%, 0, 0.225em);
+}
+.afssBody .cr-1 .s2 {
+  transform: rotateY(165deg) translate3D(-50%, 0, 0.225em);
+}
+.afssBody .cr-2 .s0 {
+  transform: rotateY(195deg) translate3D(-50%, 0, 0.225em);
+}
+.afssBody .cr-2 .s1 {
+  transform: rotateY(225deg) translate3D(-50%, 0, 0.225em);
+}
+.afssBody .cr-2 .s2 {
+  transform: rotateY(255deg) translate3D(-50%, 0, 0.225em);
+}
+.afssBody .cr-3 .s0 {
+  transform: rotateY(285deg) translate3D(-50%, 0, 0.225em);
+}
+.afssBody .cr-3 .s1 {
+  transform: rotateY(315deg) translate3D(-50%, 0, 0.225em);
+}
+.afssBody .cr-3 .s2 {
+  transform: rotateY(345deg) translate3D(-50%, 0, 0.225em);
+}
+.afssBody .side {
+  width:0.15897459621556134em;
+}

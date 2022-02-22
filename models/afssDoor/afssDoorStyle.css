@@ -1,0 +1,229 @@
+/* .afss-door styles */
+.afss-door {
+  transform:translate3D(1.375em, -0.125em, 1em) rotateX(0deg) rotateY(0deg) rotateZ(180deg);
+  opacity:1;
+  width:2em;
+  height:0.3em;
+  margin:-0.15em 0 0 -1em;
+}
+.afss-door .tp, .afss-door .bm {
+  width:2em;
+  height:2em;
+  border-radius: 50%;
+}
+.afss-door .tp {
+  transform: translate3D(0px,0px,-16px) rotateX(90deg);
+}
+.afss-door .bm {
+  transform: translate3D(0px,5px,16px) rotateX(270deg);
+}
+.afss-door .side {
+  width:0.4814869487802999em;
+  height:0.3em;
+}
+.afss-door .s0 {
+  transform: rotateY(12.857142857142858deg) translate3D(-50%, 0, 0.975em);
+}
+.afss-door .s1 {
+  transform: rotateY(38.57142857142857deg) translate3D(-50%, 0, 0.975em);
+}
+.afss-door .s2 {
+  transform: rotateY(64.28571428571429deg) translate3D(-50%, 0, 0.975em);
+}
+.afss-door .s3 {
+  transform: rotateY(90deg) translate3D(-50%, 0, 0.975em);
+}
+.afss-door .s4 {
+  transform: rotateY(115.71428571428572deg) translate3D(-50%, 0, 0.975em);
+}
+.afss-door .s5 {
+  transform: rotateY(141.42857142857144deg) translate3D(-50%, 0, 0.975em);
+}
+.afss-door .s6 {
+  transform: rotateY(167.14285714285714deg) translate3D(-50%, 0, 0.975em);
+}
+.afss-door .s7 {
+  transform: rotateY(192.85714285714286deg) translate3D(-50%, 0, 0.975em);
+}
+.afss-door .s8 {
+  transform: rotateY(218.57142857142858deg) translate3D(-50%, 0, 0.975em);
+}
+.afss-door .s9 {
+  transform: rotateY(244.2857142857143deg) translate3D(-50%, 0, 0.975em);
+}
+.afss-door .s10 {
+  transform: rotateY(270deg) translate3D(-50%, 0, 0.975em);
+}
+.afss-door .s11 {
+  transform: rotateY(295.7142857142857deg) translate3D(-50%, 0, 0.975em);
+}
+.afss-door .s12 {
+  transform: rotateY(321.4285714285714deg) translate3D(-50%, 0, 0.975em);
+}
+.afss-door .s13 {
+  transform: rotateY(347.1428571428571deg) translate3D(-50%, 0, 0.975em);
+}
+.afss-door .face, .afss-door .side {
+  background-color:#b6b17c;
+}
+/* .afss-door-hub styles */
+.afss-door-hub {
+  transform:translate3D(1.375em, -0.25em, 1em) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+  opacity:1;
+  width:0.5em;
+  height:0.5em;
+  margin:-0.25em 0 0 -0.25em;
+}
+.afss-door-hub .tp, .afss-door-hub .bm {
+  width:0.5em;
+  height:0.5em;
+  border-radius: 50%;
+}
+.afss-door-hub .tp {
+  transform: translate3D(0px,0px,-4px) rotateX(90deg);
+}
+.afss-door-hub .bm {
+  transform: translate3D(0px,8px,4px) rotateX(270deg);
+}
+.afss-door-hub .side {
+  width:0.13912173719507498em;
+  height:0.5em;
+}
+.afss-door-hub .s0 {
+  transform: rotateY(12.857142857142858deg) translate3D(-50%, 0, 0.225em);
+}
+.afss-door-hub .s1 {
+  transform: rotateY(38.57142857142857deg) translate3D(-50%, 0, 0.225em);
+}
+.afss-door-hub .s2 {
+  transform: rotateY(64.28571428571429deg) translate3D(-50%, 0, 0.225em);
+}
+.afss-door-hub .s3 {
+  transform: rotateY(90deg) translate3D(-50%, 0, 0.225em);
+}
+.afss-door-hub .s4 {
+  transform: rotateY(115.71428571428572deg) translate3D(-50%, 0, 0.225em);
+}
+.afss-door-hub .s5 {
+  transform: rotateY(141.42857142857144deg) translate3D(-50%, 0, 0.225em);
+}
+.afss-door-hub .s6 {
+  transform: rotateY(167.14285714285714deg) translate3D(-50%, 0, 0.225em);
+}
+.afss-door-hub .s7 {
+  transform: rotateY(192.85714285714286deg) translate3D(-50%, 0, 0.225em);
+}
+.afss-door-hub .s8 {
+  transform: rotateY(218.57142857142858deg) translate3D(-50%, 0, 0.225em);
+}
+.afss-door-hub .s9 {
+  transform: rotateY(244.2857142857143deg) translate3D(-50%, 0, 0.225em);
+}
+.afss-door-hub .s10 {
+  transform: rotateY(270deg) translate3D(-50%, 0, 0.225em);
+}
+.afss-door-hub .s11 {
+  transform: rotateY(295.7142857142857deg) translate3D(-50%, 0, 0.225em);
+}
+.afss-door-hub .s12 {
+  transform: rotateY(321.4285714285714deg) translate3D(-50%, 0, 0.225em);
+}
+.afss-door-hub .s13 {
+  transform: rotateY(347.1428571428571deg) translate3D(-50%, 0, 0.225em);
+}
+.afss-door-hub .face, .afss-door-hub .side {
+  background-color:#b6b17c;
+}
+/* .afss-door-handle styles */
+.afss-door-handle {
+  transform:translate3D(1.375em, -0.375em, 1em) rotateX(0deg) rotateY(-30deg) rotateZ(90deg);
+  opacity:1;
+  width:0.15em;
+  height:1.25em;
+  margin:-0.625em 0 0 -0.075em;
+}
+.afss-door-handle .tp, .afss-door-handle .bm {
+  width:0.15em;
+  height:0.15em;
+  border-radius: 50%;
+}
+.afss-door-handle .tp {
+  transform: translate3D(0px,0px,-1px) rotateX(90deg);
+}
+.afss-door-handle .bm {
+  transform: translate3D(0px,20px,1px) rotateX(270deg);
+}
+.afss-door-handle .side {
+  width:0.059236521158522494em;
+  height:1.25em;
+}
+.afss-door-handle .s0 {
+  transform: rotateY(12.857142857142858deg) translate3D(-50%, 0, 0.049999999999999996em);
+}
+.afss-door-handle .s1 {
+  transform: rotateY(38.57142857142857deg) translate3D(-50%, 0, 0.049999999999999996em);
+}
+.afss-door-handle .s2 {
+  transform: rotateY(64.28571428571429deg) translate3D(-50%, 0, 0.049999999999999996em);
+}
+.afss-door-handle .s3 {
+  transform: rotateY(90deg) translate3D(-50%, 0, 0.049999999999999996em);
+}
+.afss-door-handle .s4 {
+  transform: rotateY(115.71428571428572deg) translate3D(-50%, 0, 0.049999999999999996em);
+}
+.afss-door-handle .s5 {
+  transform: rotateY(141.42857142857144deg) translate3D(-50%, 0, 0.049999999999999996em);
+}
+.afss-door-handle .s6 {
+  transform: rotateY(167.14285714285714deg) translate3D(-50%, 0, 0.049999999999999996em);
+}
+.afss-door-handle .s7 {
+  transform: rotateY(192.85714285714286deg) translate3D(-50%, 0, 0.049999999999999996em);
+}
+.afss-door-handle .s8 {
+  transform: rotateY(218.57142857142858deg) translate3D(-50%, 0, 0.049999999999999996em);
+}
+.afss-door-handle .s9 {
+  transform: rotateY(244.2857142857143deg) translate3D(-50%, 0, 0.049999999999999996em);
+}
+.afss-door-handle .s10 {
+  transform: rotateY(270deg) translate3D(-50%, 0, 0.049999999999999996em);
+}
+.afss-door-handle .s11 {
+  transform: rotateY(295.7142857142857deg) translate3D(-50%, 0, 0.049999999999999996em);
+}
+.afss-door-handle .s12 {
+  transform: rotateY(321.4285714285714deg) translate3D(-50%, 0, 0.049999999999999996em);
+}
+.afss-door-handle .s13 {
+  transform: rotateY(347.1428571428571deg) translate3D(-50%, 0, 0.049999999999999996em);
+}
+.afss-door-handle .face, .afss-door-handle .side {
+  background-color:#b6b17c;
+}
+/* .afss-door-hinge styles */
+.afss-door-hinge {
+  transform:translate3D(0.25em, -0.125em, 1em) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+  opacity:1;
+  width:0.5em;
+  height:0.375em;
+  margin:-0.1875em 0 0 -0.25em;
+}
+.afss-door-hinge .ft {
+  transform:translateZ(0.375em);
+}
+.afss-door-hinge .bk {
+  transform:translateZ(-0.375em) rotateY(180deg);
+}
+.afss-door-hinge .rt, .afss-door-hinge .lt {
+  width:0.75em;
+  height:0.375em;
+}
+.afss-door-hinge .tp, .afss-door-hinge .bm {
+  width:0.5em;
+  height:0.75em;
+}
+.afss-door-hinge .face {
+  background-color:#b6b17c;
+}

@@ -1,8 +1,16 @@
-/* DOM styles */
-.empty {
-
+:root {
+  --darker-orange: #d04b2a;
+  --lighter-orange: #e75e26;
+  --darker-blue: #144c7e;
+  --lighter-blue: #345973;
+  --yellow: #fbae08;
+  --bg-gray: #e6e6e6;
+  --element-bg-gray: #c8c8c8;
+  --drop-shadow: #8e8e8e;
 }
-    
+
+/* DOM styles */
+   
 span {
     font-size: 16px;
     font-weight: 400;
@@ -14,7 +22,7 @@ span {
   height: 95%;
   margin: auto;
   padding-top: 5px;
-  background-color: #e6e6e6;
+  background-color: var(--bg-gray);
 }
 
 .container {
@@ -58,22 +66,26 @@ span {
   margin: 5px;
 }
 
+.c3dContainer {
+  transform-style: preserve-3d;
+}
+
 /* Interactive element styles (buttons, popups, etc.) */
 .interactive {
   cursor: pointer;
 }
 
 .button {
-  background-color: #d04b2a;
+  background-color: var(--darker-orange);
   color: white;
 }
 
 .button:hover {
-  background-color:#e75e26;
+  background-color:var(--lighter-orange);
 }
 
 .button:active {
-  background-color:#fbae08;
+  background-color:var(--yellow);
 }
 
 .keys {
@@ -273,40 +285,6 @@ span {
   transition: transform 1.3s;
 }
 
-/* background cube */
-.cube {
-  position: relative;
-  width: 800px;
-  height: 400px;
-  left: 30%;
-  transform-style: preserve-3d;
-  transform: translate3d(10px, 200px, 200px); 
-}
-
-.shape {
-  top: 50%;
-  left: 50%;
-  width: 0;
-  height: 0;
-  transform-origin: 50%;
-  transform:rotateX(30deg) translateY(-20px);
-}
-
-.c3dContainer {
-  transform-style: preserve-3d;
-}
-
-.face, .face-wrapper {
-  overflow: hidden;
-  transform-origin: 0 0;
-  backface-visibility: hidden;
-  /* hidden by default, prevent blinking and other weird rendering glitchs */
-}
-.face {
-  background-size: 100% 100%!important;
-  background-position: center;
-}
-
 /* movement classes */
 .face-front {
   transform: translate3d(250px, 40px, 250px) rotateY(0deg);
@@ -322,6 +300,36 @@ span {
 }
 /* END movement classes */
 
+/* background cube */
+.shape {
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  transform-origin: 50%;
+  transform:rotateX(30deg) translateY(-20px);
+}
+
+.face, .face-wrapper {
+  overflow: hidden;
+  transform-origin: 0 0;
+  backface-visibility: hidden;
+  /* hidden by default, prevent blinking and other weird rendering glitchs */
+}
+
+.face {
+  background-size: 100% 100%!important;
+  background-position: center;
+}
+
+.my-cube {
+  position: relative;
+  width: 800px;
+  height: 400px;
+  left: 30%;
+  transform-style: preserve-3d;
+  transform: translate3d(10px, 200px, 200px); 
+}
 .myCube-hide {
   visibility:hidden;
 }
@@ -347,7 +355,7 @@ span {
 
 .myCube-bt {
   width: 800px;
-  height: 800px;
+  height: 1000px;
   background: skyblue;
   border: 0px solid black;
   position: absolute;
@@ -360,32 +368,34 @@ span {
 }
 
 .myCube-front {
-  transform: translateZ(400px) rotateY(180deg);
+  transform: translateZ(500px) rotateY(180deg);
   background-image: url(https://cdn.jsdelivr.net/gh/tnharvey/3DCSSTrainingRoom@main/imgs/backFaceTexture.jpg);
 }
 
 .myCube-back {
-  transform: translateZ(-400px);
+  transform: translateZ(-500px);
   background-image: url(https://cdn.jsdelivr.net/gh/tnharvey/3DCSSTrainingRoom@main/imgs/frontFaceTexture.jpg);
 }
 
 .myCube-left {
-  transform: translateX(-400px) rotateY(-270deg);
-  background-image: url(https://cdn.jsdelivr.net/gh/tnharvey/3DCSSTrainingRoom@main/imgs/leftFaceTexture.jpg);
+  transform: translateX(-500px) rotateY(-270deg);
+  width: 1000px;
+  background-image: url(https://cdn.jsdelivr.net/gh/tnharvey/3DCSSTrainingRoom@main/imgs/Container-Wall-Long.jpg);
 }
 
 .myCube-right {
-  transform: translateX(400px) rotateY(270deg);
-  background-image: url(https://cdn.jsdelivr.net/gh/tnharvey/3DCSSTrainingRoom@main/imgs/rightFaceTexture.jpg);
+  transform: translateX(300px) rotateY(270deg);
+  width: 1000px;
+  background-image: url(https://cdn.jsdelivr.net/gh/tnharvey/3DCSSTrainingRoom@main/imgs/Container-Wall-Long.jpg);
 }
 
 .myCube-top {
-  transform: translateY(-400px) rotateX(270deg);
-  background-image: url(https://cdn.jsdelivr.net/gh/tnharvey/3DCSSTrainingRoom@main/imgs/ceilingTexture2.jpg);
+  transform: translateY(-500px) rotateX(270deg);
+  background-image: url(https://cdn.jsdelivr.net/gh/tnharvey/3DCSSTrainingRoom@main/imgs/ceilingTexture2-longdk.jpg);
 }
 
 .myCube-bottom {
-  transform: translateY(000px) rotateX(-270deg);
+  transform: translateY(-100px) rotateX(-270deg);
   background-image: url(https://cdn.jsdelivr.net/gh/tnharvey/3DCSSTrainingRoom@main/imgs/floorTexture.jpg);
   background-size: contain;
   background-repeat:repeat;
@@ -440,21 +450,49 @@ span {
 /* Object Styles */
 
 #table01 {
-  transform: translate3d(10px,240px,10px);
+  transform: translate3d(418px,224px,600px) scale(0.75) rotateY(91deg);
+}
+
+#table02 {
+  transform: translate3d(-253px,224px,600px) scale(0.75) rotateY(90deg);
 }
 
 #docCab01 {
-  transform: translate3d(-80px,133px,-170px);
+  transform: translate3d(500px,98px,180px) rotateY(-90deg) scale(1.75);
 }
 
 #flLight01 {
-  transform: translate3d(-100px,-193px,329px) rotateY(90deg);
+  transform: translate3d(-92px,-193px,329px) rotateY(90deg) rotateX(180deg);
 }
 
 #flLight02 {
-  transform: translate3d(100px,-193px,329px) rotateY(90deg);
+  transform: translate3d(164px,-193px,329px) rotateY(90deg) rotateX(180deg);
 }
 
 #flLight03 {
-  transform: translate3d(400px,-193px,329px) rotateY(90deg);
+  transform: translate3d(410px,-193px,329px) rotateY(90deg) rotateX(180deg);
+}
+
+#monitor01 {
+  transform: translate3d(512px,90px,469px) rotateY(270deg) rotateX(0deg) scale(1.5);
+}
+
+#plug01 {
+  transform: translate3d(-108px,-106px,-295px) rotateY(0deg) rotateX(0deg) rotateZ(180deg) scale(0.4);
+}
+
+#afssBody01 {
+  transform: translate3d(132px,101px,-250px) rotateY(0deg) rotateX(0deg) rotateZ(0deg) scale(2);
+}
+
+#afssDoor01 {
+  transform: translate3d(96px,73px,-220px) rotateY(1deg) rotateX(270deg) rotateZ(0deg) scaleX(1.9) scaleZ(1.9) scaleY(1.7);
+}
+
+#afssStand01 {
+  transform: translate3d(0px,0px,0px) rotateY(0deg) rotateX(0deg) rotateZ(0deg) scaleX(2) scaleZ(2) scaleY(2);
+}
+
+#afssStand02 {
+  transform: translate3d(0px,0px,0px) rotateY(0deg) rotateX(0deg) rotateZ(0deg) scaleX(2) scaleZ(2) scaleY(2);
 }

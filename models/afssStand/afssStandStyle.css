@@ -1,0 +1,94 @@
+/* .AFSS-Stand styles */
+.AFSS-Stand {
+  transform:translate3D(0em, 0em, 0em) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+  opacity:1;
+  width:2.5em;
+  height:0.5em;
+  margin:-0.25em 0 0 -1.25em;
+}
+.AFSS-Stand .ft {
+  transform:translateZ(1.5em);
+}
+.AFSS-Stand .bk {
+  transform:translateZ(-1.5em) rotateY(180deg);
+}
+.AFSS-Stand .rt, .AFSS-Stand .lt {
+  width:3em;
+  height:0.5em;
+}
+.AFSS-Stand .tp, .AFSS-Stand .bm {
+  width:2.5em;
+  height:3em;
+}
+.AFSS-Stand .face {
+  background-color:#b6b17c;
+}
+.AFSS-Stand .ft {
+  width:2em;
+  margin-left:0.25em;
+}
+.AFSS-Stand .bk {
+  width:2em;
+  margin-left:-0.25em;
+}
+.AFSS-Stand .rt, .AFSS-Stand .lt {
+  width:2.5em;
+}
+.AFSS-Stand .tp, .AFSS-Stand .bm, .AFSS-Stand .tp .photon-shader, .AFSS-Stand .bm .photon-shader {
+  border-radius:0.25em;
+}
+.AFSS-Stand .cr {
+  width:0.25em;
+  left:0.125em;
+}
+.AFSS-Stand .cr-0 {
+  transform: translate3D(2em, 0, 1.25em);
+}
+.AFSS-Stand .cr-1 {
+  transform: translate3D(2em, 0, -1.25em);
+}
+.AFSS-Stand .cr-2 {
+  transform: translate3D(0, 0, -1.25em);
+}
+.AFSS-Stand .cr-3 {
+  transform: translate3D(0, 0, 1.25em);
+}
+.AFSS-Stand .cr-0 .s0 {
+  transform: rotateY(15deg) translate3D(-50%, 0, 0.225em);
+}
+.AFSS-Stand .cr-0 .s1 {
+  transform: rotateY(45deg) translate3D(-50%, 0, 0.225em);
+}
+.AFSS-Stand .cr-0 .s2 {
+  transform: rotateY(75deg) translate3D(-50%, 0, 0.225em);
+}
+.AFSS-Stand .cr-1 .s0 {
+  transform: rotateY(105deg) translate3D(-50%, 0, 0.225em);
+}
+.AFSS-Stand .cr-1 .s1 {
+  transform: rotateY(135deg) translate3D(-50%, 0, 0.225em);
+}
+.AFSS-Stand .cr-1 .s2 {
+  transform: rotateY(165deg) translate3D(-50%, 0, 0.225em);
+}
+.AFSS-Stand .cr-2 .s0 {
+  transform: rotateY(195deg) translate3D(-50%, 0, 0.225em);
+}
+.AFSS-Stand .cr-2 .s1 {
+  transform: rotateY(225deg) translate3D(-50%, 0, 0.225em);
+}
+.AFSS-Stand .cr-2 .s2 {
+  transform: rotateY(255deg) translate3D(-50%, 0, 0.225em);
+}
+.AFSS-Stand .cr-3 .s0 {
+  transform: rotateY(285deg) translate3D(-50%, 0, 0.225em);
+}
+.AFSS-Stand .cr-3 .s1 {
+  transform: rotateY(315deg) translate3D(-50%, 0, 0.225em);
+}
+.AFSS-Stand .cr-3 .s2 {
+  transform: rotateY(345deg) translate3D(-50%, 0, 0.225em);
+}
+.AFSS-Stand .side {
+  width:0.15897459621556134em;
+}

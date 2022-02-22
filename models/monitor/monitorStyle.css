@@ -1,0 +1,213 @@
+/* .monitor-screen styles */
+.monitor-screen {
+  transform:translate3D(0em, -1.625em, 0em) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+  opacity:1;
+  width:3.5em;
+  height:2em;
+  margin:-1em 0 0 -1.75em;
+}
+.monitor-screen .ft {
+  transform:translateZ(0.075em);
+}
+.monitor-screen .bk {
+  transform:translateZ(-0.075em) rotateY(180deg);
+}
+.monitor-screen .rt, .monitor-screen .lt {
+  width:.15em;
+  height:2em;
+}
+.monitor-screen .tp, .monitor-screen .bm {
+  width:3.5em;
+  height:.15em;
+}
+.monitor-screen .face {
+  background-color:#5c5c5c;
+}
+.monitor-screen .ft {
+  width:3.5em;
+  margin-left:0em;
+}
+.monitor-screen .bk {
+  width:3.5em;
+  margin-left:0em;
+}
+.monitor-screen .rt, .monitor-screen .lt {
+  width:0.15em;
+}
+.monitor-screen .tp, .monitor-screen .bm, .monitor-screen .tp .photon-shader, .monitor-screen .bm .photon-shader {
+  border-radius:0em;
+}
+.monitor-screen .cr {
+  width:0em;
+  left:0em;
+}
+.monitor-screen .cr-0 {
+  transform: translate3D(3.5em, 0, 0.075em);
+}
+.monitor-screen .cr-1 {
+  transform: translate3D(3.5em, 0, -0.075em);
+}
+.monitor-screen .cr-2 {
+  transform: translate3D(0, 0, -0.075em);
+}
+.monitor-screen .cr-3 {
+  transform: translate3D(0, 0, 0.075em);
+}
+.monitor-screen .cr-0 .s0 {
+  transform: rotateY(15deg) translate3D(-50%, 0, -0.025em);
+}
+.monitor-screen .cr-0 .s1 {
+  transform: rotateY(45deg) translate3D(-50%, 0, -0.025em);
+}
+.monitor-screen .cr-0 .s2 {
+  transform: rotateY(75deg) translate3D(-50%, 0, -0.025em);
+}
+.monitor-screen .cr-1 .s0 {
+  transform: rotateY(105deg) translate3D(-50%, 0, -0.025em);
+}
+.monitor-screen .cr-1 .s1 {
+  transform: rotateY(135deg) translate3D(-50%, 0, -0.025em);
+}
+.monitor-screen .cr-1 .s2 {
+  transform: rotateY(165deg) translate3D(-50%, 0, -0.025em);
+}
+.monitor-screen .cr-2 .s0 {
+  transform: rotateY(195deg) translate3D(-50%, 0, -0.025em);
+}
+.monitor-screen .cr-2 .s1 {
+  transform: rotateY(225deg) translate3D(-50%, 0, -0.025em);
+}
+.monitor-screen .cr-2 .s2 {
+  transform: rotateY(255deg) translate3D(-50%, 0, -0.025em);
+}
+.monitor-screen .cr-3 .s0 {
+  transform: rotateY(285deg) translate3D(-50%, 0, -0.025em);
+}
+.monitor-screen .cr-3 .s1 {
+  transform: rotateY(315deg) translate3D(-50%, 0, -0.025em);
+}
+.monitor-screen .cr-3 .s2 {
+  transform: rotateY(345deg) translate3D(-50%, 0, -0.025em);
+}
+.monitor-screen .side {
+  width:0.025em;
+}
+/* .monitor-base styles */
+.monitor-base {
+  transform:translate3D(0em, 0em, 0em) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+  opacity:1;
+  width:2em;
+  height:0.12em;
+  margin:-0.06em 0 0 -1em;
+}
+.monitor-base .ft {
+  transform:translateZ(0.5em);
+}
+.monitor-base .bk {
+  transform:translateZ(-0.5em) rotateY(180deg);
+}
+.monitor-base .rt, .monitor-base .lt {
+  width:1em;
+  height:0.12em;
+}
+.monitor-base .tp, .monitor-base .bm {
+  width:2em;
+  height:1em;
+}
+.monitor-base .face {
+  background-color:#5c5c5c;
+}
+.monitor-base .ft {
+  width:1.5em;
+  margin-left:0.25em;
+}
+.monitor-base .bk {
+  width:1.5em;
+  margin-left:-0.25em;
+}
+.monitor-base .rt, .monitor-base .lt {
+  width:0.5em;
+}
+.monitor-base .tp, .monitor-base .bm, .monitor-base .tp .photon-shader, .monitor-base .bm .photon-shader {
+  border-radius:0.25em;
+}
+.monitor-base .cr {
+  width:0.25em;
+  left:0.125em;
+}
+.monitor-base .cr-0 {
+  transform: translate3D(1.5em, 0, 0.25em);
+}
+.monitor-base .cr-1 {
+  transform: translate3D(1.5em, 0, -0.25em);
+}
+.monitor-base .cr-2 {
+  transform: translate3D(0, 0, -0.25em);
+}
+.monitor-base .cr-3 {
+  transform: translate3D(0, 0, 0.25em);
+}
+.monitor-base .cr-0 .s0 {
+  transform: rotateY(15deg) translate3D(-50%, 0, 0.225em);
+}
+.monitor-base .cr-0 .s1 {
+  transform: rotateY(45deg) translate3D(-50%, 0, 0.225em);
+}
+.monitor-base .cr-0 .s2 {
+  transform: rotateY(75deg) translate3D(-50%, 0, 0.225em);
+}
+.monitor-base .cr-1 .s0 {
+  transform: rotateY(105deg) translate3D(-50%, 0, 0.225em);
+}
+.monitor-base .cr-1 .s1 {
+  transform: rotateY(135deg) translate3D(-50%, 0, 0.225em);
+}
+.monitor-base .cr-1 .s2 {
+  transform: rotateY(165deg) translate3D(-50%, 0, 0.225em);
+}
+.monitor-base .cr-2 .s0 {
+  transform: rotateY(195deg) translate3D(-50%, 0, 0.225em);
+}
+.monitor-base .cr-2 .s1 {
+  transform: rotateY(225deg) translate3D(-50%, 0, 0.225em);
+}
+.monitor-base .cr-2 .s2 {
+  transform: rotateY(255deg) translate3D(-50%, 0, 0.225em);
+}
+.monitor-base .cr-3 .s0 {
+  transform: rotateY(285deg) translate3D(-50%, 0, 0.225em);
+}
+.monitor-base .cr-3 .s1 {
+  transform: rotateY(315deg) translate3D(-50%, 0, 0.225em);
+}
+.monitor-base .cr-3 .s2 {
+  transform: rotateY(345deg) translate3D(-50%, 0, 0.225em);
+}
+.monitor-base .side {
+  width:0.15897459621556134em;
+}
+/* .monitor-stand styles */
+.monitor-stand {
+  transform:translate3D(0em, -1.125em, -0.125em) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+  opacity:1;
+  width:0.5em;
+  height:2.25em;
+  margin:-1.125em 0 0 -0.25em;
+}
+.monitor-stand .ft {
+  transform:translateZ(0.0625em);
+}
+.monitor-stand .bk {
+  transform:translateZ(-0.0625em) rotateY(180deg);
+}
+.monitor-stand .rt, .monitor-stand .lt {
+  width:0.125em;
+  height:2.25em;
+}
+.monitor-stand .tp, .monitor-stand .bm {
+  width:0.5em;
+  height:0.125em;
+}
+.monitor-stand .face {
+  background-color:#5c5c5c;
+}
