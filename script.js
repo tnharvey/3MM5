@@ -34,6 +34,7 @@ function userAction (input) {
 /* Primary user action handler. Checks for type of input as some are currently inline pasing strings.
    Depending on action, triggers/toggles CSS clases or styles to effect 3D movement. */
     var cube = document.querySelector('.scene');
+    var afssDoor = document.querySelector('#afssDoor01');
     var uAction = "";
 
     if (typeof(input)==='object') {
@@ -68,6 +69,7 @@ function userAction (input) {
             if (cube.classList.contains("face-front")) {
                 cube.classList.remove("face-front");
                 cube.classList.add("face-front-table");
+                afssDoor.classList.add("afssDoor-open");
             }
             /*else if (cube.classList.contains("face-left")) {
                 cube.classList.remove("face-left");
@@ -81,6 +83,7 @@ function userAction (input) {
         if(uAction === "ArrowDown") {
             if (cube.classList.contains("face-front-table")) {
                 cube.classList.remove("face-front-table");
+                cube.classList.remove("afssDoor-open");
                 cube.classList.add("face-front");
             }
             /*else if (cube.classList.contains("face-left-table")) {

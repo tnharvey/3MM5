@@ -18,8 +18,8 @@ span {
   
 /* Container styles */
 #appContainer {
-  width:95%;
-  height: 95%;
+  width:1020px;
+  height: 700px;
   margin: auto;
   padding-top: 5px;
   background-color: var(--bg-gray);
@@ -29,7 +29,7 @@ span {
   width: 1000px;
   height: 580px;
   perspective: 650px;
-  margin: 80px auto 0px auto;
+  margin: 10px auto 0px auto;
   overflow: hidden;
   color:white;
   /* z-index: 4; */
@@ -136,31 +136,30 @@ span {
 }
 
 .popup {
-    width: 900px;
-    height: 450px;
+    width: 90%;
+    height: 80%;
     display: none;
-    top: 600px;
-    left:21.5%;
+    top: -688px;
+    left:0%;
     background: lightcyan;
     border: 1px solid black;
     color:black;
-    position: fixed;
+    position: relative;
     opacity: 1;
     align-items: center;
     justify-content: center;
     font-family: Arial, sans-serif;
     font-size: 1.5rem;
     text-align: center;
-    transform: translate3D(0px,-550px,-1000px);
 }
 
 #popupA {
-  margin: 5%;
+  margin: 5% auto 5% auto;
   font-size: 1.5rem;
 }
 
 #popupB {
-  margin: 5%;
+  margin: 5% auto 5% auto;
   font-size: 1.5rem;
 }
 
@@ -290,7 +289,7 @@ span {
   transform: translate3d(250px, 40px, 250px) rotateY(0deg);
 }
 .face-front-table {
-  transform: translate3d(400px, -30px, 450px) rotateX(-60deg) rotateY(0deg);
+  transform: translate3d(295px, -1px, 677px) rotateX(-12deg) rotateY(0deg);
 }
 .face-left {
   transform: translate3d(600px, 20px, 200px) rotateY(-90deg);
@@ -482,17 +481,25 @@ span {
 }
 
 #afssBody01 {
-  transform: translate3d(132px,101px,-250px) rotateY(0deg) rotateX(0deg) rotateZ(0deg) scale(2);
+  transform: translate3d(132px,58px,-250px) rotateY(0deg) rotateX(0deg) rotateZ(0deg) scale(2);
 }
 
 #afssDoor01 {
-  transform: translate3d(96px,73px,-220px) rotateY(1deg) rotateX(270deg) rotateZ(0deg) scaleX(1.9) scaleZ(1.9) scaleY(1.7);
+  transform: translate3d(96px,30px,-220px) rotateY(220deg) rotateX(270deg) rotateZ(0deg) scaleX(1.9) scaleZ(1.9) scaleY(1.7);
+}
+
+#afssDoor01.afssDoor-open {
+  transform: translate3d(96px,30px,-220px) rotateY(220deg) rotateX(270deg) rotateZ(0deg) scaleX(1.9) scaleZ(1.9) scaleY(1.7);
 }
 
 #afssStand01 {
-  transform: translate3d(0px,0px,0px) rotateY(0deg) rotateX(0deg) rotateZ(0deg) scaleX(2) scaleZ(2) scaleY(2);
+  transform: translate3d(132px,153px,-280px) rotateY(0deg) rotateX(90deg) rotateZ(0deg) scaleX(2) scaleZ(2) scaleY(2);
 }
 
 #afssStand02 {
-  transform: translate3d(0px,0px,0px) rotateY(0deg) rotateX(0deg) rotateZ(0deg) scaleX(2) scaleZ(2) scaleY(2);
+  transform: translate3d(132px,153px,-224px) rotateY(0deg) rotateX(90deg) rotateZ(0deg) scaleX(2) scaleZ(2) scaleY(2);
+}
+
+.tp, .bm {
+  backface-visibility: visible;
 }

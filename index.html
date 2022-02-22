@@ -9,17 +9,17 @@
         <div class="container">
           <div id="scene1" class="scene face-front">
             <div class="my-cube myCube-show">
-              <div class="myCube-bt myCube-top">Top</div>
-              <div class="myCube-bt myCube-bottom">Bottom</div>
-              <div class="myCube-face myCube-left">Left</div>
-              <div class="myCube-face myCube-right">Right</div>
-              <div class="myCube-face myCube-front">Back</div>
-              <div class="myCube-face myCube-back"><img class="interactive" style="margin: auto; width:20%; height: auto;" src="https://cdn.jsdelivr.net/gh/tnharvey/3DCubeRoom@main/imgs/floatingWallObject.jpg" onclick="wallClick();"></div>
+              <div class="myCube-bt myCube-top"></div>
+              <div class="myCube-bt myCube-bottom"></div>
+              <div class="myCube-face myCube-left"><img class="interactive" style="margin: auto; width:10%; height: auto;" src="https://cdn.jsdelivr.net/gh/tnharvey/3DCubeRoom@main/imgs/floatingWallObject.jpg" onclick="wallClick();"></div>
+              <div class="myCube-face myCube-right"></div>
+              <div class="myCube-face myCube-front"></div>
+              <div class="myCube-face myCube-back"></div>
             </div>            
           </div>
         </div>
         <div id="popupContainer">
-          <div id="popupA" class="popup interactive"  onclick="hidePopup('popupA');">This is the apple popup. </br>Click inside the popup to close it.</div>
+          <div id="popupA" class="popup interactive"  onclick="hidePopup('popupA');"><img class="interactive" style="margin: auto; width:auto; height: 100%;" src="https://cdn.jsdelivr.net/gh/tnharvey/3DCubeRoom@main/imgs/floatingWallObject.jpg"></div>
           <div id="popupB" class="popup" onclick="hidePopup('popupB');"><button id="closePopB" onclick="popupBClick();">x</button>This is the table popup. Press the Enter key on your keyboard to close it.</div>
         </div>
         <div id="dashContainer">
@@ -57,5 +57,6 @@
             </div>
           </div>
         </div>
+      </div>
     </body>
 </html>
