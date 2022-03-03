@@ -16,6 +16,13 @@
   width:3em;
   height:4em;
 }
+.afssBody .lt {
+  background-image: url(https://cdn.jsdelivr.net/gh/tnharvey/3DCSSTrainingRoom@main/models/afssBody/afss-side-top.png);
+}
+.afssBody .rt {
+  background-image: url(https://cdn.jsdelivr.net/gh/tnharvey/3DCSSTrainingRoom@main/models/afssBody/afss-side-top.png);
+}
+
 .afssBody .tp, .afssBody .bm {
   width:2.5em;
   height:3em;

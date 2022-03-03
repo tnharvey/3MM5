@@ -139,7 +139,7 @@ span {
     width: 90%;
     height: 80%;
     display: none;
-    top: -688px;
+    top: -460px;
     left:0%;
     background: lightcyan;
     border: 1px solid black;
@@ -289,13 +289,13 @@ span {
   transform: translate3d(200px, 40px, 250px) rotateY(0deg);
 }
 .face-front-equipment {
-  transform: translate3d(256px, 17px, 677px) rotateX(-12deg) rotateY(0deg);
+  transform: translate3d(256px, 17px, 662px) rotateX(-12deg) rotateY(0deg);
 }
 .face-left {
-  transform: translate3d(600px, 20px, 200px) rotateY(-90deg);
+  transform: translate3d(707px, 20px, 300px) rotateY(-90deg);
 }
 .face-right {
-  transform: translate3d(200px, 20px, 500px) rotateY(90deg);
+  transform: translate3d(22px, 20px, 601px) rotateY(90deg);
 }
 /* END movement classes */
 

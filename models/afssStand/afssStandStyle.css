@@ -9,6 +9,12 @@
 .AFSS-Stand .ft {
   transform:translateZ(1.5em);
 }
+.AFSS-Stand .rt {
+  background-image: url(https://cdn.jsdelivr.net/gh/tnharvey/3DCSSTrainingRoom@main/models/afssStand/afss-side-botB.png);
+}
+.AFSS-Stand .lt {
+  background-image: url(https://cdn.jsdelivr.net/gh/tnharvey/3DCSSTrainingRoom@main/models/afssStand/afss-side-botF.png);
+}
 .AFSS-Stand .bk {
   transform:translateZ(-1.5em) rotateY(180deg);
 }
