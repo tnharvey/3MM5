@@ -317,7 +317,7 @@ span {
 }
 
 .face {
-  background-size: 100% 100%!important;
+  
   background-position: center;
 }
 
@@ -481,7 +481,7 @@ span {
 }
 
 #afssBody01 {
-  transform: translate3d(132px,58px,-250px) rotateY(0deg) rotateX(0deg) rotateZ(0deg) scale(2);
+  transform: translate3d(132px,58px,-250px) rotateY(0deg) rotateX(0deg) rotateZ(0deg) scaleX(0.2) scaleY(0.2) scaleZ(0.2);
 }
 
 #afssDoor01 {

@@ -2,100 +2,135 @@
 .afssBody {
   transform:translate3D(0em, 0em, 0em) rotateX(-90deg) rotateY(0deg) rotateZ(0deg);
   opacity:1;
-  width:2.5em;
-  height:4em;
-  margin:-2em 0 0 -1.25em;
+  width:25em;
+  height:40em;
+  margin:-20em 0 0 -12.5em;
 }
 .afssBody .ft {
-  transform:translateZ(1.5em);
+  transform:translateZ(15em);
 }
 .afssBody .bk {
-  transform:translateZ(-1.5em) rotateY(180deg);
+  transform:translateZ(-15em) rotateY(180deg);
 }
 .afssBody .rt, .afssBody .lt {
-  width:3em;
-  height:4em;
+  width:30em;
+  height:40em;
 }
 .afssBody .lt {
-  background-image: url(https://cdn.jsdelivr.net/gh/tnharvey/3DCSSTrainingRoom@main/models/afssBody/afss-side-top.png);
+  background: url(https://cdn.jsdelivr.net/gh/tnharvey/3DCSSTrainingRoom@main/models/afssBody/AFSS-Atlas2-test.png) 400 0;
 }
 .afssBody .rt {
-  background-image: url(https://cdn.jsdelivr.net/gh/tnharvey/3DCSSTrainingRoom@main/models/afssBody/afss-side-top.png);
+  background: url(https://cdn.jsdelivr.net/gh/tnharvey/3DCSSTrainingRoom@main/models/afssBody/AFSS-Atlas2-test.png) 0 0;
 }
-
+.afssBody .tp {
+  background: url(https://cdn.jsdelivr.net/gh/tnharvey/3DCSSTrainingRoom@main/models/afssBody/AFSS-Atlas2-test.png) 0 640;
+}
+.afssBody .bm {
+  background: url(https://cdn.jsdelivr.net/gh/tnharvey/3DCSSTrainingRoom@main/models/afssBody/AFSS-Atlas2-test.png) 480 640;
+}
+.afssBody .ft {
+  background: url(https://cdn.jsdelivr.net/gh/tnharvey/3DCSSTrainingRoom@main/models/afssBody/AFSS-Atlas2-test.png) 800 0;
+}
+.afssBody .bk {
+  background: url(https://cdn.jsdelivr.net/gh/tnharvey/3DCSSTrainingRoom@main/models/afssBody/AFSS-Atlas2-test.png) -1120 0;
+}
 .afssBody .tp, .afssBody .bm {
-  width:2.5em;
-  height:3em;
+  width:25em;
+  height:30em;
 }
 .afssBody .face {
   background-color:#b6b17c;
 }
 .afssBody .ft {
-  width:2em;
-  margin-left:0.25em;
+  width:20em;
+  margin-left:2.5em;
 }
 .afssBody .bk {
-  width:2em;
-  margin-left:-0.25em;
+  width:20em;
+  margin-left:-2.5em;
 }
 .afssBody .rt, .afssBody .lt {
-  width:2.5em;
+  width:25em;
 }
 .afssBody .tp, .afssBody .bm, .afssBody .tp .photon-shader, .afssBody .bm .photon-shader {
-  border-radius:0.25em;
+  border-radius:2.5em;
 }
 .afssBody .cr {
-  width:0.25em;
-  left:0.125em;
+  width:2.5em;
+  left:1.25em;
 }
 .afssBody .cr-0 {
-  transform: translate3D(2em, 0, 1.25em);
+  transform: translate3D(20em, 0, 12.5em);
 }
 .afssBody .cr-1 {
-  transform: translate3D(2em, 0, -1.25em);
+  transform: translate3D(20em, 0, -12.5em);
 }
 .afssBody .cr-2 {
-  transform: translate3D(0, 0, -1.25em);
+  transform: translate3D(0, 0, -12.5em);
 }
 .afssBody .cr-3 {
-  transform: translate3D(0, 0, 1.25em);
+  transform: translate3D(0, 0, 12.5em);
 }
 .afssBody .cr-0 .s0 {
-  transform: rotateY(15deg) translate3D(-50%, 0, 0.225em);
+  transform: rotateY(9deg) translate3D(-50%, 0, 2.475em);
 }
 .afssBody .cr-0 .s1 {
-  transform: rotateY(45deg) translate3D(-50%, 0, 0.225em);
+  transform: rotateY(27deg) translate3D(-50%, 0, 2.475em);
 }
 .afssBody .cr-0 .s2 {
-  transform: rotateY(75deg) translate3D(-50%, 0, 0.225em);
+  transform: rotateY(45deg) translate3D(-50%, 0, 2.475em);
+}
+.afssBody .cr-0 .s3 {
+  transform: rotateY(63deg) translate3D(-50%, 0, 2.475em);
+}
+.afssBody .cr-0 .s4 {
+  transform: rotateY(81deg) translate3D(-50%, 0, 2.475em);
 }
 .afssBody .cr-1 .s0 {
-  transform: rotateY(105deg) translate3D(-50%, 0, 0.225em);
+  transform: rotateY(99deg) translate3D(-50%, 0, 2.475em);
 }
 .afssBody .cr-1 .s1 {
-  transform: rotateY(135deg) translate3D(-50%, 0, 0.225em);
+  transform: rotateY(117deg) translate3D(-50%, 0, 2.475em);
 }
 .afssBody .cr-1 .s2 {
-  transform: rotateY(165deg) translate3D(-50%, 0, 0.225em);
+  transform: rotateY(135deg) translate3D(-50%, 0, 2.475em);
+}
+.afssBody .cr-1 .s3 {
+  transform: rotateY(153deg) translate3D(-50%, 0, 2.475em);
+}
+.afssBody .cr-1 .s4 {
+  transform: rotateY(171deg) translate3D(-50%, 0, 2.475em);
 }
 .afssBody .cr-2 .s0 {
-  transform: rotateY(195deg) translate3D(-50%, 0, 0.225em);
+  transform: rotateY(189deg) translate3D(-50%, 0, 2.475em);
 }
 .afssBody .cr-2 .s1 {
-  transform: rotateY(225deg) translate3D(-50%, 0, 0.225em);
+  transform: rotateY(207deg) translate3D(-50%, 0, 2.475em);
 }
 .afssBody .cr-2 .s2 {
-  transform: rotateY(255deg) translate3D(-50%, 0, 0.225em);
+  transform: rotateY(225deg) translate3D(-50%, 0, 2.475em);
+}
+.afssBody .cr-2 .s3 {
+  transform: rotateY(243deg) translate3D(-50%, 0, 2.475em);
+}
+.afssBody .cr-2 .s4 {
+  transform: rotateY(261deg) translate3D(-50%, 0, 2.475em);
 }
 .afssBody .cr-3 .s0 {
-  transform: rotateY(285deg) translate3D(-50%, 0, 0.225em);
+  transform: rotateY(279deg) translate3D(-50%, 0, 2.475em);
 }
 .afssBody .cr-3 .s1 {
-  transform: rotateY(315deg) translate3D(-50%, 0, 0.225em);
+  transform: rotateY(297deg) translate3D(-50%, 0, 2.475em);
 }
 .afssBody .cr-3 .s2 {
-  transform: rotateY(345deg) translate3D(-50%, 0, 0.225em);
+  transform: rotateY(315deg) translate3D(-50%, 0, 2.475em);
+}
+.afssBody .cr-3 .s3 {
+  transform: rotateY(333deg) translate3D(-50%, 0, 2.475em);
+}
+.afssBody .cr-3 .s4 {
+  transform: rotateY(351deg) translate3D(-50%, 0, 2.475em);
 }
 .afssBody .side {
-  width:0.15897459621556134em;
+  width:0.8169222016226814em;
 }
