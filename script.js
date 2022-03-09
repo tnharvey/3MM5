@@ -5,6 +5,85 @@ window.onload = function(){
   loadModels();
 }
 
+// scenario scores
+var scenario1 = 0;
+var scenario2 = 0;
+var scenario3 = 0;
+
+var score = 3;
+
+/* Scenarios */
+function updateScenario(scenario,points){
+  console.log(scenario+", "+points);
+  if (points == -1 || points == 1){
+    switch(scenario) {
+      case 1:
+        if(scenario1 == 0){
+          scenario1 = points;
+          score = score + points;
+          document.getElementById("scenarioScore").innerHTML = score;
+        }
+        else {
+          if(points==1 && scenario1==-1){
+            scenario1 = points;
+            score = score + 2;
+            document.getElementById("scenarioScore").innerHTML = score;
+          }
+          else {
+            return;
+          }
+        }
+        break;
+      case 2:
+        if(scenario2 == 0){
+          scenario2 = points;
+          score = score + points;
+          document.getElementById("scenarioScore").innerHTML = score;
+        }
+        else {
+          if(points==1 && scenario2==-1){
+            scenario2 = points;
+            score = score + 2;
+            document.getElementById("scenarioScore").innerHTML = score;
+          }
+          else {
+            return;
+          }
+        }
+        break;
+      case 3:
+        if(scenario3 == 0){
+          scenario3 = points;
+          score = score + points;
+          document.getElementById("scenarioScore").innerHTML = score;
+        }
+        else {
+          if(points==1 && scenario3==-1){
+            scenario3 = points;
+            score = score + 2;
+            document.getElementById("scenarioScore").innerHTML = score;
+          }
+          else {
+            return;
+          }
+        }
+        break;
+      default:
+        console.log("Invalid scenario. Your attempt at hacking this course has been logged. :P")
+    }
+  }
+  else {
+    console.log("Invalid points. Your attempt at hacking this course has been logged. :P");
+  }
+  if (score == 6) {
+    endScenario();
+  }
+}
+
+function endScenario(){
+    parent.postMessage("scenario complete","*");
+}
+
 /* Inline click funcions, need to set up with listeners */
 function showPopup (popupId) {
     document.getElementById(popupId).style.display="flex";
@@ -156,6 +235,9 @@ function loadModels (modelsJson) {
   var afssDoorCode1 = $('<div id="afssDoor01" class="c3dContainer">');
   var afssStandCode1 = $('<div id="afssStand01" class="c3dContainer">');
   var afssStandCode2 = $('<div id="afssStand02" class="c3dContainer">');
+  var cubeHeart1 = $('<div id="cubeHeart01" class="c3dContainer">');
+  var cubeHeart2 = $('<div id="cubeHeart02" class="c3dContainer">');
+  var cubeHeart3 = $('<div id="cubeHeart03" class="c3dContainer">');
 
   tableCode1.load("models/table/tableDom.html");
   tableCode2.load("models/table/tableDom.html");
@@ -169,8 +251,11 @@ function loadModels (modelsJson) {
   afssDoorCode1.load("models/afssDoor/afssDoorDom.html");
   afssStandCode1.load("models/afssStand/afssStandDom.html");
   afssStandCode2.load("models/afssStand/afssStandDom.html");
-  
+  cubeHeart1.load("models/cubeHeart/cubeHeartDom.html");
+  cubeHeart2.load("models/cubeHeart/cubeHeartDom.html");
+  cubeHeart3.load("models/cubeHeart/cubeHeartDom.html");
   $("#scene1").append(tableCode1,tableCode2,docCabCode,flLightCode1,flLightCode2,flLightCode3,monitorCode1,plugCode1,afssBodyCode1,afssDoorCode1,afssStandCode1,afssStandCode2);
+  $("#health").append(cubeHeart1,cubeHeart2,cubeHeart3);
   $("head").append('<link rel="stylesheet" href="models/table/tableStyle.css" />');
   $("head").append('<link rel="stylesheet" href="models/documentCabinet/docCabStyle.css" />');
   $("head").append('<link rel="stylesheet" href="models/flLight/flLightStyle.css" />');
