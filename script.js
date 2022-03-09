@@ -78,6 +78,123 @@ function updateScenario(scenario,points){
   if (score == 6) {
     endScenario();
   }
+  updateHealth();
+}
+
+function updateHealth() {
+  var heart1 = document.getElementById("cubeHeart01");
+  var heart2 = document.getElementById("cubeHeart02")
+  var heart3 = document.getElementById("cubeHeart03")
+  console.log(score);
+  switch(score) {
+    case 0:
+      heart1.classList.add("hide");
+      heart2.classList.add("hide");
+      heart3.classList.add("hide");
+      break;
+    case 1:
+      if (heart1.classList.contains("healthy")) {
+        heart1.classList.remove("healthy");
+        heart1.classList.add("sick");
+      }
+      if (heart1.classList.contains("hide")) {
+        heart1.classList.remove("hide");
+      }
+      heart2.classList.add("hide");
+      heart3.classList.add("hide");
+      break;
+    case 2:
+      if (heart1.classList.contains("healthy")) {
+        heart1.classList.remove("healthy");
+        heart1.classList.add("sick");
+      }
+      if (heart1.classList.contains("hide")) {
+        heart1.classList.remove("hide");
+      }
+      if (heart2.classList.contains("healthy")) {
+        heart2.classList.remove("healthy");
+        heart2.classList.add("sick");
+      }
+      if (heart2.classList.contains("hide")) {
+        heart2.classList.remove("hide");
+      }
+      heart3.classList.add("hide");
+      break;
+    case 3:
+      if (heart1.classList.contains("healthy")) {
+        heart1.classList.remove("healthy");
+        heart1.classList.add("sick");
+      }
+      if (heart1.classList.contains("hide")) {
+        heart1.classList.remove("hide");
+      }
+      if (heart2.classList.contains("healthy")) {
+        heart2.classList.remove("healthy");
+        heart2.classList.add("sick");
+      }
+      if (heart2.classList.contains("hide")) {
+        heart2.classList.remove("hide");
+      }
+      if (heart3.classList.contains("healthy")) {
+        heart3.classList.remove("healthy");
+        heart3.classList.add("sick");
+      }
+      if (heart3.classList.contains("hide")) {
+        heart3.classList.remove("hide");
+      }
+      break;
+    case 4:
+      if (heart1.classList.contains("sick")) {
+        heart1.classList.remove("sick");
+        heart1.classList.add("healthy");
+      }
+      if (heart1.classList.contains("hide")) {
+        heart1.classList.remove("hide");
+      }
+      if (heart2.classList.contains("healthy")) {
+        heart2.classList.remove("healthy");
+        heart2.classList.add("sick");
+      }
+      if (heart2.classList.contains("hide")) {
+        heart2.classList.remove("hide");
+      }
+      if (heart3.classList.contains("healthy")) {
+        heart3.classList.remove("healthy");
+        heart3.classList.add("sick");
+      }
+      if (heart3.classList.contains("hide")) {
+        heart3.classList.remove("hide");
+      }
+      break;
+    case 5:
+      if (heart1.classList.contains("sick")) {
+        heart1.classList.remove("sick");
+        heart1.classList.add("healthy");
+      }
+      if (heart2.classList.contains("sick")) {
+        heart2.classList.remove("sick");
+        heart2.classList.add("healthy");
+      }
+      if (heart3.classList.contains("healthy")) {
+        heart3.classList.remove("healthy");
+        heart3.classList.add("sick");
+      }
+      break;
+    case 6:
+      if (heart1.classList.contains("sick")) {
+        heart1.classList.remove("sick");
+        heart1.classList.add("healthy");
+      }
+      if (heart2.classList.contains("sick")) {
+        heart2.classList.remove("sick");
+        heart2.classList.add("healthy");
+      }
+      if (heart3.classList.contains("sick")) {
+        heart3.classList.remove("sick");
+        heart3.classList.add("healthy");
+      }
+      break;
+  }
 }
 
 function endScenario(){
@@ -235,9 +352,9 @@ function loadModels (modelsJson) {
   var afssDoorCode1 = $('<div id="afssDoor01" class="c3dContainer">');
   var afssStandCode1 = $('<div id="afssStand01" class="c3dContainer">');
   var afssStandCode2 = $('<div id="afssStand02" class="c3dContainer">');
-  var cubeHeart1 = $('<div id="cubeHeart01" class="c3dContainer healthHeart">');
-  var cubeHeart2 = $('<div id="cubeHeart02" class="c3dContainer healthHeart">');
-  var cubeHeart3 = $('<div id="cubeHeart03" class="c3dContainer healthHeart">');
+  var cubeHeart1 = $('<div id="cubeHeart01" class="c3dContainer healthHeart sick">');
+  var cubeHeart2 = $('<div id="cubeHeart02" class="c3dContainer healthHeart sick">');
+  var cubeHeart3 = $('<div id="cubeHeart03" class="c3dContainer healthHeart sick">');
 
   tableCode1.load("models/table/tableDom.html");
   tableCode2.load("models/table/tableDom.html");

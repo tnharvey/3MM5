@@ -15,7 +15,15 @@ span {
     font-size: 16px;
     font-weight: 400;
 }
-  
+
+.hide {
+  visibility: hidden;
+}
+
+.delete {
+  display: none;
+}
+
 /* Container styles */
 #appContainer {
   width:940px;
@@ -482,16 +490,16 @@ span {
   transform: translate3d(132px,153px,-224px) rotateY(0deg) rotateX(90deg) rotateZ(0deg) scaleX(2) scaleZ(2) scaleY(2);
 }
 
-#cubeHeart01 {
-  transform: translate3d(-100px,25px,0px) rotateY(0deg) rotateX(0deg) rotateZ(0deg) scaleX(0.2) scaleZ(0.2) scaleY(0.2);
+#cubeHeart01 .healthy {
+  transform: translate3d(-100px,25px,0px) rotateY(0deg) rotateX(0deg) rotateZ(0deg) scaleX(0.1) scaleZ(0.1) scaleY(0.1);
 }
 
-#cubeHeart02 {
-  transform: translate3d(0px,25px,0px) rotateY(0deg) rotateX(0deg) rotateZ(0deg) scaleX(0.2) scaleZ(0.2) scaleY(0.2);
+#cubeHeart02 .healthy {
+  transform: translate3d(0px,25px,0px) rotateY(0deg) rotateX(0deg) rotateZ(0deg) scaleX(0.1) scaleZ(0.1) scaleY(0.1);
 }
 
-#cubeHeart03 {
-  transform: translate3d(100px,25px,0px) rotateY(0deg) rotateX(0deg) rotateZ(0deg) scaleX(0.2) scaleZ(0.2) scaleY(0.2);
+#cubeHeart03 .healthy {
+  transform: translate3d(100px,25px,0px) rotateY(0deg) rotateX(0deg) rotateZ(0deg) scaleX(0.1) scaleZ(0.1) scaleY(0.1);
 }
 
 .containerSm {
@@ -504,11 +512,18 @@ span {
   /* z-index: 4; */
 }
 
-#cubeHeart01 {
-  animation-name: rotateHeart01;
+.healthHeart {
   animation-duration: 4s;
   animation-iteration-count: infinite;
   animation-timing-function: linear;
+}
+  
+#cubeHeart01.healthy{
+  animation-name: rotateHeart01;
+}
+
+#cubeHeart01.sick {
+  animation-name: rotateHeart01sick;
 }
 
 @keyframes rotateHeart01 {
@@ -520,11 +535,21 @@ span {
   }
 }
 
-#cubeHeart02 {
+@keyframes rotateHeart01sick {
+  from {
+    transform: translate3d(-75px,25px,0px) rotateY(0deg) rotateX(0deg) rotateZ(0deg) scaleX(0.06) scaleZ(0.06) scaleY(0.06);
+  }
+  to {
+    transform: translate3d(-75px,25px,0px) rotateY(360deg) rotateX(0deg) rotateZ(0deg) scaleX(0.06) scaleZ(0.06) scaleY(0.06);
+  }
+}
+
+#cubeHeart02.healthy{
   animation-name: rotateHeart02;
-  animation-duration: 4s;
-  animation-iteration-count: infinite;
-  animation-timing-function: linear;
+}
+
+#cubeHeart02.sick {
+  animation-name: rotateHeart02sick;
 }
 
 @keyframes rotateHeart02 {
@@ -536,11 +561,21 @@ span {
   }
 }
 
-#cubeHeart03 {
+@keyframes rotateHeart02sick {
+  from {
+    transform: translate3d(0px,25px,0px) rotateY(0deg) rotateX(0deg) rotateZ(0deg) scaleX(0.06) scaleZ(0.06) scaleY(0.06);
+  }
+  to {
+    transform: translate3d(0px,25px,0px) rotateY(360deg) rotateX(0deg) rotateZ(0deg) scaleX(0.06) scaleZ(0.06) scaleY(0.06);
+  }
+}
+
+#cubeHeart03.healthy{
   animation-name: rotateHeart03;
-  animation-duration: 4s;
-  animation-iteration-count: infinite;
-  animation-timing-function: linear;
+}
+
+#cubeHeart03.sick {
+  animation-name: rotateHeart03sick;
 }
 
 @keyframes rotateHeart03 {
@@ -549,5 +584,14 @@ span {
   }
   to {
     transform: translate3d(75px,25px,0px) rotateY(360deg) rotateX(0deg) rotateZ(0deg) scaleX(0.1) scaleZ(0.1) scaleY(0.1);
+  }
+}
+
+@keyframes rotateHeart03sick {
+  from {
+    transform: translate3d(75px,25px,0px) rotateY(0deg) rotateX(0deg) rotateZ(0deg) scaleX(0.06) scaleZ(0.06) scaleY(0.06);
+  }
+  to {
+    transform: translate3d(75px,25px,0px) rotateY(360deg) rotateX(0deg) rotateZ(0deg) scaleX(0.06) scaleZ(0.06) scaleY(0.06);
   }
 }
