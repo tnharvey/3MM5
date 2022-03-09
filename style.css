@@ -19,7 +19,7 @@ span {
 /* Container styles */
 #appContainer {
   width:940px;
-  height: 633px;
+  height: 564px;
   margin: auto;
   padding-top: 5px;
   background-color: var(--bg-gray);
@@ -27,7 +27,7 @@ span {
 
 .container {
   width: 900px;
-  height: 500px;
+  height: 540px;
   perspective: 650px;
   margin: 10px auto 0px auto;
   overflow: hidden;
@@ -39,21 +39,39 @@ span {
   display:grid;
   grid-template-columns: 33% 33% 33%;
   justify-items: center;
-  width: 100%;
+  width: 90%;
   margin: auto;
+  position: relative;
+  left: 0px;
+  bottom: 90px;
   /* background-color: lightgray; */
+}
+
+#messagesContainer {
+  height: fit-content;
+  background-color: rgb(0,0,0,0.2);
+  padding: 10px;
+}
+
+#popupContainer {
+  position: absolute;
+  z-index: 1;
+  width: 940px;
+  margin: auto;
+  top: 0px;
 }
 
 #healthContainer {
   position: relative;
-  width: 10%;
-  padding: 10px;
+  width: 100%;
+  height: 110px;
+  margin: auto;
+  padding: 2%px;
 }
 
 #health {
   perspective: 800px;
   position: absolute;
-  overflow: hidden;
   width: 100%;
   height: 100%;
   background: transparent;
@@ -86,6 +104,7 @@ span {
   display: grid;
   grid-template-columns: auto auto;
   padding: 10px;
+  grid-gap: 3px;
 }
 
 .gridItem2 {
@@ -190,7 +209,7 @@ span {
     width: 90%;
     height: 80%;
     display: none;
-    top: -460px;
+    top: 0px;
     left:0%;
     background: lightcyan;
     border: 1px solid black;
@@ -207,6 +226,9 @@ span {
 #popupA {
   margin: 5% auto 5% auto;
   font-size: 1.5rem;
+  position: relative;
+  padding: 10px;
+  border-radius: 4px;
 }
 
 #popupB {
@@ -219,6 +241,10 @@ span {
   top: 5px;
   right: 5px;
   background-color:red;
+}
+
+#message {
+  color: white;
 }
 
 /* 3D element styling */
@@ -239,10 +265,10 @@ span {
 
 /* movement classes */
 .face-front {
-  transform: translate3d(200px, 40px, 250px) rotateY(0deg);
+  transform: translate3d(206px, 0px, 250px) rotateY(0deg);
 }
 .face-front-equipment {
-  transform: translate3d(256px, 17px, 662px) rotateX(-12deg) rotateY(0deg);
+  transform: translate3d(251px, -1px, 634px) rotateX(-12deg) rotateY(0deg);
 }
 .face-left {
   transform: translate3d(707px, 20px, 300px) rotateY(-90deg);
@@ -457,13 +483,71 @@ span {
 }
 
 #cubeHeart01 {
-  transform: translate3d(0px,0px,0px) rotateY(0deg) rotateX(0deg) rotateZ(0deg) scaleX(1) scaleZ(1) scaleY(1);
+  transform: translate3d(-100px,25px,0px) rotateY(0deg) rotateX(0deg) rotateZ(0deg) scaleX(0.2) scaleZ(0.2) scaleY(0.2);
 }
 
 #cubeHeart02 {
-  transform: translate3d(0px,0px,0px) rotateY(0deg) rotateX(0deg) rotateZ(0deg) scaleX(1) scaleZ(1) scaleY(1);
+  transform: translate3d(0px,25px,0px) rotateY(0deg) rotateX(0deg) rotateZ(0deg) scaleX(0.2) scaleZ(0.2) scaleY(0.2);
 }
 
 #cubeHeart03 {
-  transform: translate3d(0px,0px,0px) rotateY(0deg) rotateX(0deg) rotateZ(0deg) scaleX(1) scaleZ(1) scaleY(1);
+  transform: translate3d(100px,25px,0px) rotateY(0deg) rotateX(0deg) rotateZ(0deg) scaleX(0.2) scaleZ(0.2) scaleY(0.2);
+}
+
+.containerSm {
+  width: 100%;
+  height: 100%;
+  perspective: 650px;
+  margin: auto;
+  
+  color:white;
+  /* z-index: 4; */
+}
+
+#cubeHeart01 {
+  animation-name: rotateHeart01;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+@keyframes rotateHeart01 {
+  from {
+    transform: translate3d(-75px,25px,0px) rotateY(0deg) rotateX(0deg) rotateZ(0deg) scaleX(0.1) scaleZ(0.1) scaleY(0.1);
+  }
+  to {
+    transform: translate3d(-75px,25px,0px) rotateY(360deg) rotateX(0deg) rotateZ(0deg) scaleX(0.1) scaleZ(0.1) scaleY(0.1);
+  }
+}
+
+#cubeHeart02 {
+  animation-name: rotateHeart02;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+@keyframes rotateHeart02 {
+  from {
+    transform: translate3d(0px,25px,0px) rotateY(0deg) rotateX(0deg) rotateZ(0deg) scaleX(0.1) scaleZ(0.1) scaleY(0.1);
+  }
+  to {
+    transform: translate3d(0px,25px,0px) rotateY(360deg) rotateX(0deg) rotateZ(0deg) scaleX(0.1) scaleZ(0.1) scaleY(0.1);
+  }
+}
+
+#cubeHeart03 {
+  animation-name: rotateHeart03;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+@keyframes rotateHeart03 {
+  from {
+    transform: translate3d(75px,25px,0px) rotateY(0deg) rotateX(0deg) rotateZ(0deg) scaleX(0.1) scaleZ(0.1) scaleY(0.1);
+  }
+  to {
+    transform: translate3d(75px,25px,0px) rotateY(360deg) rotateX(0deg) rotateZ(0deg) scaleX(0.1) scaleZ(0.1) scaleY(0.1);
+  }
 }

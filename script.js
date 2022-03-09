@@ -235,9 +235,9 @@ function loadModels (modelsJson) {
   var afssDoorCode1 = $('<div id="afssDoor01" class="c3dContainer">');
   var afssStandCode1 = $('<div id="afssStand01" class="c3dContainer">');
   var afssStandCode2 = $('<div id="afssStand02" class="c3dContainer">');
-  var cubeHeart1 = $('<div id="cubeHeart01" class="c3dContainer">');
-  var cubeHeart2 = $('<div id="cubeHeart02" class="c3dContainer">');
-  var cubeHeart3 = $('<div id="cubeHeart03" class="c3dContainer">');
+  var cubeHeart1 = $('<div id="cubeHeart01" class="c3dContainer healthHeart">');
+  var cubeHeart2 = $('<div id="cubeHeart02" class="c3dContainer healthHeart">');
+  var cubeHeart3 = $('<div id="cubeHeart03" class="c3dContainer healthHeart">');
 
   tableCode1.load("models/table/tableDom.html");
   tableCode2.load("models/table/tableDom.html");
@@ -264,4 +264,5 @@ function loadModels (modelsJson) {
   $("head").append('<link rel="stylesheet" href="models/afssBody/afssBodyStyle.css" />');
   $("head").append('<link rel="stylesheet" href="models/afssDoor/afssDoorStyle.css" />');
   $("head").append('<link rel="stylesheet" href="models/afssStand/afssStandStyle.css" />');
+  $("head").append('<link rel="stylesheet" href="models/cubeHeart/cubeHeartStyle.css" />');
 }
