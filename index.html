@@ -20,23 +20,24 @@
         </div>
         <div id="popupContainer">
           <div id="popupA" class="popup interactive">
-            <img class="interactive" style="margin: auto; width:auto; height: 100%;" src="https://cdn.jsdelivr.net/gh/tnharvey/3DCubeRoom@main/imgs/floatingWallObject.jpg">
+            
             <div class="buttonChoice close" onclick="hidePopup('popupA');">X</div>
             <div class="gridContainer">
-            <div class="buttonChoice gridItem2" onclick="updateScenario(1,-1);">Fail P1</div>
-            <div class="buttonChoice gridItem2" onclick="updateScenario(1,1);">Complete P1</div>
-            <div class="buttonChoice gridItem2" onclick="updateScenario(2,-1);">Fail P2</div>
-            <div class="buttonChoice gridItem2" onclick="updateScenario(2,1);">Complete P2</div>
-            <div class="buttonChoice gridItem2" onclick="updateScenario(3,-1);">Fail P3</div>
-            <div class="buttonChoice gridItem2" onclick="updateScenario(3,1);">Complete P3</div>
-            <div class="buttonChoice gridItem2" onclick="endScenario();">Complete Scenario</div>
+            <div class="buttonChoice gridItem2 btn-part-control" onclick="updateScenario(1,-1);">Fail P1</div>
+            <div class="buttonChoice gridItem2 btn-part-control" onclick="updateScenario(1,1);">Complete P1</div>
+            <div class="buttonChoice gridItem2 btn-part-control" onclick="updateScenario(2,-1);">Fail P2</div>
+            <div class="buttonChoice gridItem2 btn-part-control" onclick="updateScenario(2,1);">Complete P2</div>
+            <div class="buttonChoice gridItem2 btn-part-control" onclick="updateScenario(3,-1);">Fail P3</div>
+            <div class="buttonChoice gridItem2 btn-part-control" onclick="updateScenario(3,1);">Complete P3</div>
+            <div class="buttonChoice gridItem2 btn-scenario-control" onclick="resetScenario();">Reset Scenarios</div>
+            <div class="buttonChoice gridItem2 btn-scenario-control" onclick="endScenario();">Complete Scenario</div>
             </div>
           </div>
           <div id="popupB" class="popup" onclick="hidePopup('popupB');"><button id="closePopB" onclick="popupBClick();">x</button>This is the table popup. Press the Enter key on your keyboard to close it.</div>
         </div>
         <div id="dashContainer">
           <div id="messagesContainer" class="3col-1">
-            <span id="message">Next Step: Click on the workflow post on the wall to the left.</span>
+            <span id="message">Next Step: Click on the workflow poster on the wall to the left.</span>
           </div>
           <div id="controlsContainer" class="3col-1">
               <div class="grid-container">

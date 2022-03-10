@@ -75,9 +75,18 @@ function updateScenario(scenario,points){
   else {
     console.log("Invalid points. Your attempt at hacking this course has been logged. :P");
   }
-  if (score == 6) {
+  updateHealth();
+  if (score==6) {
     endScenario();
   }
+}
+
+function resetScenario(){
+  score = 3;
+  scenario1 = 0;
+  scenario2 = 0;
+  scenario3 = 0;
+  document.getElementById("scenarioScore").innerHTML = 3;
   updateHealth();
 }
 
@@ -198,7 +207,9 @@ function updateHealth() {
 }
 
 function endScenario(){
-    parent.postMessage("scenario complete","*");
+  updateHealth();
+  parent.postMessage("scenario complete","*");
+  window.alert("Scenario Complete. You've helped to save PFC Bosky!")
 }
 
 /* Inline click funcions, need to set up with listeners */
