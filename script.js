@@ -263,6 +263,7 @@ function userAction (input) {
       else if (uAction === "ArrowUp"){
         cube.classList.remove("face-front");
         cube.classList.add("face-equipment");
+        document.getElementById("afssDoor01").classList.add("afssDoor-open");
       }
       else if (uAction === "ArrowDown"){}
       else if (uAction === "Enter"){}
@@ -299,6 +300,7 @@ function userAction (input) {
       else if (uAction === "ArrowUp"){}
       else if (uAction === "ArrowDown"){
         cube.classList.remove("face-equipment");
+        document.getElementById("afssDoor01").classList.remove("afssDoor-open");
         cube.classList.add("face-front");
       }
       else if (uAction === "Enter"){}

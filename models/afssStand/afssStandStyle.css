@@ -1,100 +1,124 @@
-/* .AFSS-Stand styles */
-.AFSS-Stand {
+/* .afss-stand styles */
+.afss-stand {
   transform:translate3D(0em, 0em, 0em) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
   opacity:1;
-  width:2.5em;
-  height:0.5em;
-  margin:-0.25em 0 0 -1.25em;
+  width:25em;
+  height:5em;
+  margin:-2.5em 0 0 -12.5em;
 }
-.AFSS-Stand .ft {
-  transform:translateZ(1.5em);
+.afss-stand .ft {
+  transform:translateZ(15em);
 }
-.AFSS-Stand .rt {
-  background-image: url(https://cdn.jsdelivr.net/gh/tnharvey/3DCSSTrainingRoom@main/models/afssStand/afss-side-botB.png);
+.afss-stand .bk {
+  transform:translateZ(-15em) rotateY(180deg);
 }
-.AFSS-Stand .lt {
-  background-image: url(https://cdn.jsdelivr.net/gh/tnharvey/3DCSSTrainingRoom@main/models/afssStand/afss-side-botF.png);
+.afss-stand .rt, .afss-stand .lt {
+  width:30em;
+  height:5em;
 }
-.AFSS-Stand .bk {
-  transform:translateZ(-1.5em) rotateY(180deg);
+.afss-stand .tp, .afss-stand .bm {
+  width:25em;
+  height:30em;
 }
-.AFSS-Stand .rt, .AFSS-Stand .lt {
-  width:3em;
-  height:0.5em;
-}
-.AFSS-Stand .tp, .AFSS-Stand .bm {
-  width:2.5em;
-  height:3em;
-}
-.AFSS-Stand .face {
+.afss-stand .face {
   background-color:#b6b17c;
 }
-.AFSS-Stand .ft {
-  width:2em;
-  margin-left:0.25em;
+.afss-stand .rt {
+  background-image: url(https://cdn.jsdelivr.net/gh/tnharvey/3DCSSTrainingRoom@main/models/afssStand/afss-side-botB.png);
 }
-.AFSS-Stand .bk {
-  width:2em;
-  margin-left:-0.25em;
+.afss-stand .lt {
+  background-image: url(https://cdn.jsdelivr.net/gh/tnharvey/3DCSSTrainingRoom@main/models/afssStand/afss-side-botF.png);
 }
-.AFSS-Stand .rt, .AFSS-Stand .lt {
-  width:2.5em;
+.afss-stand .ft {
+  width:21.5em;
+  margin-left:1.75em;
 }
-.AFSS-Stand .tp, .AFSS-Stand .bm, .AFSS-Stand .tp .photon-shader, .AFSS-Stand .bm .photon-shader {
-  border-radius:0.25em;
+.afss-stand .bk {
+  width:21.5em;
+  margin-left:-1.75em;
 }
-.AFSS-Stand .cr {
-  width:0.25em;
-  left:0.125em;
+.afss-stand .rt, .afss-stand .lt {
+  width:26.5em;
 }
-.AFSS-Stand .cr-0 {
-  transform: translate3D(2em, 0, 1.25em);
+.afss-stand .tp, .afss-stand .bm, .afss-stand .tp .photon-shader, .afss-stand .bm .photon-shader {
+  border-radius:1.75em;
 }
-.AFSS-Stand .cr-1 {
-  transform: translate3D(2em, 0, -1.25em);
+.afss-stand .cr {
+  width:1.75em;
+  left:0.875em;
 }
-.AFSS-Stand .cr-2 {
-  transform: translate3D(0, 0, -1.25em);
+.afss-stand .cr-0 {
+  transform: translate3D(21.5em, 0, 13.25em);
 }
-.AFSS-Stand .cr-3 {
-  transform: translate3D(0, 0, 1.25em);
+.afss-stand .cr-1 {
+  transform: translate3D(21.5em, 0, -13.25em);
 }
-.AFSS-Stand .cr-0 .s0 {
-  transform: rotateY(15deg) translate3D(-50%, 0, 0.225em);
+.afss-stand .cr-2 {
+  transform: translate3D(0, 0, -13.25em);
 }
-.AFSS-Stand .cr-0 .s1 {
-  transform: rotateY(45deg) translate3D(-50%, 0, 0.225em);
+.afss-stand .cr-3 {
+  transform: translate3D(0, 0, 13.25em);
 }
-.AFSS-Stand .cr-0 .s2 {
-  transform: rotateY(75deg) translate3D(-50%, 0, 0.225em);
+.afss-stand .cr-0 .s0 {
+  transform: rotateY(9deg) translate3D(-50%, 0, 1.725em);
 }
-.AFSS-Stand .cr-1 .s0 {
-  transform: rotateY(105deg) translate3D(-50%, 0, 0.225em);
+.afss-stand .cr-0 .s1 {
+  transform: rotateY(27deg) translate3D(-50%, 0, 1.725em);
 }
-.AFSS-Stand .cr-1 .s1 {
-  transform: rotateY(135deg) translate3D(-50%, 0, 0.225em);
+.afss-stand .cr-0 .s2 {
+  transform: rotateY(45deg) translate3D(-50%, 0, 1.725em);
 }
-.AFSS-Stand .cr-1 .s2 {
-  transform: rotateY(165deg) translate3D(-50%, 0, 0.225em);
+.afss-stand .cr-0 .s3 {
+  transform: rotateY(63deg) translate3D(-50%, 0, 1.725em);
 }
-.AFSS-Stand .cr-2 .s0 {
-  transform: rotateY(195deg) translate3D(-50%, 0, 0.225em);
+.afss-stand .cr-0 .s4 {
+  transform: rotateY(81deg) translate3D(-50%, 0, 1.725em);
 }
-.AFSS-Stand .cr-2 .s1 {
-  transform: rotateY(225deg) translate3D(-50%, 0, 0.225em);
+.afss-stand .cr-1 .s0 {
+  transform: rotateY(99deg) translate3D(-50%, 0, 1.725em);
 }
-.AFSS-Stand .cr-2 .s2 {
-  transform: rotateY(255deg) translate3D(-50%, 0, 0.225em);
+.afss-stand .cr-1 .s1 {
+  transform: rotateY(117deg) translate3D(-50%, 0, 1.725em);
 }
-.AFSS-Stand .cr-3 .s0 {
-  transform: rotateY(285deg) translate3D(-50%, 0, 0.225em);
+.afss-stand .cr-1 .s2 {
+  transform: rotateY(135deg) translate3D(-50%, 0, 1.725em);
 }
-.AFSS-Stand .cr-3 .s1 {
-  transform: rotateY(315deg) translate3D(-50%, 0, 0.225em);
+.afss-stand .cr-1 .s3 {
+  transform: rotateY(153deg) translate3D(-50%, 0, 1.725em);
 }
-.AFSS-Stand .cr-3 .s2 {
-  transform: rotateY(345deg) translate3D(-50%, 0, 0.225em);
+.afss-stand .cr-1 .s4 {
+  transform: rotateY(171deg) translate3D(-50%, 0, 1.725em);
 }
-.AFSS-Stand .side {
-  width:0.15897459621556134em;
+.afss-stand .cr-2 .s0 {
+  transform: rotateY(189deg) translate3D(-50%, 0, 1.725em);
+}
+.afss-stand .cr-2 .s1 {
+  transform: rotateY(207deg) translate3D(-50%, 0, 1.725em);
+}
+.afss-stand .cr-2 .s2 {
+  transform: rotateY(225deg) translate3D(-50%, 0, 1.725em);
+}
+.afss-stand .cr-2 .s3 {
+  transform: rotateY(243deg) translate3D(-50%, 0, 1.725em);
+}
+.afss-stand .cr-2 .s4 {
+  transform: rotateY(261deg) translate3D(-50%, 0, 1.725em);
+}
+.afss-stand .cr-3 .s0 {
+  transform: rotateY(279deg) translate3D(-50%, 0, 1.725em);
+}
+.afss-stand .cr-3 .s1 {
+  transform: rotateY(297deg) translate3D(-50%, 0, 1.725em);
+}
+.afss-stand .cr-3 .s2 {
+  transform: rotateY(315deg) translate3D(-50%, 0, 1.725em);
+}
+.afss-stand .cr-3 .s3 {
+  transform: rotateY(333deg) translate3D(-50%, 0, 1.725em);
+}
+.afss-stand .cr-3 .s4 {
+  transform: rotateY(351deg) translate3D(-50%, 0, 1.725em);
+}
+.afss-stand .side {
+  width:0.579345541135877em;
 }

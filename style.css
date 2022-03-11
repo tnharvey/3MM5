@@ -51,12 +51,14 @@ span {
   margin: auto;
   position: relative;
   left: 0px;
-  bottom: 90px;
+  bottom: 100px;
   /* background-color: lightgray; */
 }
 
 #messagesContainer {
-  height: fit-content;
+  height: 44%;
+  width: 100%;
+  margin-top: 20px;
   background-color: rgb(0,0,0,0.2);
   padding: 10px;
 }
@@ -289,7 +291,7 @@ span {
   transform: translate3d(206px, 0px, 250px) rotateY(0deg);
 }
 .face-equipment {
-  transform: translate3d(251px, -1px, 634px) rotateX(-12deg) rotateY(0deg);
+  transform: translate3d(251px, -1px, 596px) rotateX(-12deg) rotateY(0deg);
 }
 .face-left {
   transform: translate3d(707px, 20px, 300px) rotateY(-90deg);
@@ -457,6 +459,18 @@ transform: translate3d(707px, 20px, 518px) rotateY(-90deg) rotateZ(39deg);
   top: 100%;
 }
 
+[class*="cylinder"] .tp {
+  transform: rotateX(90deg) translateY(-50%);
+}
+[class*="cylinder"] .bm {
+  transform: rotateX(-90deg) translateY(-50%);
+}
+[class*="cylinder"] .tp, [class*="cylinder"] .bm, [class*="cylinder"] .tp .photon-shader, [class*="cylinder"] .bm .photon-shader {
+  border-radius: 50%;
+}
+[class*="cylinder"] .bm {
+  top: 100%;
+}
 /* Object Styles */
 .tp, .bm {
   backface-visibility: visible;
@@ -495,23 +509,24 @@ transform: translate3d(707px, 20px, 518px) rotateY(-90deg) rotateZ(39deg);
 }
 
 #afssBody01 {
-  transform: translate3d(132px,58px,-250px) rotateY(0deg) rotateX(0deg) rotateZ(0deg) scaleX(0.2) scaleY(0.2) scaleZ(0.2);
+  transform: translate3d(132px,58px,-233px) rotateY(0deg) rotateX(0deg) rotateZ(0deg) scaleX(0.2) scaleY(0.2) scaleZ(0.2);
 }
 
 #afssDoor01 {
-  transform: translate3d(96px,30px,-220px) rotateY(220deg) rotateX(270deg) rotateZ(0deg) scaleX(1.9) scaleZ(1.9) scaleY(1.7);
+  transform: translate3d(97px,58px,-168px) rotateY(0deg) rotateX(0deg) rotateZ(0deg) scaleX(0.19) scaleZ(0.19) scaleY(0.19);
+  transition-duration: 2s;
 }
 
 #afssDoor01.afssDoor-open {
-  transform: translate3d(96px,30px,-220px) rotateY(220deg) rotateX(270deg) rotateZ(0deg) scaleX(1.9) scaleZ(1.9) scaleY(1.7);
+  transform: translate3d(97px,58px,-162px) rotateY(-140deg) rotateX(0deg) rotateZ(0deg) scaleX(0.19) scaleZ(0.19) scaleY(0.19);
 }
 
 #afssStand01 {
-  transform: translate3d(132px,153px,-280px) rotateY(0deg) rotateX(90deg) rotateZ(0deg) scaleX(2) scaleZ(2) scaleY(2);
+  transform: translate3d(132px,153px,-290px) rotateY(0deg) rotateX(90deg) rotateZ(0deg) scaleX(0.2) scaleZ(0.2) scaleY(0.2);
 }
 
 #afssStand02 {
-  transform: translate3d(132px,153px,-224px) rotateY(0deg) rotateX(90deg) rotateZ(0deg) scaleX(2) scaleZ(2) scaleY(2);
+  transform: translate3d(132px,153px,-177px) rotateY(0deg) rotateX(90deg) rotateZ(0deg) scaleX(0.2) scaleZ(0.2) scaleY(0.2);
 }
 
 #cubeHeart01 .healthy {
@@ -531,7 +546,7 @@ transform: translate3d(707px, 20px, 518px) rotateY(-90deg) rotateZ(39deg);
   height: 100%;
   perspective: 650px;
   margin: auto;
-  
+  transform: translate3d(38px, 36px, 0px);
   color:white;
   /* z-index: 4; */
 }
@@ -552,19 +567,19 @@ transform: translate3d(707px, 20px, 518px) rotateY(-90deg) rotateZ(39deg);
 
 @keyframes rotateHeart01 {
   from {
-    transform: translate3d(-75px,25px,0px) rotateY(0deg) rotateX(0deg) rotateZ(0deg) scaleX(0.1) scaleZ(0.1) scaleY(0.1);
+    transform: translate3d(-75px,0px,0px) rotateY(0deg) rotateX(0deg) rotateZ(0deg) scaleX(0.1) scaleZ(0.1) scaleY(0.1);
   }
   to {
-    transform: translate3d(-75px,25px,0px) rotateY(360deg) rotateX(0deg) rotateZ(0deg) scaleX(0.1) scaleZ(0.1) scaleY(0.1);
+    transform: translate3d(-75px,0px,0px) rotateY(360deg) rotateX(0deg) rotateZ(0deg) scaleX(0.1) scaleZ(0.1) scaleY(0.1);
   }
 }
 
 @keyframes rotateHeart01sick {
   from {
-    transform: translate3d(-75px,25px,0px) rotateY(0deg) rotateX(0deg) rotateZ(0deg) scaleX(0.06) scaleZ(0.06) scaleY(0.06);
+    transform: translate3d(-75px,0px,0px) rotateY(0deg) rotateX(0deg) rotateZ(0deg) scaleX(0.06) scaleZ(0.06) scaleY(0.06);
   }
   to {
-    transform: translate3d(-75px,25px,0px) rotateY(360deg) rotateX(0deg) rotateZ(0deg) scaleX(0.06) scaleZ(0.06) scaleY(0.06);
+    transform: translate3d(-75px,0px,0px) rotateY(360deg) rotateX(0deg) rotateZ(0deg) scaleX(0.06) scaleZ(0.06) scaleY(0.06);
   }
 }
 
@@ -578,19 +593,19 @@ transform: translate3d(707px, 20px, 518px) rotateY(-90deg) rotateZ(39deg);
 
 @keyframes rotateHeart02 {
   from {
-    transform: translate3d(0px,25px,0px) rotateY(0deg) rotateX(0deg) rotateZ(0deg) scaleX(0.1) scaleZ(0.1) scaleY(0.1);
+    transform: translate3d(0px,0px,0px) rotateY(0deg) rotateX(0deg) rotateZ(0deg) scaleX(0.1) scaleZ(0.1) scaleY(0.1);
   }
   to {
-    transform: translate3d(0px,25px,0px) rotateY(360deg) rotateX(0deg) rotateZ(0deg) scaleX(0.1) scaleZ(0.1) scaleY(0.1);
+    transform: translate3d(0px,0px,0px) rotateY(360deg) rotateX(0deg) rotateZ(0deg) scaleX(0.1) scaleZ(0.1) scaleY(0.1);
   }
 }
 
 @keyframes rotateHeart02sick {
   from {
-    transform: translate3d(0px,25px,0px) rotateY(0deg) rotateX(0deg) rotateZ(0deg) scaleX(0.06) scaleZ(0.06) scaleY(0.06);
+    transform: translate3d(0px,0px,0px) rotateY(0deg) rotateX(0deg) rotateZ(0deg) scaleX(0.06) scaleZ(0.06) scaleY(0.06);
   }
   to {
-    transform: translate3d(0px,25px,0px) rotateY(360deg) rotateX(0deg) rotateZ(0deg) scaleX(0.06) scaleZ(0.06) scaleY(0.06);
+    transform: translate3d(0px,0px,0px) rotateY(360deg) rotateX(0deg) rotateZ(0deg) scaleX(0.06) scaleZ(0.06) scaleY(0.06);
   }
 }
 
@@ -604,18 +619,18 @@ transform: translate3d(707px, 20px, 518px) rotateY(-90deg) rotateZ(39deg);
 
 @keyframes rotateHeart03 {
   from {
-    transform: translate3d(75px,25px,0px) rotateY(0deg) rotateX(0deg) rotateZ(0deg) scaleX(0.1) scaleZ(0.1) scaleY(0.1);
+    transform: translate3d(75px,0px,0px) rotateY(0deg) rotateX(0deg) rotateZ(0deg) scaleX(0.1) scaleZ(0.1) scaleY(0.1);
   }
   to {
-    transform: translate3d(75px,25px,0px) rotateY(360deg) rotateX(0deg) rotateZ(0deg) scaleX(0.1) scaleZ(0.1) scaleY(0.1);
+    transform: translate3d(75px,0px,0px) rotateY(360deg) rotateX(0deg) rotateZ(0deg) scaleX(0.1) scaleZ(0.1) scaleY(0.1);
   }
 }
 
 @keyframes rotateHeart03sick {
   from {
-    transform: translate3d(75px,25px,0px) rotateY(0deg) rotateX(0deg) rotateZ(0deg) scaleX(0.06) scaleZ(0.06) scaleY(0.06);
+    transform: translate3d(75px,0px,0px) rotateY(0deg) rotateX(0deg) rotateZ(0deg) scaleX(0.06) scaleZ(0.06) scaleY(0.06);
   }
   to {
-    transform: translate3d(75px,25px,0px) rotateY(360deg) rotateX(0deg) rotateZ(0deg) scaleX(0.06) scaleZ(0.06) scaleY(0.06);
+    transform: translate3d(75px,0px,0px) rotateY(360deg) rotateX(0deg) rotateZ(0deg) scaleX(0.06) scaleZ(0.06) scaleY(0.06);
   }
 }
