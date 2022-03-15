@@ -522,11 +522,11 @@ transform: translate3d(707px, 20px, 518px) rotateY(-90deg) rotateZ(39deg);
 }
 
 #afssStand01 {
-  transform: translate3d(132px,153px,-290px) rotateY(0deg) rotateX(90deg) rotateZ(0deg) scaleX(0.2) scaleZ(0.2) scaleY(0.2);
+  transform: translate3d(132px,153px,-290px) rotateY(0deg) rotateX(0deg) rotateZ(0deg) scaleX(0.2) scaleZ(0.2) scaleY(0.2);
 }
 
 #afssStand02 {
-  transform: translate3d(132px,153px,-177px) rotateY(0deg) rotateX(90deg) rotateZ(0deg) scaleX(0.2) scaleZ(0.2) scaleY(0.2);
+  transform: translate3d(132px,153px,-177px) rotateY(0deg) rotateX(0deg) rotateZ(0deg) scaleX(0.2) scaleZ(0.2) scaleY(0.2);
 }
 
 #cubeHeart01 .healthy {

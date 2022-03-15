@@ -1,6 +1,6 @@
 /* .afss-stand styles */
 .afss-stand {
-  transform:translate3D(0em, 0em, 0em) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+  transform:translate3D(0em, 0em, 0em) rotateX(90deg) rotateY(0deg) rotateZ(0deg);
   opacity:1;
   width:25em;
   height:5em;
