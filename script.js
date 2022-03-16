@@ -245,7 +245,11 @@ function userAction (input) {
     var uAction = "";
 
     if (typeof(input)==='object') {
-        uAction = input.key;
+      // Prevent scrolling, which makes page jump around when navigating with keyboard
+      if(input.key=="ArrowUp"||input.key=="ArrowDown" ||input.key=="ArrowLeft"||input.key=="ArrowDown"){
+        input.preventDefault();
+      }  
+      uAction = input.key;
     }
     else if (typeof(input)==='string') {
         uAction = input;
