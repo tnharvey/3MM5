@@ -6,10 +6,10 @@ window.onload = function(){
 }
 
 // scenario scores
+var devControls = false;
 var scenario1 = 0;
 var scenario2 = 0;
 var scenario3 = 0;
-
 var score = 3;
 
 /* Scenarios */
@@ -240,13 +240,14 @@ function popupBClick () {
 function userAction (input) {
 /* Primary user action handler. Checks for type of input as some are currently inline pasing strings.
    Depending on action, triggers/toggles CSS clases or styles to effect 3D movement. */
-    var cube = document.querySelector('.scene');
+    var cube = document.querySelector('#scene1');
+    var orientation = cube.classList[1];
     var afssDoor = document.querySelector('#afssDoor01');
     var uAction = "";
 
     if (typeof(input)==='object') {
-      // Prevent scrolling, which makes page jump around when navigating with keyboard
       if(input.key=="ArrowUp"||input.key=="ArrowDown" ||input.key=="ArrowLeft"||input.key=="ArrowDown"){
+        // Prevent scrolling on arrow keypress, which makes page jump around when navigating with keyboard
         input.preventDefault();
       }  
       uAction = input.key;
@@ -255,7 +256,7 @@ function userAction (input) {
         uAction = input;
     }
   if (uAction !== "") {
-    if (cube.classList.contains("face-front")) {
+    if (orientation=="face-front") {
       if(uAction === "ArrowLeft") {
         cube.classList.remove("face-front");
         cube.classList.add("face-left");
@@ -272,7 +273,7 @@ function userAction (input) {
       else if (uAction === "ArrowDown"){}
       else if (uAction === "Enter"){}
     }
-    else if (cube.classList.contains("face-left")){
+    else if (orientation=="face-left"){
       if(uAction === "ArrowLeft") {}
       else if (uAction === "ArrowRight"){
         cube.classList.remove("face-left");
@@ -285,7 +286,7 @@ function userAction (input) {
       else if (uAction === "ArrowDown"){}
       else if (uAction === "Enter"){}
     }
-    else if (cube.classList.contains("face-right")){
+    else if (orientation=="face-right"){
       if(uAction === "ArrowLeft") {
         cube.classList.remove("face-right");
         cube.classList.add("face-front");
@@ -298,7 +299,7 @@ function userAction (input) {
       else if (uAction === "ArrowDown"){}
       else if (uAction === "Enter"){}
     }
-    else if (cube.classList.contains("face-equipment")){
+    else if (orientation=="face-equipment"){
       if(uAction === "ArrowLeft") {}
       else if (uAction === "ArrowRight"){}
       else if (uAction === "ArrowUp"){}
@@ -309,7 +310,7 @@ function userAction (input) {
       }
       else if (uAction === "Enter"){}
     }
-    else if (cube.classList.contains("face-workTable")){
+    else if (orientation=="face-workTable"){
       if(uAction === "ArrowLeft") {}
       else if (uAction === "ArrowRight"){}
       else if (uAction === "ArrowUp"){}
@@ -319,7 +320,7 @@ function userAction (input) {
       }
       else if (uAction === "Enter"){}
     }
-    else if (cube.classList.contains("face-computer")){
+    else if (orientation=="face-computer"){
       if(uAction === "ArrowLeft") {
         cube.classList.remove("face-computer");
         cube.classList.add("face-docCab");
@@ -332,7 +333,7 @@ function userAction (input) {
       }
       else if (uAction === "Enter"){}
     }
-    else if (cube.classList.contains("face-docCab")){
+    else if (orientation=="face-docCab"){
       if(uAction === "ArrowLeft") {}
       else if (uAction === "ArrowRight"){
         cube.classList.remove("face-docCab");
@@ -345,47 +346,13 @@ function userAction (input) {
       }
       else if (uAction === "Enter"){}
     }
+    else if ((input.shiftKey && uAction =="ArrowLeft")||uAction=="rotLeft"){
+      //document.getElementBy
+    }
+    else if ((input.shiftKey && uAction =="ArrowRight")||uAction=="rotRight"){
+      
+    }
   }
-    /*if (uAction !== "") {
-        if(uAction === "ArrowLeft") {
-            if (cube.classList.contains("face-right")) {
-                cube.classList.remove("face-right");
-                cube.classList.add("face-front");
-            }
-            else if (cube.classList.contains("face-front")) {
-                cube.classList.remove("face-front");
-                cube.classList.add("face-left");
-            }
-        }
-        if (uAction === "ArrowRight") {
-            if (cube.classList.contains("face-left")) {
-                cube.classList.remove("face-left");
-                cube.classList.add("face-front");
-            }
-            else if (cube.classList.contains("face-front")) {
-                cube.classList.remove("face-front");
-                cube.classList.add("face-right");
-            }
-        }
-        if(uAction === "ArrowUp") {
-            if (cube.classList.contains("face-front")) {
-                cube.classList.remove("face-front");
-                cube.classList.add("face-front-equipment");
-                afssDoor.classList.add("afssDoor-open");
-            }
-        }
-        if(uAction === "ArrowDown") {
-            if (cube.classList.contains("face-front-equipment")) {
-                cube.classList.remove("face-front-equipment");
-                cube.classList.remove("afssDoor-open");
-                cube.classList.add("face-front");
-            }
-        }
-        if(uAction === "Enter") {
-            if(document.getElementById('popupB').style.visibility === "visible")
-            popupBClick();
-        }
-    }*/
 }   
 
 // Changes XML to JSON
@@ -426,6 +393,15 @@ function xmlToJson(xml) {
 	}
 	return obj;
 };
+
+function getSceneTransformXYZ(scene) {
+  if (scene.transform.includes('3d')) {
+    var rawMatrixArr = scene.transform.match(/matrix.*\((.+)\)/)[1].split(', ');
+    var x = rawMatrixArr[12];
+    var y = rawMatrixArr[13];
+    var z = rawMatrixArr[14];
+  }
+}
 
 function loadModels (modelsJson) {
   /* takes a JSON model parsed from XML manifest of models and folder locations, loads those models into the HTML document, and adds initial transform data if none is present in main stylesheet */

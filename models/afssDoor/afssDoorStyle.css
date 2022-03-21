@@ -1,64 +1,92 @@
 /* .door styles */
 .door {
-  transform:translate3D(11.5em, 0em, 0em) rotateX(90deg) rotateY(0deg) rotateZ(0deg);
-  opacity:1;
-  width:20em;
-  height:3em;
-  margin:-1.5em 0 0 -10em;
+    transform: translate3D(11.5em, 0em, 0em) rotateX(90deg) rotateY(0deg) rotateZ(0deg);
+    opacity: 1;
+    width: 20em;
+    height: 3em;
+    margin: -1.5em 0 0 -10em;
 }
-.door .tp, .door .bm {
-  width:20em;
-  height:20em;
+
+.door .tp,
+.door .bm {
+    width: 20em;
+    height: 20em;
 }
+
+.door .tp {
+    background: url(https://cdn.jsdelivr.net/gh/tnharvey/3DCSSTrainingRoom/models/afssDoor/AFSS-Door-Atlas.png) -320px 0px;
+}
+
+.door .bm {
+    background: url(https://cdn.jsdelivr.net/gh/tnharvey/3DCSSTrainingRoom/models/afssDoor/AFSS-Door-Atlas.png) 0px 0px;
+}
+
 .door .side {
-  width:4.589869487802999em;
-  height:3em;
+    background: url(https://cdn.jsdelivr.net/gh/tnharvey/3DCSSTrainingRoom/models/afssDoor/AFSS-Door-Atlas.png) -464px -320px;
 }
-.door .s0 {
-  transform: rotateY(12.857142857142858deg) translate3D(-50%, 0, 9.975em);
+
+.door .side {
+    width: 1.14746737195075em;
+    height: 3em;
 }
-.door .s1 {
-  transform: rotateY(38.57142857142857deg) translate3D(-50%, 0, 9.975em);
-}
-.door .s2 {
-  transform: rotateY(64.28571428571429deg) translate3D(-50%, 0, 9.975em);
-}
-.door .s3 {
-  transform: rotateY(90deg) translate3D(-50%, 0, 9.975em);
-}
-.door .s4 {
-  transform: rotateY(115.71428571428572deg) translate3D(-50%, 0, 9.975em);
-}
-.door .s5 {
-  transform: rotateY(141.42857142857144deg) translate3D(-50%, 0, 9.975em);
-}
-.door .s6 {
-  transform: rotateY(167.14285714285714deg) translate3D(-50%, 0, 9.975em);
-}
-.door .s7 {
-  transform: rotateY(192.85714285714286deg) translate3D(-50%, 0, 9.975em);
-}
-.door .s8 {
-  transform: rotateY(218.57142857142858deg) translate3D(-50%, 0, 9.975em);
-}
-.door .s9 {
-  transform: rotateY(244.2857142857143deg) translate3D(-50%, 0, 9.975em);
-}
-.door .s10 {
-  transform: rotateY(270deg) translate3D(-50%, 0, 9.975em);
-}
-.door .s11 {
-  transform: rotateY(295.7142857142857deg) translate3D(-50%, 0, 9.975em);
-}
-.door .s12 {
-  transform: rotateY(321.4285714285714deg) translate3D(-50%, 0, 9.975em);
-}
-.door .s13 {
-  transform: rotateY(347.1428571428571deg) translate3D(-50%, 0, 9.975em);
-}
-.door .face, .door .side {
-  background-color:#b6b17c;
-}
+
+.door .s0 {transform: rotateY(3.21428571428571deg) translate3D(-50%,0,9.975em);}
+.door .s1 {transform: rotateY(9.64285714285714deg) translate3D(-50%,0,9.975em);}
+.door .s2 {transform: rotateY(16.0714285714286deg) translate3D(-50%,0,9.975em);}
+.door .s3 {transform: rotateY(22.5deg) translate3D(-50%,0,9.975em);}
+.door .s4 {transform: rotateY(28.9285714285714deg) translate3D(-50%,0,9.975em);}
+.door .s5 {transform: rotateY(35.3571428571429deg) translate3D(-50%,0,9.975em);}
+.door .s6 {transform: rotateY(41.7857142857143deg) translate3D(-50%,0,9.975em);}
+.door .s7 {transform: rotateY(48.2142857142857deg) translate3D(-50%,0,9.975em);}
+.door .s8 {transform: rotateY(54.6428571428572deg) translate3D(-50%,0,9.975em);}
+.door .s9 {transform: rotateY(61.0714285714286deg) translate3D(-50%,0,9.975em);}
+.door .s10 {transform: rotateY(67.5deg) translate3D(-50%,0,9.975em);}
+.door .s11 {transform: rotateY(73.9285714285714deg) translate3D(-50%,0,9.975em);}
+.door .s12 {transform: rotateY(80.3571428571429deg) translate3D(-50%,0,9.975em);}
+.door .s13 {transform: rotateY(86.7857142857143deg) translate3D(-50%,0,9.975em);}
+.door .s14 {transform: rotateY(93.2142857142857deg) translate3D(-50%,0,9.975em);}
+.door .s15 {transform: rotateY(99.6428571428572deg) translate3D(-50%,0,9.975em);}
+.door .s16 {transform: rotateY(106.071428571429deg) translate3D(-50%,0,9.975em);}
+.door .s17 {transform: rotateY(112.5deg) translate3D(-50%,0,9.975em);}
+.door .s18 {transform: rotateY(118.928571428571deg) translate3D(-50%,0,9.975em);}
+.door .s19 {transform: rotateY(125.357142857143deg) translate3D(-50%,0,9.975em);}
+.door .s20 {transform: rotateY(131.785714285714deg) translate3D(-50%,0,9.975em);}
+.door .s21 {transform: rotateY(138.214285714286deg) translate3D(-50%,0,9.975em);}
+.door .s22 {transform: rotateY(144.642857142857deg) translate3D(-50%,0,9.975em);}
+.door .s23 {transform: rotateY(151.071428571429deg) translate3D(-50%,0,9.975em);}
+.door .s24 {transform: rotateY(157.5deg) translate3D(-50%,0,9.975em);}
+.door .s25 {transform: rotateY(163.928571428571deg) translate3D(-50%,0,9.975em);}
+.door .s26 {transform: rotateY(170.357142857143deg) translate3D(-50%,0,9.975em);}
+.door .s27 {transform: rotateY(176.785714285714deg) translate3D(-50%,0,9.975em);}
+.door .s28 {transform: rotateY(183.214285714286deg) translate3D(-50%,0,9.975em);}
+.door .s29 {transform: rotateY(189.642857142857deg) translate3D(-50%,0,9.975em);}
+.door .s30 {transform: rotateY(196.071428571428deg) translate3D(-50%,0,9.975em);}
+.door .s31 {transform: rotateY(202.5deg) translate3D(-50%,0,9.975em);}
+.door .s32 {transform: rotateY(208.928571428571deg) translate3D(-50%,0,9.975em);}
+.door .s33 {transform: rotateY(215.357142857143deg) translate3D(-50%,0,9.975em);}
+.door .s34 {transform: rotateY(221.785714285714deg) translate3D(-50%,0,9.975em);}
+.door .s35 {transform: rotateY(228.214285714286deg) translate3D(-50%,0,9.975em);}
+.door .s36 {transform: rotateY(234.642857142857deg) translate3D(-50%,0,9.975em);}
+.door .s37 {transform: rotateY(241.071428571428deg) translate3D(-50%,0,9.975em);}
+.door .s38 {transform: rotateY(247.5deg) translate3D(-50%,0,9.975em);}
+.door .s39 {transform: rotateY(253.928571428571deg) translate3D(-50%,0,9.975em);}
+.door .s40 {transform: rotateY(260.357142857143deg) translate3D(-50%,0,9.975em);}
+.door .s41 {transform: rotateY(266.785714285714deg) translate3D(-50%,0,9.975em);}
+.door .s42 {transform: rotateY(273.214285714286deg) translate3D(-50%,0,9.975em);}
+.door .s43 {transform: rotateY(279.642857142857deg) translate3D(-50%,0,9.975em);}
+.door .s44 {transform: rotateY(286.071428571428deg) translate3D(-50%,0,9.975em);}
+.door .s45 {transform: rotateY(292.5deg) translate3D(-50%,0,9.975em);}
+.door .s46 {transform: rotateY(298.928571428571deg) translate3D(-50%,0,9.975em);}
+.door .s47 {transform: rotateY(305.357142857143deg) translate3D(-50%,0,9.975em);}
+.door .s48 {transform: rotateY(311.785714285714deg) translate3D(-50%,0,9.975em);}
+.door .s49 {transform: rotateY(318.214285714286deg) translate3D(-50%,0,9.975em);}
+.door .s50 {transform: rotateY(324.642857142857deg) translate3D(-50%,0,9.975em);}
+.door .s51 {transform: rotateY(331.071428571429deg) translate3D(-50%,0,9.975em);}
+.door .s52 {transform: rotateY(337.5deg) translate3D(-50%,0,9.975em);}
+.door .s53 {transform: rotateY(343.928571428571deg) translate3D(-50%,0,9.975em);}
+.door .s54 {transform: rotateY(350.357142857143deg) translate3D(-50%,0,9.975em);}
+.door .s55 {transform: rotateY(356.785714285714deg) translate3D(-50%,0,9.975em);}
+
 /* .door-handle styles */
 .door-handle {
   transform:translate3D(11.5em, 0em, 2.875em) rotateX(0deg) rotateY(0deg) rotateZ(45deg);
@@ -70,6 +98,15 @@
 .door-handle .tp, .door-handle .bm {
   width:1.5em;
   height:1.5em;
+}
+.door-handle .tp {
+  background: url(https://cdn.jsdelivr.net/gh/tnharvey/3DCSSTrainingRoom/models/afssDoor/AFSS-Door-Atlas.png) 30px -346px;
+}
+.door-handle .bm {
+  background: url(https://cdn.jsdelivr.net/gh/tnharvey/3DCSSTrainingRoom/models/afssDoor/AFSS-Door-Atlas.png) 54px -346px;
+}
+.door-handle .side {
+  background: url(https://cdn.jsdelivr.net/gh/tnharvey/3DCSSTrainingRoom/models/afssDoor/AFSS-Door-Atlas.png) 6px -170px;
 }
 .door-handle .side {
   width:0.36736521158522495em;
@@ -132,52 +169,48 @@
   width:5em;
   height:5em;
 }
+.door-hub .tp {
+  background: url(https://cdn.jsdelivr.net/gh/tnharvey/3DCSSTrainingRoom/models/afssDoor/AFSS-Door-Atlas.png) -320px -320px;
+}
+.door-hub .bm {
+  background: url(https://cdn.jsdelivr.net/gh/tnharvey/3DCSSTrainingRoom/models/afssDoor/AFSS-Door-Atlas.png) -240px -320px;
+}
 .door-hub .side {
-  width:1.1662173719507496em;
+  background: url(https://cdn.jsdelivr.net/gh/tnharvey/3DCSSTrainingRoom/models/afssDoor/AFSS-Door-Atlas.png) -416px -320px;
+}
+.door-hub .side {
+  width:0.58310868597537453em;
   height:3em;
 }
-.door-hub .s0 {
-  transform: rotateY(12.857142857142858deg) translate3D(-50%, 0, 2.475em);
-}
-.door-hub .s1 {
-  transform: rotateY(38.57142857142857deg) translate3D(-50%, 0, 2.475em);
-}
-.door-hub .s2 {
-  transform: rotateY(64.28571428571429deg) translate3D(-50%, 0, 2.475em);
-}
-.door-hub .s3 {
-  transform: rotateY(90deg) translate3D(-50%, 0, 2.475em);
-}
-.door-hub .s4 {
-  transform: rotateY(115.71428571428572deg) translate3D(-50%, 0, 2.475em);
-}
-.door-hub .s5 {
-  transform: rotateY(141.42857142857144deg) translate3D(-50%, 0, 2.475em);
-}
-.door-hub .s6 {
-  transform: rotateY(167.14285714285714deg) translate3D(-50%, 0, 2.475em);
-}
-.door-hub .s7 {
-  transform: rotateY(192.85714285714286deg) translate3D(-50%, 0, 2.475em);
-}
-.door-hub .s8 {
-  transform: rotateY(218.57142857142858deg) translate3D(-50%, 0, 2.475em);
-}
-.door-hub .s9 {
-  transform: rotateY(244.2857142857143deg) translate3D(-50%, 0, 2.475em);
-}
-.door-hub .s10 {
-  transform: rotateY(270deg) translate3D(-50%, 0, 2.475em);
-}
-.door-hub .s11 {
-  transform: rotateY(295.7142857142857deg) translate3D(-50%, 0, 2.475em);
-}
-.door-hub .s12 {
-  transform: rotateY(321.4285714285714deg) translate3D(-50%, 0, 2.475em);
-}
-.door-hub .s13 {
-  transform: rotateY(347.1428571428571deg) translate3D(-50%, 0, 2.475em);
-}
+.door-hub .s0 {transform: rotateY(6.42857142857143deg) translate3D(-50%,0,2.475em);}
+.door-hub .s1 {transform: rotateY(19.2857142857143deg) translate3D(-50%,0,2.475em);}
+.door-hub .s2 {transform: rotateY(32.1428571428571deg) translate3D(-50%,0,2.475em);}
+.door-hub .s3 {transform: rotateY(45deg) translate3D(-50%,0,2.475em);}
+.door-hub .s4 {transform: rotateY(57.8571428571429deg) translate3D(-50%,0,2.475em);}
+.door-hub .s5 {transform: rotateY(70.7142857142857deg) translate3D(-50%,0,2.475em);}
+.door-hub .s6 {transform: rotateY(83.5714285714286deg) translate3D(-50%,0,2.475em);}
+.door-hub .s7 {transform: rotateY(96.4285714285714deg) translate3D(-50%,0,2.475em);}
+.door-hub .s8 {transform: rotateY(109.285714285714deg) translate3D(-50%,0,2.475em);}
+.door-hub .s9 {transform: rotateY(122.142857142857deg) translate3D(-50%,0,2.475em);}
+.door-hub .s10 {transform: rotateY(135deg) translate3D(-50%,0,2.475em);}
+.door-hub .s11 {transform: rotateY(147.857142857143deg) translate3D(-50%,0,2.475em);}
+.door-hub .s12 {transform: rotateY(160.714285714286deg) translate3D(-50%,0,2.475em);}
+.door-hub .s13 {transform: rotateY(173.571428571429deg) translate3D(-50%,0,2.475em);}
+.door-hub .s14 {transform: rotateY(186.428571428571deg) translate3D(-50%,0,2.475em);}
+.door-hub .s15 {transform: rotateY(199.285714285714deg) translate3D(-50%,0,2.475em);}
+.door-hub .s16 {transform: rotateY(212.142857142857deg) translate3D(-50%,0,2.475em);}
+.door-hub .s17 {transform: rotateY(225deg) translate3D(-50%,0,2.475em);}
+.door-hub .s18 {transform: rotateY(237.857142857143deg) translate3D(-50%,0,2.475em);}
+.door-hub .s19 {transform: rotateY(250.714285714286deg) translate3D(-50%,0,2.475em);}
+.door-hub .s20 {transform: rotateY(263.571428571429deg) translate3D(-50%,0,2.475em);}
+.door-hub .s21 {transform: rotateY(276.428571428571deg) translate3D(-50%,0,2.475em);}
+.door-hub .s22 {transform: rotateY(289.285714285714deg) translate3D(-50%,0,2.475em);}
+.door-hub .s23 {transform: rotateY(302.142857142857deg) translate3D(-50%,0,2.475em);}
+.door-hub .s24 {transform: rotateY(315deg) translate3D(-50%,0,2.475em);}
+.door-hub .s25 {transform: rotateY(327.857142857143deg) translate3D(-50%,0,2.475em);}
+.door-hub .s26 {transform: rotateY(340.714285714286deg) translate3D(-50%,0,2.475em);}
+.door-hub .s27 {transform: rotateY(353.571428571428deg) translate3D(-50%,0,2.475em);}
+
 .door-hub .face, .door-hub .side {
   background-color:#b6b17c;
 }
@@ -199,14 +232,28 @@
   width:7.5em;
   height:3.75em;
 }
+.door-hinge .tp {
+  background: url(https://cdn.jsdelivr.net/gh/tnharvey/3DCSSTrainingRoom/models/afssDoor/AFSS-Door-Atlas.png) 0px -320px;
+}
+.door-hinge .bm {
+  background: url(https://cdn.jsdelivr.net/gh/tnharvey/3DCSSTrainingRoom/models/afssDoor/AFSS-Door-Atlas.png) -80px -320px;
+}
+.door-hinge .ft {
+  background: url(https://cdn.jsdelivr.net/gh/tnharvey/3DCSSTrainingRoom/models/afssDoor/AFSS-Door-Atlas.png) -240px -440px;
+}
+.door-hinge .bk {
+  background: url(https://cdn.jsdelivr.net/gh/tnharvey/3DCSSTrainingRoom/models/afssDoor/AFSS-Door-Atlas.png) -318px -440px;
+}
+.door-hinge .lt {
+  background: url(https://cdn.jsdelivr.net/gh/tnharvey/3DCSSTrainingRoom/models/afssDoor/AFSS-Door-Atlas.png) 0px -440px;
+}
+.door-hinge .rt {
+  background: url("https://cdn.jsdelivr.net/gh/tnharvey/3DCSSTrainingRoom/models/afssDoor/AFSS-Door-Atlas.png") -120px -440px;
+}
 .door-hinge .tp, .door-hinge .bm {
   width:5em;
   height:7.5em;
 }
 .door-hinge .face {
   background-color:#b6b17c;
-}
-
-[class*="cylinder"] {
-  
 }

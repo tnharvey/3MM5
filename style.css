@@ -108,6 +108,13 @@ span {
 .c3dContainer {
   transform-style: preserve-3d;
 }
+#cards{}
+.3dpopup-Container{}
+.3dpopup{
+  height:100px;
+  width:200px;
+}
+#equipment-card{}
 
 /* CSS Grid styles */
 .gridContainer {
@@ -381,34 +388,34 @@ transform: translate3d(707px, 20px, 518px) rotateY(-90deg) rotateZ(39deg);
 
 .myCube-front {
   transform: translateZ(500px) rotateY(180deg);
-  background-image: url(https://cdn.jsdelivr.net/gh/tnharvey/3DCSSTrainingRoom@main/imgs/backFaceTexture.jpg);
+  background-image: url(https://cdn.jsdelivr.net/gh/tnharvey/3DCSSTrainingRoom/imgs/backFaceTexture.jpg);
 }
 
 .myCube-back {
   transform: translateZ(-500px);
-  background-image: url(https://cdn.jsdelivr.net/gh/tnharvey/3DCSSTrainingRoom@main/imgs/frontFaceTexture.jpg);
+  background-image: url(https://cdn.jsdelivr.net/gh/tnharvey/3DCSSTrainingRoom/imgs/frontFaceTexture.jpg);
 }
 
 .myCube-left {
   transform: translateX(-500px) rotateY(-270deg);
   width: 1000px;
-  background-image: url(https://cdn.jsdelivr.net/gh/tnharvey/3DCSSTrainingRoom@main/imgs/Container-Wall-Long.jpg);
+  background-image: url(https://cdn.jsdelivr.net/gh/tnharvey/3DCSSTrainingRoom/imgs/Container-Wall-Long.jpg);
 }
 
 .myCube-right {
   transform: translateX(300px) rotateY(270deg);
   width: 1000px;
-  background-image: url(https://cdn.jsdelivr.net/gh/tnharvey/3DCSSTrainingRoom@main/imgs/Container-Wall-Long.jpg);
+  background-image: url(https://cdn.jsdelivr.net/gh/tnharvey/3DCSSTrainingRoom/imgs/Container-Wall-Long.jpg);
 }
 
 .myCube-top {
   transform: translateY(-500px) rotateX(270deg);
-  background-image: url(https://cdn.jsdelivr.net/gh/tnharvey/3DCSSTrainingRoom@main/imgs/ceilingTexture2-longdk.jpg);
+  background-image: url(https://cdn.jsdelivr.net/gh/tnharvey/3DCSSTrainingRoom/imgs/ceilingTexture2-longdk.jpg);
 }
 
 .myCube-bottom {
   transform: translateY(-100px) rotateX(-270deg);
-  background-image: url(https://cdn.jsdelivr.net/gh/tnharvey/3DCSSTrainingRoom@main/imgs/floorTexture.jpg);
+  background-image: url(https://cdn.jsdelivr.net/gh/tnharvey/3DCSSTrainingRoom/imgs/floorTexture.jpg);
   background-size: contain;
   background-repeat:repeat;
 }
