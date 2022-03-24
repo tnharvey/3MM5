@@ -11,23 +11,23 @@
             <div class="my-cube myCube-show">
               <div class="myCube-bt myCube-top"></div>
               <div class="myCube-bt myCube-bottom"></div>
-              <div class="myCube-face myCube-left"><img class="interactive" style="margin: auto; width:10%; height: auto;" src="https://cdn.jsdelivr.net/gh/tnharvey/3DCSSTrainingRoom/imgs/floatingWallObject.jpg" onclick="wallClick();"></div>
+              <div class="myCube-face myCube-left"><img class="interactive" style="margin: auto; width:10%; height: auto;" src="https://cdn.jsdelivr.net/gh/tnharvey/3DCSSTrainingRoom/imgs/floatingWallObject.jpg" onclick="showPopup('popupA');"></div>
               <div class="myCube-face myCube-right"></div>
               <div class="myCube-face myCube-front"></div>
               <div class="myCube-face myCube-back"></div>
             </div>
-            <div id="cards" class="3dpopup-Container">
-              <div id="equipment-card" class="3dpopup">
+            <div id="cards" class="popup3d-Container">
+              <div id="equipment-card" data-target-dir="face-equipment" class="popup3d interactive">
                 Scenario
               </div>
-              <div id="computer-card" class="3dpopup">
-                Scenario
+              <div id="computer-card" data-target-dir="face-computer" class="popup3d interactive">
+                Computer
               </div>
-              <div id="resources-card" class="3dpopup">
-                Scenario
+              <div id="resources-card" data-target-dir="face-resources" class="popup3d interactive">
+                Resources
               </div>
-              <div id="references-card" class="3dpopup">
-                Scenario
+              <div id="references-card" data-target-dir="face-references" class="popup3d interactive">
+                References
               </div>
             </div>
           </div>
@@ -47,15 +47,14 @@
             <div class="buttonChoice gridItem2 btn-scenario-control" onclick="endScenario();">Complete Scenario</div>
             </div>
           </div>
-          <div id="popupB" class="popup" onclick="hidePopup('popupB');"><button id="closePopB" onclick="popupBClick();">x</button>This is the table popup. Press the Enter key on your keyboard to close it.</div>
+          <div id="popupB" class="popup" onclick="hidePopup('popupB');"><div class="buttonChoice close" onclick="hidePopup('popupB');">X</div><img class="interactive" src="https://cdn.jsdelivr.net/gh/tnharvey/3DCSSTrainingRoom/imgs/floatingWallObject.jpg"></div>
         </div>
         <div id="dashContainer">
-          <div id="mapContainer" class="3col-1">
-            <img id="map" src="https://cdn.jsdelivr.net/gh/tnharvey/3DCSSTrainingRoom/imgs/flowchart-icon.png">
+          <div id="mapContainer" class="dashItem">
+            <img id="mapIcon" src="https://cdn.jsdelivr.net/gh/tnharvey/3DCSSTrainingRoom/imgs/flowchart-icon.png" onclick="showPopup('popupB')" class="interactive">
           </div>
-          <div class="emptyContainer"></div>
-          <div id="healthContainer" class="3col-1">
-            <div id="scenarioScore" style="text-align: center; padding-left: 75px;">
+          <div id="healthContainer" class="dashItem">
+            <div id="scenarioScore" style="text-align: center; padding-left: 75px;" class="dev delete">
               3
             </div>
             <div class="containerSm">
@@ -63,10 +62,13 @@
               </div>
             </div>
           </div>
-          <div id="messagesContainer" class="3col-1">
+          <div id="messagesContainer" class="dashItem">
             <span id="message"><b>Next Step:</b><br>Click on the workflow poster on the wall to the left.</span>
           </div>
-          <div id="controlsContainer" class="3col-1">
+          <div id="backButton" data-target-dir="face-front" class="interactive">Back</div>
+          <div id="leftButton" onclick="userAction('ArrowLeft')" class="interactive"><span>&#x25C0;</span></div>
+          <div id="rightButton" onclick="userAction('ArrowRight')" class="interactive"><span>&#x25B6;</span></div>
+          <div id="controlsContainer" class="dashItem delete">
               <div class="grid-container">
                 <div class="grid-item empty"></div>
                 <div id="ArrowUp" onclick="userAction('ArrowUp')" class="grid-item button interactive">&uarr;</div>
@@ -76,16 +78,15 @@
                 <div id="ArrowRight" onclick="userAction('ArrowRight')" class="grid-item button interactive">&rarr;</div>    
               </div>
           </div>
-          <div class="emptyContainer"></div>
-          <div id="devControls" class="3col-1">
-              <div class="grid-container">
-                <div id="rotateLeft" onclick="userAction('rotLeft')" class="grid-item button interactive">&olarr;</div>
-                <div id="ArrowUp" onclick="userAction('ArrowUp')" class="grid-item button interactive">&uarr;</div>
-                <div id="rotateRight" onclick="userAction('ArrowRight')" class="grid-item button interactive">&orarr;</div>
-                <div id="ArrowLeft" onclick="userAction('ArrowLeft')" class="grid-item button interactive">&larr;</div>
-                <div id="ArrowDown" onclick="userAction('ArrowDown')" class="grid-item button interactive">&darr;</div>
-                <div id="ArrowRight" onclick="userAction('ArrowRight')" class="grid-item button interactive">&rarr;</div>    
-              </div>
+          <div id="devControls" class="dev delete">
+            <div class="grid-container">
+              <div id="rotateLeft" onclick="userAction('rotLeft')" class="grid-item button interactive">&olarr;</div>
+              <div id="ArrowUp" onclick="userAction('ArrowUp')" class="grid-item button interactive">&uarr;</div>
+              <div id="rotateRight" onclick="userAction('ArrowRight')" class="grid-item button interactive">&orarr;</div>
+              <div id="ArrowLeft" onclick="userAction('ArrowLeft')" class="grid-item button interactive">&larr;</div>
+              <div id="ArrowDown" onclick="userAction('ArrowDown')" class="grid-item button interactive">&darr;</div>
+              <div id="ArrowRight" onclick="userAction('ArrowRight')" class="grid-item button interactive">&rarr;</div>    
+            </div>
           </div>
         </div>
       </div>

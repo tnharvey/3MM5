@@ -2,6 +2,13 @@ window.onload = function(){
   var cube = document.querySelector('.scene');
   document.addEventListener('keydown', userAction);
 
+  let viewCards = document.getElementsByClassName('popup3d');
+  let viewCardsArr = Array.prototype.slice.call(viewCards);
+  viewCardsArr.forEach(function(item){
+    item.addEventListener("click",userAction);
+  });
+  document.getElementById("backButton").addEventListener("click",userAction);
+
   loadModels();
 }
 
@@ -88,6 +95,12 @@ function resetScenario(){
   scenario3 = 0;
   document.getElementById("scenarioScore").innerHTML = 3;
   updateHealth();
+}
+
+function endScenario(){
+  updateHealth();
+  parent.postMessage("scenario complete","*");
+  window.alert("Scenario Complete. You've helped to save PFC Bosky!")
 }
 
 function updateHealth() {
@@ -206,12 +219,6 @@ function updateHealth() {
   }
 }
 
-function endScenario(){
-  updateHealth();
-  parent.postMessage("scenario complete","*");
-  window.alert("Scenario Complete. You've helped to save PFC Bosky!")
-}
-
 /* Inline click funcions, need to set up with listeners */
 function showPopup (popupId) {
     document.getElementById(popupId).style.display="flex";
@@ -219,22 +226,6 @@ function showPopup (popupId) {
 
 function hidePopup (popupId) {
     document.getElementById(popupId).style.display="none";
-}
-
-function wallClick () {
-    document.getElementById("popupA").style.display="flex";
-}
-
-function popupAClick () {
-    document.getElementById("popupA").style.display="none";
-}
-
-function tableClick () {
-    document.getElementById("popupB").style.display="flex";
-}
-
-function popupBClick () {
-    document.getElementById("popupB").style.display="none";
 }
 
 function userAction (input) {
@@ -249,13 +240,55 @@ function userAction (input) {
       if(input.key=="ArrowUp"||input.key=="ArrowDown" ||input.key=="ArrowLeft"||input.key=="ArrowDown"){
         // Prevent scrolling on arrow keypress, which makes page jump around when navigating with keyboard
         input.preventDefault();
-      }  
-      uAction = input.key;
+      }
+      console.log(input.type);
+      if(input.type=="keydown"){
+        uAction = input.key;
+      }
+      else if(input.type="click"){
+        uAction = input.path[0].dataset.targetDir;
+      }
     }
     else if (typeof(input)==='string') {
         uAction = input;
     }
   if (uAction !== "") {
+    //Dev controls toggle
+    if (uAction =="D"){
+      var devElements = document.getElementsByClassName("dev");
+      Array.from(devElements).forEach(
+        function(element,index,array){
+          if(element.classList.contains("delete")){
+            element.classList.remove("delete")
+            element.classList.add("dashItem")
+          }
+          else {
+            element.classList.add("delete")
+            element.classList.remove("dashItem")
+          }
+        });
+    }
+    if(uAction.search("face-")==0){
+      if(uAction == "face-front"||uAction == "face-right"||uAction == "face-left"){
+        cube.classList.remove(cube.classList[1]);
+        cube.classList.add(uAction);
+        document.getElementById("cards").style.visibility="visible";
+        document.getElementById("backButton").style.opacity="0";
+        if (uAction=="face-front" && document.getElementById("afssDoor01").classList.contains("afssDoor-open")){
+          document.getElementById("afssDoor01").classList.remove("afssDoor-open");
+        }
+      }
+      else {
+        document.getElementById("backButton").dataset.targetDir = cube.classList[1];
+        cube.classList.remove(cube.classList[1]);
+        cube.classList.add(uAction);
+        document.getElementById("cards").style.visibility="hidden";
+        document.getElementById("backButton").style.opacity=1;
+        if(uAction=="face-equipment") {
+          document.getElementById("afssDoor01").classList.add("afssDoor-open");
+        }
+      }
+    }
     if (orientation=="face-front") {
       if(uAction === "ArrowLeft") {
         cube.classList.remove("face-front");
@@ -269,6 +302,7 @@ function userAction (input) {
         cube.classList.remove("face-front");
         cube.classList.add("face-equipment");
         document.getElementById("afssDoor01").classList.add("afssDoor-open");
+        document.getElementById("cards").style.visibility="hidden";
       }
       else if (uAction === "ArrowDown"){}
       else if (uAction === "Enter"){}
@@ -281,7 +315,8 @@ function userAction (input) {
       }
       else if (uAction === "ArrowUp"){
         cube.classList.remove("face-left");
-        cube.classList.add("face-workTable");
+        cube.classList.add("face-resources");
+        document.getElementById("cards").style.visibility="hidden";
       }
       else if (uAction === "ArrowDown"){}
       else if (uAction === "Enter"){}
@@ -295,6 +330,7 @@ function userAction (input) {
       else if (uAction === "ArrowUp"){
         cube.classList.remove("face-right");
         cube.classList.add("face-computer");
+        document.getElementById("cards").style.visibility="hidden";
       }
       else if (uAction === "ArrowDown"){}
       else if (uAction === "Enter"){}
@@ -307,42 +343,46 @@ function userAction (input) {
         cube.classList.remove("face-equipment");
         document.getElementById("afssDoor01").classList.remove("afssDoor-open");
         cube.classList.add("face-front");
+        document.getElementById("cards").style.visibility="visible";
       }
       else if (uAction === "Enter"){}
     }
-    else if (orientation=="face-workTable"){
+    else if (orientation=="face-resources"){
       if(uAction === "ArrowLeft") {}
       else if (uAction === "ArrowRight"){}
       else if (uAction === "ArrowUp"){}
       else if (uAction === "ArrowDown"){
-        cube.classList.remove("face-workTable");
+        cube.classList.remove("face-resources");
         cube.classList.add("face-left");
+        document.getElementById("cards").style.visibility="visible";
       }
       else if (uAction === "Enter"){}
     }
     else if (orientation=="face-computer"){
       if(uAction === "ArrowLeft") {
         cube.classList.remove("face-computer");
-        cube.classList.add("face-docCab");
+        cube.classList.add("face-references");
       }
       else if (uAction === "ArrowRight"){}
       else if (uAction === "ArrowUp"){}
       else if (uAction === "ArrowDown"){
         cube.classList.remove("face-computer");
         cube.classList.add("face-right");
+        document.getElementById("cards").style.visibility="visible";
       }
       else if (uAction === "Enter"){}
     }
-    else if (orientation=="face-docCab"){
+    else if (orientation=="face-references"){
       if(uAction === "ArrowLeft") {}
       else if (uAction === "ArrowRight"){
-        cube.classList.remove("face-docCab");
+        cube.classList.remove("face-references");
         cube.classList.add("face-computer");
       }
       else if (uAction === "ArrowUp"){}
       else if (uAction === "ArrowDown"){
-        cube.classList.remove("face-docCab");
+        cube.classList.remove("face-references");
         cube.classList.add("face-right");
+        document.getElementById("cards").style.visibility="visible";
       }
       else if (uAction === "Enter"){}
     }
@@ -354,54 +394,6 @@ function userAction (input) {
     }
   }
 }   
-
-// Changes XML to JSON
-function xmlToJson(xml) {
-	
-	// Create the return object
-	var obj = {};
-
-	if (xml.nodeType == 1) { // element
-		// do attributes
-		if (xml.attributes.length > 0) {
-		obj["@attributes"] = {};
-			for (var j = 0; j < xml.attributes.length; j++) {
-				var attribute = xml.attributes.item(j);
-				obj["@attributes"][attribute.nodeName] = attribute.nodeValue;
-			}
-		}
-	} else if (xml.nodeType == 3) { // text
-		obj = xml.nodeValue;
-	}
-
-	// do children
-	if (xml.hasChildNodes()) {
-		for(var i = 0; i < xml.childNodes.length; i++) {
-			var item = xml.childNodes.item(i);
-			var nodeName = item.nodeName;
-			if (typeof(obj[nodeName]) == "undefined") {
-				obj[nodeName] = xmlToJson(item);
-			} else {
-				if (typeof(obj[nodeName].push) == "undefined") {
-					var old = obj[nodeName];
-					obj[nodeName] = [];
-					obj[nodeName].push(old);
-				}
-				obj[nodeName].push(xmlToJson(item));
-			}
-		}
-	}
-	return obj;
-};
-
-function getSceneTransformXYZ(scene) {
-  if (scene.transform.includes('3d')) {
-    var rawMatrixArr = scene.transform.match(/matrix.*\((.+)\)/)[1].split(', ');
-    var x = rawMatrixArr[12];
-    var y = rawMatrixArr[13];
-    var z = rawMatrixArr[14];
-  }
-}
 
 function loadModels (modelsJson) {
   /* takes a JSON model parsed from XML manifest of models and folder locations, loads those models into the HTML document, and adds initial transform data if none is present in main stylesheet */
@@ -449,3 +441,54 @@ function loadModels (modelsJson) {
   $("head").append('<link rel="stylesheet" href="models/afssStand/afssStandStyle.css" />');
   $("head").append('<link rel="stylesheet" href="models/cubeHeart/cubeHeartStyle.css" />');
 }
+
+// Functions in development
+/*
+// Changes XML to JSON
+function xmlToJson(xml) {
+	
+	// Create the return object
+	var obj = {};
+
+	if (xml.nodeType == 1) { // element
+		// do attributes
+		if (xml.attributes.length > 0) {
+		obj["@attributes"] = {};
+			for (var j = 0; j < xml.attributes.length; j++) {
+				var attribute = xml.attributes.item(j);
+				obj["@attributes"][attribute.nodeName] = attribute.nodeValue;
+			}
+		}
+	} else if (xml.nodeType == 3) { // text
+		obj = xml.nodeValue;
+	}
+
+	// do children
+	if (xml.hasChildNodes()) {
+		for(var i = 0; i < xml.childNodes.length; i++) {
+			var item = xml.childNodes.item(i);
+			var nodeName = item.nodeName;
+			if (typeof(obj[nodeName]) == "undefined") {
+				obj[nodeName] = xmlToJson(item);
+			} else {
+				if (typeof(obj[nodeName].push) == "undefined") {
+					var old = obj[nodeName];
+					obj[nodeName] = [];
+					obj[nodeName].push(old);
+				}
+				obj[nodeName].push(xmlToJson(item));
+			}
+		}
+	}
+	return obj;
+};
+
+function getSceneTransformXYZ(scene) {
+  if (scene.transform.includes('3d')) {
+    var rawMatrixArr = scene.transform.match(/matrix.*\((.+)\)/)[1].split(', ');
+    var x = rawMatrixArr[12];
+    var y = rawMatrixArr[13];
+    var z = rawMatrixArr[14];
+  }
+}
+*/

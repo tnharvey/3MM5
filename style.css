@@ -31,6 +31,8 @@ span {
   margin: auto;
   padding-top: 5px;
   background-color: var(--bg-gray);
+  overflow: hidden;
+  border-radius: 4px;
 }
 
 .container {
@@ -44,23 +46,26 @@ span {
 }
 
 #dashContainer {
-  display:grid;
-  grid-template-columns: 33% 33% 33%;
-  justify-items: center;
-  width: 90%;
-  margin: auto;
+  height: 0px;
+}
+
+.dashItem {
   position: relative;
-  left: 0px;
-  bottom: 100px;
-  /* background-color: lightgray; */
+}
+
+#mapContainer {
+  left: 38px;
+  top: -526px;
 }
 
 #messagesContainer {
-  height: 44%;
-  width: 100%;
-  margin-top: 20px;
-  background-color: rgb(0,0,0,0.2);
+  height: 60px;
+  width: 380px;
+  background-color: rgb(0,0,0,0.4);
   padding: 10px;
+  left: 268px;
+  bottom: 664px;
+  border-radius: 4px;
 }
 
 #popupContainer {
@@ -72,11 +77,11 @@ span {
 }
 
 #healthContainer {
-  position: relative;
-  width: 100%;
-  height: 110px;
-  margin: auto;
-  padding: 2%px;
+  display: inline-block;
+  width: 26%;
+  height: 80px;
+  left:650px;
+  top:-620px;
 }
 
 #health {
@@ -87,6 +92,20 @@ span {
   background: transparent;
   font-size: 100%;
   transition: transform 1.3s;
+}
+
+#controlsContainer {
+  left: 400px;
+  top: -774px;
+  height: 100px;
+  width: 140px;
+}
+
+#devControls {
+  left: 778px;
+  top: -420px;
+  height: 100px;
+  width: 140px;
 }
 
 .grid-container {
@@ -108,13 +127,103 @@ span {
 .c3dContainer {
   transform-style: preserve-3d;
 }
-#cards{}
-.3dpopup-Container{}
-.3dpopup{
-  height:100px;
-  width:200px;
+
+#backButton {
+  color: white;
+  position: relative;
+  height:20px;
+  width:80px;
+  background-color: rgb(0,0,0,0.4);
+  border-radius: 4px;
+  text-align: center;
+  padding: 10px;
+  bottom:640px;
+  left:100px;
+  opacity:0;
 }
-#equipment-card{}
+#leftButton {
+  color: white;
+  position: relative;
+  height:200px;
+  width:30px;
+  background-color: rgb(0,0,0,0.2);
+  border-radius: 0px;
+  text-align: center;
+  padding: 4px;
+  bottom: 624px;
+  left:20px;
+  opacity:1;
+}
+#leftButton:hover {
+  background-color: rgb(0,0,0,0.4);
+  box-shadow: 0px 0px 4px rgb(0 0 0 / 30%);
+}
+#leftButton:active {
+  background-color: rgb(0,0,0,0.3);
+  box-shadow: inset 0px 0px 4px rgb(0 0 0 / 30%);
+}
+#leftButton > span {
+  position: relative;
+  top: 44%;
+  font-weight: bolder;
+}
+#rightButton {
+  color: white;
+  position: relative;
+  height:200px;
+  width:30px;
+  background-color: rgb(0,0,0,0.2);
+  border-radius: 0px;
+  text-align: center;
+  padding: 4px;
+  bottom: 832px;
+  left: 882px;
+  opacity:1;
+}
+#rightButton:hover {
+  background-color: rgb(0,0,0,0.4);
+  box-shadow: 0px 0px 4px rgb(0 0 0 / 30%);
+}
+#rightButton:active {
+  background-color: rgb(0,0,0,0.3);
+  box-shadow: inset 0px 0px 4px rgb(0 0 0 / 30%);
+}
+#rightButton > span {
+  position: relative;
+  top: 44%;
+  font-weight: bolder;
+  text-shadow: 0 0 2px rgb(0 0 0 / 90%)
+}
+#cards{
+  visibility: visibile;
+  transition: visibility 0.5s ease-in-out 1s;
+}
+.popup3d-Container{
+  transform-style: preserve-3d;
+  position: absolute;
+}
+.popup3d {
+  position: absolute;
+  height:10px;
+  width:44px;
+  background-color: rgb(0,0,0,0.4);
+  border-radius: 4px;
+  text-align: center;
+  padding: 2px;
+  font-size: xx-small;
+}
+#equipment-card{
+  transform: translate3d(762px,6px,200px);
+}
+#computer-card{
+  transform: translate3d(884px,4px,408px) rotateY(-90deg);
+}
+#resources-card{
+  transform: translate3d(622px,28px,360px) rotateY(90deg);
+}
+#references-card{
+  transform: translate3d(896px,4px,292px) rotateY(-90deg);
+}
 
 /* CSS Grid styles */
 .gridContainer {
@@ -129,11 +238,24 @@ span {
   text-align: center;
 }
 
+.containerSm {
+  width: 100%;
+  height: 100%;
+  perspective: 650px;
+  margin: auto;
+  transform: translate3d(38px, 36px, 0px);
+  color:white;
+  /* z-index: 4; */
+}
+
 /* Interactive element styles (buttons, popups, etc.) */
 .interactive {
   cursor: pointer;
 }
-
+#mapIcon {
+  width:60px;
+  height:auto;
+}
 .button {
   background-color: var(--darker-orange);
   color: white;
@@ -236,29 +358,28 @@ span {
 }
 
 .popup {
-    width: 90%;
-    height: 80%;
-    display: none;
-    top: 0px;
-    left:0%;
-    background: lightcyan;
-    border: 1px solid black;
-    color:black;
-    position: relative;
-    opacity: 1;
-    align-items: center;
-    justify-content: center;
-    font-family: Arial, sans-serif;
-    font-size: 1.5rem;
-    text-align: center;
+  margin: 5% auto 5% auto;
+  font-size: 1.5rem;
+  position: absolute;
+  padding: 10px;
+  border-radius: 4px;  
+  width: 894px;
+  height: 530px;
+  display: none;
+  top: -30px;
+  left: 14px;
+  background: lightcyan;
+  border: 1px solid black;
+  color:black;
+  opacity: 1;
+  align-items: center;
+  justify-content: center;
+  font-family: Arial, sans-serif;
+  text-align: center;
 }
 
 #popupA {
-  margin: 5% auto 5% auto;
-  font-size: 1.5rem;
-  position: relative;
-  padding: 10px;
-  border-radius: 4px;
+  
 }
 
 #popupB {
@@ -266,11 +387,11 @@ span {
   font-size: 1.5rem;
 }
 
-#closePopB {
-  position: absolute;
-  top: 5px;
-  right: 5px;
-  background-color:red;
+#popupB img {
+  width:auto;
+  height: 76vh;
+  padding: 20px;
+  margin: auto;
 }
 
 #message {
@@ -293,7 +414,7 @@ span {
   transition: transform 1.3s;
 }
 
-/* movement classes */
+/* Movement Classes */
 .face-front {
   transform: translate3d(206px, 0px, 250px) rotateY(0deg);
 }
@@ -301,20 +422,20 @@ span {
   transform: translate3d(251px, -1px, 596px) rotateX(-12deg) rotateY(0deg);
 }
 .face-left {
-  transform: translate3d(707px, 20px, 300px) rotateY(-90deg);
+  transform: translate3d(704px, 20px, 374px) rotateY(-90deg);
 }
 .face-right {
-  transform: translate3d(22px, 20px, 601px) rotateY(90deg);
+  transform: translate3d(8px, 12px, 704px) rotateY(90deg);
 }
 .face-computer {
 transform: translate3d(-108px, -43px, 1028px) rotateY(90deg);
 }
 
-.face-docCab {
-transform: translate3d(120px, 87px, 952px) rotateY(90deg) rotateZ(-16deg);
+.face-references {
+transform: translate3d(120px, 86px, 946px) rotateY(90deg) rotateZ(-14deg);
 }
 
-.face-workTable {
+.face-resources {
 transform: translate3d(707px, 20px, 518px) rotateY(-90deg) rotateZ(39deg);
 }
 /* END movement classes */
@@ -484,7 +605,7 @@ transform: translate3d(707px, 20px, 518px) rotateY(-90deg) rotateZ(39deg);
 }
 
 #table01 {
-  transform: translate3d(418px,224px,600px) scale(0.75) rotateY(91deg);
+  transform: translate3d(418px,224px,600px) scale(0.75) rotateY(90deg);
 }
 
 #table02 {
@@ -512,7 +633,7 @@ transform: translate3d(707px, 20px, 518px) rotateY(-90deg) rotateZ(39deg);
 }
 
 #plug01 {
-  transform: translate3d(-108px,-106px,-295px) rotateY(0deg) rotateX(0deg) rotateZ(180deg) scale(0.4);
+  transform: translate3d(-108px,-32px,-295px) rotateY(0deg) rotateX(0deg) rotateZ(180deg) scale(0.4);
 }
 
 #afssBody01 {
@@ -536,6 +657,7 @@ transform: translate3d(707px, 20px, 518px) rotateY(-90deg) rotateZ(39deg);
   transform: translate3d(132px,153px,-177px) rotateY(0deg) rotateX(0deg) rotateZ(0deg) scaleX(0.2) scaleZ(0.2) scaleY(0.2);
 }
 
+/* HEALTH - Cube Hearts Position and Animations */
 #cubeHeart01 .healthy {
   transform: translate3d(-100px,25px,0px) rotateY(0deg) rotateX(0deg) rotateZ(0deg) scaleX(0.1) scaleZ(0.1) scaleY(0.1);
 }
@@ -546,16 +668,6 @@ transform: translate3d(707px, 20px, 518px) rotateY(-90deg) rotateZ(39deg);
 
 #cubeHeart03 .healthy {
   transform: translate3d(100px,25px,0px) rotateY(0deg) rotateX(0deg) rotateZ(0deg) scaleX(0.1) scaleZ(0.1) scaleY(0.1);
-}
-
-.containerSm {
-  width: 100%;
-  height: 100%;
-  perspective: 650px;
-  margin: auto;
-  transform: translate3d(38px, 36px, 0px);
-  color:white;
-  /* z-index: 4; */
 }
 
 .healthHeart {
