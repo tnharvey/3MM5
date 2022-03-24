@@ -81,7 +81,7 @@ span {
   width: 26%;
   height: 80px;
   left:650px;
-  top:-620px;
+  top:-610px;
 }
 
 #health {
@@ -141,7 +141,7 @@ span {
   left:100px;
   opacity:0;
 }
-#leftButton {
+.controlButton {
   color: white;
   position: relative;
   height:200px;
@@ -150,49 +150,28 @@ span {
   border-radius: 0px;
   text-align: center;
   padding: 4px;
+  opacity:1;
+}
+.controlButton:hover {
+  background-color: rgb(0,0,0,0.4);
+  box-shadow: 0px 0px 4px rgb(0 0 0 / 30%);
+}
+.controlButton:active {
+  background-color: rgb(0,0,0,0.3);
+  box-shadow: inset 0px 0px 4px rgb(0 0 0 / 30%);
+}
+.controlButton > span {
+  position: relative;
+  top: 44%;
+  font-weight: bolder;
+}
+#leftButton {
   bottom: 624px;
   left:20px;
-  opacity:1;
-}
-#leftButton:hover {
-  background-color: rgb(0,0,0,0.4);
-  box-shadow: 0px 0px 4px rgb(0 0 0 / 30%);
-}
-#leftButton:active {
-  background-color: rgb(0,0,0,0.3);
-  box-shadow: inset 0px 0px 4px rgb(0 0 0 / 30%);
-}
-#leftButton > span {
-  position: relative;
-  top: 44%;
-  font-weight: bolder;
 }
 #rightButton {
-  color: white;
-  position: relative;
-  height:200px;
-  width:30px;
-  background-color: rgb(0,0,0,0.2);
-  border-radius: 0px;
-  text-align: center;
-  padding: 4px;
   bottom: 832px;
   left: 882px;
-  opacity:1;
-}
-#rightButton:hover {
-  background-color: rgb(0,0,0,0.4);
-  box-shadow: 0px 0px 4px rgb(0 0 0 / 30%);
-}
-#rightButton:active {
-  background-color: rgb(0,0,0,0.3);
-  box-shadow: inset 0px 0px 4px rgb(0 0 0 / 30%);
-}
-#rightButton > span {
-  position: relative;
-  top: 44%;
-  font-weight: bolder;
-  text-shadow: 0 0 2px rgb(0 0 0 / 90%)
 }
 #cards{
   visibility: visibile;
@@ -389,7 +368,7 @@ span {
 
 #popupB img {
   width:auto;
-  height: 76vh;
+  height: 94%;
   padding: 20px;
   margin: auto;
 }
