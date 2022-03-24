@@ -12,6 +12,8 @@ window.onload = function(){
   loadModels();
 }
 
+const baseUrl = "";
+
 // scenario scores
 var devControls = false;
 var scenario1 = 0;
@@ -414,32 +416,32 @@ function loadModels (modelsJson) {
   var cubeHeart2 = $('<div id="cubeHeart02" class="c3dContainer healthHeart sick">');
   var cubeHeart3 = $('<div id="cubeHeart03" class="c3dContainer healthHeart sick">');
 
-  tableCode1.load("models/table/tableDom.html");
-  tableCode2.load("models/table/tableDom.html");
-  docCabCode.load("models/documentCabinet/docCabDom.html");
-  flLightCode1.load("models/flLight/flLightDom.html");
-  flLightCode2.load("models/flLight/flLightDom.html");
-  flLightCode3.load("models/flLight/flLightDom.html");
-  monitorCode1.load("models/monitor/monitorDom.html");
-  plugCode1.load("models/plug/plugDom.html");
-  afssBodyCode1.load("models/afssBody/afssBodyDom.html");
-  afssDoorCode1.load("models/afssDoor/afssDoorDom.html");
-  afssStandCode1.load("models/afssStand/afssStandDom.html");
-  afssStandCode2.load("models/afssStand/afssStandDom.html");
-  cubeHeart1.load("models/cubeHeart/cubeHeartDom.html");
-  cubeHeart2.load("models/cubeHeart/cubeHeartDom.html");
-  cubeHeart3.load("models/cubeHeart/cubeHeartDom.html");
+  tableCode1.load(baseUrl+"models/table/tableDom.html");
+  tableCode2.load(baseUrl+"models/table/tableDom.html");
+  docCabCode.load(baseUrl+"models/documentCabinet/docCabDom.html");
+  flLightCode1.load(baseUrl+"models/flLight/flLightDom.html");
+  flLightCode2.load(baseUrl+"models/flLight/flLightDom.html");
+  flLightCode3.load(baseUrl+"models/flLight/flLightDom.html");
+  monitorCode1.load(baseUrl+"models/monitor/monitorDom.html");
+  plugCode1.load(baseUrl+"models/plug/plugDom.html");
+  afssBodyCode1.load(baseUrl+"models/afssBody/afssBodyDom.html");
+  afssDoorCode1.load(baseUrl+"models/afssDoor/afssDoorDom.html");
+  afssStandCode1.load(baseUrl+"models/afssStand/afssStandDom.html");
+  afssStandCode2.load(baseUrl+"models/afssStand/afssStandDom.html");
+  cubeHeart1.load(baseUrl+"models/cubeHeart/cubeHeartDom.html");
+  cubeHeart2.load(baseUrl+"models/cubeHeart/cubeHeartDom.html");
+  cubeHeart3.load(baseUrl+"models/cubeHeart/cubeHeartDom.html");
   $("#scene1").append(tableCode1,tableCode2,docCabCode,flLightCode1,flLightCode2,flLightCode3,monitorCode1,plugCode1,afssBodyCode1,afssDoorCode1,afssStandCode1,afssStandCode2);
   $("#health").append(cubeHeart1,cubeHeart2,cubeHeart3);
-  $("head").append('<link rel="stylesheet" href="models/table/tableStyle.css" />');
-  $("head").append('<link rel="stylesheet" href="models/documentCabinet/docCabStyle.css" />');
-  $("head").append('<link rel="stylesheet" href="models/flLight/flLightStyle.css" />');
-  $("head").append('<link rel="stylesheet" href="models/monitor/monitorStyle.css" />');
-  $("head").append('<link rel="stylesheet" href="models/plug/plugStyle.css" />');
-  $("head").append('<link rel="stylesheet" href="models/afssBody/afssBodyStyle.css" />');
-  $("head").append('<link rel="stylesheet" href="models/afssDoor/afssDoorStyle.css" />');
-  $("head").append('<link rel="stylesheet" href="models/afssStand/afssStandStyle.css" />');
-  $("head").append('<link rel="stylesheet" href="models/cubeHeart/cubeHeartStyle.css" />');
+  $("head").append('<link rel="stylesheet" href="'+baseUrl+'models/table/tableStyle.css" />');
+  $("head").append('<link rel="stylesheet" href="'+baseUrl+'models/documentCabinet/docCabStyle.css" />');
+  $("head").append('<link rel="stylesheet" href="'+baseUrl+'models/flLight/flLightStyle.css" />');
+  $("head").append('<link rel="stylesheet" href="'+baseUrl+'models/monitor/monitorStyle.css" />');
+  $("head").append('<link rel="stylesheet" href="'+baseUrl+'models/plug/plugStyle.css" />');
+  $("head").append('<link rel="stylesheet" href="'+baseUrl+'models/afssBody/afssBodyStyle.css" />');
+  $("head").append('<link rel="stylesheet" href="'+baseUrl+'models/afssDoor/afssDoorStyle.css" />');
+  $("head").append('<link rel="stylesheet" href="'+baseUrl+'models/afssStand/afssStandStyle.css" />');
+  $("head").append('<link rel="stylesheet" href="'+baseUrl+'models/cubeHeart/cubeHeartStyle.css" />');
 }
 
 // Functions in development
