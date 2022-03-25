@@ -415,6 +415,7 @@ function loadModels (modelsJson) {
   var cubeHeart1 = $('<div id="cubeHeart01" class="c3dContainer healthHeart sick">');
   var cubeHeart2 = $('<div id="cubeHeart02" class="c3dContainer healthHeart sick">');
   var cubeHeart3 = $('<div id="cubeHeart03" class="c3dContainer healthHeart sick">');
+  var manualSm1 = $('<div id="manualSm01" class="c3dContainer">');
 
   tableCode1.load(baseUrl+"models/table/tableDom.html");
   tableCode2.load(baseUrl+"models/table/tableDom.html");
@@ -431,6 +432,7 @@ function loadModels (modelsJson) {
   cubeHeart1.load(baseUrl+"models/cubeHeart/cubeHeartDom.html");
   cubeHeart2.load(baseUrl+"models/cubeHeart/cubeHeartDom.html");
   cubeHeart3.load(baseUrl+"models/cubeHeart/cubeHeartDom.html");
+  manualSm1.load(baseUrl+"models/manualSm/manualSmDom.html");
   $("#scene1").append(tableCode1,tableCode2,docCabCode,flLightCode1,flLightCode2,flLightCode3,monitorCode1,plugCode1,afssBodyCode1,afssDoorCode1,afssStandCode1,afssStandCode2);
   $("#health").append(cubeHeart1,cubeHeart2,cubeHeart3);
   $("head").append('<link rel="stylesheet" href="'+baseUrl+'models/table/tableStyle.css" />');
@@ -442,6 +444,7 @@ function loadModels (modelsJson) {
   $("head").append('<link rel="stylesheet" href="'+baseUrl+'models/afssDoor/afssDoorStyle.css" />');
   $("head").append('<link rel="stylesheet" href="'+baseUrl+'models/afssStand/afssStandStyle.css" />');
   $("head").append('<link rel="stylesheet" href="'+baseUrl+'models/cubeHeart/cubeHeartStyle.css" />');
+  $("head").append('<link rel="stylesheet" href="'+baseUrl+'models/manualSm/manualSmStyle.css" />');
 }
 
 // Functions in development

@@ -355,7 +355,7 @@ span {
   display: none;
   top: -30px;
   left: 14px;
-  background: lightcyan;
+  background: rgb(0,0,0,0.8);
   border: 1px solid black;
   color:black;
   opacity: 1;
@@ -528,6 +528,21 @@ transform: translate3d(707px, 20px, 518px) rotateY(-90deg) rotateZ(39deg);
   background-repeat:repeat;
 }
 
+#bertha-manual {
+  position:absolute;
+  transform-style: preserve-3d;
+  height: 80px;
+  width:60px;
+  transform: translate3d(430px, 51px, 400px) rotateX(90deg) rotateZ(261deg);
+}
+.img-container {
+  
+}
+.img-card-3d {
+  height:100%;
+  width:100%;
+}
+
 /* tridiv styles */
 
 .face-wrapper .face {
@@ -642,6 +657,10 @@ transform: translate3d(707px, 20px, 518px) rotateY(-90deg) rotateZ(39deg);
 
 #afssStand02 {
   transform: translate3d(132px,153px,-177px) rotateY(0deg) rotateX(0deg) rotateZ(0deg) scaleX(0.2) scaleZ(0.2) scaleY(0.2);
+}
+
+#manualSm01 {
+  transform: translate3d(430px, 51px, 400px) rotateX(90deg) rotateZ(261deg) scaleX(0.5) scaleZ(0.5) scaleY(0.5);
 }
 
 /* HEALTH - Cube Hearts Position and Animations */
