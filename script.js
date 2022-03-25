@@ -1,4 +1,4 @@
-window.onload = function(){
+  window.onload = function(){
   var cube = document.querySelector('.scene');
   document.addEventListener('keydown', userAction);
 

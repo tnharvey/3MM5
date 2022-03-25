@@ -1,6 +1,6 @@
 :root {
-  --darker-orange: #d04b2a;
-  --lighter-orange: #e75e26;
+  --darker-orange: rgb(208, 75, 42);
+  --lighter-orange: rgb(231, 94, 38);
   --darker-blue: #144c7e;
   --lighter-blue: #345973;
   --yellow: #fbae08;
@@ -141,6 +141,14 @@ span {
   left:100px;
   opacity:0;
 }
+#backButton:hover{
+  background-color: var(--lighter-orange);
+  box-shadow: 0px 0px 4px rgb(0 0 0 / 30%);
+}
+#backButton:active{
+  background-color: var(--darker-orange);
+  box-shadow: inset 0px 0px 4px rgb(0 0 0 / 30%);
+}
 .controlButton {
   color: white;
   position: relative;
@@ -153,11 +161,11 @@ span {
   opacity:1;
 }
 .controlButton:hover {
-  background-color: rgb(0,0,0,0.4);
+  background-color: var(--lighter-orange);
   box-shadow: 0px 0px 4px rgb(0 0 0 / 30%);
 }
 .controlButton:active {
-  background-color: rgb(0,0,0,0.3);
+  background-color: var(--darker-orange);
   box-shadow: inset 0px 0px 4px rgb(0 0 0 / 30%);
 }
 .controlButton > span {
