@@ -7,6 +7,18 @@
   viewCardsArr.forEach(function(item){
     item.addEventListener("click",userAction);
   });
+
+  /* Browser Check */
+  var prefix = (Array.prototype.slice
+    .call(window.getComputedStyle(document.documentElement, ""))
+    .join("") 
+    .match(/-(moz|webkit|ms)-/))[1];
+
+  if (prefix == "moz") {
+    document.getElementById("browser-error").style.display="flex";
+  }
+
+  console.log(prefix);
   document.getElementById("backButton").addEventListener("click",userAction);
 
   loadModels();
