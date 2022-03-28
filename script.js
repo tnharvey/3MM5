@@ -433,6 +433,7 @@ function loadModels (modelsJson) {
   cubeHeart2.load(baseUrl+"models/cubeHeart/cubeHeartDom.html");
   cubeHeart3.load(baseUrl+"models/cubeHeart/cubeHeartDom.html");
   manualSm1.load(baseUrl+"models/manualSm/manualSmDom.html");
+  console.log(manualSm1);
   $("#scene1").append(tableCode1,tableCode2,docCabCode,flLightCode1,flLightCode2,flLightCode3,monitorCode1,plugCode1,afssBodyCode1,afssDoorCode1,afssStandCode1,afssStandCode2);
   $("#health").append(cubeHeart1,cubeHeart2,cubeHeart3);
   $("head").append('<link rel="stylesheet" href="'+baseUrl+'models/table/tableStyle.css" />');

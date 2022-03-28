@@ -496,34 +496,34 @@ transform: translate3d(707px, 20px, 518px) rotateY(-90deg) rotateZ(39deg);
 
 .myCube-front {
   transform: translateZ(500px) rotateY(180deg);
-  background-image: url(https://cdn.jsdelivr.net/gh/tnharvey/3DCSSTrainingRoom/imgs/LO_C_WALL_MID_B_v1.jpg);
+  background-image: url(https://cdn.jsdelivr.net/gh/tnharvey/3DCSSTrainingRoom/imgs/frontFaceTexture.jpg);
 }
 
 .myCube-back {
   transform: translateZ(-500px);
-  background-image: url(https://cdn.jsdelivr.net/gh/tnharvey/3DCSSTrainingRoom/imgs/LO_C_WALL_MID_v1.jpg);
+  background-image: url(https://cdn.jsdelivr.net/gh/tnharvey/3DCSSTrainingRoom/imgs/backFaceTexture.jpg);
 }
 
 .myCube-left {
   transform: translateX(-500px) rotateY(-270deg);
   width: 1000px;
-  background-image: url(https://cdn.jsdelivr.net/gh/tnharvey/3DCSSTrainingRoom/imgs/LO_C_WALL_LEFT_v1.jpg);
+  background-image: url(https://cdn.jsdelivr.net/gh/tnharvey/3DCSSTrainingRoom/imgs/Container-Wall-Long-Left.jpg);
 }
 
 .myCube-right {
   transform: translateX(300px) rotateY(270deg);
   width: 1000px;
-  background-image: url(https://cdn.jsdelivr.net/gh/tnharvey/3DCSSTrainingRoom/imgs/LO_C_WALL_RIGHT_v1.jpg);
+  background-image: url(https://cdn.jsdelivr.net/gh/tnharvey/3DCSSTrainingRoom/imgs/Container-Wall-Long-Right.jpg);
 }
 
 .myCube-top {
   transform: translateY(-500px) rotateX(270deg);
-  background-image: url(https://cdn.jsdelivr.net/gh/tnharvey/3DCSSTrainingRoom/imgs/LO_CEILING_v1.jpg);
+  background-image: url(https://cdn.jsdelivr.net/gh/tnharvey/3DCSSTrainingRoom/imgs/ceilingTexture2-longdk.jpg);
 }
 
 .myCube-bottom {
   transform: translateY(-100px) rotateX(-270deg);
-  background-image: url(https://cdn.jsdelivr.net/gh/tnharvey/3DCSSTrainingRoom/imgs/LO_C_FLOOR_v1.jpg);
+  background-image: url(https://cdn.jsdelivr.net/gh/tnharvey/3DCSSTrainingRoom/imgs/floorTexture.jpg);
   background-size: contain;
   background-repeat:repeat;
 }
