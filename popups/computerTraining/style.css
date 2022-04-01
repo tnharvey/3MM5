@@ -1,0 +1,20 @@
+.loadedPContainer {
+  width: 60%;
+  margin: auto;
+  background-color: black;
+  padding: 3%;
+}
+
+.loadedPContainer p {
+  color: white;
+  font-size: 0.5em;
+}
+
+.loadedPContainer img {
+  margin: auto;
+  display: block;
+  width: 50%;
+  border-radius: 4px;
+}
+
+

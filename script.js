@@ -1,3 +1,15 @@
+/*
+- Remove keyboard navigation
+training to scenario transition function
+- Unload/load assets, images, etc. (should this be crossfade between two scenes)
+- Hide/Show (load/unload?) training/scenario content containers
+- Trigger initial scenario popup
+
+Slide interface
+- *Popup
+  - Popup with iframe or load()
+*/
+
   window.onload = function(){
   var cube = document.querySelector('.scene');
   document.addEventListener('keydown', userAction);
@@ -8,19 +20,9 @@
     item.addEventListener("click",userAction);
   });
 
-  /* Browser Check */
-  var prefix = (Array.prototype.slice
-    .call(window.getComputedStyle(document.documentElement, ""))
-    .join("") 
-    .match(/-(moz|webkit|ms)-/))[1];
+  browserCheck();
 
-  if (prefix == "moz") {
-    document.getElementById("browser-error").style.display="flex";
-  }
-
-  console.log(prefix);
   document.getElementById("backButton").addEventListener("click",userAction);
-
   loadModels();
 }
 
@@ -35,7 +37,6 @@ var score = 3;
 
 /* Scenarios */
 function updateScenario(scenario,points){
-  console.log(scenario+", "+points);
   if (points == -1 || points == 1){
     switch(scenario) {
       case 1:
@@ -121,7 +122,7 @@ function updateHealth() {
   var heart1 = document.getElementById("cubeHeart01");
   var heart2 = document.getElementById("cubeHeart02")
   var heart3 = document.getElementById("cubeHeart03")
-  console.log(score);
+  
   switch(score) {
     case 0:
       heart1.classList.add("hide");
@@ -255,7 +256,6 @@ function userAction (input) {
         // Prevent scrolling on arrow keypress, which makes page jump around when navigating with keyboard
         input.preventDefault();
       }
-      console.log(input.type);
       if(input.type=="keydown"){
         uAction = input.key;
       }
@@ -300,6 +300,10 @@ function userAction (input) {
         document.getElementById("backButton").style.opacity=1;
         if(uAction=="face-equipment") {
           document.getElementById("afssDoor01").classList.add("afssDoor-open");
+        }
+        if(uAction=="face-computer") {
+          showPopup("popupC");
+          loadContent ("popTest","popups/computerTraining/","popupC");
         }
       }
     }
@@ -400,14 +404,26 @@ function userAction (input) {
       }
       else if (uAction === "Enter"){}
     }
-    else if ((input.shiftKey && uAction =="ArrowLeft")||uAction=="rotLeft"){
-      //document.getElementBy
-    }
-    else if ((input.shiftKey && uAction =="ArrowRight")||uAction=="rotRight"){
-      
-    }
+    else if ((input.shiftKey && uAction =="ArrowLeft")||uAction=="rotLeft"){}
+    else if ((input.shiftKey && uAction =="ArrowRight")||uAction=="rotRight"){}
   }
 }   
+
+function loadContent (contentId,contentLoc,targetId,params) {
+  /* Load content from local folder directory to target element ID */
+
+  var newElementCode = $('<div id="'+contentId+'" class="loaded">');
+
+  newElementCode.load(contentLoc+"index.html");
+  
+  $('#'+targetId).append(newElementCode);
+
+  $("head").append('<link rel="stylesheet" href="'+contentLoc+'style.css" />');
+}
+
+function removeContent(targetId) {
+  document.getElementById("popTest").remove();
+}
 
 function loadModels (modelsJson) {
   /* takes a JSON model parsed from XML manifest of models and folder locations, loads those models into the HTML document, and adds initial transform data if none is present in main stylesheet */
@@ -445,7 +461,6 @@ function loadModels (modelsJson) {
   cubeHeart2.load(baseUrl+"models/cubeHeart/cubeHeartDom.html");
   cubeHeart3.load(baseUrl+"models/cubeHeart/cubeHeartDom.html");
   manualSm1.load(baseUrl+"models/manualSm/manualSmDom.html");
-  console.log(manualSm1);
   $("#scene1").append(tableCode1,tableCode2,docCabCode,flLightCode1,flLightCode2,flLightCode3,monitorCode1,plugCode1,afssBodyCode1,afssDoorCode1,afssStandCode1,afssStandCode2);
   $("#health").append(cubeHeart1,cubeHeart2,cubeHeart3);
   $("head").append('<link rel="stylesheet" href="'+baseUrl+'models/table/tableStyle.css" />');
@@ -460,6 +475,18 @@ function loadModels (modelsJson) {
   $("head").append('<link rel="stylesheet" href="'+baseUrl+'models/manualSm/manualSmStyle.css" />');
 }
 
+function browserCheck() {
+  // Uses computer style to detect browser. If browser if Moz, blocks interaction with popup.
+  
+  var prefix = (Array.prototype.slice
+    .call(window.getComputedStyle(document.documentElement, ""))
+    .join("") 
+    .match(/-(moz|webkit|ms)-/))[1];
+
+  if (prefix == "moz") {
+    document.getElementById("browser-error").style.display="flex";
+  }
+}
 // Functions in development
 /*
 // Changes XML to JSON
