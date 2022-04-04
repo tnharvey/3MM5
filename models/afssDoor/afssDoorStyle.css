@@ -14,15 +14,15 @@
 }
 
 .door .tp {
-    background: url(https://cdn.jsdelivr.net/gh/tnharvey/3DCSSTrainingRoom@newStylesTest/models/afssDoor/AFSS_Door_Atlas_v1_A1.png) -320px 0px;
+    background: url(https://cdn.jsdelivr.net/gh/tnharvey/3DCSSTrainingRoom/models/afssDoor/AFSS_Door_Atlas_v1_A1.png) -320px 0px;
 }
 
 .door .bm {
-    background: url(https://cdn.jsdelivr.net/gh/tnharvey/3DCSSTrainingRoom@newStylesTest/models/afssDoor/AFSS_Door_Atlas_v1_A1.png) 0px 0px;
+    background: url(https://cdn.jsdelivr.net/gh/tnharvey/3DCSSTrainingRoom/models/afssDoor/AFSS_Door_Atlas_v1_A1.png) 0px 0px;
 }
 
 .door .side {
-    background: url(https://cdn.jsdelivr.net/gh/tnharvey/3DCSSTrainingRoom@newStylesTest/models/afssDoor/AFSS_Door_Atlas_v1_A1.png) -464px -320px;
+    background: url(https://cdn.jsdelivr.net/gh/tnharvey/3DCSSTrainingRoom/models/afssDoor/AFSS_Door_Atlas_v1_A1.png) -464px -320px;
 }
 
 .door .side {
@@ -100,13 +100,13 @@
   height:1.5em;
 }
 .door-handle .tp {
-  background: url(https://cdn.jsdelivr.net/gh/tnharvey/3DCSSTrainingRoom@newStylesTest/models/afssDoor/AFSS_Door_Atlas_v1_A1.png) 30px -346px;
+  background: url(https://cdn.jsdelivr.net/gh/tnharvey/3DCSSTrainingRoom/models/afssDoor/AFSS_Door_Atlas_v1_A1.png) 30px -346px;
 }
 .door-handle .bm {
-  background: url(https://cdn.jsdelivr.net/gh/tnharvey/3DCSSTrainingRoom@newStylesTest/models/afssDoor/AFSS_Door_Atlas_v1_A1.png) 54px -346px;
+  background: url(https://cdn.jsdelivr.net/gh/tnharvey/3DCSSTrainingRoom/models/afssDoor/AFSS_Door_Atlas_v1_A1.png) 54px -346px;
 }
 .door-handle .side {
-  background: url(https://cdn.jsdelivr.net/gh/tnharvey/3DCSSTrainingRoom@newStylesTest/models/afssDoor/AFSS_Door_Atlas_v1_A1.png) 6px -170px;
+  background: url(https://cdn.jsdelivr.net/gh/tnharvey/3DCSSTrainingRoom/models/afssDoor/AFSS_Door_Atlas_v1_A1.png) 6px -170px;
 }
 .door-handle .side {
   width:0.36736521158522495em;
@@ -170,13 +170,13 @@
   height:5em;
 }
 .door-hub .tp {
-  background: url(https://cdn.jsdelivr.net/gh/tnharvey/3DCSSTrainingRoom@newStylesTest/models/afssDoor/AFSS_Door_Atlas_v1_A1.png) -320px -320px;
+  background: url(https://cdn.jsdelivr.net/gh/tnharvey/3DCSSTrainingRoom/models/afssDoor/AFSS_Door_Atlas_v1_A1.png) -320px -320px;
 }
 .door-hub .bm {
-  background: url(https://cdn.jsdelivr.net/gh/tnharvey/3DCSSTrainingRoom@newStylesTest/models/afssDoor/AFSS_Door_Atlas_v1_A1.png) -240px -320px;
+  background: url(https://cdn.jsdelivr.net/gh/tnharvey/3DCSSTrainingRoom/models/afssDoor/AFSS_Door_Atlas_v1_A1.png) -240px -320px;
 }
 .door-hub .side {
-  background: url(https://cdn.jsdelivr.net/gh/tnharvey/3DCSSTrainingRoom@newStylesTest/models/afssDoor/AFSS_Door_Atlas_v1_A1.png) -416px -320px;
+  background: url(https://cdn.jsdelivr.net/gh/tnharvey/3DCSSTrainingRoom/models/afssDoor/AFSS_Door_Atlas_v1_A1.png) -416px -320px;
 }
 .door-hub .side {
   width:0.58310868597537453em;
@@ -233,22 +233,22 @@
   height:3.75em;
 }
 .door-hinge .tp {
-  background: url(https://cdn.jsdelivr.net/gh/tnharvey/3DCSSTrainingRoom@newStylesTest/models/afssDoor/AFSS_Door_Atlas_v1_A1.png) 0px -320px;
+  background: url(https://cdn.jsdelivr.net/gh/tnharvey/3DCSSTrainingRoom/models/afssDoor/AFSS_Door_Atlas_v1_A1.png) 0px -320px;
 }
 .door-hinge .bm {
-  background: url(https://cdn.jsdelivr.net/gh/tnharvey/3DCSSTrainingRoom@newStylesTest/models/afssDoor/AFSS_Door_Atlas_v1_A1.png) -80px -320px;
+  background: url(https://cdn.jsdelivr.net/gh/tnharvey/3DCSSTrainingRoom/models/afssDoor/AFSS_Door_Atlas_v1_A1.png) -80px -320px;
 }
 .door-hinge .ft {
-  background: url(https://cdn.jsdelivr.net/gh/tnharvey/3DCSSTrainingRoom@newStylesTest/models/afssDoor/AFSS_Door_Atlas_v1_A1.png) -240px -440px;
+  background: url(https://cdn.jsdelivr.net/gh/tnharvey/3DCSSTrainingRoom/models/afssDoor/AFSS_Door_Atlas_v1_A1.png) -240px -440px;
 }
 .door-hinge .bk {
-  background: url(https://cdn.jsdelivr.net/gh/tnharvey/3DCSSTrainingRoom@newStylesTest/models/afssDoor/AFSS_Door_Atlas_v1_A1.png) -318px -440px;
+  background: url(https://cdn.jsdelivr.net/gh/tnharvey/3DCSSTrainingRoom/models/afssDoor/AFSS_Door_Atlas_v1_A1.png) -318px -440px;
 }
 .door-hinge .lt {
-  background: url(https://cdn.jsdelivr.net/gh/tnharvey/3DCSSTrainingRoom@newStylesTest/models/afssDoor/AFSS_Door_Atlas_v1_A1.png) 0px -440px;
+  background: url(https://cdn.jsdelivr.net/gh/tnharvey/3DCSSTrainingRoom/models/afssDoor/AFSS_Door_Atlas_v1_A1.png) 0px -440px;
 }
 .door-hinge .rt {
-  background: url(https://cdn.jsdelivr.net/gh/tnharvey/3DCSSTrainingRoom@newStylesTest/models/afssDoor/AFSS_Door_Atlas_v1_A1) -120px -440px;
+  background: url(https://cdn.jsdelivr.net/gh/tnharvey/3DCSSTrainingRoom/models/afssDoor/AFSS_Door_Atlas_v1_A1) -120px -440px;
 }
 .door-hinge .tp, .door-hinge .bm {
   width:5em;
