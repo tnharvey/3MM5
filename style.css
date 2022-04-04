@@ -10,7 +10,14 @@
 }
 
 /* DOM styles */
-   
+
+body {
+  -webkit-user-select: none;
+  -webkit-touch-callout: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
 span {
     font-size: 16px;
     font-weight: 400;
@@ -235,6 +242,14 @@ span {
   /* z-index: 4; */
 }
 
+.grid-1col {
+  display: grid;
+  grid-template-columns: auto;
+  padding: 10px;
+}
+
+.grid-1col
+
 /* Interactive element styles (buttons, popups, etc.) */
 .interactive {
   cursor: pointer;
@@ -274,6 +289,20 @@ span {
 
 .btn-part-control {
   background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+}
+
+.btn-confirm {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+}
+
+.btn-cancel {
+  background-color: #b12020; /* Red */
   border: none;
   color: white;
   padding: 15px 32px;
@@ -357,7 +386,7 @@ span {
   left: 14px;
   background: rgb(0,0,0,0.8);
   border: 1px solid black;
-  color:black;
+  color:white;
   opacity: 1;
   align-items: center;
   justify-content: center;
@@ -385,6 +414,27 @@ span {
   color: white;
 }
 
+#training-checklist {
+  text-align: left;
+  margin-left:30%;
+}
+
+li.complete {
+  list-style: none;
+}
+
+li.incomplete {
+  list-style: none;
+}
+.complete:before {
+  color:green;
+  content: "\2713\0020";
+}
+.incomplete:before {
+  color:red;
+  content:"X";
+  margin-right: 8px;
+}
 /* 3D element styling */
 
 /* Primary Scene styling */
@@ -406,7 +456,7 @@ span {
   transform: translate3d(206px, 0px, 250px) rotateY(0deg);
 }
 .face-equipment {
-  transform: translate3d(251px, -1px, 596px) rotateX(-12deg) rotateY(0deg);
+  transform: translate3d(238px, -1px, 596px) rotateX(-12deg) rotateY(0deg);
 }
 .face-left {
   transform: translate3d(704px, 20px, 374px) rotateY(-90deg);
@@ -643,12 +693,12 @@ transform: translate3d(707px, 20px, 518px) rotateY(-90deg) rotateZ(39deg);
 }
 
 #afssDoor01 {
-  transform: translate3d(97px,58px,-168px) rotateY(0deg) rotateX(0deg) rotateZ(0deg) scaleX(0.19) scaleZ(0.19) scaleY(0.19);
+  transform: translate3d(100px,56px,-168px) rotateY(0deg) rotateX(0deg) rotateZ(0deg) scaleX(0.17) scaleZ(0.17) scaleY(0.17);
   transition-duration: 2s;
 }
 
 #afssDoor01.afssDoor-open {
-  transform: translate3d(97px,58px,-162px) rotateY(-140deg) rotateX(0deg) rotateZ(0deg) scaleX(0.19) scaleZ(0.19) scaleY(0.19);
+  transform: translate3d(100px,56px,-162px) rotateY(-140deg) rotateX(0deg) rotateZ(0deg) scaleX(0.17) scaleZ(0.17) scaleY(0.17);
 }
 
 #afssStand01 {
