@@ -305,6 +305,9 @@ function userAction (input) {
           showPopup("popupC");
           loadContent ("popTest","popups/computerTraining/","popupC");
         }
+        if(uAction=="face-equipment") {
+          showPopup("popupD");
+        }
       }
     }
     if (orientation=="face-front") {
