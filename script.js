@@ -438,7 +438,7 @@ function loadModels (modelsJson) {
   var flLightCode2 = $('<div id="flLight02" class="c3dContainer">');
   var flLightCode3 = $('<div id="flLight03" class="c3dContainer">');
   var monitorCode1 = $('<div id="monitor01" class="c3dContainer">');
-  var plugCode1 = $('<div id="plug01" class="c3dContainer">');
+  //var plugCode1 = $('<div id="plug01" class="c3dContainer">');
   var afssBodyCode1 = $('<div id="afssBody01" class="c3dContainer">');
   var afssDoorCode1 = $('<div id="afssDoor01" class="c3dContainer">');
   var afssStandCode1 = $('<div id="afssStand01" class="c3dContainer">');
@@ -455,7 +455,7 @@ function loadModels (modelsJson) {
   flLightCode2.load(baseUrl+"models/flLight/flLightDom.html");
   flLightCode3.load(baseUrl+"models/flLight/flLightDom.html");
   monitorCode1.load(baseUrl+"models/monitor/monitorDom.html");
-  plugCode1.load(baseUrl+"models/plug/plugDom.html");
+  //plugCode1.load(baseUrl+"models/plug/plugDom.html");
   afssBodyCode1.load(baseUrl+"models/afssBody/afssBodyDom.html");
   afssDoorCode1.load(baseUrl+"models/afssDoor/afssDoorDom.html");
   afssStandCode1.load(baseUrl+"models/afssStand/afssStandDom.html");
@@ -464,13 +464,13 @@ function loadModels (modelsJson) {
   cubeHeart2.load(baseUrl+"models/cubeHeart/cubeHeartDom.html");
   cubeHeart3.load(baseUrl+"models/cubeHeart/cubeHeartDom.html");
   manualSm1.load(baseUrl+"models/manualSm/manualSmDom.html");
-  $("#scene1").append(tableCode1,tableCode2,docCabCode,flLightCode1,flLightCode2,flLightCode3,monitorCode1,plugCode1,afssBodyCode1,afssDoorCode1,afssStandCode1,afssStandCode2);
+  $("#scene1").append(tableCode1,tableCode2,docCabCode,flLightCode1,flLightCode2,flLightCode3,monitorCode1,afssBodyCode1,afssDoorCode1,afssStandCode1,afssStandCode2);
   $("#health").append(cubeHeart1,cubeHeart2,cubeHeart3);
   $("head").append('<link rel="stylesheet" href="'+baseUrl+'models/table/tableStyle.css" />');
   $("head").append('<link rel="stylesheet" href="'+baseUrl+'models/documentCabinet/docCabStyle.css" />');
   $("head").append('<link rel="stylesheet" href="'+baseUrl+'models/flLight/flLightStyle.css" />');
   $("head").append('<link rel="stylesheet" href="'+baseUrl+'models/monitor/monitorStyle.css" />');
-  $("head").append('<link rel="stylesheet" href="'+baseUrl+'models/plug/plugStyle.css" />');
+  //$("head").append('<link rel="stylesheet" href="'+baseUrl+'models/plug/plugStyle.css" />');
   $("head").append('<link rel="stylesheet" href="'+baseUrl+'models/afssBody/afssBodyStyle.css" />');
   $("head").append('<link rel="stylesheet" href="'+baseUrl+'models/afssDoor/afssDoorStyle.css" />');
   $("head").append('<link rel="stylesheet" href="'+baseUrl+'models/afssStand/afssStandStyle.css" />');
