@@ -41,6 +41,9 @@
 .afss-stand .tp {
   background: url(https://cdn.jsdelivr.net/gh/tnharvey/3DCSSTrainingRoom/models/afssStand/AFSS_Stand_Atlas_v1_A1.png) 0px -160px;
 }
+.afss-stand .side {
+  background: url(https://cdn.jsdelivr.net/gh/tnharvey/3DCSSTrainingRoom/models/afssStand/AFSS_Stand_Atlas_v1_A1.png) -770px 0px;
+}
 .afss-stand .ft {
   width:21.5em;
   margin-left:1.75em;

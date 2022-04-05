@@ -490,6 +490,33 @@ function browserCheck() {
     document.getElementById("browser-error").style.display="flex";
   }
 }
+
+function findInList (list, term, exact) {
+  // searches array items for search term. If exact search, returns true if exact term is found. If not exact, returns any matching items in list.
+  var results = "";
+  var resultsArr = [];
+    
+  list.forEach(item => {
+    if(exact){
+      if(item==term){results = item;}
+      else {results=false;}
+    }
+    else {
+      if(item.search(term)>=0){
+        if(results=="") {
+          results = item;
+        }
+        else {
+          if(resultsArr==""){
+            resultsArr.push(results);
+          }
+          resultsArr.push(item);
+        }
+      }
+    }
+  })
+  return results;
+}
 // Functions in development
 /*
 // Changes XML to JSON
