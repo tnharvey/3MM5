@@ -1,13 +1,10 @@
-/*
+/* TO DO
 - Remove keyboard navigation
 training to scenario transition function
 - Unload/load assets, images, etc. (should this be crossfade between two scenes)
 - Hide/Show (load/unload?) training/scenario content containers
 - Trigger initial scenario popup
 
-Slide interface
-- *Popup
-  - Popup with iframe or load()
 */
 
   window.onload = function(){
@@ -35,6 +32,7 @@ var scenario1 = 0;
 var scenario2 = 0;
 var scenario3 = 0;
 var score = 3;
+var contentCollection = {resources:0,forms:0,computer:0};
 
 /* Scenarios */
 function updateScenario(scenario,points){
@@ -235,6 +233,22 @@ function updateHealth() {
   }
 }
 
+function updateContentView(content) {
+  contentCollection[content]=1;
+  updateMessages();
+}
+
+function updateMessages() {
+  if (contentCollection.resources==1) {
+    $("#message")[0].innerHTML="<b>Next Step:</b><br>Review the forms in the document cabinet on the table to the right.</span>";
+  }
+  else if (contentCollection.resources==1 && contentCollection.forms==1) {
+    $("#message")[0].innerHTML="<b>Next Step:</b><br>Review the presentation on the computer screen to the right.</span>";
+  }
+  else if (contentCollection.resources==1 && contentCollection.forms==1 && contentCollection.computer==1) {
+    $("#message")[0].innerHTML="<b>Next Step:</b><br>Great Job! You've completed the training content. You may review some more, or start the scenario.</span>";
+  }
+}
 /* Inline click funcions, need to set up with listeners */
 function showPopup (popupId) {
     document.getElementById(popupId).style.display="flex";
