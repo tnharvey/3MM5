@@ -19,6 +19,7 @@ Slide interface
   viewCardsArr.forEach(function(item){
     item.addEventListener("click",userAction);
   });
+    $("#cancelStart")[0].addEventListener("click",userAction);
 
   browserCheck();
 
@@ -252,11 +253,11 @@ function userAction (input) {
     var uAction = "";
 
     if (typeof(input)==='object') {
-      if(input.key=="ArrowUp"||input.key=="ArrowDown" ||input.key=="ArrowLeft"||input.key=="ArrowDown"){
-        // Prevent scrolling on arrow keypress, which makes page jump around when navigating with keyboard
-        input.preventDefault();
-      }
       if(input.type=="keydown"){
+        if(input.key=="ArrowUp"||input.key=="ArrowDown" ||input.key=="ArrowLeft"||input.key=="ArrowDown"){
+          // Prevent scrolling on arrow keypress, which makes page jump around when navigating with keyboard
+          input.preventDefault();
+        }
         uAction = input.key;
       }
       else if(input.type="click"){

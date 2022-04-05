@@ -24,6 +24,14 @@ span {
     font-weight: 400;
 }
 
+h2 {
+  font-size: 1.2em;
+}
+
+h3 {
+  font-size: 1em;
+}
+
 .hide {
   visibility: hidden;
 }
@@ -467,7 +475,7 @@ li.incomplete {
   transform: translate3d(8px, 12px, 704px) rotateY(90deg);
 }
 .face-computer {
-transform: translate3d(-108px, -43px, 1028px) rotateY(90deg);
+  transform: translate3d(-109px, -27px, 1098px) rotateY(90deg);
 }
 
 .face-references {
