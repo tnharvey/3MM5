@@ -819,3 +819,18 @@ transform: translate3d(707px, 20px, 518px) rotateY(-90deg) rotateZ(39deg);
     transform: translate3d(75px,0px,0px) rotateY(360deg) rotateX(0deg) rotateZ(0deg) scaleX(0.06) scaleZ(0.06) scaleY(0.06);
   }
 }
+
+@keyframes glow {
+    0% {
+		border-color: #929933;
+		box-shadow: 0 0 5px rgba(238,255,0,.2), inset 0 0 5px rgba(238,255,0,.1), 0 2px 0 #000;
+    }	
+    100% {
+		border-color: #fcff66;
+		box-shadow: 0 0 20px rgba(238,255,0,.6), inset 0 0 10px rgba(238,255,0,.4), 0 2px 0 #000;
+    }
+}
+
+.hint {
+  animation: glow 800ms ease-out infinite alternate;
+}
