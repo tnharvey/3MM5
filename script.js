@@ -1,25 +1,30 @@
 /* TO DO
-- Remove keyboard navigation
-training to scenario transition function
-- Unload/load assets, images, etc. (should this be crossfade between two scenes)
-- Hide/Show (load/unload?) training/scenario content containers
-- Trigger initial scenario popup
 
 */
 
-  window.onload = function(){
+window.onload = function(){
   var cube = document.querySelector('.scene');
   document.addEventListener('keydown', userAction);
 
   let viewCards = document.getElementsByClassName('popup3d');
   let viewCardsArr = Array.prototype.slice.call(viewCards);
+  
   viewCardsArr.forEach(function(item){
     item.addEventListener("click",userAction);
   });
-    $("#cancelStart")[0].addEventListener("click",userAction);
+  $("#cancelStart")[0].addEventListener("click",userAction);
 
   browserCheck();
-
+  
+  showPopup("popupIntro");
+  loadContent ("popLoad","popups/intro/","popupIntro");
+  
+  window.addEventListener("message", (event) => {
+    if (event.data == "start") {
+      startScenario();
+    }
+  }, false);
+    
   document.getElementById("backButton").addEventListener("click",userAction);
   loadModels();
 }
@@ -35,6 +40,13 @@ var score = 3;
 var contentCollection = {resources:0,forms:0,computer:0};
 
 /* Scenarios */
+
+function startScenario() {
+  hidePopup('popupIntro');
+  removeContent('popLoad');
+  // initiate any starting sequence
+}
+
 function updateScenario(scenario,points){
   if (points == -1 || points == 1){
     switch(scenario) {

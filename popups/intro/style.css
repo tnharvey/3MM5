@@ -1,0 +1,47 @@
+.loadedPContainer {
+  width: 94%;
+  height: 90%;
+  margin: auto;
+  padding: 3%;
+  border-radius: 4px;
+}
+
+.loadedPContainer p {
+  color: white;
+  font-size: 0.75em;
+}
+
+.loadedPContainer img {
+  margin: auto;
+  display: block;
+  border-radius: 4px;
+}
+
+.slideBtn {
+  color: white;
+  position: relative;
+  height:20px;
+  width:80px;
+  background-color: var(--darker-orange);
+  border-radius: 4px;
+  text-align: center;
+  padding: 10px;
+  bottom:-10px;
+  left:636px;
+}
+
+.slideBtn:hover {
+  background-color: var(--lighter-orange);
+}
+
+.slideBtn:active {
+  background-color: var(--darker-orange);
+}
+
+.slide {
+  display:none;
+}
+
+.slide:nth-of-type(1){
+  display:block;
+}

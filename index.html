@@ -1,23 +1,23 @@
 <html>
     <head>
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/tnharvey/3DCSSTrainingRoom@scenarioStart/style.css" />
+        <link rel="stylesheet" href="style.css" />
         <script src="script.js" ></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" ></script>
     </head>
     <body>
       <div id="appContainer">
         <div class="container">
-          <div id="scene1" class="scene face-front">
+          <div id="scene1" class="scene face-right">
             <div class="my-cube myCube-show">
               <div class="myCube-bt myCube-top"></div>
               <div class="myCube-bt myCube-bottom"></div>
-              <div class="myCube-face myCube-left"><img class="interactive" style="margin: auto; width:10%; height: auto;" src="https://cdn.jsdelivr.net/gh/tnharvey/3DCSSTrainingRoom@scenarioStart/imgs/floatingWallObject_r.jpg" onclick="showPopup('popupA');"></div>
+              <div class="myCube-face myCube-left"></div>
               <div class="myCube-face myCube-right"></div>
               <div class="myCube-face myCube-front"></div>
               <div class="myCube-face myCube-back"></div>
             </div>
             <div id="bertha-manual" class="img-container interactive" onclick="showPopup('popup-bertha-manual');">
-              <img class="img-card-3d" src="imgs/Bertha-M-138-Manual_r.jpg">
+              <img class="img-card-3d" src="imgs/Bertha-M-138-Manual.jpg">
             </div>
             <div id="cards" class="popup3d-Container">
               <div id="equipment-card" data-target-dir="face-equipment" class="popup3d interactive">
@@ -49,9 +49,7 @@
             <div class="buttonChoice gridItem2 btn-scenario-control" onclick="endScenario();">Complete Scenario</div>
             </div>
           </div>
-          <div id="popupB" class="popup" onclick="hidePopup('popupB');">
-            <div class="buttonChoice close" onclick="hidePopup('popupB');">X</div>
-            <img class="interactive" src="https://cdn.jsdelivr.net/gh/tnharvey/3DCSSTrainingRoom/imgs/floatingWallObject.jpg">
+          <div id="popupIntro" class="popup" onclick="hidePopup('popupB');">
           </div>
           <div id="popupC" class="popup">
             <div class="buttonChoice close" onclick="hidePopup('popupC');removeContent('popTest');">X</div>
