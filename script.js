@@ -258,6 +258,7 @@ function userAction (input) {
         uAction = input.path[0].dataset.targetDir;
       }
     }
+    //if input is from onclick, not listener
     else if (typeof(input)==='string') {
         uAction = input;
     }
@@ -290,6 +291,7 @@ function userAction (input) {
         }
       }
     }
+    //Room orientation
     if (orientation=="face-front") {
       if(uAction === "ArrowLeft") {
         cube.classList.remove("face-front");
@@ -299,65 +301,56 @@ function userAction (input) {
         cube.classList.remove("face-front");
         cube.classList.add("face-right");
       }
-      else if (uAction === "ArrowUp"){
-        cube.classList.remove("face-front");
-        cube.classList.add("face-equipment");
-        document.getElementById("afssDoor01").classList.add("afssDoor-open");
-        document.getElementById("cards").style.visibility="hidden";
-      }
-      else if (uAction === "ArrowDown"){}
-      else if (uAction === "Enter"){}
     }
     else if (orientation=="face-left"){
-      if(uAction === "ArrowLeft") {}
+      if(uAction === "ArrowLeft") {
+        cube.classList.remove("face-left");
+        cube.classList.add("face-lBack");
+      }
       else if (uAction === "ArrowRight"){
         cube.classList.remove("face-left");
         cube.classList.add("face-front");
       }
-      else if (uAction === "ArrowUp"){
-        cube.classList.remove("face-left");
-        cube.classList.add("face-resources");
-        document.getElementById("cards").style.visibility="hidden";
+    }
+    else if (orientation=="face-lBack"){
+      cube.addEventListener("transitionend",switchOrientation);
+      if(uAction === "ArrowLeft") {
+        cube.classList.remove("face-lBack");
+        cube.classList.add("face-lRight");
       }
-      else if (uAction === "ArrowDown"){}
-      else if (uAction === "Enter"){}
+      else if (uAction === "ArrowRight"){
+        cube.classList.remove("face-lBack");
+        cube.classList.add("face-left");
+      }
     }
     else if (orientation=="face-right"){
       if(uAction === "ArrowLeft") {
         cube.classList.remove("face-right");
         cube.classList.add("face-front");
       }
-      else if (uAction === "ArrowRight"){}
-      else if (uAction === "ArrowUp"){
+      else if (uAction === "ArrowRight"){
         cube.classList.remove("face-right");
-        cube.classList.add("face-computer");
-        document.getElementById("cards").style.visibility="hidden";
+        cube.classList.add("face-rBack");
       }
-      else if (uAction === "ArrowDown"){}
-      else if (uAction === "Enter"){}
+    }
+    else if (orientation=="face-rBack"){
+      cube.addEventListener("transitionend",switchOrientation);
+      if(uAction === "ArrowLeft") {
+        cube.classList.remove("face-rBack");
+        cube.classList.add("face-right");
+      }
+      else if (uAction === "ArrowRight"){
+        cube.classList.remove("face-rBack");
+        cube.classList.add("face-rLeft");
+      }
     }
     else if (orientation=="face-equipment"){
       if(uAction === "ArrowLeft") {}
       else if (uAction === "ArrowRight"){}
-      else if (uAction === "ArrowUp"){}
-      else if (uAction === "ArrowDown"){
-        cube.classList.remove("face-equipment");
-        document.getElementById("afssDoor01").classList.remove("afssDoor-open");
-        cube.classList.add("face-front");
-        document.getElementById("cards").style.visibility="visible";
-      }
-      else if (uAction === "Enter"){}
     }
     else if (orientation=="face-resources"){
       if(uAction === "ArrowLeft") {}
       else if (uAction === "ArrowRight"){}
-      else if (uAction === "ArrowUp"){}
-      else if (uAction === "ArrowDown"){
-        cube.classList.remove("face-resources");
-        cube.classList.add("face-left");
-        document.getElementById("cards").style.visibility="visible";
-      }
-      else if (uAction === "Enter"){}
     }
     else if (orientation=="face-computer"){
       if(uAction === "ArrowLeft") {
@@ -365,13 +358,6 @@ function userAction (input) {
         cube.classList.add("face-references");
       }
       else if (uAction === "ArrowRight"){}
-      else if (uAction === "ArrowUp"){}
-      else if (uAction === "ArrowDown"){
-        cube.classList.remove("face-computer");
-        cube.classList.add("face-right");
-        document.getElementById("cards").style.visibility="visible";
-      }
-      else if (uAction === "Enter"){}
     }
     else if (orientation=="face-references"){
       if(uAction === "ArrowLeft") {}
@@ -379,16 +365,29 @@ function userAction (input) {
         cube.classList.remove("face-references");
         cube.classList.add("face-computer");
       }
-      else if (uAction === "ArrowUp"){}
-      else if (uAction === "ArrowDown"){
-        cube.classList.remove("face-references");
-        cube.classList.add("face-right");
-        document.getElementById("cards").style.visibility="visible";
-      }
-      else if (uAction === "Enter"){}
     }
   }
 }   
+function switchOrientation(e) {
+  //Sneaky. Resolves the continuous rotation issue by disabling transitions during a quick orientation reset.
+  var cube = document.querySelector('#scene1');
+  var orientation = cube.classList[1];
+
+  if (orientation=="face-lRight"){
+    cube.classList.add("notransition");
+    cube.classList.remove("face-lRight");
+    cube.classList.add("face-right");
+    cube.offsetHeight;
+    cube.classList.remove("notransition");
+    }
+  if (orientation=="face-rLeft"){
+    cube.classList.add("notransition");
+    cube.classList.remove("face-rLeft");
+    cube.classList.add("face-left");
+    cube.offsetHeight;
+    cube.classList.remove("notransition");
+    }
+}
 
 /*CONTENT */
 function updateContentView(content) {
