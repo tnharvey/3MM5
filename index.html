@@ -36,7 +36,7 @@
           </div>
         </div>
         <div id="popupContainer">
-          <div id="popupA" class="popup interactive">
+          <div id="popupA" class="popup popupGeneric interactive">
             <div class="buttonChoice close" onclick="hidePopup('popupA');">X</div>
             <div class="gridContainer">
             <div class="buttonChoice gridItem2 btn-part-control" onclick="updateScenario(1,-1);">Fail P1</div>
@@ -49,33 +49,18 @@
             <div class="buttonChoice gridItem2 btn-scenario-control" onclick="endScenario();">Complete Scenario</div>
             </div>
           </div>
-          <div id="popupIntro" class="popup" onclick="hidePopup('popupB');">
+          <div id="popupIntro" class="popup intro" onclick="hidePopup('popupB');">
           </div>
-          <div id="popupC" class="popup">
-            <div class="buttonChoice close" onclick="hidePopup('popupC');removeContent('popTest');">X</div>
-          </div>
-          <div id="popupD" class="popup">
-            <div class="buttonChoice close" onclick="hidePopup('popupD');">X</div>
-            <div class="grid-1col">
-              <span>Are you ready to start the scenario?</span>
-              <div class="gridContainer">
-                <div id="cancelStart" class="buttonChoice gridItem2 btn-cancel" data-target-dir="face-front" onclick="hidePopup('popupD');">No, wait!</div>
-                <div class="buttonChoice gridItem2 btn-confirm" onclick="startScenario();">Yes</div>
-              </div>
-              <span>It looks like you still have a couple more areas to complete before starting the scenario:</span>
-              <ul id="training-checklist">
-                <li class="complete">References</li>
-                <li class="incomplete">Resources</li>
-                <li class="incomplete">Computer</li>
-              </ul>
-            </div>
-          </div>
-          <div id="popup-bertha-manual" class="popup" onclick="hidePopup('popup-bertha-manual');">
-            <div class="buttonChoice close" onclick="hidePopup('popupB');updateContentView('resources');">X</div>
+          <div id="popup-bertha-manual" class="popup popupGeneric">
+            <div class="buttonChoice close" onclick="hidePopup('popup-bertha-manual');updateContentView('resources');">X</div>
             <iframe src="MAI%20Bertha%20M138%20User%20manual.pdf#view=FitH&toolbar=0" height="94%" width="760px">
             </iframe>
           </div>
-          <div id="browser-error" class="popup">
+          <div id="popupGeneric" class="popup popupGeneric"></div>
+          <div id="popupChallenge" class="popup challenges"></div>
+          <div id="popupOption" class="popup option"></div>
+          <div id="popupFeedback" class="popup feedback"></div>
+          <div id="browser-error" class="popup challenges">
             <span style="color:white; font-size:1.5em;">This scenario will not run properly due to severe compatibility issues with your browser (Firefox). Please reopen the scenario in a compatible browser (i.e., Chrome, Edge, Safari).</span>
           </div>
         </div>

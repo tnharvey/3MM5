@@ -84,15 +84,6 @@ h3 {
   border-radius: 4px;
 }
 
-#popupContainer {
-  position: absolute;
-  z-index: 1;
-  width: 940px;
-  margin: auto;
-  top: 0px;
-  transition-duration: 0.75s;
-}
-
 #healthContainer {
   display: inline-block;
   width: 26%;
@@ -202,20 +193,7 @@ h3 {
   visibility: visibile;
   transition: visibility 0.5s ease-in-out 1s;
 }
-.popup3d-Container{
-  transform-style: preserve-3d;
-  position: absolute;
-}
-.popup3d {
-  position: absolute;
-  height:10px;
-  width:44px;
-  background-color: var(--popup-bg);
-  border-radius: 4px;
-  text-align: center;
-  padding: 2px;
-  font-size: xx-small;
-}
+
 #equipment-card{
   transform: translate3d(762px,6px,200px) rotateY(1deg);
 }
@@ -260,7 +238,7 @@ h3 {
 
 .grid-1col
 
-/* Interactive element styles (buttons, popups, etc.) */
+/* Interactive element styles (buttons, etc.) */
 .interactive {
   cursor: pointer;
 }
@@ -382,44 +360,6 @@ h3 {
 .key :nth-child(4n) {
   left: -104%;
 }
-
-.popup {
-  margin: 5% auto 5% auto;
-  font-size: 1.5rem;
-  position: absolute;
-  padding: 10px;
-  border-radius: 4px;  
-  width: 894px;
-  height: 530px;
-  display: none;
-  top: -30px;
-  left: 14px;
-  background: rgb(0,0,0,0.8);
-  border: 1px solid black;
-  color:white;
-  opacity: 1;
-  align-items: center;
-  justify-content: center;
-  font-family: Arial, sans-serif;
-  text-align: center;
-}
-
-#popupA {
-  
-}
-
-#popupB {
-  margin: 5% auto 5% auto;
-  font-size: 1.5rem;
-}
-
-#popupB img {
-  width:auto;
-  height: 94%;
-  padding: 20px;
-  margin: auto;
-}
-
 #message {
   color: white;
 }
@@ -445,6 +385,79 @@ li.incomplete {
   content:"X";
   margin-right: 8px;
 }
+/* POPUPS */
+#popupContainer {
+  position: absolute;
+  z-index: 1;
+  width: 940px;
+  margin: auto;
+  top: 0px;
+  transition-duration: 0.75s;
+}
+.popup {
+  margin: 5% auto 5% auto;
+  font-size: 1.5rem;
+  position: absolute;
+  padding: 10px;
+  border-radius: 4px;  
+  width: 894px;
+  height: 530px;
+  display: none;
+  top: -30px;
+  left: 14px;
+  background: rgb(0,0,0,0.9);
+  border: 1px solid black;
+  color:white;
+  opacity: 1;
+  align-items: center;
+  justify-content: center;
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+#popupA {}
+#popupB {
+  margin: 5% auto 5% auto;
+  font-size: 1.5rem;
+}
+#popupB img {
+  width:auto;
+  height: 94%;
+  padding: 20px;
+  margin: auto;
+}
+.popup3d-Container{
+  transform-style: preserve-3d;
+  position: absolute;
+}
+.popup3d {
+  position: absolute;
+  height:10px;
+  width:44px;
+  background-color: var(--popup-bg);
+  border-radius: 4px;
+  text-align: center;
+  padding: 2px;
+  font-size: xx-small;
+}
+.popup3d:hover {
+  animation: glow 800ms ease-out infinite alternate;
+}
+.popupGeneric{}
+.intro{}
+.challenges{
+  background: rgb(110,0,0,0.9);
+  border: 1px solid black;
+}
+.feedback{
+  background: rgb(0,60,0,0.9);
+  border: 1px solid black;
+}
+.documents{}
+.outro{
+  background: var(--darker-orange);
+  border: 1px solid black;
+}
+
 /* 3D element styling */
 
 /* Primary Scene styling */
@@ -465,26 +478,33 @@ li.incomplete {
 .face-front {
   transform: translate3d(206px, 0px, 250px) rotateY(0deg);
 }
-.face-equipment {
-  transform: translate3d(238px, -1px, 596px) rotateX(-12deg) rotateY(0deg);
-}
 .face-left {
   transform: translate3d(730px, 20px, 374px) rotateY(-90deg);
 }
-.face-back {
+.face-rLeft {
+  transform: translate3d(730px, 20px, 374px) rotateY(270deg);
+}
+.face-lBack {
+  transform: translate3d(517px, 12px, 866px) rotateY(-180deg);
+}
+.face-rBack {
   transform: translate3d(517px, 12px, 866px) rotateY(180deg);
 }
 .face-right {
   transform: translate3d(-14px, 12px, 704px) rotateY(90deg);
 }
+.face-lRight {
+  transform: translate3d(-14px, 12px, 704px) rotateY(-270deg);
+}
+.face-equipment {
+  transform: translate3d(238px, -1px, 596px) rotateX(-12deg) rotateY(0deg);
+}
 .face-computer {
   transform: translate3d(-109px, -27px, 1098px) rotateY(90deg);
 }
-
 .face-references {
 transform: translate3d(120px, 86px, 946px) rotateY(90deg) rotateZ(-14deg);
 }
-
 .face-resources {
 transform: translate3d(707px, 20px, 518px) rotateY(-90deg) rotateZ(39deg);
 }
@@ -832,8 +852,4 @@ transform: translate3d(707px, 20px, 518px) rotateY(-90deg) rotateZ(39deg);
 		border-color: #fcff66;
 		box-shadow: 0 0 20px rgba(238,255,0,.8);
     }
-}
-
-.popup3d:hover {
-  animation: glow 800ms ease-out infinite alternate;
 }

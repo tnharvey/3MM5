@@ -4,7 +4,6 @@
 
 window.onload = function(){
   var cube = document.querySelector('.scene');
-  document.addEventListener('keydown', userAction);
 
   let viewCards = document.getElementsByClassName('popup3d');
   let viewCardsArr = Array.prototype.slice.call(viewCards);
@@ -12,7 +11,7 @@ window.onload = function(){
   viewCardsArr.forEach(function(item){
     item.addEventListener("click",userAction);
   });
-  $("#cancelStart")[0].addEventListener("click",userAction);
+  //$("#cancelStart")[0].addEventListener("click",userAction);
 
   browserCheck();
   
@@ -40,7 +39,6 @@ var score = 3;
 var contentCollection = {resources:0,forms:0,computer:0};
 
 /* Scenarios */
-
 function startScenario() {
   hidePopup('popupIntro');
   removeContent('popLoad');
@@ -245,31 +243,8 @@ function updateHealth() {
   }
 }
 
-function updateContentView(content) {
-  contentCollection[content]=1;
-  updateMessages();
-}
 
-function updateMessages() {
-  if (contentCollection.resources==1) {
-    $("#message")[0].innerHTML="<b>Next Step:</b><br>Review the forms in the document cabinet on the table to the right.</span>";
-  }
-  else if (contentCollection.resources==1 && contentCollection.forms==1) {
-    $("#message")[0].innerHTML="<b>Next Step:</b><br>Review the presentation on the computer screen to the right.</span>";
-  }
-  else if (contentCollection.resources==1 && contentCollection.forms==1 && contentCollection.computer==1) {
-    $("#message")[0].innerHTML="<b>Next Step:</b><br>Great Job! You've completed the training content. You may review some more, or start the scenario.</span>";
-  }
-}
-/* Inline click funcions, need to set up with listeners */
-function showPopup (popupId) {
-    document.getElementById(popupId).style.display="flex";
-}
-
-function hidePopup (popupId) {
-    document.getElementById(popupId).style.display="none";
-}
-
+/*INTERFACE CONTROL */
 function userAction (input) {
 /* Primary user action handler. Checks for type of input as some are currently inline pasing strings.
    Depending on action, triggers/toggles CSS clases or styles to effect 3D movement. */
@@ -279,14 +254,7 @@ function userAction (input) {
     var uAction = "";
 
     if (typeof(input)==='object') {
-      if(input.type=="keydown"){
-        if(input.key=="ArrowUp"||input.key=="ArrowDown" ||input.key=="ArrowLeft"||input.key=="ArrowDown"){
-          // Prevent scrolling on arrow keypress, which makes page jump around when navigating with keyboard
-          input.preventDefault();
-        }
-        uAction = input.key;
-      }
-      else if(input.type="click"){
+      if(input.type="click"){
         uAction = input.path[0].dataset.targetDir;
       }
     }
@@ -294,21 +262,6 @@ function userAction (input) {
         uAction = input;
     }
   if (uAction !== "") {
-    //Dev controls toggle
-    if (uAction =="D"){
-      var devElements = document.getElementsByClassName("dev");
-      Array.from(devElements).forEach(
-        function(element,index,array){
-          if(element.classList.contains("delete")){
-            element.classList.remove("delete")
-            element.classList.add("dashItem")
-          }
-          else {
-            element.classList.add("delete")
-            element.classList.remove("dashItem")
-          }
-        });
-    }
     if(uAction.search("face-")==0){
       if(uAction == "face-front"||uAction == "face-right"||uAction == "face-left"){
         cube.classList.remove(cube.classList[1]);
@@ -434,25 +387,50 @@ function userAction (input) {
       }
       else if (uAction === "Enter"){}
     }
-    else if ((input.shiftKey && uAction =="ArrowLeft")||uAction=="rotLeft"){}
-    else if ((input.shiftKey && uAction =="ArrowRight")||uAction=="rotRight"){}
   }
 }   
 
-function loadContent (contentId,contentLoc,targetId,params) {
+/*CONTENT */
+function updateContentView(content) {
+  contentCollection[content]=1;
+  updateMessages();
+}
+
+function updateMessages() {
+  if (contentCollection.resources==1) {
+    $("#message")[0].innerHTML="<b>Next Step:</b><br>Review the forms in the document cabinet on the table to the right.</span>";
+  }
+  else if (contentCollection.resources==1 && contentCollection.forms==1) {
+    $("#message")[0].innerHTML="<b>Next Step:</b><br>Review the presentation on the computer screen to the right.</span>";
+  }
+  else if (contentCollection.resources==1 && contentCollection.forms==1 && contentCollection.computer==1) {
+    $("#message")[0].innerHTML="<b>Next Step:</b><br>Great Job! You've completed the training content. You may review some more, or start the scenario.</span>";
+  }
+}
+
+function loadContent (contentId,contentLoc,targetId,fileName) {
   /* Load content from local folder directory to target element ID */
-
   var newElementCode = $('<div id="'+contentId+'" class="loaded">');
-
-  newElementCode.load(contentLoc+"index.html");
+  var myFileName = fileName;
+  var styleName = "";
+  
+  if (!myFileName){
+    myFileName = "index";
+    styleName = "style";
+  }
+  else {
+    styleName = myFileName;
+  }
+  
+  newElementCode.load(contentLoc + myFileName + ".html");
   
   $('#'+targetId).append(newElementCode);
 
-  $("head").append('<link rel="stylesheet" href="'+contentLoc+'style.css" />');
+  $("head").append('<link rel="stylesheet" href="' + contentLoc + styleName+'.css" />');
 }
 
 function removeContent(targetId) {
-  document.getElementById("popTest").remove();
+  document.getElementById(targetId).remove();
 }
 
 function loadModels (modelsJson) {
@@ -505,8 +483,17 @@ function loadModels (modelsJson) {
   $("head").append('<link rel="stylesheet" href="'+baseUrl+'models/manualSm/manualSmStyle.css" />');
 }
 
+/* Inline click funcions, need to set up with listeners */
+function showPopup (popupId) {
+    document.getElementById(popupId).style.display="flex";
+}
+
+function hidePopup (popupId) {
+    document.getElementById(popupId).style.display="none";
+}
+
 function browserCheck() {
-  // Uses computer style to detect browser. If browser if Moz, blocks interaction with popup.
+  // Uses computed style to detect browser. If browser if Moz, blocks interaction with popup.
   
   var prefix = (Array.prototype.slice
     .call(window.getComputedStyle(document.documentElement, ""))

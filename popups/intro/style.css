@@ -19,15 +19,15 @@
 
 .slideBtn {
   color: white;
-  position: relative;
+  position: absolute;
   height:20px;
   width:80px;
   background-color: var(--darker-orange);
   border-radius: 4px;
   text-align: center;
   padding: 10px;
-  bottom:-10px;
-  left:636px;
+  bottom:12px;
+  left:800px;
 }
 
 .slideBtn:hover {
