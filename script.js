@@ -1,5 +1,10 @@
 /* TO DO
-
+1. Reset view after each challenge
+2. update messages
+3. create function to check which options have content, set 3d card to glow.
+4. Update score/health (waiting for feedback from charles)
+- Refactor popup system to use array/object and allow for tracking the last popup and close it or close all popups
+Might also be able to use an object to load and track all popup info at once and load/unload individual ones
 */
 
 window.onload = function(){
@@ -15,15 +20,15 @@ window.onload = function(){
 
   browserCheck();
   
+  loadContent ("popLoad","popups/intro/","popupIntro","index",true);
   showPopup("popupIntro");
-  loadContent ("popLoad","popups/intro/","popupIntro");
   
   window.addEventListener("message", (event) => {
     if (event.data == "start") {
       startScenario();
     }
   }, false);
-    
+
   document.getElementById("backButton").addEventListener("click",userAction);
   loadModels();
 }
@@ -31,84 +36,148 @@ window.onload = function(){
 const baseUrl = "";
 
 // scenario scores
-var devControls = false;
-var scenario1 = 0;
-var scenario2 = 0;
-var scenario3 = 0;
+var currentChallenge = 1;
 var score = 3;
-var contentCollection = {resources:0,forms:0,computer:0};
+var contentCollection = {resources:0,forms:0,computer:0,equipment:0};
+var currentPopup = "";
+var choices = {
+  challenge01:0,
+  challenge02:0,
+  challenge03:0,
+  challenge04:0,
+  challenge05:0,
+};
 
 /* Scenarios */
 function startScenario() {
-  hidePopup('popupIntro');
+  hideCurrentPopup();
   removeContent('popLoad');
   // initiate any starting sequence
+  updateScenario();
 }
 
-function updateScenario(scenario,points){
-  if (points == -1 || points == 1){
-    switch(scenario) {
-      case 1:
-        if(scenario1 == 0){
-          scenario1 = points;
-          score = score + points;
-          document.getElementById("scenarioScore").innerHTML = score;
-        }
-        else {
-          if(points==1 && scenario1==-1){
-            scenario1 = points;
-            score = score + 2;
-            document.getElementById("scenarioScore").innerHTML = score;
-          }
-          else {
-            return;
-          }
-        }
-        break;
-      case 2:
-        if(scenario2 == 0){
-          scenario2 = points;
-          score = score + points;
-          document.getElementById("scenarioScore").innerHTML = score;
-        }
-        else {
-          if(points==1 && scenario2==-1){
-            scenario2 = points;
-            score = score + 2;
-            document.getElementById("scenarioScore").innerHTML = score;
-          }
-          else {
-            return;
-          }
-        }
-        break;
-      case 3:
-        if(scenario3 == 0){
-          scenario3 = points;
-          score = score + points;
-          document.getElementById("scenarioScore").innerHTML = score;
-        }
-        else {
-          if(points==1 && scenario3==-1){
-            scenario3 = points;
-            score = score + 2;
-            document.getElementById("scenarioScore").innerHTML = score;
-          }
-          else {
-            return;
-          }
-        }
-        break;
-      default:
-        console.log("Invalid scenario. Your attempt at hacking this course has been logged. :P")
-    }
+function updateScenario(){
+  switch (currentChallenge) {
+    case 1:
+      loadContent("challenge01","popups/challenges/challenge01/","popupChallenge","challenge01");
+      loadContent("option01","popups/challenges/challenge01/","popupOption01","option01");
+      loadContent("option02","popups/challenges/challenge01/","popupOption02","option02");
+      loadContent("option03","popups/challenges/challenge01/","popupOption03","option03");
+      loadContent("feedback01","popups/challenges/challenge01/","popupFeedback01","option01FB");
+      loadContent("feedback02","popups/challenges/challenge01/","popupFeedback02","option02FB");
+      loadContent("feedback03","popups/challenges/challenge01/","popupFeedback03","option03FB");
+      showPopup("popupChallenge");
+      //updateMessage
+      break;
+    case 2:
+      removeContent("challenge01");
+      removeContent("option01");
+      removeContent("option02");
+      removeContent("option03");
+      removeContent("feedback01");
+      removeContent("feedback02");
+      removeContent("feedback03");
+      loadContent("challenge02","popups/challenges/challenge02/","popupChallenge","challenge02");
+      loadContent("option01","popups/challenges/challenge02/","popupOption01","option01");
+      loadContent("option02","popups/challenges/challenge02/","popupOption02","option02");
+      loadContent("option03","popups/challenges/challenge02/","popupOption03","option03");
+      loadContent("feedback01","popups/challenges/challenge02/","popupFeedback01","option01FB");
+      loadContent("feedback02","popups/challenges/challenge02/","popupFeedback02","option02FB");
+      loadContent("feedback03","popups/challenges/challenge02/","popupFeedback03","option03FB");
+      hideCurrentPopup();
+      showPopup("popupChallenge");
+      break;
+    case 3:
+      removeContent("challenge02");
+      removeContent("option01");
+      removeContent("option02");
+      removeContent("option03");
+      removeContent("feedback01");
+      removeContent("feedback02");
+      removeContent("feedback03");
+      loadContent("challenge03","popups/challenges/challenge03/","popupChallenge","challenge03");
+      loadContent("option01","popups/challenges/challenge03/","popupOption01","option01");
+      loadContent("option02","popups/challenges/challenge03/","popupOption02","option02");
+      loadContent("option03","popups/challenges/challenge03/","popupOption03","option03");
+      loadContent("feedback01","popups/challenges/challenge03/","popupFeedback01","option01FB");
+      loadContent("feedback02","popups/challenges/challenge03/","popupFeedback02","option02FB");
+      loadContent("feedback03","popups/challenges/challenge03/","popupFeedback03","option03FB");
+      hideCurrentPopup();
+      showPopup("popupChallenge");
+      break;
+    case 4:
+      removeContent("challenge03");
+      removeContent("option01");
+      removeContent("option02");
+      removeContent("option03");
+      removeContent("feedback01");
+      removeContent("feedback02");
+      removeContent("feedback03");
+      loadContent("challenge04","popups/challenges/challenge04/","popupChallenge","challenge04");
+      loadContent("option01","popups/challenges/challenge04/","popupOption01","option01");
+      loadContent("option03","popups/challenges/challenge04/","popupOption03","option03");
+      loadContent("option04","popups/challenges/challenge04/","popupOption04","option04");
+      loadContent("feedback01","popups/challenges/challenge04/","popupFeedback01","option01FB");
+      loadContent("feedback03","popups/challenges/challenge04/","popupFeedback03","option03FB");
+      loadContent("feedback04","popups/challenges/challenge04/","popupFeedback04","option04FB");
+      hideCurrentPopup();
+      showPopup("popupChallenge");
+      break;
+    case 5:
+      removeContent("challenge04");
+      removeContent("option01");
+      removeContent("option02");
+      removeContent("option03");
+      removeContent("feedback01");
+      removeContent("feedback02");
+      removeContent("feedback03");
+      loadContent("challenge05","popups/challenges/challenge05/","popupChallenge","challenge05");
+      loadContent("option01","popups/challenges/challenge05/","popupOption01","option01");
+      loadContent("option02","popups/challenges/challenge05/","popupOption02","option02");
+      loadContent("option03","popups/challenges/challenge05/","popupOption03","option03");
+      loadContent("feedback01","popups/challenges/challenge05/","popupFeedback01","option01FB");
+      loadContent("feedback02","popups/challenges/challenge05/","popupFeedback02","option02FB");
+      loadContent("feedback03","popups/challenges/challenge05/","popupFeedback03","option03FB");
+      hideCurrentPopup();
+      showPopup("popupChallenge");
+      break;
+    case 6:
+      break;
+    default:
+      console.log("updateScenario: Invald challenge value.");
+      break;
   }
-  else {
-    console.log("Invalid points. Your attempt at hacking this course has been logged. :P");
-  }
-  updateHealth();
+  //updateHealth();
   if (score==6) {
     endScenario();
+  }
+}
+
+function updateChoice (choice) {
+  if (choice > 0 && choice < 5) {
+    switch (currentChallenge) {
+      case 1:
+        choices.challenge01 = choice;
+        break;
+      case 2:
+        choices.challenge02 = choice;
+        break;
+      case 3:
+        choices.challenge03 = choice;
+        break;
+      case 4:
+        choices.challenge04 = choice;
+        break;
+      case 5:
+        choices.challenge05 = choice;
+        break;
+      default:
+        console.log("updateChoice: Invalid challenge number.");
+        return;
+        break;
+    }
+    hideCurrentPopup();
+    showPopup("popupFeedback0"+choice);
   }
 }
 
@@ -243,7 +312,6 @@ function updateHealth() {
   }
 }
 
-
 /*INTERFACE CONTROL */
 function userAction (input) {
 /* Primary user action handler. Checks for type of input as some are currently inline pasing strings.
@@ -280,14 +348,23 @@ function userAction (input) {
         document.getElementById("cards").style.visibility="hidden";
         document.getElementById("backButton").style.opacity=1;
         if(uAction=="face-equipment") {
-          document.getElementById("afssDoor01").classList.add("afssDoor-open");
+          currentPopup = "popupOption03"
+          afssDoor.classList.add("afssDoor-open");
+          afssDoor.addEventListener("transitionend",transitionPopup);
+          
+          cube.addEventListener("transitionend",transitionPopup);
         }
         if(uAction=="face-computer") {
-          showPopup("popupC");
-          loadContent ("popTest","popups/computerTraining/","popupC");
+          currentPopup = "popupOption01"
+          cube.addEventListener("transitionend",transitionPopup);
         }
-        if(uAction=="face-equipment") {
-          showPopup("popupD");
+        if(uAction=="face-references") {
+          currentPopup = "popupOption02"
+          cube.addEventListener("transitionend",transitionPopup);
+        }
+        if(uAction=="face-resources") {
+          currentPopup = "popupOption04"
+          cube.addEventListener("transitionend",transitionPopup);
         }
       }
     }
@@ -367,7 +444,8 @@ function userAction (input) {
       }
     }
   }
-}   
+}
+
 function switchOrientation(e) {
   //Sneaky. Resolves the continuous rotation issue by disabling transitions during a quick orientation reset.
   var cube = document.querySelector('#scene1');
@@ -389,6 +467,14 @@ function switchOrientation(e) {
     }
 }
 
+function transitionPopup(event) {
+  var cube = document.querySelector('#scene1');
+  if (event.propertyName=="transform"){
+    showPopup(currentPopup);
+    cube.removeEventListener("transitionend",transitionPopup);
+  }
+}
+
 /*CONTENT */
 function updateContentView(content) {
   contentCollection[content]=1;
@@ -407,25 +493,23 @@ function updateMessages() {
   }
 }
 
-function loadContent (contentId,contentLoc,targetId,fileName) {
+function loadContent (contentId, contentLoc, targetId, fileName, css) {
   /* Load content from local folder directory to target element ID */
   var newElementCode = $('<div id="'+contentId+'" class="loaded">');
   var myFileName = fileName;
   var styleName = "";
   
-  if (!myFileName){
-    myFileName = "index";
+  if (myFileName=="index"){
     styleName = "style";
-  }
-  else {
-    styleName = myFileName;
   }
   
   newElementCode.load(contentLoc + myFileName + ".html");
   
   $('#'+targetId).append(newElementCode);
 
-  $("head").append('<link rel="stylesheet" href="' + contentLoc + styleName+'.css" />');
+  if(css) {
+    $("head").append('<link rel="stylesheet" href="' + contentLoc + styleName+'.css" />');
+  }
 }
 
 function removeContent(targetId) {
@@ -484,13 +568,18 @@ function loadModels (modelsJson) {
 
 /* Inline click funcions, need to set up with listeners */
 function showPopup (popupId) {
-    document.getElementById(popupId).style.display="flex";
+  document.getElementById(popupId).style.display="flex";
+  currentPopup = document.getElementById(popupId);
 }
 
 function hidePopup (popupId) {
     document.getElementById(popupId).style.display="none";
+  currentPopup = "";
 }
-
+function hideCurrentPopup () {
+    currentPopup.style.display="none";
+  currentPopup = "";
+}
 function browserCheck() {
   // Uses computed style to detect browser. If browser if Moz, blocks interaction with popup.
   
@@ -530,6 +619,7 @@ function findInList (list, term, exact) {
   })
   return results;
 }
+
 // Functions in development
 /*
 // Changes XML to JSON

@@ -36,20 +36,7 @@
           </div>
         </div>
         <div id="popupContainer">
-          <div id="popupA" class="popup popupGeneric interactive">
-            <div class="buttonChoice close" onclick="hidePopup('popupA');">X</div>
-            <div class="gridContainer">
-            <div class="buttonChoice gridItem2 btn-part-control" onclick="updateScenario(1,-1);">Fail P1</div>
-            <div class="buttonChoice gridItem2 btn-part-control" onclick="updateScenario(1,1);">Complete P1</div>
-            <div class="buttonChoice gridItem2 btn-part-control" onclick="updateScenario(2,-1);">Fail P2</div>
-            <div class="buttonChoice gridItem2 btn-part-control" onclick="updateScenario(2,1);">Complete P2</div>
-            <div class="buttonChoice gridItem2 btn-part-control" onclick="updateScenario(3,-1);">Fail P3</div>
-            <div class="buttonChoice gridItem2 btn-part-control" onclick="updateScenario(3,1);">Complete P3</div>
-            <div class="buttonChoice gridItem2 btn-scenario-control" onclick="resetScenario();">Reset Scenarios</div>
-            <div class="buttonChoice gridItem2 btn-scenario-control" onclick="endScenario();">Complete Scenario</div>
-            </div>
-          </div>
-          <div id="popupIntro" class="popup intro" onclick="hidePopup('popupB');">
+          <div id="popupIntro" class="popup intro">
           </div>
           <div id="popup-bertha-manual" class="popup popupGeneric">
             <div class="buttonChoice close" onclick="hidePopup('popup-bertha-manual');updateContentView('resources');">X</div>
@@ -57,9 +44,17 @@
             </iframe>
           </div>
           <div id="popupGeneric" class="popup popupGeneric"></div>
-          <div id="popupChallenge" class="popup challenges"></div>
-          <div id="popupOption" class="popup option"></div>
-          <div id="popupFeedback" class="popup feedback"></div>
+          <div id="popupChallenge" class="popup challenges">
+            <div class="buttonChoice close" onclick="hideCurrentPopup();">X</div>
+          </div>
+          <div id="popupOption01" class="popup option"></div>
+          <div id="popupOption02" class="popup option"></div>
+          <div id="popupOption03" class="popup option"></div>
+          <div id="popupOption04" class="popup option"></div>
+          <div id="popupFeedback01" class="popup feedback"></div>
+          <div id="popupFeedback02" class="popup feedback"></div>
+          <div id="popupFeedback03" class="popup feedback"></div>
+          <div id="popupFeedback04" class="popup feedback"></div>
           <div id="browser-error" class="popup challenges">
             <span style="color:white; font-size:1.5em;">This scenario will not run properly due to severe compatibility issues with your browser (Firefox). Please reopen the scenario in a compatible browser (i.e., Chrome, Edge, Safari).</span>
           </div>

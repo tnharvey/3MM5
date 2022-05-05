@@ -195,7 +195,7 @@ h3 {
 }
 
 #equipment-card{
-  transform: translate3d(762px,6px,200px) rotateY(1deg);
+  transform: translate3d(762px,6px,210px) rotateY(1deg);
 }
 #computer-card{
   transform: translate3d(884px,4px,418px) rotateY(-90deg);
