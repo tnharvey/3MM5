@@ -1,9 +1,8 @@
 /* TO DO
 1. Reset view after each challenge
 2. update messages
-3. Update End Scenario to show ending video popup
-4. create function to check which options have content, set 3d card to glow.
-5. Update score/health (waiting for feedback from charles)
+3. create function to check which options have content, set 3d card to glow.
+4. Update score/health (waiting for feedback from charles)
 - Refactor popup system to use array/object and allow for tracking the last popup and close it or close all popups
 Might also be able to use an object to load and track all popup info at once and load/unload individual ones
 */
@@ -332,56 +331,77 @@ function userAction (input) {
         uAction = input;
     }
   if (uAction !== "") {
+    //Primary Orientations
+    if (orientation=="face-front") {
+      if(uAction === "ArrowLeft") {
+        updateOrientation("face-left");
+      }
+      else if (uAction === "ArrowRight"){
+        updateOrientation("face-right");
+      }
+    }
+    else if (orientation=="face-left"){
+      if(uAction === "ArrowLeft") {
+        updateOrientation("face-lBack");
+      }
+      else if (uAction === "ArrowRight"){
+        updateOrientation("face-front");
+      }
+    }
+    else if (orientation=="face-lBack"){
+      cube.addEventListener("transitionend",switchOrientation);
+      if(uAction === "ArrowLeft") {
+        updateOrientation("face-lRight");
+      }
+      else if (uAction === "ArrowRight"){
+        updateOrientation("face-left");
+      }
+    }
+    else if (orientation=="face-right"){
+      if(uAction === "ArrowLeft") {
+        updateOrientation("face-front");
+      }
+      else if (uAction === "ArrowRight"){
+        updateOrientation("face-rBack");
+      }
+    }
+    else if (orientation=="face-rBack"){
+      cube.addEventListener("transitionend",switchOrientation);
+      if(uAction === "ArrowLeft") {
+        updateOrientation("face-right");
+      }
+      else if (uAction === "ArrowRight"){
+        updateOrientation("face-rLeft");
+      }
+    }
+    else if (orientation=="face-equipment"){
+      if(uAction === "ArrowLeft") {}
+      else if (uAction === "ArrowRight"){}
+    }
+    else if (orientation=="face-resources"){
+      if(uAction === "ArrowLeft") {}
+      else if (uAction === "ArrowRight"){}
+    }
+    else if (orientation=="face-computer"){
+      if(uAction === "ArrowLeft") {
+        updateOrientation("face-references");
+      }
+      else if (uAction === "ArrowRight"){}
+    }
+    else if (orientation=="face-references"){
+      if(uAction === "ArrowLeft") {}
+      else if (uAction === "ArrowRight"){
+        updateOrientation("face-computer");
+      }
+    }
     if(uAction.search("face-")==0){
+      // If returning to the main area from one of the focus areas
       if(uAction == "face-front"||uAction == "face-right"||uAction == "face-left"){
-        //updateOrientation(uAction);
+        updateOrientation(uAction);
         document.getElementById("cards").style.visibility="visible";
         document.getElementById("backButton").style.opacity="0";
         if (uAction=="face-front" && document.getElementById("afssDoor01").classList.contains("afssDoor-open")){
           document.getElementById("afssDoor01").classList.remove("afssDoor-open");
-        }
-        //Room orientation
-        if (orientation=="face-front") {
-          if(uAction === "ArrowLeft") {
-            updateOrientation("face-left");
-          }
-          else if (uAction === "ArrowRight"){
-            updateOrientation("face-right");
-          }
-        }
-        else if (orientation=="face-left"){
-          if(uAction === "ArrowLeft") {
-            updateOrientation("face-lBack");
-          }
-          else if (uAction === "ArrowRight"){
-            updateOrientation("face-front");
-          }
-        }
-        else if (orientation=="face-lBack"){
-          cube.addEventListener("transitionend",switchOrientation);
-          if(uAction === "ArrowLeft") {
-            updateOrientation("face-lRight");
-          }
-          else if (uAction === "ArrowRight"){
-            updateOrientation("face-left");
-          }
-        }
-        else if (orientation=="face-right"){
-          if(uAction === "ArrowLeft") {
-            updateOrientation("face-front");
-          }
-          else if (uAction === "ArrowRight"){
-            updateOrientation("face-rBack");
-          }
-        }
-        else if (orientation=="face-rBack"){
-          cube.addEventListener("transitionend",switchOrientation);
-          if(uAction === "ArrowLeft") {
-            updateOrientation("face-right");
-          }
-          else if (uAction === "ArrowRight"){
-            updateOrientation("face-rLeft");
-          }
         }
       }
       else {
@@ -408,26 +428,6 @@ function userAction (input) {
           currentPopup = "popupOption04"
           cube.addEventListener("transitionend",transitionPopup);
         }
-        else if (orientation=="face-equipment"){
-          if(uAction === "ArrowLeft") {}
-          else if (uAction === "ArrowRight"){}
-        }
-        else if (orientation=="face-resources"){
-          if(uAction === "ArrowLeft") {}
-          else if (uAction === "ArrowRight"){}
-        }
-        else if (orientation=="face-computer"){
-          if(uAction === "ArrowLeft") {
-            updateOrientation("face-references");
-          }
-          else if (uAction === "ArrowRight"){}
-        }
-        else if (orientation=="face-references"){
-          if(uAction === "ArrowLeft") {}
-          else if (uAction === "ArrowRight"){
-            updateOrientation("face-computer");
-          }
-        }
       }
     }
   }
@@ -438,7 +438,6 @@ function updateOrientation(newOrientation) {
   
   cube.classList.remove(findInList(cube.classList,"face-"));
   cube.classList.add(newOrientation);
-  
 }
 
 function switchOrientation(e) {
