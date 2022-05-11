@@ -1,10 +1,12 @@
 /* TO DO
-1. Reset view after each challenge
-2. update messages
-3. create function to check which options have content, set 3d card to glow.
-4. Update score/health (waiting for feedback from charles)
+
+1. update messages
+2. create function to check which options have content, set 3d card to glow.
+3. Update score/health (waiting for feedback from charles)
 - Refactor popup system to use array/object and allow for tracking the last popup and close it or close all popups
 Might also be able to use an object to load and track all popup info at once and load/unload individual ones
+- Refactor to have transition listener on transition between challenges. Maybe refactor to have a function that handles start/stop of listener.
+- Refactor to have relevant areas tracked in objects (i.e. all 3d cards have state stored in object and updated)
 */
 
 window.onload = function(){
@@ -38,7 +40,7 @@ const baseUrl = "";
 // scenario scores
 var currentChallenge = 1;
 var score = 3;
-var contentCollection = {resources:0,forms:0,computer:0,equipment:0};
+var activeAreas = {resources:0,forms:0,computer:0,equipment:0};
 var currentPopup = "";
 var choices = {
   challenge01:0,
@@ -57,6 +59,7 @@ function startScenario() {
 }
 
 function updateScenario(){
+  var cards = document.getElementsByClassName('popup3d');
   switch (currentChallenge) {
     case 1:
       loadContent("challenge01","popups/challenges/challenge01/","popupChallenge","challenge01");
@@ -66,6 +69,11 @@ function updateScenario(){
       loadContent("feedback01","popups/challenges/challenge01/","popupFeedback01","option01FB");
       loadContent("feedback02","popups/challenges/challenge01/","popupFeedback02","option02FB");
       loadContent("feedback03","popups/challenges/challenge01/","popupFeedback03","option03FB");
+      // add glow class to all relevant areas in room (remove glow from all then add)
+      activeAreas.computer = 1;
+      activeAreas.equipment = 1;
+      activeAreas.forms = 1;
+      updateCards();
       showPopup("popupChallenge");
       //updateMessage
       break;
@@ -85,6 +93,14 @@ function updateScenario(){
       loadContent("feedback02","popups/challenges/challenge02/","popupFeedback02","option02FB");
       loadContent("feedback03","popups/challenges/challenge02/","popupFeedback03","option03FB");
       hideCurrentPopup();
+      // add glow class to all relevant areas in room (remove glow from all then add)
+      Array.from(cards).forEach((card) => {
+        document.getElementById(card.id).classList.remove("glow");
+      });
+      activeAreas.computer = 1;
+      activeAreas.equipment = 1;
+      activeAreas.forms = 1;
+      updateCards();
       showPopup("popupChallenge");
       break;
     case 3:
@@ -103,6 +119,11 @@ function updateScenario(){
       loadContent("feedback02","popups/challenges/challenge03/","popupFeedback02","option02FB");
       loadContent("feedback03","popups/challenges/challenge03/","popupFeedback03","option03FB");
       hideCurrentPopup();
+      // add glow class to all relevant areas in room (remove glow from all then add)
+      activeAreas.computer = 1;
+      activeAreas.equipment = 1;
+      activeAreas.forms = 1;
+      updateCards();
       showPopup("popupChallenge");
       break;
     case 4:
@@ -121,6 +142,12 @@ function updateScenario(){
       loadContent("feedback03","popups/challenges/challenge04/","popupFeedback03","option03FB");
       loadContent("feedback04","popups/challenges/challenge04/","popupFeedback04","option04FB");
       hideCurrentPopup();
+      // add glow class to all relevant areas in room (remove glow from all then add)
+      activeAreas.computer = 1;
+      activeAreas.equipment = 1;
+      activeAreas.forms = 0;
+      activeAreas.resources = 1;
+      updateCards();
       showPopup("popupChallenge");
       break;
     case 5:
@@ -139,9 +166,16 @@ function updateScenario(){
       loadContent("feedback02","popups/challenges/challenge05/","popupFeedback02","option02FB");
       loadContent("feedback03","popups/challenges/challenge05/","popupFeedback03","option03FB");
       hideCurrentPopup();
+      // add glow class to all relevant areas in room (remove glow from all then add)
+      activeAreas.computer = 1;
+      activeAreas.equipment = 1;
+      activeAreas.forms = 1;
+      activeAreas.resources = 0;
+      updateCards();
       showPopup("popupChallenge");
       break;
     case 6:
+      console.log("updateScenario: No content loaded for 6.");
       break;
     default:
       console.log("updateScenario: Invald challenge value.");
@@ -150,6 +184,18 @@ function updateScenario(){
   //updateHealth();
   if (score==6) {
     endScenario();
+  }
+  updateCards();
+}
+
+function updateCards () {
+  for (var area in activeAreas) {
+    if(activeAreas[area]==1) {
+      document.getElementById(area+"-card").classList.add("glow");
+    }
+    else if(activeAreas[area]==0){
+      document.getElementById(area+"-card").classList.remove("glow");
+    }
   }
 }
 
@@ -384,11 +430,11 @@ function userAction (input) {
     }
     else if (orientation=="face-computer"){
       if(uAction === "ArrowLeft") {
-        updateOrientation("face-references");
+        updateOrientation("face-forms");
       }
       else if (uAction === "ArrowRight"){}
     }
-    else if (orientation=="face-references"){
+    else if (orientation=="face-forms"){
       if(uAction === "ArrowLeft") {}
       else if (uAction === "ArrowRight"){
         updateOrientation("face-computer");
@@ -420,7 +466,7 @@ function userAction (input) {
           currentPopup = "popupOption01"
           cube.addEventListener("transitionend",transitionPopup);
         }
-        if(uAction=="face-references") {
+        if(uAction=="face-forms") {
           currentPopup = "popupOption02"
           cube.addEventListener("transitionend",transitionPopup);
         }
@@ -435,9 +481,17 @@ function userAction (input) {
 
 function updateOrientation(newOrientation) {
   var cube = document.querySelector('#scene1');
-  
+  console.log(newOrientation);
   cube.classList.remove(findInList(cube.classList,"face-"));
   cube.classList.add(newOrientation);
+  if(newOrientation == "face-front"||newOrientation == "face-right"||newOrientation == "face-left"){
+    console.log("face-mains");
+    document.getElementById("cards").style.visibility="visible";
+    document.getElementById("backButton").style.opacity="0";
+    if (newOrientation=="face-front" && document.getElementById("afssDoor01").classList.contains("afssDoor-open")){
+      document.getElementById("afssDoor01").classList.remove("afssDoor-open");
+    }
+  }
 }
 
 function switchOrientation(e) {
@@ -471,7 +525,7 @@ function transitionPopup(event) {
 
 /*CONTENT */
 function updateContentView(content) {
-  contentCollection[content]=1;
+  //contentCollection[content]=1;
   updateMessages();
 }
 
