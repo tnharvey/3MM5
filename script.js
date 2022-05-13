@@ -1,8 +1,6 @@
 /* TO DO
 
-1. update messages
-2. create function to check which options have content, set 3d card to glow.
-3. Update score/health (waiting for feedback from charles)
+1. Update score/health (waiting for feedback from charles)
 - Refactor popup system to use array/object and allow for tracking the last popup and close it or close all popups
 Might also be able to use an object to load and track all popup info at once and load/unload individual ones
 - Refactor to have transition listener on transition between challenges. Maybe refactor to have a function that handles start/stop of listener.
@@ -36,11 +34,14 @@ window.onload = function(){
 }
 
 const baseUrl = "";
-
-// scenario scores
 var currentChallenge = 1;
-var score = 3;
-var activeAreas = {resources:0,forms:0,computer:0,equipment:0};
+var score = 5;
+var activeAreas = {
+  resources:0,
+  forms:0,
+  computer:0,
+  equipment:0
+};
 var currentPopup = "";
 var choices = {
   challenge01:0,
@@ -49,9 +50,25 @@ var choices = {
   challenge04:0,
   challenge05:0,
 };
+var answers = {
+  challenge01:1,
+  challenge02:1,
+  challenge03:2,
+  challenge04:4,
+  challenge05:0,
+};
+const messages = {
+  1:"<b>Next Step:</b><br><span>What is the first step in the equipment repair process once you've received a request? Look around the room, pay attention to the areas with a glowing card.</span>",
+  2:"<b>Next Step:</b><br><span>You need to be timely, economical, and professional. What will help you process the equipment this way?</span>",
+  3:"<b>Next Step:</b><br><span>You're able to see that the costs are not going to exceed the MEL. What now?</span>",
+  4:"<b>Next Step:</b><br><span>You have received the equipment back. What do you do now?</span>",
+  5:"<b>Next Step:</b><br><span></span>",
+};
+var resets = 0;
 
 /* Scenarios */
 function startScenario() {
+  updateHealth();
   hideCurrentPopup();
   removeContent('popLoad');
   // initiate any starting sequence
@@ -69,13 +86,9 @@ function updateScenario(){
       loadContent("feedback01","popups/challenges/challenge01/","popupFeedback01","option01FB");
       loadContent("feedback02","popups/challenges/challenge01/","popupFeedback02","option02FB");
       loadContent("feedback03","popups/challenges/challenge01/","popupFeedback03","option03FB");
-      // add glow class to all relevant areas in room (remove glow from all then add)
       activeAreas.computer = 1;
       activeAreas.equipment = 1;
       activeAreas.forms = 1;
-      updateCards();
-      showPopup("popupChallenge");
-      //updateMessage
       break;
     case 2:
       removeContent("challenge01");
@@ -85,6 +98,7 @@ function updateScenario(){
       removeContent("feedback01");
       removeContent("feedback02");
       removeContent("feedback03");
+      currentChallenge=2;
       loadContent("challenge02","popups/challenges/challenge02/","popupChallenge","challenge02");
       loadContent("option01","popups/challenges/challenge02/","popupOption01","option01");
       loadContent("option02","popups/challenges/challenge02/","popupOption02","option02");
@@ -93,15 +107,9 @@ function updateScenario(){
       loadContent("feedback02","popups/challenges/challenge02/","popupFeedback02","option02FB");
       loadContent("feedback03","popups/challenges/challenge02/","popupFeedback03","option03FB");
       hideCurrentPopup();
-      // add glow class to all relevant areas in room (remove glow from all then add)
-      Array.from(cards).forEach((card) => {
-        document.getElementById(card.id).classList.remove("glow");
-      });
       activeAreas.computer = 1;
       activeAreas.equipment = 1;
       activeAreas.forms = 1;
-      updateCards();
-      showPopup("popupChallenge");
       break;
     case 3:
       removeContent("challenge02");
@@ -111,6 +119,7 @@ function updateScenario(){
       removeContent("feedback01");
       removeContent("feedback02");
       removeContent("feedback03");
+      currentChallenge=3;
       loadContent("challenge03","popups/challenges/challenge03/","popupChallenge","challenge03");
       loadContent("option01","popups/challenges/challenge03/","popupOption01","option01");
       loadContent("option02","popups/challenges/challenge03/","popupOption02","option02");
@@ -119,12 +128,9 @@ function updateScenario(){
       loadContent("feedback02","popups/challenges/challenge03/","popupFeedback02","option02FB");
       loadContent("feedback03","popups/challenges/challenge03/","popupFeedback03","option03FB");
       hideCurrentPopup();
-      // add glow class to all relevant areas in room (remove glow from all then add)
       activeAreas.computer = 1;
       activeAreas.equipment = 1;
       activeAreas.forms = 1;
-      updateCards();
-      showPopup("popupChallenge");
       break;
     case 4:
       removeContent("challenge03");
@@ -134,6 +140,7 @@ function updateScenario(){
       removeContent("feedback01");
       removeContent("feedback02");
       removeContent("feedback03");
+      currentChallenge=4;
       loadContent("challenge04","popups/challenges/challenge04/","popupChallenge","challenge04");
       loadContent("option01","popups/challenges/challenge04/","popupOption01","option01");
       loadContent("option03","popups/challenges/challenge04/","popupOption03","option03");
@@ -142,13 +149,10 @@ function updateScenario(){
       loadContent("feedback03","popups/challenges/challenge04/","popupFeedback03","option03FB");
       loadContent("feedback04","popups/challenges/challenge04/","popupFeedback04","option04FB");
       hideCurrentPopup();
-      // add glow class to all relevant areas in room (remove glow from all then add)
       activeAreas.computer = 1;
       activeAreas.equipment = 1;
       activeAreas.forms = 0;
       activeAreas.resources = 1;
-      updateCards();
-      showPopup("popupChallenge");
       break;
     case 5:
       removeContent("challenge04");
@@ -158,6 +162,7 @@ function updateScenario(){
       removeContent("feedback01");
       removeContent("feedback02");
       removeContent("feedback03");
+      currentChallenge=5;
       loadContent("challenge05","popups/challenges/challenge05/","popupChallenge","challenge05");
       loadContent("option01","popups/challenges/challenge05/","popupOption01","option01");
       loadContent("option02","popups/challenges/challenge05/","popupOption02","option02");
@@ -166,13 +171,10 @@ function updateScenario(){
       loadContent("feedback02","popups/challenges/challenge05/","popupFeedback02","option02FB");
       loadContent("feedback03","popups/challenges/challenge05/","popupFeedback03","option03FB");
       hideCurrentPopup();
-      // add glow class to all relevant areas in room (remove glow from all then add)
       activeAreas.computer = 1;
       activeAreas.equipment = 1;
       activeAreas.forms = 1;
       activeAreas.resources = 0;
-      updateCards();
-      showPopup("popupChallenge");
       break;
     case 6:
       console.log("updateScenario: No content loaded for 6.");
@@ -185,6 +187,8 @@ function updateScenario(){
   if (score==6) {
     endScenario();
   }
+  updateMessages();
+  showPopup("popupChallenge");
   updateCards();
 }
 
@@ -222,17 +226,33 @@ function updateChoice (choice) {
         return;
         break;
     }
+    checkAnswer(currentChallenge);
     hideCurrentPopup();
     showPopup("popupFeedback0"+choice);
   }
 }
 
+function checkAnswer(challenge) {
+  if(choices["challenge0"+challenge] == answers["challenge0"+challenge]){
+    console.log("correct");
+  }
+  else {
+    score = score - 1;
+  }
+  updateHealth();
+}
+
 function resetScenario(){
-  score = 3;
-  scenario1 = 0;
-  scenario2 = 0;
-  scenario3 = 0;
-  document.getElementById("scenarioScore").innerHTML = 3;
+  resets = resets + 1;
+  score = 5;
+  currentChallenge = 1;
+  choices = {
+    challenge01:0,
+    challenge02:0,
+    challenge03:0,
+    challenge04:0,
+    challenge05:0,
+  };
   updateHealth();
 }
 
@@ -279,12 +299,18 @@ function updateHealth() {
       if (heart2.classList.contains("hide")) {
         heart2.classList.remove("hide");
       }
-      heart3.classList.add("hide");
+      if (heart3.classList.contains("healthy")) {
+        heart3.classList.remove("healthy");
+        heart3.classList.add("sick");
+      }
+      if (heart3.classList.contains("hide")) {
+        heart3.classList.remove("hide");
+      }
       break;
     case 3:
-      if (heart1.classList.contains("healthy")) {
-        heart1.classList.remove("healthy");
-        heart1.classList.add("sick");
+      if (heart1.classList.contains("sick")) {
+        heart1.classList.remove("sick");
+        heart1.classList.add("healthy");
       }
       if (heart1.classList.contains("hide")) {
         heart1.classList.remove("hide");
@@ -312,9 +338,9 @@ function updateHealth() {
       if (heart1.classList.contains("hide")) {
         heart1.classList.remove("hide");
       }
-      if (heart2.classList.contains("healthy")) {
-        heart2.classList.remove("healthy");
-        heart2.classList.add("sick");
+      if (heart2.classList.contains("sick")) {
+        heart2.classList.remove("sick");
+        heart2.classList.add("healthy");
       }
       if (heart2.classList.contains("hide")) {
         heart2.classList.remove("hide");
@@ -328,20 +354,6 @@ function updateHealth() {
       }
       break;
     case 5:
-      if (heart1.classList.contains("sick")) {
-        heart1.classList.remove("sick");
-        heart1.classList.add("healthy");
-      }
-      if (heart2.classList.contains("sick")) {
-        heart2.classList.remove("sick");
-        heart2.classList.add("healthy");
-      }
-      if (heart3.classList.contains("healthy")) {
-        heart3.classList.remove("healthy");
-        heart3.classList.add("sick");
-      }
-      break;
-    case 6:
       if (heart1.classList.contains("sick")) {
         heart1.classList.remove("sick");
         heart1.classList.add("healthy");
@@ -481,11 +493,9 @@ function userAction (input) {
 
 function updateOrientation(newOrientation) {
   var cube = document.querySelector('#scene1');
-  console.log(newOrientation);
   cube.classList.remove(findInList(cube.classList,"face-"));
   cube.classList.add(newOrientation);
   if(newOrientation == "face-front"||newOrientation == "face-right"||newOrientation == "face-left"){
-    console.log("face-mains");
     document.getElementById("cards").style.visibility="visible";
     document.getElementById("backButton").style.opacity="0";
     if (newOrientation=="face-front" && document.getElementById("afssDoor01").classList.contains("afssDoor-open")){
@@ -524,21 +534,8 @@ function transitionPopup(event) {
 }
 
 /*CONTENT */
-function updateContentView(content) {
-  //contentCollection[content]=1;
-  updateMessages();
-}
-
 function updateMessages() {
-  if (contentCollection.resources==1) {
-    $("#message")[0].innerHTML="<b>Next Step:</b><br>Review the forms in the document cabinet on the table to the right.</span>";
-  }
-  else if (contentCollection.resources==1 && contentCollection.forms==1) {
-    $("#message")[0].innerHTML="<b>Next Step:</b><br>Review the presentation on the computer screen to the right.</span>";
-  }
-  else if (contentCollection.resources==1 && contentCollection.forms==1 && contentCollection.computer==1) {
-    $("#message")[0].innerHTML="<b>Next Step:</b><br>Great Job! You've completed the training content. You may review some more, or start the scenario.</span>";
-  }
+  $("#message")[0].innerHTML=messages[currentChallenge];
 }
 
 function loadContent (contentId, contentLoc, targetId, fileName, css) {
@@ -624,10 +621,12 @@ function hidePopup (popupId) {
     document.getElementById(popupId).style.display="none";
   currentPopup = "";
 }
+
 function hideCurrentPopup () {
     currentPopup.style.display="none";
   currentPopup = "";
 }
+
 function browserCheck() {
   // Uses computed style to detect browser. If browser if Moz, blocks interaction with popup.
   
