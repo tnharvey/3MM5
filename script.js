@@ -22,8 +22,15 @@ window.onload = function(){
   showPopup("popupIntro");
   
   window.addEventListener("message", (event) => {
-    if (event.data == "start") {
-      startScenario();
+    switch (event.data) {
+      case "start":
+        startScenario();
+        break;
+      case "restart":
+        resetScenario();
+        break;
+      case "end":
+        break;
     }
   }, false);
 
@@ -35,10 +42,36 @@ const baseUrl = "";
 var currentChallenge = 1;
 var score = 5;
 var activeAreas = {
-  resources:0,
-  forms:0,
-  computer:0,
-  equipment:0
+  challenge01: {
+    resources:0,
+    forms:1,
+    computer:1,
+    equipment:1,
+  },
+  challenge02: {
+    resources:0,
+    forms:1,
+    computer:1,
+    equipment:1,
+  },
+  challenge03: {
+    resources:0,
+    forms:1,
+    computer:1,
+    equipment:1,
+  },
+  challenge04: {
+    resources:1,
+    forms:0,
+    computer:1,
+    equipment:1,
+  },
+  challenge05: {
+    resources:0,
+    forms:0,
+    computer:0,
+    equipment:0,
+  },
 };
 var currentPopup = "";
 var choices = {
@@ -48,6 +81,7 @@ var choices = {
   challenge04:0,
   challenge05:0,
 };
+var allChoices = {};
 var answers = {
   challenge01:1,
   challenge02:1,
@@ -88,9 +122,6 @@ function updateScenario(){
       loadContent("feedback03","popups/challenges/challenge01/","popupFeedback03","option03FB");
       loadContent("gameOverSuccess","popups/gameOverSuccess/","popupGameOver01","index");
       loadContent("gameOverFail","popups/gameOverFail/","popupGameOver02","index");
-      activeAreas.computer = 1;
-      activeAreas.equipment = 1;
-      activeAreas.forms = 1;
       break;
     case 2:
       removeContent("challenge01");
@@ -109,9 +140,6 @@ function updateScenario(){
       loadContent("feedback02","popups/challenges/challenge02/","popupFeedback02","option02FB");
       loadContent("feedback03","popups/challenges/challenge02/","popupFeedback03","option03FB");
       hideCurrentPopup();
-      activeAreas.computer = 1;
-      activeAreas.equipment = 1;
-      activeAreas.forms = 1;
       break;
     case 3:
       removeContent("challenge02");
@@ -130,9 +158,6 @@ function updateScenario(){
       loadContent("feedback02","popups/challenges/challenge03/","popupFeedback02","option02FB");
       loadContent("feedback03","popups/challenges/challenge03/","popupFeedback03","option03FB");
       hideCurrentPopup();
-      activeAreas.computer = 1;
-      activeAreas.equipment = 1;
-      activeAreas.forms = 1;
       break;
     case 4:
       removeContent("challenge03");
@@ -151,10 +176,6 @@ function updateScenario(){
       loadContent("feedback03","popups/challenges/challenge04/","popupFeedback03","option03FB");
       loadContent("feedback04","popups/challenges/challenge04/","popupFeedback04","option04FB");
       hideCurrentPopup();
-      activeAreas.computer = 1;
-      activeAreas.equipment = 1;
-      activeAreas.forms = 0;
-      activeAreas.resources = 1;
       break;
     case 5:
       removeContent("challenge04");
@@ -173,10 +194,6 @@ function updateScenario(){
       loadContent("feedback02","popups/challenges/challenge05/","popupFeedback02","option02FB");
       loadContent("feedback03","popups/challenges/challenge05/","popupFeedback03","option03FB");
       hideCurrentPopup();
-      activeAreas.computer = 1;
-      activeAreas.equipment = 1;
-      activeAreas.forms = 1;
-      activeAreas.resources = 0;
       break;
     case 6:
       console.log("updateScenario: No content loaded for 6.");
@@ -192,11 +209,12 @@ function updateScenario(){
 }
 
 function updateCards () {
-  for (var area in activeAreas) {
-    if(activeAreas[area]==1) {
+  var chal = "challenge0"+currentChallenge;
+  for (var area in activeAreas[chal]) {
+    if(activeAreas[chal][area]==1) {
       document.getElementById(area+"-card").classList.add("glow");
     }
-    else if(activeAreas[area]==0){
+    else if(activeAreas[chal][area]==0){
       document.getElementById(area+"-card").classList.remove("glow");
     }
   }
@@ -226,8 +244,6 @@ function updateChoice (choice) {
         break;
     }
     checkAnswer(currentChallenge);
-    hideCurrentPopup();
-    showPopup("popupFeedback0"+choice);
   }
 }
 
@@ -240,19 +256,32 @@ function checkAnswer(challenge) {
     //console.log("Incorrect");
   }
   updateHealth();
-  if (challenge == 5 && score >= 4) {
+  if (challenge == 5 && score >= 3) {
     showPopup("popupGameOver01");
     endScenario();
   }
-  else if ((challenge == 5 && score < 4) || (score < 4)) {
+  else if ((challenge == 5 && score < 3) || (score < 3)) {
+    hideCurrentPopup();
     showPopup("popupGameOver02");
+  }
+  else {
+    hideCurrentPopup();
+    showPopup("popupFeedback0"+choices["challenge0"+currentChallenge]);
   }
 }
 
 function resetScenario(){
+  removeContent("challenge0"+currentChallenge);
+  removeContent("option01");
+  removeContent("option02");
+  removeContent("option03");
+  removeContent("feedback01");
+  removeContent("feedback02");
+  removeContent("feedback03");
   resets = resets + 1;
   score = 5;
   currentChallenge = 1;
+  allChoices["attempt0"+(resets-1)]=choices;
   choices = {
     challenge01:0,
     challenge02:0,
@@ -260,7 +289,10 @@ function resetScenario(){
     challenge04:0,
     challenge05:0,
   };
-  updateHealth();
+  hideCurrentPopup();
+  loadContent ("popLoad","popups/intro/","popupIntro","index",true);
+  showPopup("popupIntro");
+  updateOrientation("face-right");
 }
 
 function endScenario(){
@@ -562,12 +594,12 @@ function showPopup (popupId) {
 }
 
 function hidePopup (popupId) {
-    document.getElementById(popupId).style.display="none";
+  document.getElementById(popupId).style.display="none";
   currentPopup = "";
 }
 
 function hideCurrentPopup () {
-    currentPopup.style.display="none";
+  currentPopup.style.display="none";
   currentPopup = "";
 }
 

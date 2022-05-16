@@ -1,14 +1,62 @@
-<div class="loadedPContainer">
-  <div class="slide"
+<div class="loadedPContainer state01">
+  <div class="slide01 slide"
     <h3>GAME OVER</h3>
     <video src="vid/gameOverFail.mp4" width=600px  height=338px controls poster="https://cdn.jsdelivr.net/gh/tnharvey/3DCSSTrainingRoom@scenarioStart/popups/gameOverFail/placeholder 640x360.jpg">
     </video>
-    <p>SPC Bosky didn't recover from the virus. Restart and see if you can save SPC Bosky from being turned into a zombie!</p>
-    <div class="slideBtn" onclick="postRestart();">Start</div>
+    <div class="slideBtn" onclick="nextSlide();">Next</div>
+  </div>
+  <div class="slide02 slide">
+    <h3>GAME OVER</h3>
+    <p>SPC Bosky didn't recover from the virus. Restart the scenario and see if you can save SPC Bosky from being turned into a zombie!</p>
+    <div class="slideBtn" onclick="postRestart();">Restart Scenario</div>
   </div>
 </div>
+
 <script>
+  function nextSlide() {
+    var currentSlide = findInList($("#popupGameOver02")[0].childNodes[1].childNodes[0].classList,"state",false);
+    if(currentSlide=="state01"){
+      $(".slide01")[0].style.display = "none";
+      $(".slide02")[0].style.display = "block";
+      $(".loadedPContainer")[0].classList.remove("state01");
+      $(".loadedPContainer")[0].classList.add("state02");
+    }
+    else if(currentSlide=="state02"){
+      $(".slide01")[0].style.display = "block";
+      $(".slide02")[0].style.display = "none";
+      $(".loadedPContainer")[0].classList.remove("state02");
+      $(".loadedPContainer")[0].classList.add("state01");
+    }
+  }
+  
   function postRestart() {
-    parent.postMessage("restart","*");
+      parent.postMessage("restart","*");
+    }
+    
+  function findInList (list, term, exact) {
+    // searches array items for search term. If exact search, returns true if exact term is found. If not exact, returns any matching items in list.
+    var results = "";
+    var resultsArr = [];
+      
+    list.forEach(item => {
+      if(exact){
+        if(item==term){results = item;}
+        else {results=false;}
+      }
+      else {
+        if(item.search(term)>=0){
+          if(results=="") {
+            results = item;
+          }
+          else {
+            if(resultsArr==""){
+              resultsArr.push(results);
+            }
+            resultsArr.push(item);
+          }
+        }
+      }
+    })
+    return results;
   }
 </script>
