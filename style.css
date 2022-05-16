@@ -136,6 +136,10 @@ h3 {
   transform-style: preserve-3d;
 }
 
+.c3dContainer.healthHeart {
+  transform: translate3d(80px, 16px, 10px)
+}
+
 #backButton {
   color: white;
   position: relative;
@@ -751,7 +755,7 @@ transform: translate3d(707px, 20px, 518px) rotateY(-90deg) rotateZ(39deg);
 }
 
 /* HEALTH - Cube Hearts Position and Animations */
-#cubeHeart01 .healthy {
+/*#cubeHeart01 .healthy {
   transform: translate3d(-100px,25px,0px) rotateY(0deg) rotateX(0deg) rotateZ(0deg) scaleX(0.1) scaleZ(0.1) scaleY(0.1);
 }
 
@@ -761,22 +765,15 @@ transform: translate3d(707px, 20px, 518px) rotateY(-90deg) rotateZ(39deg);
 
 #cubeHeart03 .healthy {
   transform: translate3d(100px,25px,0px) rotateY(0deg) rotateX(0deg) rotateZ(0deg) scaleX(0.1) scaleZ(0.1) scaleY(0.1);
-}
-
-.healthHeart {
+}*/
+.cubeHeart {
   animation-duration: 4s;
   animation-iteration-count: infinite;
   animation-timing-function: linear;
 }
-  
-#cubeHeart01.healthy{
+#cubeHeart01 .cubeHeart {
   animation-name: rotateHeart01;
 }
-
-#cubeHeart01.sick {
-  animation-name: rotateHeart01sick;
-}
-
 @keyframes rotateHeart01 {
   from {
     transform: translate3d(-75px,0px,0px) rotateY(0deg) rotateX(0deg) rotateZ(0deg) scaleX(0.1) scaleZ(0.1) scaleY(0.1);
@@ -786,21 +783,8 @@ transform: translate3d(707px, 20px, 518px) rotateY(-90deg) rotateZ(39deg);
   }
 }
 
-@keyframes rotateHeart01sick {
-  from {
-    transform: translate3d(-75px,0px,0px) rotateY(0deg) rotateX(0deg) rotateZ(0deg) scaleX(0.06) scaleZ(0.06) scaleY(0.06);
-  }
-  to {
-    transform: translate3d(-75px,0px,0px) rotateY(360deg) rotateX(0deg) rotateZ(0deg) scaleX(0.06) scaleZ(0.06) scaleY(0.06);
-  }
-}
-
-#cubeHeart02.healthy{
+#cubeHeart02 .cubeHeart {
   animation-name: rotateHeart02;
-}
-
-#cubeHeart02.sick {
-  animation-name: rotateHeart02sick;
 }
 
 @keyframes rotateHeart02 {
@@ -812,21 +796,8 @@ transform: translate3d(707px, 20px, 518px) rotateY(-90deg) rotateZ(39deg);
   }
 }
 
-@keyframes rotateHeart02sick {
-  from {
-    transform: translate3d(0px,0px,0px) rotateY(0deg) rotateX(0deg) rotateZ(0deg) scaleX(0.06) scaleZ(0.06) scaleY(0.06);
-  }
-  to {
-    transform: translate3d(0px,0px,0px) rotateY(360deg) rotateX(0deg) rotateZ(0deg) scaleX(0.06) scaleZ(0.06) scaleY(0.06);
-  }
-}
-
-#cubeHeart03.healthy{
+#cubeHeart03 .cubeHeart {
   animation-name: rotateHeart03;
-}
-
-#cubeHeart03.sick {
-  animation-name: rotateHeart03sick;
 }
 
 @keyframes rotateHeart03 {
@@ -835,15 +806,6 @@ transform: translate3d(707px, 20px, 518px) rotateY(-90deg) rotateZ(39deg);
   }
   to {
     transform: translate3d(75px,0px,0px) rotateY(360deg) rotateX(0deg) rotateZ(0deg) scaleX(0.1) scaleZ(0.1) scaleY(0.1);
-  }
-}
-
-@keyframes rotateHeart03sick {
-  from {
-    transform: translate3d(75px,0px,0px) rotateY(0deg) rotateX(0deg) rotateZ(0deg) scaleX(0.06) scaleZ(0.06) scaleY(0.06);
-  }
-  to {
-    transform: translate3d(75px,0px,0px) rotateY(360deg) rotateX(0deg) rotateZ(0deg) scaleX(0.06) scaleZ(0.06) scaleY(0.06);
   }
 }
 

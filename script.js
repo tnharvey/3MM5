@@ -8,8 +8,6 @@ Might also be able to use an object to load and track all popup info at once and
 */
 
 window.onload = function(){
-  var cube = document.querySelector('.scene');
-
   let viewCards = document.getElementsByClassName('popup3d');
   let viewCardsArr = Array.prototype.slice.call(viewCards);
   
@@ -65,9 +63,11 @@ const messages = {
   5:"<b>Next Step:</b><br><span></span>",
 };
 var resets = 0;
+var cube = "";
 
 /* Scenarios */
 function startScenario() {
+  cube = document.getElementById('scene1');
   updateHealth();
   hideCurrentPopup();
   removeContent('popLoad');
@@ -234,10 +234,11 @@ function updateChoice (choice) {
 
 function checkAnswer(challenge) {
   if(choices["challenge0"+challenge] == answers["challenge0"+challenge]){
-    console.log("correct");
+    //console.log("correct");
   }
   else {
     score = score - 1;
+    //console.log("Incorrect");
   }
   updateHealth();
 }
@@ -264,93 +265,31 @@ function endScenario(){
 
 function updateHealth() {
   var heart1 = document.getElementById("cubeHeart01");
-  var heart2 = document.getElementById("cubeHeart02")
-  var heart3 = document.getElementById("cubeHeart03")
+  var heart2 = document.getElementById("cubeHeart02");
+  var heart3 = document.getElementById("cubeHeart03");
   
   switch(score) {
-    case 0:
-      heart1.classList.add("hide");
-      heart2.classList.add("hide");
-      heart3.classList.add("hide");
-      break;
-    case 1:
-      if (heart1.classList.contains("healthy")) {
-        heart1.classList.remove("healthy");
-        heart1.classList.add("sick");
-      }
-      if (heart1.classList.contains("hide")) {
-        heart1.classList.remove("hide");
-      }
-      heart2.classList.add("hide");
-      heart3.classList.add("hide");
-      break;
-    case 2:
-      if (heart1.classList.contains("healthy")) {
-        heart1.classList.remove("healthy");
-        heart1.classList.add("sick");
-      }
-      if (heart1.classList.contains("hide")) {
-        heart1.classList.remove("hide");
-      }
-      if (heart2.classList.contains("healthy")) {
-        heart2.classList.remove("healthy");
-        heart2.classList.add("sick");
-      }
-      if (heart2.classList.contains("hide")) {
-        heart2.classList.remove("hide");
-      }
-      if (heart3.classList.contains("healthy")) {
-        heart3.classList.remove("healthy");
-        heart3.classList.add("sick");
-      }
-      if (heart3.classList.contains("hide")) {
-        heart3.classList.remove("hide");
-      }
-      break;
+  // Cases 0-2 no longer valid;
     case 3:
       if (heart1.classList.contains("sick")) {
-        heart1.classList.remove("sick");
-        heart1.classList.add("healthy");
-      }
-      if (heart1.classList.contains("hide")) {
-        heart1.classList.remove("hide");
+        toggleHealth(heart1.id);
       }
       if (heart2.classList.contains("healthy")) {
-        heart2.classList.remove("healthy");
-        heart2.classList.add("sick");
-      }
-      if (heart2.classList.contains("hide")) {
-        heart2.classList.remove("hide");
+        toggleHealth(heart2.id);
       }
       if (heart3.classList.contains("healthy")) {
-        heart3.classList.remove("healthy");
-        heart3.classList.add("sick");
-      }
-      if (heart3.classList.contains("hide")) {
-        heart3.classList.remove("hide");
+        toggleHealth(heart3.id);
       }
       break;
     case 4:
       if (heart1.classList.contains("sick")) {
-        heart1.classList.remove("sick");
-        heart1.classList.add("healthy");
-      }
-      if (heart1.classList.contains("hide")) {
-        heart1.classList.remove("hide");
+        toggleHealth(heart1.id);
       }
       if (heart2.classList.contains("sick")) {
-        heart2.classList.remove("sick");
-        heart2.classList.add("healthy");
-      }
-      if (heart2.classList.contains("hide")) {
-        heart2.classList.remove("hide");
+        toggleHealth(heart2.id);
       }
       if (heart3.classList.contains("healthy")) {
-        heart3.classList.remove("healthy");
-        heart3.classList.add("sick");
-      }
-      if (heart3.classList.contains("hide")) {
-        heart3.classList.remove("hide");
+        toggleHealth(heart3.id);
       }
       break;
     case 5:
@@ -374,7 +313,7 @@ function updateHealth() {
 function userAction (input) {
 /* Primary user action handler. Checks for type of input as some are currently inline pasing strings.
    Depending on action, triggers/toggles CSS clases or styles to effect 3D movement. */
-    var cube = document.querySelector('#scene1');
+    //var cube = document.querySelector('#scene1');
     var orientation = cube.classList[1];
     var afssDoor = document.querySelector('#afssDoor01');
     var uAction = "";
@@ -492,7 +431,7 @@ function userAction (input) {
 }
 
 function updateOrientation(newOrientation) {
-  var cube = document.querySelector('#scene1');
+  //var cube = document.querySelector('#scene1');
   cube.classList.remove(findInList(cube.classList,"face-"));
   cube.classList.add(newOrientation);
   if(newOrientation == "face-front"||newOrientation == "face-right"||newOrientation == "face-left"){
@@ -506,7 +445,7 @@ function updateOrientation(newOrientation) {
 
 function switchOrientation(e) {
   //Sneaky. Resolves the continuous rotation issue by disabling transitions during a quick orientation reset.
-  var cube = document.querySelector('#scene1');
+  //var cube = document.querySelector('#scene1');
   var orientation = cube.classList[1];
 
   if (orientation=="face-lRight"){
@@ -526,7 +465,7 @@ function switchOrientation(e) {
 }
 
 function transitionPopup(event) {
-  var cube = document.querySelector('#scene1');
+  //var cube = document.querySelector('#scene1');
   if (event.propertyName=="transform"){
     showPopup(currentPopup);
     cube.removeEventListener("transitionend",transitionPopup);
@@ -576,9 +515,9 @@ function loadModels (modelsJson) {
   var afssDoorCode1 = $('<div id="afssDoor01" class="c3dContainer">');
   var afssStandCode1 = $('<div id="afssStand01" class="c3dContainer">');
   var afssStandCode2 = $('<div id="afssStand02" class="c3dContainer">');
-  var cubeHeart1 = $('<div id="cubeHeart01" class="c3dContainer healthHeart sick">');
-  var cubeHeart2 = $('<div id="cubeHeart02" class="c3dContainer healthHeart sick">');
-  var cubeHeart3 = $('<div id="cubeHeart03" class="c3dContainer healthHeart sick">');
+  var cubeHeart1 = $('<div id="cubeHeart01" class="c3dContainer healthHeart healthy">');
+  var cubeHeart2 = $('<div id="cubeHeart02" class="c3dContainer healthHeart healthy">');
+  var cubeHeart3 = $('<div id="cubeHeart03" class="c3dContainer healthHeart healthy">');
   var manualSm1 = $('<div id="manualSm01" class="c3dContainer">');
 
   tableCode1.load(baseUrl+"models/table/tableDom.html");
@@ -667,6 +606,45 @@ function findInList (list, term, exact) {
   return results;
 }
 
+// Animation Functions
+function toggleHealth(elemId) {
+var heart = document.getElementById(elemId).childNodes[0];
+//console.log(heart);
+
+if(heart.childNodes[1].childNodes[1].classList.contains("sick")){
+  for (let i=1; i<16; i+=2) {
+    for (let j=1; j<12; j+=2) {
+      heart.childNodes[i].childNodes[j].classList.remove("sick");
+      heart.childNodes[i].childNodes[j].classList.add("healthy");
+    }
+  }
+  heart.parentElement.classList.remove("sick");
+  heart.parentElement.classList.add("healthy");
+}
+else if (heart.childNodes[1].childNodes[1].classList.contains("healthy")) {
+  for (let i=1; i<16; i+=2) {
+    for (let j=1; j<12; j+=2) {
+      heart.childNodes[i].childNodes[j].classList.remove("healthy");
+      heart.childNodes[i].childNodes[j].classList.add("sick");
+    }
+  }
+  heart.parentElement.classList.remove("healthy");
+  heart.parentElement.classList.add("sick");
+}
+restartAnim(elemId);
+}
+
+function restartAnim (elemId) {
+  var heart = document.getElementById(elemId);
+  var newHeart = heart.cloneNode(true);
+  heart.parentNode.replaceChild(newHeart, heart);
+}
+
+function restartAnims () {
+  restartAnim("cubeHeart01");
+  restartAnim("cubeHeart02");
+  restartAnim("cubeHeart03");
+}
 // Functions in development
 /*
 // Changes XML to JSON
