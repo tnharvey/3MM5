@@ -86,6 +86,8 @@ function updateScenario(){
       loadContent("feedback01","popups/challenges/challenge01/","popupFeedback01","option01FB");
       loadContent("feedback02","popups/challenges/challenge01/","popupFeedback02","option02FB");
       loadContent("feedback03","popups/challenges/challenge01/","popupFeedback03","option03FB");
+      loadContent("gameOverSuccess","popups/gameOverSuccess/","popupGameOver01","index");
+      loadContent("gameOverFail","popups/gameOverFail/","popupGameOver02","index");
       activeAreas.computer = 1;
       activeAreas.equipment = 1;
       activeAreas.forms = 1;
@@ -184,9 +186,6 @@ function updateScenario(){
       break;
   }
   //updateHealth();
-  if (score==6) {
-    endScenario();
-  }
   updateMessages();
   showPopup("popupChallenge");
   updateCards();
@@ -241,6 +240,13 @@ function checkAnswer(challenge) {
     //console.log("Incorrect");
   }
   updateHealth();
+  if (challenge == 5 && score >= 4) {
+    showPopup("popupGameOver01");
+    endScenario();
+  }
+  else if ((challenge == 5 && score < 4) || (score < 4)) {
+    showPopup("popupGameOver02");
+  }
 }
 
 function resetScenario(){
@@ -258,7 +264,6 @@ function resetScenario(){
 }
 
 function endScenario(){
-  updateHealth();
   parent.postMessage("scenario complete","*");
   window.alert("Scenario Complete. You've helped to save PFC Bosky!")
 }

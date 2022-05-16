@@ -1,0 +1,14 @@
+<div class="loadedPContainer">
+  <div class="slide"
+    <h3>GAME OVER</h3>
+    <video src="vid/gameOverFail.mp4" width=600px  height=338px controls poster="https://cdn.jsdelivr.net/gh/tnharvey/3DCSSTrainingRoom@scenarioStart/popups/gameOverFail/placeholder 640x360.jpg">
+    </video>
+    <p>SPC Bosky didn't recover from the virus. Restart and see if you can save SPC Bosky from being turned into a zombie!</p>
+    <div class="slideBtn" onclick="postRestart();">Start</div>
+  </div>
+</div>
+<script>
+  function postRestart() {
+    parent.postMessage("restart","*");
+  }
+</script>
