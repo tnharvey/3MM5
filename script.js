@@ -38,9 +38,15 @@ window.onload = function(){
   loadModels();
 }
 
+// Used when working from different server, doesn't always work that well
 const baseUrl = "";
+
+//global vars
 var currentChallenge = 1;
+var currentPopup = "";
 var score = 5;
+
+// Data Objects
 var activeAreas = {
   challenge01: {
     resources:0,
@@ -73,7 +79,6 @@ var activeAreas = {
     equipment:0,
   },
 };
-var currentPopup = "";
 var choices = {
   challenge01:0,
   challenge02:0,
@@ -96,7 +101,8 @@ const messages = {
   4:"<b>Next Step:</b><br><span>You have received the equipment back. What do you do now?</span>",
   5:"<b>Next Step:</b><br><span></span>",
 };
-var resets = 0;
+
+// Ref to main scene
 var cube = "";
 
 /* Scenarios */
@@ -111,99 +117,31 @@ function startScenario() {
 
 function updateScenario(){
   var cards = document.getElementsByClassName('popup3d');
-  switch (currentChallenge) {
-    case 1:
-      loadContent("challenge01","popups/challenges/challenge01/","popupChallenge","challenge01");
-      loadContent("option01","popups/challenges/challenge01/","popupOption01","option01");
-      loadContent("option02","popups/challenges/challenge01/","popupOption02","option02");
-      loadContent("option03","popups/challenges/challenge01/","popupOption03","option03");
-      loadContent("feedback01","popups/challenges/challenge01/","popupFeedback01","option01FB");
-      loadContent("feedback02","popups/challenges/challenge01/","popupFeedback02","option02FB");
-      loadContent("feedback03","popups/challenges/challenge01/","popupFeedback03","option03FB");
-      loadContent("gameOverSuccess","popups/gameOverSuccess/","popupGameOver01","index");
-      loadContent("gameOverFail","popups/gameOverFail/","popupGameOver02","index");
-      break;
-    case 2:
-      removeContent("challenge01");
-      removeContent("option01");
-      removeContent("option02");
-      removeContent("option03");
-      removeContent("feedback01");
-      removeContent("feedback02");
-      removeContent("feedback03");
-      currentChallenge=2;
-      loadContent("challenge02","popups/challenges/challenge02/","popupChallenge","challenge02");
-      loadContent("option01","popups/challenges/challenge02/","popupOption01","option01");
-      loadContent("option02","popups/challenges/challenge02/","popupOption02","option02");
-      loadContent("option03","popups/challenges/challenge02/","popupOption03","option03");
-      loadContent("feedback01","popups/challenges/challenge02/","popupFeedback01","option01FB");
-      loadContent("feedback02","popups/challenges/challenge02/","popupFeedback02","option02FB");
-      loadContent("feedback03","popups/challenges/challenge02/","popupFeedback03","option03FB");
-      hideCurrentPopup();
-      break;
-    case 3:
-      removeContent("challenge02");
-      removeContent("option01");
-      removeContent("option02");
-      removeContent("option03");
-      removeContent("feedback01");
-      removeContent("feedback02");
-      removeContent("feedback03");
-      currentChallenge=3;
-      loadContent("challenge03","popups/challenges/challenge03/","popupChallenge","challenge03");
-      loadContent("option01","popups/challenges/challenge03/","popupOption01","option01");
-      loadContent("option02","popups/challenges/challenge03/","popupOption02","option02");
-      loadContent("option03","popups/challenges/challenge03/","popupOption03","option03");
-      loadContent("feedback01","popups/challenges/challenge03/","popupFeedback01","option01FB");
-      loadContent("feedback02","popups/challenges/challenge03/","popupFeedback02","option02FB");
-      loadContent("feedback03","popups/challenges/challenge03/","popupFeedback03","option03FB");
-      hideCurrentPopup();
-      break;
-    case 4:
-      removeContent("challenge03");
-      removeContent("option01");
-      removeContent("option02");
-      removeContent("option03");
-      removeContent("feedback01");
-      removeContent("feedback02");
-      removeContent("feedback03");
-      currentChallenge=4;
-      loadContent("challenge04","popups/challenges/challenge04/","popupChallenge","challenge04");
-      loadContent("option01","popups/challenges/challenge04/","popupOption01","option01");
-      loadContent("option03","popups/challenges/challenge04/","popupOption03","option03");
-      loadContent("option04","popups/challenges/challenge04/","popupOption04","option04");
-      loadContent("feedback01","popups/challenges/challenge04/","popupFeedback01","option01FB");
-      loadContent("feedback03","popups/challenges/challenge04/","popupFeedback03","option03FB");
-      loadContent("feedback04","popups/challenges/challenge04/","popupFeedback04","option04FB");
-      hideCurrentPopup();
-      break;
-    case 5:
-      removeContent("challenge04");
-      removeContent("option01");
-      removeContent("option02");
-      removeContent("option03");
-      removeContent("feedback01");
-      removeContent("feedback02");
-      removeContent("feedback03");
-      currentChallenge=5;
-      loadContent("challenge05","popups/challenges/challenge05/","popupChallenge","challenge05");
-      loadContent("option01","popups/challenges/challenge05/","popupOption01","option01");
-      loadContent("option02","popups/challenges/challenge05/","popupOption02","option02");
-      loadContent("option03","popups/challenges/challenge05/","popupOption03","option03");
-      loadContent("feedback01","popups/challenges/challenge05/","popupFeedback01","option01FB");
-      loadContent("feedback02","popups/challenges/challenge05/","popupFeedback02","option02FB");
-      loadContent("feedback03","popups/challenges/challenge05/","popupFeedback03","option03FB");
-      hideCurrentPopup();
-      break;
-    case 6:
-      console.log("updateScenario: No content loaded for 6.");
-      break;
-    default:
-      console.log("updateScenario: Invald challenge value.");
-      break;
+
+  if (currentChallenge > 1) {
+    removeContent("challenge0"+(currentChallenge-1));
+    
+    for (var i=1;i<=4;i++) {
+      removeContent("option0"+i);
+      removeContent("feedback0"+i);
+    }
   }
-  //updateHealth();
+   loadContent("challenge0"+currentChallenge,"popups/challenges/challenge0"+currentChallenge+"/","popupChallenge","challenge0"+currentChallenge);
+  
+  for (var i = 1;i <= 4;i++) {
+    loadContent("option0"+i,"popups/challenges/challenge0" + currentChallenge + "/","popupOption0"+i,"option0"+i);
+    loadContent("feedback0"+i,"popups/challenges/challenge0" + currentChallenge + "/","popupFeedback0"+i,"option0" + i + "FB")
+  }
+  if (currentChallenge==1 && resets == 0) {
+    loadContent("gameOverSuccess","popups/gameOverSuccess/","popupGameOver01","index");
+    loadContent("gameOverFail","popups/gameOverFail/","popupGameOver02","index");
+    }
+  
   updateMessages();
+  if (currentChallenge > 1) {
+    hideCurrentPopup();
+  }
+  
   showPopup("popupChallenge");
   updateCards();
 }
@@ -279,6 +217,7 @@ function resetScenario(){
   removeContent("feedback02");
   removeContent("feedback03");
   resets = resets + 1;
+  start = 1
   score = 5;
   currentChallenge = 1;
   allChoices["attempt0"+(resets-1)]=choices;
@@ -293,6 +232,7 @@ function resetScenario(){
   loadContent ("popLoad","popups/intro/","popupIntro","index",true);
   showPopup("popupIntro");
   updateOrientation("face-right");
+  updateHealth();  
 }
 
 function endScenario(){
@@ -331,16 +271,13 @@ function updateHealth() {
       break;
     case 5:
       if (heart1.classList.contains("sick")) {
-        heart1.classList.remove("sick");
-        heart1.classList.add("healthy");
+        toggleHealth(heart3.id);
       }
       if (heart2.classList.contains("sick")) {
-        heart2.classList.remove("sick");
-        heart2.classList.add("healthy");
+        toggleHealth(heart3.id);
       }
       if (heart3.classList.contains("sick")) {
-        heart3.classList.remove("sick");
-        heart3.classList.add("healthy");
+        toggleHealth(heart3.id);
       }
       break;
   }
