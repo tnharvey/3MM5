@@ -1,25 +1,25 @@
 /* .cub-1 styles */
-.cub-1 {
+.manualSm {
   transform:translate3D(0em, 0em, 0em) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
   opacity:1;
   width:4em;
   height:0.1em;
   margin:-0.05em 0 0 -2em;
 }
-.cub-1 .ft {
+.manualSm .ft {
   transform:translateZ(2.5em);
 }
-.cub-1 .bk {
+.manualSm .bk {
   transform:translateZ(-2.5em) rotateY(180deg);
 }
-.cub-1 .rt, .cub-1 .lt {
+.manualSm .rt, .cub-1 .lt {
   width:5em;
   height:0.1em;
 }
-.cub-1 .tp, .cub-1 .bm {
+.manualSm .tp, .cub-1 .bm {
   width:4em;
   height:5em;
 }
-.cub-1 .face {
+.manualSm .face {
   background-color:#FFFFFF;
 }

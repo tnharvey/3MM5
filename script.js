@@ -523,6 +523,10 @@ function loadModels (modelsJson) {
   var cubeHeart2 = $('<div id="cubeHeart02" class="c3dContainer healthHeart healthy">');
   var cubeHeart3 = $('<div id="cubeHeart03" class="c3dContainer healthHeart healthy">');
   var manualSm1 = $('<div id="manualSm01" class="c3dContainer">');
+  var keyboardSimp1 = $('<div id="keyboardSimp01" class="c3dContainer">');
+  var laptop1 = $('<div id="laptop01" class="c3dContainer">');
+  var mouse1 = $('<div id="mouse01" class="c3dContainer">');
+  var coffeeCup1 = $('<div id="coffeeCup01" class="c3dContainer">');
 
   tableCode1.load(baseUrl+"models/table/tableDom.html");
   tableCode2.load(baseUrl+"models/table/tableDom.html");
@@ -540,7 +544,11 @@ function loadModels (modelsJson) {
   cubeHeart2.load(baseUrl+"models/cubeHeart/cubeHeartDom.html");
   cubeHeart3.load(baseUrl+"models/cubeHeart/cubeHeartDom.html");
   manualSm1.load(baseUrl+"models/manualSm/manualSmDom.html");
-  $("#scene1").append(tableCode1,tableCode2,docCabCode,flLightCode1,flLightCode2,flLightCode3,monitorCode1,afssBodyCode1,afssDoorCode1,afssStandCode1,afssStandCode2);
+  keyboardSimp1.load(baseUrl+"models/keyboardSimp/keyboardSimpDom.html");
+  laptop1.load(baseUrl+"models/laptop/laptopDom.html");
+  mouse1.load(baseUrl+"models/mouse/mouseDom.html");
+  coffeeCup1.load(baseUrl+"models/coffeeCup/coffeeCupDom.html");
+  $("#scene1").append(tableCode1,tableCode2,docCabCode,flLightCode1,flLightCode2,flLightCode3,monitorCode1,afssBodyCode1,afssDoorCode1,afssStandCode1,afssStandCode2,manualSm1,keyboardSimp1,laptop1,mouse1,coffeeCup1);
   $("#health").append(cubeHeart1,cubeHeart2,cubeHeart3);
   $("head").append('<link rel="stylesheet" href="'+baseUrl+'models/table/tableStyle.css" />');
   $("head").append('<link rel="stylesheet" href="'+baseUrl+'models/documentCabinet/docCabStyle.css" />');
@@ -552,6 +560,10 @@ function loadModels (modelsJson) {
   $("head").append('<link rel="stylesheet" href="'+baseUrl+'models/afssStand/afssStandStyle.css" />');
   $("head").append('<link rel="stylesheet" href="'+baseUrl+'models/cubeHeart/cubeHeartStyle.css" />');
   $("head").append('<link rel="stylesheet" href="'+baseUrl+'models/manualSm/manualSmStyle.css" />');
+  $("head").append('<link rel="stylesheet" href="'+baseUrl+'models/keyboardSimp/keyboardSimpStyle.css" />');
+  $("head").append('<link rel="stylesheet" href="'+baseUrl+'models/laptop/laptopStyle.css" />');
+  $("head").append('<link rel="stylesheet" href="'+baseUrl+'models/mouse/mouseStyle.css" />');
+  $("head").append('<link rel="stylesheet" href="'+baseUrl+'models/coffeeCup/coffeeCupStyle.css" />');
 }
 
 /* Inline click funcions, need to set up with listeners */

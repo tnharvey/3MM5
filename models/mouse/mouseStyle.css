@@ -1,0 +1,94 @@
+/* .mouse styles */
+.mouse {
+  transform:translate3D(0em, 0em, 0em) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+  opacity:1;
+  width:0.7459677419354839em;
+  height:0.45161290322580677em;
+  margin:-0.22580645161290339em 0 0 -0.37298387096774194em;
+}
+.mouse .ft {
+  transform:translateZ(0.5100806451612904em);
+}
+.mouse .bk {
+  transform:translateZ(-0.5100806451612904em) rotateY(180deg);
+}
+.mouse .rt, .mouse .lt {
+  width:1.0201612903225807em;
+  height:0.45161290322580677em;
+}
+.mouse .tp, .mouse .bm {
+  width:0.7459677419354839em;
+  height:1.0201612903225807em;
+}
+.mouse .face {
+  background-color:#707070;
+}
+.mouse .ft {
+  width:0em;
+  margin-left:0.37298387096774194em;
+}
+.mouse .bk {
+  width:0em;
+  margin-left:-0.37298387096774194em;
+}
+.mouse .rt, .mouse .lt {
+  width:0.27419354838709686em;
+}
+.mouse .tp, .mouse .bm, .mouse .tp .photon-shader, .mouse .bm .photon-shader {
+  border-radius:0.37298387096774194em;
+}
+.mouse .cr {
+  width:0.37298387096774194em;
+  left:0.18649193548387097em;
+}
+.mouse .cr-0 {
+  transform: translate3D(0em, 0, 0.13709677419354843em);
+}
+.mouse .cr-1 {
+  transform: translate3D(0em, 0, -0.13709677419354843em);
+}
+.mouse .cr-2 {
+  transform: translate3D(0, 0, -0.13709677419354843em);
+}
+.mouse .cr-3 {
+  transform: translate3D(0, 0, 0.13709677419354843em);
+}
+.mouse .cr-0 .s0 {
+  transform: rotateY(15deg) translate3D(-50%, 0, 0.3479838709677419em);
+}
+.mouse .cr-0 .s1 {
+  transform: rotateY(45deg) translate3D(-50%, 0, 0.3479838709677419em);
+}
+.mouse .cr-0 .s2 {
+  transform: rotateY(75deg) translate3D(-50%, 0, 0.3479838709677419em);
+}
+.mouse .cr-1 .s0 {
+  transform: rotateY(105deg) translate3D(-50%, 0, 0.3479838709677419em);
+}
+.mouse .cr-1 .s1 {
+  transform: rotateY(135deg) translate3D(-50%, 0, 0.3479838709677419em);
+}
+.mouse .cr-1 .s2 {
+  transform: rotateY(165deg) translate3D(-50%, 0, 0.3479838709677419em);
+}
+.mouse .cr-2 .s0 {
+  transform: rotateY(195deg) translate3D(-50%, 0, 0.3479838709677419em);
+}
+.mouse .cr-2 .s1 {
+  transform: rotateY(225deg) translate3D(-50%, 0, 0.3479838709677419em);
+}
+.mouse .cr-2 .s2 {
+  transform: rotateY(255deg) translate3D(-50%, 0, 0.3479838709677419em);
+}
+.mouse .cr-3 .s0 {
+  transform: rotateY(285deg) translate3D(-50%, 0, 0.3479838709677419em);
+}
+.mouse .cr-3 .s1 {
+  transform: rotateY(315deg) translate3D(-50%, 0, 0.3479838709677419em);
+}
+.mouse .cr-3 .s2 {
+  transform: rotateY(345deg) translate3D(-50%, 0, 0.3479838709677419em);
+}
+.mouse .side {
+  width:0.22488145403128104em;
+}

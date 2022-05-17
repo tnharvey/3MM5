@@ -1,0 +1,50 @@
+/* .keyboardBase styles */
+.keyboardBase {
+  transform:translate3D(0em, 0em, 0em) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+  opacity:1;
+  width:14em;
+  height:0.75em;
+  margin:-0.375em 0 0 -7em;
+}
+.keyboardBase .ft {
+  transform:translateZ(2.125em);
+}
+.keyboardBase .bk {
+  transform:translateZ(-2.125em) rotateY(180deg);
+}
+.keyboardBase .rt, .keyboardBase .lt {
+  width:4.25em;
+  height:0.75em;
+}
+.keyboardBase .tp, .keyboardBase .bm {
+  width:14em;
+  height:4.25em;
+}
+.keyboardBase .face {
+  background-color:#616161;
+}
+/* .keyboardKeys styles */
+.keyboardKeys {
+  transform:translate3D(0em, -0.3em, 0em) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+  opacity:1;
+  width:13.5em;
+  height:0.75em;
+  margin:-0.375em 0 0 -6.75em;
+}
+.keyboardKeys .ft {
+  transform:translateZ(1.90625em);
+}
+.keyboardKeys .bk {
+  transform:translateZ(-1.90625em) rotateY(180deg);
+}
+.keyboardKeys .rt, .keyboardKeys .lt {
+  width:3.8125em;
+  height:0.75em;
+}
+.keyboardKeys .tp, .keyboardKeys .bm {
+  width:13.5em;
+  height:3.8125em;
+}
+.keyboardKeys .face {
+  background-color:#919191;
+}

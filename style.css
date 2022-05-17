@@ -751,21 +751,35 @@ transform: translate3d(707px, 20px, 518px) rotateY(-90deg) rotateZ(39deg);
 }
 
 #manualSm01 {
-  transform: translate3d(430px, 51px, 400px) rotateX(90deg) rotateZ(261deg) scaleX(0.5) scaleZ(0.5) scaleY(0.5);
+  transform: translate3d(-174px, 91px, 322px) rotateX(0deg) rotateY(65deg) scaleX(0.75) scaleZ(0.75) scaleY(0.75);
+}
+
+#keyboardSimp01 {
+  transform: translate3d(461px, 90px, 469px) rotateX(0deg) rotateY(90deg) scaleX(0.4) scaleZ(0.4) scaleY(0.4);
+}
+
+#laptop01 {
+  transform: translate3d(507px, 90px, 566px) rotateX(0deg) rotateY(90deg) scaleX(0.3) scaleZ(0.3) scaleY(0.3);
+}
+
+#mouse01 {
+  transform: translate3d(458px, 91px, 538px) rotateX(0deg) rotateY(90deg) scaleX(1) scaleZ(1) scaleY(1);
+}
+
+#coffeeCup01 {
+  transform: translate3d(-174px, 74px, 230px) rotateX(0deg) rotateY(178deg) scaleX(0.25) scaleZ(0.25) scaleY(0.25);
+}
+
+#cupSteam {
+  transform: translate3d(633px, -258px, -115px) rotateX(0deg) rotateY(-90deg) scaleX(0.2) scaleY(0.2);
+}
+
+#cupSteam img {
+  width: auto;
+  height: auto;
 }
 
 /* HEALTH - Cube Hearts Position and Animations */
-/*#cubeHeart01 .healthy {
-  transform: translate3d(-100px,25px,0px) rotateY(0deg) rotateX(0deg) rotateZ(0deg) scaleX(0.1) scaleZ(0.1) scaleY(0.1);
-}
-
-#cubeHeart02 .healthy {
-  transform: translate3d(0px,25px,0px) rotateY(0deg) rotateX(0deg) rotateZ(0deg) scaleX(0.1) scaleZ(0.1) scaleY(0.1);
-}
-
-#cubeHeart03 .healthy {
-  transform: translate3d(100px,25px,0px) rotateY(0deg) rotateX(0deg) rotateZ(0deg) scaleX(0.1) scaleZ(0.1) scaleY(0.1);
-}*/
 .cubeHeart {
   animation-duration: 4s;
   animation-iteration-count: infinite;
