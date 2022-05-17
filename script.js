@@ -5,6 +5,7 @@
 Might also be able to use an object to load and track all popup info at once and load/unload individual ones
 - Refactor to have transition listener on transition between challenges. Maybe refactor to have a function that handles start/stop of listener.
 - Refactor to have relevant areas tracked in objects (i.e. all 3d cards have state stored in object and updated)
+- Refactor (someday!) to use React for state mgmt, etc. This would interfere with the SCORM/embedability.
 */
 
 window.onload = function(){
@@ -45,6 +46,7 @@ const baseUrl = "";
 var currentChallenge = 1;
 var currentPopup = "";
 var score = 5;
+var resets = 0;
 
 // Data Objects
 var activeAreas = {
@@ -100,6 +102,21 @@ const messages = {
   3:"<b>Next Step:</b><br><span>You're able to see that the costs are not going to exceed the MEL. What now?</span>",
   4:"<b>Next Step:</b><br><span>You have received the equipment back. What do you do now?</span>",
   5:"<b>Next Step:</b><br><span></span>",
+};
+
+var heartsState = {
+  cubeHeart01: {
+    topState: "",
+    childState: "",
+  },
+  cubeHeart02: {
+    topState: "",
+    childState: "",
+  },
+  cubeHeart03: {
+    topState: "",
+    childState: "",
+  },
 };
 
 // Ref to main scene
@@ -216,6 +233,8 @@ function resetScenario(){
   removeContent("feedback01");
   removeContent("feedback02");
   removeContent("feedback03");
+  loadContent ("popLoad","popups/intro/","popupIntro","index",true);
+  
   resets = resets + 1;
   start = 1
   score = 5;
@@ -229,7 +248,6 @@ function resetScenario(){
     challenge05:0,
   };
   hideCurrentPopup();
-  loadContent ("popLoad","popups/intro/","popupIntro","index",true);
   showPopup("popupIntro");
   updateOrientation("face-right");
   updateHealth();  
@@ -241,43 +259,55 @@ function endScenario(){
 }
 
 function updateHealth() {
-  var heart1 = document.getElementById("cubeHeart01");
-  var heart2 = document.getElementById("cubeHeart02");
-  var heart3 = document.getElementById("cubeHeart03");
+  var heart01 = document.getElementById("cubeHeart01");
+  var heart02 = document.getElementById("cubeHeart02");
+  var heart03 = document.getElementById("cubeHeart03");
   
   switch(score) {
   // Cases 0-2 no longer valid;
+    case 2:
+      if (heart01.classList.contains("healthy")) {
+        toggleHealth(heart01.id);
+        
+      }
+      if (heart02.classList.contains("healthy")) {
+        toggleHealth(heart02.id);
+      }
+      if (heart03.classList.contains("healthy")) {
+        toggleHealth(heart03.id);
+      }
+      break;
     case 3:
-      if (heart1.classList.contains("sick")) {
-        toggleHealth(heart1.id);
+      if (heart01.classList.contains("sick")) {
+        toggleHealth(heart01.id);
       }
-      if (heart2.classList.contains("healthy")) {
-        toggleHealth(heart2.id);
+      if (heart02.classList.contains("healthy")) {
+        toggleHealth(heart02.id);
       }
-      if (heart3.classList.contains("healthy")) {
-        toggleHealth(heart3.id);
+      if (heart03.classList.contains("healthy")) {
+        toggleHealth(heart03.id);
       }
       break;
     case 4:
-      if (heart1.classList.contains("sick")) {
-        toggleHealth(heart1.id);
+      if (heart01.classList.contains("sick")) {
+        toggleHealth(heart01.id);
       }
-      if (heart2.classList.contains("sick")) {
-        toggleHealth(heart2.id);
+      if (heart02.classList.contains("sick")) {
+        toggleHealth(heart02.id);
       }
-      if (heart3.classList.contains("healthy")) {
-        toggleHealth(heart3.id);
+      if (heart03.classList.contains("healthy")) {
+        toggleHealth(heart03.id);
       }
       break;
     case 5:
-      if (heart1.classList.contains("sick")) {
-        toggleHealth(heart3.id);
+      if (heart01.classList.contains("sick")) {
+        toggleHealth(heart01.id);
       }
-      if (heart2.classList.contains("sick")) {
-        toggleHealth(heart3.id);
+      if (heart02.classList.contains("sick")) {
+        toggleHealth(heart02.id);
       }
-      if (heart3.classList.contains("sick")) {
-        toggleHealth(heart3.id);
+      if (heart03.classList.contains("sick")) {
+        toggleHealth(heart03.id);
       }
       break;
   }
@@ -592,8 +622,10 @@ if(heart.childNodes[1].childNodes[1].classList.contains("sick")){
       heart.childNodes[i].childNodes[j].classList.add("healthy");
     }
   }
-  heart.parentElement.classList.remove("sick");
-  heart.parentElement.classList.add("healthy");
+  heartsState[elemId].childState = "healthy";
+  heart.parentNode.classList.remove("sick");
+  heart.parentNode.classList.add("healthy");
+  heartsState[elemId].topState = "healthy";
 }
 else if (heart.childNodes[1].childNodes[1].classList.contains("healthy")) {
   for (let i=1; i<16; i+=2) {
@@ -602,8 +634,10 @@ else if (heart.childNodes[1].childNodes[1].classList.contains("healthy")) {
       heart.childNodes[i].childNodes[j].classList.add("sick");
     }
   }
-  heart.parentElement.classList.remove("healthy");
-  heart.parentElement.classList.add("sick");
+  heartsState[elemId].childState = "sick";
+  heart.parentNode.classList.remove("healthy");
+  heart.parentNode.classList.add("sick");
+  heartsState[elemId].topState = "sick";
 }
 restartAnim(elemId);
 }
