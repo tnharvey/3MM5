@@ -19,8 +19,8 @@ window.onload = function(){
 
   browserCheck();
   
-  loadContent ("popLoad","popups/intro/","popupIntro","index",true);
-  showPopup("popupIntro");
+  loadContent (popups.intro.id,popups.intro.loc,popups.intro.target,popups.intro.fName,true);
+  showPopup(popups.intro.target);
   
   window.addEventListener("message", (event) => {
     switch (event.data) {
@@ -103,7 +103,44 @@ const messages = {
   4:"<b>Next Step:</b><br><span>You have received the equipment back. What do you do now?</span>",
   5:"<b>Next Step:</b><br><span></span>",
 };
-
+var popups = {
+  chal: {
+    loc: "popups/challenges/challenge0",
+    id: "challenge0",
+    target: "popupChallenge",
+    fName: "challenge0",
+  },
+  opt: {
+    loc: "popups/challenges/challenge0",
+    id: "option0",
+    target: "popupOption0",
+    fName: "option0",
+  },
+  fdbk: {
+    loc: "popups/challenges/challenge0",
+    id: "option0",
+    target: "popupFeedback0",
+    fName: "option0",
+  },
+  intro: {
+    loc: "popups/intro/",
+    id: "intro",
+    target: "popupIntro",
+    fName: "index",
+  },
+  gameOverS: {
+    loc: "popups/gameOverSuccess/",
+    id: "gameOverSuccess",
+    target: "popupGameOver01",
+    fName: "index",
+  },
+  gameOverF: {
+    loc: "popups/gameOverFail/",
+    id: "gameOverFail",
+    target: "popupGameOver02",
+    fName: "index",
+  },
+};
 var heartsState = {
   cubeHeart01: {
     topState: "",
@@ -127,7 +164,7 @@ function startScenario() {
   cube = document.getElementById('scene1');
   updateHealth();
   hideCurrentPopup();
-  removeContent('popLoad');
+  removeContent(popups.intro.id);
   // initiate any starting sequence
   updateScenario();
 }
@@ -136,22 +173,22 @@ function updateScenario(){
   var cards = document.getElementsByClassName('popup3d');
 
   if (currentChallenge > 1) {
-    removeContent("challenge0"+(currentChallenge-1));
+    removeContent(popups.chal.id+(currentChallenge-1));
     
     for (var i=1;i<=4;i++) {
-      removeContent("option0"+i);
-      removeContent("feedback0"+i);
+      removeContent(popups.opt.id+i);
+      removeContent(popups.fdbk.id+i);
     }
   }
-   loadContent("challenge0"+currentChallenge,"popups/challenges/challenge0"+currentChallenge+"/","popupChallenge","challenge0"+currentChallenge);
+   loadContent(popups.chal.id+currentChallenge,popups.chal.loc+currentChallenge+"/",popups.chal.target,popups.chal.fName+currentChallenge);
   
   for (var i = 1;i <= 4;i++) {
-    loadContent("option0"+i,"popups/challenges/challenge0" + currentChallenge + "/","popupOption0"+i,"option0"+i);
-    loadContent("feedback0"+i,"popups/challenges/challenge0" + currentChallenge + "/","popupFeedback0"+i,"option0" + i + "FB")
+    loadContent(popups.opt.id+i,popups.opt.loc + currentChallenge + "/",popups.opt.target+i,popups.opt.fName+i);
+    loadContent(popups.fdbk.id+i,popups.fdbk.loc + currentChallenge + "/",popups.fdbk.target+i,popups.fdbk.fName + i + "FB")
   }
   if (currentChallenge==1 && resets == 0) {
-    loadContent("gameOverSuccess","popups/gameOverSuccess/","popupGameOver01","index");
-    loadContent("gameOverFail","popups/gameOverFail/","popupGameOver02","index");
+    loadContent(popups.gameOverS.id,popups.gameOverS.loc,popups.gameOverS.target,popups.gameOverS.fName);
+    loadContent(popups.gameOverF.id,popups.gameOverF.loc,popups.gameOverF.target,popups.gameOverF.fName);
     }
   
   updateMessages();
@@ -159,7 +196,7 @@ function updateScenario(){
     hideCurrentPopup();
   }
   
-  showPopup("popupChallenge");
+  showPopup(popups.chal.target);
   updateCards();
 }
 
@@ -212,16 +249,16 @@ function checkAnswer(challenge) {
   }
   updateHealth();
   if (challenge == 5 && score >= 3) {
-    showPopup("popupGameOver01");
+    showPopup(popups.gameOverS.target);
     endScenario();
   }
   else if ((challenge == 5 && score < 3) || (score < 3)) {
     hideCurrentPopup();
-    showPopup("popupGameOver02");
+    showPopup(popups.gameOverF.target);
   }
   else {
     hideCurrentPopup();
-    showPopup("popupFeedback0"+choices["challenge0"+currentChallenge]);
+    showPopup(popups.fdbk.target+choices["challenge0"+currentChallenge]);
   }
 }
 
@@ -233,7 +270,7 @@ function resetScenario(){
   removeContent("feedback01");
   removeContent("feedback02");
   removeContent("feedback03");
-  loadContent ("popLoad","popups/intro/","popupIntro","index",true);
+  loadContent (popups.intro.id,popups.intro.loc,popups.intro.target,popups.intro.fName,true);
   
   resets = resets + 1;
   start = 1
