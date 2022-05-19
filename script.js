@@ -35,7 +35,7 @@ window.onload = function(){
     }
   }, false);
 
-  document.getElementById("backButton").addEventListener("click",userAction);
+  //document.getElementById("backButton").addEventListener("click",userAction);
   loadModels();
 }
 
@@ -80,6 +80,13 @@ var activeAreas = {
     computer:0,
     equipment:0,
   },
+};
+var currentStep = {
+  challenge01: "",
+  challenge02: "",
+  challenge03: "",
+  challenge04: "",
+  challenge05: "",
 };
 var choices = {
   challenge01:0,
@@ -212,6 +219,19 @@ function updateCards () {
   }
 }
 
+function updateProcessMap () {
+  var chal = "challenge0"+currentChallenge;
+  
+  for (var area in activeAreas[chal]) {
+    if(activeAreas[chal][area]==1) {
+      document.getElementById(area+"-card").classList.add("glow");
+    }
+    else if(activeAreas[chal][area]==0){
+      document.getElementById(area+"-card").classList.remove("glow");
+    }
+  }
+}
+
 function updateChoice (choice) {
   if (choice > 0 && choice < 5) {
     switch (currentChallenge) {
@@ -288,6 +308,12 @@ function resetScenario(){
   showPopup("popupIntro");
   updateOrientation("face-right");
   updateHealth();  
+}
+
+function loadResults(){
+  // loads customized results in the #results div based on user choices
+  var results = document.getElementById("results");
+  results.innerHTML = "";
 }
 
 function endScenario(){
@@ -437,16 +463,16 @@ function userAction (input) {
       if(uAction == "face-front"||uAction == "face-right"||uAction == "face-left"){
         updateOrientation(uAction);
         document.getElementById("cards").style.visibility="visible";
-        document.getElementById("backButton").style.opacity="0";
+        //document.getElementById("backButton").style.opacity="0";
         if (uAction=="face-front" && document.getElementById("afssDoor01").classList.contains("afssDoor-open")){
           document.getElementById("afssDoor01").classList.remove("afssDoor-open");
         }
       }
       else {
-        document.getElementById("backButton").dataset.targetDir = cube.classList[1];
+        //document.getElementById("backButton").dataset.targetDir = cube.classList[1];
         updateOrientation(uAction);
         document.getElementById("cards").style.visibility="hidden";
-        document.getElementById("backButton").style.opacity=1;
+        //document.getElementById("backButton").style.opacity=1;
         if(uAction=="face-equipment") {
           currentPopup = "popupOption03"
           afssDoor.classList.add("afssDoor-open");
@@ -477,7 +503,7 @@ function updateOrientation(newOrientation) {
   cube.classList.add(newOrientation);
   if(newOrientation == "face-front"||newOrientation == "face-right"||newOrientation == "face-left"){
     document.getElementById("cards").style.visibility="visible";
-    document.getElementById("backButton").style.opacity="0";
+    //document.getElementById("backButton").style.opacity="0";
     if (newOrientation=="face-front" && document.getElementById("afssDoor01").classList.contains("afssDoor-open")){
       document.getElementById("afssDoor01").classList.remove("afssDoor-open");
     }
@@ -702,6 +728,10 @@ function restartAnims () {
   restartAnim("cubeHeart02");
   restartAnim("cubeHeart03");
 }
+
+/* MEL Calc Functions */
+    
+
 // Functions in development
 /*
 // Changes XML to JSON

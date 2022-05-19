@@ -1,9 +1,66 @@
-<div class="loadedPContainer">
-  <div class="slide"
+<div class="loadedPContainer state01">
+  <div class="slide01 slide"
     <h3>MISSION COMPLETE</h3>
     <video src="vid/gameOverFail.mp4" width=600px  height=338px controls poster="https://cdn.jsdelivr.net/gh/tnharvey/3DCSSTrainingRoom@scenarioStart/popups/gameOverSuccess/placeholder 640x360.jpg">
     </video>
+    <div class="slideBtn" onclick="loadResults();nextSlide();">Next</div>
+  </div>
+  <div class="slide02 slide">
     <p>Way to go! Due to your diligent work, SPC Bosky has recovered from the virus and will not spend the rest of his days mindlessly roaming the earth.</p>
+    <div id="results"></div>
+    <div class="slideBtn" onclick="nextSlide();">Next</div>
+  </div>
+  <div class="slide03 slide">
     <p>You have successfully completed the scenario. Click the button that has appeared to the right of this area to continue with the training.</p>
+    <div class="slideBtn" onclick="endScenario();">End Scenario</div>
   </div>
 </div>
+
+<script>
+  function nextSlide() {
+    var currentSlide = findInList($("#popupGameOver02")[0].childNodes[1].childNodes[0].classList,"state",false);
+    if(currentSlide=="state01"){
+      $(".slide01")[0].style.display = "none";
+      $(".slide02")[0].style.display = "block";
+      $(".loadedPContainer")[0].classList.remove("state01");
+      $(".loadedPContainer")[0].classList.add("state02");
+    }
+    else if(currentSlide=="state02"){
+      $(".slide01")[0].style.display = "block";
+      $(".slide02")[0].style.display = "none";
+      $(".loadedPContainer")[0].classList.remove("state02");
+      $(".loadedPContainer")[0].classList.add("state01");
+    }
+  }
+  
+  function postRestart() {
+      parent.postMessage("restart","*");
+    }
+    
+  function findInList (list, term, exact) {
+    // searches array items for search term. If exact search, returns true if exact term is found. If not exact, returns any matching items in list.
+    var results = "";
+    var resultsArr = [];
+      
+    list.forEach(item => {
+      if(exact){
+        if(item==term){results = item;}
+        else {results=false;}
+      }
+      else {
+        if(item.search(term)>=0){
+          if(results=="") {
+            results = item;
+          }
+          else {
+            if(resultsArr==""){
+              resultsArr.push(results);
+            }
+            resultsArr.push(item);
+          }
+        }
+      }
+    })
+    return results;
+  }
+</script>

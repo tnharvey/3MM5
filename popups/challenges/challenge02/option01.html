@@ -1,5 +1,180 @@
+<style>
+  
+#wrap{
+	width:400px;
+	margin:0 auto;
+	text-align:left;
+	margin-top:8px;
+	padding:5px;
+	background:#fff;
+  font-family:AvenirLTStd, Arial, Helvetica, sans-serif;
+	font-size:13px;    
+  line-height:16px;
+  color: black;
+}
+#wrap .cont_details fieldset,.cont_order fieldset{
+	margin:10px;
+	padding:20px;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -khtml-border-radius: 10px;
+  border-radius: 5px;
+}
+#wrap legend{
+	font-size:16px;
+	font-family:Georgia, "Times New Roman", Times, serif;
+	color:#000;
+	font-weight:bold;
+	font-style:italic;
+  padding-bottom:10px;
+}
+#wrap .cont_details input{
+  margin-bottom:10px;
+  color:#000;
+}
+#wrap .input1:hover,.input1:active{
+	
+}
+#wrap label{
+	display:block;
+	font-size:12px;
+	color:#000;
+  font-weight:bold;
+}
+#wrap label.inlinelabel
+{
+  display:inline;
+}
+#wrap .cont_order input{
+	margin-bottom:5px;
+}
+#wrap .cont_order p{
+	padding-top:5px;
+}
+
+#wrap input[type="radio"]
+{
+  margin-top:8px;
+  margin-bottom:8px;
+}
+
+#wrap input[type="text"]:hover,
+#wrap input[type="text"]:active {
+  background-color: #FAF398;
+}
+
+#wrap input#submit
+{
+  margin:10px;
+  padding-left:20px;
+  padding-right:20px;
+  padding-top:10px;
+  padding-bottom:10px;
+}
+
+#wrap div#totalPrice
+{
+  padding:10px;
+  font-weight:bold;
+  background-color:#ff0;
+}
+
+#wrap label.radiolabel
+{
+  font-weight:normal;
+  display:inline;
+}
+
+#submit {
+  margin: auto;
+}
+
+.melCalc {
+  padding: 6px 6px;
+  text-align: center;
+}
+  
+.melYes {
+  background-color: red;
+  padding: 12px 8px;
+  border-radius: 4px;
+  text-align: center;
+  text-align: center;
+  color: white;
+  font-size: 1.2em;
+}
+.melNo {
+  background-color: green;
+  padding: 12px 8px;
+  border-radius: 4px;
+  text-align: center;
+  color: white;
+  font-size: 1.2em;
+}
+</style>
 <div class="grid-1col">
   <span>Calculate the maintenance expenditure limits.</span>
 </div>
 <div class="buttonChoice respond-no" onclick="hideCurrentPopup();updateOrientation('face-right');">No</div>
 <div class="buttonChoice respond-yes" onclick="updateChoice(1);">Yes</div>
+<div id="wrap">
+    <form action="" id="calcform" onsubmit="return false;">
+      <div>
+        <div class="cont_order">
+          <fieldset>
+            <legend>Calculate MEL</legend>
+            <p>
+              <label class="inlinelabel" for='estrepaircosts'>Estimated Repair Costs: #</label>
+              <input id="estrepaircosts" name="estrepaircosts" placeholder="Enter Cost" type="number" min="0.01" max="1000000000" />
+            </p>
+            <p>
+              <label class="inlinelabel" for='unitprice'>Unit Price: $</label>
+              <input id="unitprice" name="unitprice" placeholder="Enter Price" type="number" min="0.01" max="1000000000" />
+            </p>
+            <p>
+              <label class="inlinelabel" for='melpercent'>MEL Percentage: </label>
+              <input id="melpercent" name="melpercent" placeholder="Enter Percentage (between 0.01 and 1" type="number" min="0.01" max="1" /> %
+            </p>
+            <div id="mel">Calculated MEL: $</div>
+            <div id="exceedContainer">
+              <span>Does the estimated repair cost exceed the MEL?</span>
+              <div id="exceeds"></div>
+              </div>
+          </fieldset>
+        </div>
+        <input type='submit' id='submit' value='Calcuate MEL' onclick="calculateMEL();" />
+      </div>  
+    </form>
+  </div>
+<script>
+  function calculateMEL() {
+  var theForm = document.forms["calcform"];
+  var estRepair = Number(theForm.elements["estrepaircosts"].value); 
+  var mel = Number(theForm.elements["unitprice"].value) * Number(theForm.elements["melpercent"].value);
+  console.log(estRepair);
+  console.log(mel);
+  //display the result
+  var melObj = document.getElementById('mel');
+  melObj.style.display='block';
+  melObj.innerHTML = "Calculated MEL: <div class='melCalc'><b>$" + mel + "</b></div>";
+
+  var exceedsObj = document.getElementById('exceeds');
+  if (mel > estRepair) {
+    exceedsObj.innerHTML = "<div class='melYes'><b>Yes</b></div>";
+  }
+  else {
+    exceedsObj.innerHTML = "<div class='melNo'><b>No</b></div>";
+  }
+  exceedsObj.style.display='block';
+}
+
+function hideMELResults()
+{
+  var melObj = document.getElementById('mel');
+  var exceedsObj = document.getElementById('exceeds');
+  
+  melObj.style.display='none';
+  exceedsObj.style.display='none';
+}
+  hideMELResults();
+</script>

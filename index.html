@@ -36,7 +36,96 @@
           </div>
         </div>
         <div id="popupContainer">
-          <div id="popupIntro" class="popup intro">
+          <div id="popupIntro" class="popup intro"></div>
+          <div id="popupProcessMap" class="popup">
+            <div class="buttonChoice close" onclick="hideCurrentPopup();">X</div>
+            <div id="processMap" class="gridParent">
+              <div class="div1">
+                <img class="process-icon-img" src="imgs/icon-01.png">
+                <span class="stepInfo">Test</span>
+              </div>
+              <div class="div2">
+                <img class="process-arrow-img" src="imgs/arrow.png">
+                <span class="stepInfo">Test</span>
+              </div>
+              <div class="div3">
+                <img class="process-icon-img" src="imgs/icon-02.png">
+                <span class="stepInfo">Test</span>
+              </div>
+              <div class="div4">
+                <img class="process-arrow-img" src="imgs/arrow.png">
+                <span class="stepInfo">Test</span>
+              </div>
+              <div class="div5">
+                <img class="process-icon-img" src="imgs/icon-03.png">
+                <span class="stepInfo">Test</span>
+              </div>
+              <div class="div6">
+                <img class="process-arrow-img" src="imgs/arrow.png">
+                <span class="stepInfo">Test</span>
+              </div>
+              <div class="div7">
+                <img class="process-icon-img wide" src="imgs/icon-04.png">
+                <span class="stepInfo">Test</span>
+              </div>
+              <div class="div8">
+                <img class="process-arrow-img down" src="imgs/arrow.png">
+                <span class="stepInfo">Test</span>
+              </div>
+              <div class="div9">
+                <img class="process-icon-img" src="imgs/icon-05.png">
+                <span class="stepInfo">Test</span>
+              </div>
+              <div class="div10">
+                <img class="process-arrow-img" src="imgs/arrow.png">
+                <span class="stepInfo">Test</span>
+              </div>
+              <div class="div11">
+                <img class="process-icon-img" src="imgs/icon-06.png">
+                <span class="stepInfo">Test</span>
+              </div>
+              <div class="div12">
+                <img class="process-arrow-img" src="imgs/arrow.png">
+                <span class="stepInfo">Test</span>
+              </div>
+              <div class="div13">
+                <img class="process-icon-img wide" src="imgs/icon-07.png">
+                <span class="stepInfo">Test</span>
+              </div>
+              <div class="div14">
+                <img class="process-arrow-img" src="imgs/arrow.png">
+                <span class="stepInfo">Test</span>
+              </div>
+              <div class="div15">
+                <img class="process-icon-img" src="imgs/icon-08.png">
+                <span class="stepInfo">Test</span>
+              </div>
+              <div class="div16">
+                <img class="process-arrow-img downR" src="imgs/arrow.png">
+                <span class="stepInfo">Test</span>
+              </div>
+              <div class="div17">
+                <img class="process-icon-img wide" src="imgs/icon-09.png">
+                <span class="stepInfo">Test</span>
+              </div>
+              <div class="div18">
+                <img class="process-arrow-img" src="imgs/arrow.png">
+                <span class="stepInfo">Test</span>
+              </div>
+              <div class="div19">
+                <img class="process-icon-img" src="imgs/icon-10.png">
+                <span class="stepInfo">Test</span>
+              </div>
+              <div class="div20">
+                <img class="process-arrow-img" src="imgs/arrow.png">
+                <span class="stepInfo">Test</span>
+              </div>
+              <div class="div21">
+                <img class="process-icon-img" src="imgs/icon-11.png">
+                <span class="stepInfo">Test</span>
+              </div>
+            </div>
+            <span id="process-map-instructions">* Hover over each step in the process for more information. The highlighted step shows the last step you took.</span>
           </div>
           <div id="popup-bertha-manual" class="popup popupGeneric">
             <div class="buttonChoice close" onclick="hidePopup('popup-bertha-manual');">X</div>
@@ -67,7 +156,7 @@
         </div>
         <div id="dashContainer">
           <div id="mapContainer" class="dashItem">
-            <img id="mapIcon" src="https://cdn.jsdelivr.net/gh/tnharvey/3DCSSTrainingRoom/imgs/flowchart-icon.png" onclick="showPopup('popupB')" class="interactive">
+            <img id="mapIcon" src="https://cdn.jsdelivr.net/gh/tnharvey/3DCSSTrainingRoom/imgs/flowchart-icon.png" onclick="showPopup('popupProcessMap')" class="interactive">
           </div>
           <div id="healthContainer" class="dashItem">
             <div id="scenarioScore" style="text-align: center; padding-left: 75px;" class="dev delete">
@@ -93,16 +182,6 @@
                 <div id="ArrowDown" onclick="userAction('ArrowDown')" class="grid-item button interactive">&darr;</div>
                 <div id="ArrowRight" onclick="userAction('ArrowRight')" class="grid-item button interactive">&rarr;</div>    
               </div>
-          </div>
-          <div id="devControls" class="dev delete">
-            <div class="grid-container">
-              <div id="rotateLeft" onclick="userAction('rotLeft')" class="grid-item button interactive">&olarr;</div>
-              <div id="ArrowUp" onclick="userAction('ArrowUp')" class="grid-item button interactive">&uarr;</div>
-              <div id="rotateRight" onclick="userAction('ArrowRight')" class="grid-item button interactive">&orarr;</div>
-              <div id="ArrowLeft" onclick="userAction('ArrowLeft')" class="grid-item button interactive">&larr;</div>
-              <div id="ArrowDown" onclick="userAction('ArrowDown')" class="grid-item button interactive">&darr;</div>
-              <div id="ArrowRight" onclick="userAction('ArrowRight')" class="grid-item button interactive">&rarr;</div>    
-            </div>
           </div>
         </div>
       </div>
