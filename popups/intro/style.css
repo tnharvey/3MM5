@@ -20,22 +20,37 @@
 .slideBtn {
   color: white;
   position: absolute;
-  height:20px;
-  width:80px;
+  height: 20px;
+  width: auto;
   background-color: var(--darker-orange);
   border-radius: 4px;
   text-align: center;
   padding: 10px;
-  bottom:12px;
-  left:800px;
+  padding-bottom: 16px;
+  bottom: 12px;
+  right: 16px;
+}
+
+.slideBtn.disabled {
+  color: black;
+  background-color: lightgray;
 }
 
 .slideBtn:hover {
   background-color: var(--lighter-orange);
 }
 
+.slideBtn.disabled:hover {
+  background-color: gray;
+}
+
 .slideBtn:active {
   background-color: var(--darker-orange);
+}
+
+.slideBtn.disabled:active {
+  color: white;
+  background-color: darkgray;
 }
 
 .slide {

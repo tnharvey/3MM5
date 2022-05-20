@@ -202,8 +202,7 @@ function updateScenario(){
   if (currentChallenge > 1) {
     hideCurrentPopup();
   }
-  
-  showPopup(popups.chal.target);
+  cube.addEventListener("transitionend",showPopup(popups.chal.target));
   updateCards();
 }
 
