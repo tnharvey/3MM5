@@ -5,59 +5,12 @@
   </p>
     <video src="vid/intro.mp4" width=600px  height=338px controls poster="https://cdn.jsdelivr.net/gh/tnharvey/3DCSSTrainingRoom@scenarioStart/popups/intro/placeholder 640x360.png">
     </video>
-    <div class="slideBtn" onclick="nextSlide();">Next</div>
+    <div class="slideBtn" onclick="nextSlide01();">Next</div>
   </div>
   <div class="slide02 slide">
     <h3>Ready to Get Started?</h3>
     <p>Once you close out this intro, you can come back to it later by clicking on the question mark (?) in the upper right. The scenario will start, and you will receive your first challenge. Look around the room, pay attention to the areas with a pulsing yellow halo and, if you feel lost, use the process map in the upper right to get a hint as to what you should be doing next.</p>
     <p>Good Luck!</p>
-    <div class="slideBtn" onclick="postStart();">Start</div>
+    <div class="slideBtn" onclick="startScenario();">Start</div>
   </div>
 </div>
-<script>
-function nextSlide() {
-  var currentSlide = findInList($(".loadedPContainer")[0].classList,"state",false);
-  if(currentSlide=="state01"){
-    $(".slide01")[0].style.display = "none";
-    $(".slide02")[0].style.display = "block";
-    $(".loadedPContainer")[0].classList.remove("state01");
-    $(".loadedPContainer")[0].classList.add("state02");
-  }
-  else if(currentSlide=="state02"){
-    $(".slide01")[0].style.display = "block";
-    $(".slide02")[0].style.display = "none";
-    $(".loadedPContainer")[0].classList.remove("state02");
-    $(".loadedPContainer")[0].classList.add("state01");
-  }
-}
-
-function postStart() {
-  parent.postMessage("start","*");
-}
-function findInList (list, term, exact) {
-  // searches array items for search term. If exact search, returns true if exact term is found. If not exact, returns any matching items in list.
-  var results = "";
-  var resultsArr = [];
-    
-  list.forEach(item => {
-    if(exact){
-      if(item==term){results = item;}
-      else {results=false;}
-    }
-    else {
-      if(item.search(term)>=0){
-        if(results=="") {
-          results = item;
-        }
-        else {
-          if(resultsArr==""){
-            resultsArr.push(results);
-          }
-          resultsArr.push(item);
-        }
-      }
-    }
-  })
-  return results;
-}
-</script>

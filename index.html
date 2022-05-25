@@ -3,6 +3,7 @@
         <link rel="stylesheet" href="style.css" />
         <script src="script.js" ></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" ></script>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css" />
     </head>
     <body>
       <div id="appContainer">
@@ -135,7 +136,7 @@
           <div id="popupGameOver01" class="popup feedback">
             
           </div>
-          <div id="popupGameOver02" class="popup challenge">
+          <div id="popupGameOver02" class="popup challenges">
             
           </div>
           <div id="browser-error" class="popup challenges">
@@ -143,8 +144,11 @@
           </div>
         </div>
         <div id="dashContainer">
-          <div id="mapContainer" class="dashItem">
-            <img id="mapIcon" src="https://cdn.jsdelivr.net/gh/tnharvey/3DCSSTrainingRoom/imgs/flowchart-icon.png" onclick="showPopup('popupProcessMap')" class="interactive">
+          <div id="helpContainer" class="dashItem">
+            <div class="btn expand-on-hover red">
+              <i class="bi bi-info-lg icon info"></i>
+              <i class="bi bi-diagram-3-fill text icon" onclick="showPopup('popupProcessMap')" ></i><i class="bi bi-question-lg icon text2" onclick="showPopup('popupHelp')" ></i>
+            </div>
           </div>
           <div id="healthContainer" class="dashItem">
             <div id="scenarioScore" style="text-align: center; padding-left: 75px;" class="dev delete">
@@ -161,16 +165,6 @@
           <div id="backButton" data-target-dir="face-front" class="interactive">Back</div>
           <div id="leftButton" onclick="userAction('ArrowLeft')" class="controlButton interactive"><span>&#x25C0;</span></div>
           <div id="rightButton" onclick="userAction('ArrowRight')" class="controlButton interactive"><span>&#x25B6;</span></div>
-          <div id="controlsContainer" class="dashItem delete">
-              <div class="grid-container">
-                <div class="grid-item empty"></div>
-                <div id="ArrowUp" onclick="userAction('ArrowUp')" class="grid-item button interactive">&uarr;</div>
-                <div class="grid-item empty"></div>  
-                <div id="ArrowLeft" onclick="userAction('ArrowLeft')" class="grid-item button interactive">&larr;</div>
-                <div id="ArrowDown" onclick="userAction('ArrowDown')" class="grid-item button interactive">&darr;</div>
-                <div id="ArrowRight" onclick="userAction('ArrowRight')" class="grid-item button interactive">&rarr;</div>    
-              </div>
-          </div>
         </div>
       </div>
     </body>

@@ -28,6 +28,7 @@ h3 {
   font-size: 1em;
 }
 
+/* DOM Extensions */
 span.left {
   text-align: left;
 }
@@ -40,6 +41,7 @@ span.center {
   text-align: center;
 }
 
+/* GENERIC */
 .hide {
   visibility: hidden;
 }
@@ -74,30 +76,72 @@ span.center {
 }
 
 .dashItem {
-  position: relative;
+  position: absolute;
 }
 
-#mapContainer {
-  left: 38px;
-  top: -526px;
+#helpContainer {
+  left: 20%;
+  top: 4%;
+  height: 30px;
+  width: 20px;
+  transition-duration: 1s;
+  padding: 10px;
+}
+/*
+#helpContainer:hover {
+  border: 4px solid black;
+  border-radius: 4px;
+  width: 52px;
 }
 
+#helpContainer:hover #helpIcon {
+  opacity: 1;
+  left: 10px;
+  top: 0px;
+}
+
+#helpContainer:hover #mapIcon {
+  opacity: 1;
+  left: 34px;
+}
+*/
 #messagesContainer {
-  height: auto;
-  width: 380px;
+  height: 16px;
+  width: 75px;
   background-color: rgb(0,0,0,0.8);
   padding: 10px;
-  left: 268px;
-  bottom: 664px;
+  left: 47%;
+  top: 6%;
   border-radius: 4px;
+  overflow: hidden;
+  transition-duration: 1s;
+}
+
+#messagesContainer:hover {
+  height: auto;
+  width: 380px;
+  left: 500px;
+  top: 30px;
+}
+
+#message {
+  opacity: 0;
+  transition-duration: 1s;
+  transition-delay: 1s;
+  display:none;
+}
+
+#messagesContainer:hover #message {
+  opacity: 1;
+  display: block;
 }
 
 #healthContainer {
   display: inline-block;
   width: 26%;
   height: 80px;
-  left:650px;
-  top:-610px;
+  left: 60%;
+  top: 1%;
 }
 
 #health {
@@ -194,11 +238,11 @@ span.center {
   font-weight: bolder;
 }
 #leftButton {
-  bottom: 624px;
-  left:20px;
+  top: -406px;
+  left: 20px;
 }
 #rightButton {
-  bottom: 832px;
+  top: -614px;
   left: 882px;
 }
 #cards{
@@ -358,10 +402,35 @@ span.center {
 .interactive {
   cursor: pointer;
 }
-#mapIcon {
-  width:60px;
-  height:auto;
+
+#infoIcon {
+  font-size: 2em;
+  font-weight: 900;
+  font-family: system-ui;
+  position: absolute;
+  left: 4px;
+  top: 4px;
 }
+
+    #mapIcon {
+  width: 25px;
+  height: auto;
+  left: 20px;
+  top: 10px;
+  opacity: 0;
+  position:absolute;
+  transition-duration: 1s;
+}
+
+#helpIcon {
+  font-size: 2em;
+  font-weight: 900;
+  font-family: system-ui;
+  position: absolute;
+  left: 4px;
+  top: 4px;
+}
+
 .button {
   background-color: var(--darker-orange);
   color: white;
@@ -530,7 +599,7 @@ li.incomplete {
   display: none;
   top: -30px;
   left: 14px;
-  background: rgb(0,0,0,0.9);
+  background: var(--popup-bg);
   border: 1px solid black;
   color:white;
   opacity: 1;
@@ -539,16 +608,9 @@ li.incomplete {
   font-family: Arial, sans-serif;
   text-align: center;
 }
-#popupA {}
-#popupB {
-  margin: 5% auto 5% auto;
-  font-size: 1.5rem;
-}
-#popupB img {
-  width:auto;
-  height: 94%;
-  padding: 20px;
-  margin: auto;
+
+#option01 {
+  width: 100%;
 }
 .popup3d-Container{
   transform-style: preserve-3d;
@@ -568,13 +630,36 @@ li.incomplete {
   animation: glow 800ms ease-out infinite alternate;
 }
 .popupGeneric{}
-.intro{}
+
+.popup .loaded {
+  padding: 10px;
+  border-radius: 4px;
+  max-height: 90%;
+  max-width: 90%;
+}
+
+.popup.intro .loaded {
+  background-color: rgb(0,0,0,0.9);
+}
+
+.popup.challenges .loaded {
+  background-color: rgb(110,0,0,0.9);
+}
+
+.popup.option .loaded {
+  background-color: rgb(0,0,0,0.9);
+}
+
+.popup.feedback .loaded {
+  background-color: rgb(0,60,0,0.9);
+}
+
 .challenges{
-  background: rgb(110,0,0,0.9);
+  background: rgb(110,0,0,0.6);
   border: 1px solid black;
 }
 .feedback{
-  background: rgb(0,60,0,0.9);
+  background: rgb(0,60,0,0.6);
   border: 1px solid black;
 }
 .documents{}
@@ -607,7 +692,7 @@ li.incomplete {
   transform: translate3d(730px, 20px, 450px) rotateY(-90deg);
 }
 .face-rLeft {
-  transform: translate3d(730px, 20px, 374px) rotateY(270deg);
+  transform: translate3d(730px, 20px, 450px) rotateY(270deg);
 }
 .face-lBack {
   transform: translate3d(517px, 12px, 866px) rotateY(-180deg);
@@ -619,7 +704,7 @@ li.incomplete {
   transform: translate3d(-20px, 12px, 724px) rotateY(90deg);
 }
 .face-lRight {
-  transform: translate3d(-14px, 12px, 704px) rotateY(-270deg);
+  transform: translate3d(-20px, 12px, 724px) rotateY(-270deg);
 }
 .face-equipment {
   transform: translate3d(238px, -1px, 596px) rotateX(-12deg) rotateY(0deg);
@@ -1017,4 +1102,95 @@ transform: translate3d(707px, 20px, 518px) rotateY(-90deg) rotateZ(39deg);
 		border-color: #fcff66;
 		box-shadow: 0 0 6px rgba(238,255,0,.8);
     }
+}
+
+.btn {
+  background: #111;
+  color: #fff;
+  margin: 1em;
+  border: none;
+  transition: all 0.4s;
+  padding: 1em 0em 1em 3em;
+  font-weight: 600;
+  font-size: 0.8em;
+  letter-spacing: .05em;
+  border-radius: 2em;
+  cursor: pointer;
+  position: relative;
+  display: inline-block;
+  height: 1em;
+  width: 0;
+  max-width: 0;
+}
+
+.btn i {
+    position: absolute;
+    left: .75em;
+    top: .75em; 
+  }
+  
+ .btn i.fa {
+    font-size: 1.25em;
+  }
+  
+ .btn .text {
+    display: inline-block;
+    opacity: 0;
+    transition: all .3s;
+    transition-delay: 0s;
+    min-width: 100px;
+    transform: translateX(.5em);
+  }
+
+.btn .text2 {
+    display: inline-block;
+    opacity: 0;
+    transition: all .3s;
+    transition-delay: 0s;
+    min-width: 100px;
+    transform: translateX(.5em);
+  }
+
+.btn.expand, .expand-on-hover:hover {
+  padding: 1em 2em 1em 5.4em;
+  max-width: 10em;
+  width: auto;
+}
+
+.btn.expand, .expand-on-hover:hover .text {
+    opacity: 1;
+    transition-delay: .3s;
+    min-width: inherit;
+    transform: translateX(3.4em);
+}
+
+.btn.expand, .expand-on-hover:hover .text2 {
+    opacity: 1;
+    transition-delay: .3s;
+    min-width: inherit;
+    transform: translateX(1.7em);
+  }
+/* icons */
+
+.icon {
+  font-size: 1.2em;
+}
+
+.expand-on-hover:hover .info {
+  color: rgb(255,255,255,0.6);
+}
+
+.text:hover {
+  text-shadow: 0px 0px 2px #FFFFFF;
+}
+
+.text2:hover {
+  text-shadow: 0px 0px 2px #FFFFFF;
+}
+
+/* colors https://www.grabient.com/ */
+
+.red {
+  background-color: #FFE53B;
+  background-image: linear-gradient(147deg, #FFE53B 0%, #FF2525 74%);
 }

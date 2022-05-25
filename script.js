@@ -101,14 +101,14 @@ var answers = {
   challenge02:1,
   challenge03:2,
   challenge04:4,
-  challenge05:0,
+  challenge05:1,
 };
 const messages = {
   1:"<b>Next Step:</b><br><span>What is the first step in the equipment repair process once you've received a request? Look around the room, pay attention to the areas with a glowing card.</span>",
   2:"<b>Next Step:</b><br><span>You need to be timely, economical, and professional. What will help you process the equipment this way?</span>",
   3:"<b>Next Step:</b><br><span>You're able to see that the costs are not going to exceed the MEL. What now?</span>",
   4:"<b>Next Step:</b><br><span>You have received the equipment back. What do you do now?</span>",
-  5:"<b>Next Step:</b><br><span></span>",
+  5:"<b>Next Step:</b><br><span>There are still a few deficiencies with the equipment. What should you do?</span>",
 };
 var popups = {
   chal: {
@@ -268,8 +268,8 @@ function checkAnswer(challenge) {
   }
   updateHealth();
   if (challenge == 5 && score >= 3) {
+    hideCurrentPopup();
     showPopup(popups.gameOverS.target);
-    endScenario();
   }
   else if ((challenge == 5 && score < 3) || (score < 3)) {
     hideCurrentPopup();
@@ -312,7 +312,7 @@ function resetScenario(){
 function loadResults(){
   // loads customized results in the #results div based on user choices
   var results = document.getElementById("results");
-  results.innerHTML = "";
+  results.innerHTML = "Results";
 }
 
 function endScenario(){
@@ -727,6 +727,24 @@ function restartAnims () {
   restartAnim("cubeHeart02");
   restartAnim("cubeHeart03");
 }
+
+/* SLIDE CONTROLS */
+  function nextSlide01() {
+    var currentSlide = findInList($(".loadedPContainer:visible")[0].classList,"state",false);
+    if(currentSlide=="state01"){
+      $(".slide01")[0].style.display = "none";
+      $(".slide02")[0].style.display = "block";
+      $(".loadedPContainer")[0].classList.remove("state01");
+      $(".loadedPContainer")[0].classList.add("state02");
+    }
+    else if(currentSlide=="state02"){
+      $(".slide01")[0].style.display = "none";
+      $(".slide02")[0].style.display = "none";
+      $(".slide03")[0].style.display = "block";
+      $(".loadedPContainer")[0].classList.remove("state02");
+      $(".loadedPContainer")[0].classList.add("state03");
+    }
+  }
 
 /* MEL Calc Functions */
     
