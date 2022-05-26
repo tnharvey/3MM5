@@ -81,7 +81,7 @@ span.center {
 
 #helpContainer {
   left: 20%;
-  top: 4%;
+  top: 2%;
   height: 30px;
   width: 20px;
   transition-duration: 1s;
@@ -115,6 +115,7 @@ span.center {
   border-radius: 4px;
   overflow: hidden;
   transition-duration: 1s;
+  max-height: 80px;
 }
 
 #messagesContainer:hover {
@@ -124,23 +125,34 @@ span.center {
   top: 30px;
 }
 
+#messageLabel {
+  color: white;
+  padding-left: 4px;
+}
+
+#messagesContainer:hover #messageLabel {
+  display: none;
+}
+
 #message {
   opacity: 0;
-  transition-duration: 1s;
-  transition-delay: 1s;
-  display:none;
+  transition: display 0.2s;
+  position: relative;
+  left: -400px;
 }
 
 #messagesContainer:hover #message {
+  transition: opacity 1s 0.3s, left 1s 0s;
   opacity: 1;
-  display: block;
+  position: relative;
+  left: 0;
 }
 
 #healthContainer {
   display: inline-block;
-  width: 26%;
+  width: 2%;
   height: 80px;
-  left: 60%;
+  left: 62%;
   top: 1%;
 }
 
@@ -655,11 +667,11 @@ li.incomplete {
 }
 
 .challenges{
-  background: rgb(110,0,0,0.6);
+  background: rgb(0,0,0,0.6);
   border: 1px solid black;
 }
 .feedback{
-  background: rgb(0,60,0,0.6);
+  background: rgb(0,0,0,0.6);
   border: 1px solid black;
 }
 .documents{}
@@ -1136,7 +1148,7 @@ transform: translate3d(707px, 20px, 518px) rotateY(-90deg) rotateZ(39deg);
  .btn .text {
     display: inline-block;
     opacity: 0;
-    transition: all .3s;
+    transition: transform 0.3s, opacity 0.3s, text-shadow 0.2s 0s;
     transition-delay: 0s;
     min-width: 100px;
     transform: translateX(.5em);
@@ -1145,7 +1157,7 @@ transform: translate3d(707px, 20px, 518px) rotateY(-90deg) rotateZ(39deg);
 .btn .text2 {
     display: inline-block;
     opacity: 0;
-    transition: all .3s;
+    transition: transform 0.3s, opacity 0.3s, text-shadow 0.2s 0s;
     transition-delay: 0s;
     min-width: 100px;
     transform: translateX(.5em);

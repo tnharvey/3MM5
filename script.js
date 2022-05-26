@@ -47,6 +47,7 @@ var currentChallenge = 1;
 var currentPopup = "";
 var score = 5;
 var resets = 0;
+var started = 0;
 
 // Data Objects
 var activeAreas = {
@@ -168,12 +169,23 @@ var cube = "";
 
 /* Scenarios */
 function startScenario() {
-  cube = document.getElementById('scene1');
-  updateHealth();
   hideCurrentPopup();
   removeContent(popups.intro.id);
-  // initiate any starting sequence
-  updateScenario();
+  
+  if (started == 0) {
+    cube = document.getElementById('scene1');
+    updateHealth();
+    // initiate any starting sequence
+    updateScenario();
+  }
+
+  started = 1;
+}
+
+function relaunchIntro() {
+  loadContent (popups.intro.id,popups.intro.loc,popups.intro.target,popups.intro.fName,true);
+  hideCurrentPopup();
+  showPopup("popupIntro");
 }
 
 function updateScenario(){
@@ -292,7 +304,7 @@ function resetScenario(){
   loadContent (popups.intro.id,popups.intro.loc,popups.intro.target,popups.intro.fName,true);
   
   resets = resets + 1;
-  start = 1
+  started = 0
   score = 5;
   currentChallenge = 1;
   allChoices["attempt0"+(resets-1)]=choices;

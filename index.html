@@ -38,6 +38,10 @@
         </div>
         <div id="popupContainer">
           <div id="popupIntro" class="popup intro"></div>
+          <div id="popupHelp" class="popup" onclick="hideCurrentPopup();">
+            <span>insert help image</span>
+            <div class="buttonChoice respond-yes" onclick="relaunchIntro();">Click to relaunch the Introduction</div>
+          </div>
           <div id="popupProcessMap" class="popup">
             <div class="buttonChoice close" onclick="hideCurrentPopup();">X</div>
             <div id="processMap" class="gridParent">
@@ -160,6 +164,7 @@
             </div>
           </div>
           <div id="messagesContainer" class="dashItem">
+            <span id="messageLabel">Next Step</span>
             <span id="message"><b>Next Step:</b><br>Review the resources on the table to the left.</span>
           </div>
           <div id="backButton" data-target-dir="face-front" class="interactive">Back</div>
