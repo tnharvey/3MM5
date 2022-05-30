@@ -406,7 +406,7 @@ function userAction (input) {
         uAction = input;
     }
   if (uAction !== "") {
-    //Primary Orientations
+    // Controls filtered for Orientations first, then user action
     if (orientation=="face-front") {
       if(uAction === "ArrowLeft") {
         updateOrientation("face-left");
@@ -449,6 +449,7 @@ function userAction (input) {
         updateOrientation("face-rLeft");
       }
     }
+    // Primary logic for focus area returns
     else if (orientation=="face-equipment"){}
     else if (orientation=="face-resources"){}
     else if (orientation=="face-computer"){}
@@ -456,16 +457,15 @@ function userAction (input) {
     if(uAction.search("face-")==0){
       // If returning to the main area from one of the focus areas
       if(uAction == "face-front"||uAction == "face-right"||uAction == "face-left"){
+        hideCurrentPopup();
         updateOrientation(uAction);
-        document.getElementById("cards").style.visibility="visible";
+        $("#cards")[0].style.visibility="visible";
         //document.getElementById("backButton").style.opacity="0";
-        if (uAction=="face-front" && document.getElementById("afssDoor01").classList.contains("afssDoor-open")){
-          document.getElementById("afssDoor01").classList.remove("afssDoor-open");
+        if (uAction=="face-front" && $("#afssDoor01")[0].classList.contains("afssDoor-open")){
+          $("#afssDoor01")[0].classList.remove("afssDoor-open");
         }
         if (uAction=="face-left"){
-          hideCurrentPopup();
           toggleBook("#manualSm01");
-          updateOrienation(uAction);
         }
       }
       else {
