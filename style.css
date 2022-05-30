@@ -112,9 +112,9 @@ span.center {
   padding: 10px;
   left: 45%;
   top: 6%;
-  border-radius: 4px;
+  border-radius: 20px;
   overflow: hidden;
-  transition-duration: 1s;
+  transition-duration: 0.5s;
   max-height: 80px;
 }
 
@@ -123,6 +123,7 @@ span.center {
   width: 380px;
   left: 500px;
   top: 30px;
+  border-radius: 4px;
 }
 
 #messageLabel {
@@ -136,12 +137,11 @@ span.center {
 #message {
   opacity: 0;
   transition: display 0.2s;
-  position: relative;
-  left: -400px;
+  position: relative;  
 }
 
 #messagesContainer:hover #message {
-  transition: opacity 1s 0.3s, left 1s 0s;
+  transition: opacity 0.25s 0.55s;
   opacity: 1;
   position: relative;
   left: 0;
@@ -682,7 +682,7 @@ li.incomplete {
 /* 3D element styling */
 
 /* Primary Scene styling */
-.scene, .shape, .face, .face-wrapper, .cr {
+.scene, .c3dContainer, .shape, .face, .face-wrapper, .cr {
   position: absolute;
   transform-style: preserve-3d;
 }
@@ -983,11 +983,11 @@ transform: translate3d(707px, 20px, 518px) rotateY(-90deg) rotateZ(39deg);
 }
 
 #table02 {
-  transform: translate3d(-253px,224px,600px) scale(0.75) rotateY(90deg);
+  transform: translate3d(1050px,224px,600px) scale(0.75) rotateY(90deg);
 }
 
 #docCab01 {
-  transform: translate3d(500px,98px,180px) rotateY(-90deg) scale(1.75);
+  transform: translate3d(1158px,98px,180px) rotateY(-90deg) scaleX(2) scaleY(2) scaleZ(2);
 }
 
 #flLight01 {
@@ -1003,32 +1003,28 @@ transform: translate3d(707px, 20px, 518px) rotateY(-90deg) rotateZ(39deg);
 }
 
 #monitor01 {
-  transform: translate3d(512px,90px,469px) rotateY(270deg) rotateX(0deg) scale(1.5);
-}
-
-#plug01 {
-  transform: translate3d(-108px,-32px,-295px) rotateY(0deg) rotateX(0deg) rotateZ(180deg) scale(0.4);
+  transform: translate3d(1140px,90px,469px) rotateY(270deg) rotateX(0deg) scale(1.5);
 }
 
 #afssBody01 {
-  transform: translate3d(132px,58px,-233px) rotateY(0deg) rotateX(0deg) rotateZ(0deg) scaleX(0.2) scaleY(0.2) scaleZ(0.2);
+  transform: translate3d(790px,58px,-233px) rotateY(0deg) rotateX(0deg) rotateZ(0deg) scaleX(0.2) scaleY(0.2) scaleZ(0.2);
 }
 
 #afssDoor01 {
-  transform: translate3d(100px,56px,-168px) rotateY(0deg) rotateX(0deg) rotateZ(0deg) scaleX(0.17) scaleZ(0.17) scaleY(0.17);
+  transform: translate3d(758px,56px,-168px) rotateY(0deg) rotateX(0deg) rotateZ(0deg) scaleX(0.17) scaleZ(0.17) scaleY(0.17);
   transition-duration: 2s;
 }
 
 #afssDoor01.afssDoor-open {
-  transform: translate3d(100px,56px,-162px) rotateY(-140deg) rotateX(0deg) rotateZ(0deg) scaleX(0.17) scaleZ(0.17) scaleY(0.17);
+  transform: translate3d(758px,56px,-162px) rotateY(-140deg) rotateX(0deg) rotateZ(0deg) scaleX(0.17) scaleZ(0.17) scaleY(0.17);
 }
 
 #afssStand01 {
-  transform: translate3d(132px,153px,-290px) rotateY(0deg) rotateX(0deg) rotateZ(0deg) scaleX(0.2) scaleZ(0.2) scaleY(0.2);
+  transform: translate3d(790px,153px,-290px) rotateY(0deg) rotateX(0deg) rotateZ(0deg) scaleX(0.2) scaleZ(0.2) scaleY(0.2);
 }
 
 #afssStand02 {
-  transform: translate3d(132px,153px,-177px) rotateY(0deg) rotateX(0deg) rotateZ(0deg) scaleX(0.2) scaleZ(0.2) scaleY(0.2);
+  transform: translate3d(790px,153px,-177px) rotateY(0deg) rotateX(0deg) rotateZ(0deg) scaleX(0.2) scaleZ(0.2) scaleY(0.2);
 }
 
 #manualSm01 {
@@ -1036,23 +1032,23 @@ transform: translate3d(707px, 20px, 518px) rotateY(-90deg) rotateZ(39deg);
 }
 
 #keyboardSimp01 {
-  transform: translate3d(461px, 90px, 469px) rotateX(0deg) rotateY(90deg) scaleX(0.4) scaleZ(0.4) scaleY(0.4);
+  transform: translate3d(1090px, 90px, 469px) rotateX(0deg) rotateY(90deg) scaleX(0.4) scaleZ(0.4) scaleY(0.4);
 }
 
 #laptop01 {
-  transform: translate3d(507px, 90px, 566px) rotateX(0deg) rotateY(90deg) scaleX(0.3) scaleZ(0.3) scaleY(0.3);
+  transform: translate3d(1138px, 90px, 566px) rotateX(0deg) rotateY(90deg) scaleX(0.3) scaleZ(0.3) scaleY(0.3);
 }
 
 #mouse01 {
-  transform: translate3d(458px, 91px, 538px) rotateX(0deg) rotateY(90deg) scaleX(1) scaleZ(1) scaleY(1);
+  transform: translate3d(1086px, 91px, 538px) rotateX(0deg) rotateY(90deg) scaleX(1) scaleZ(1) scaleY(1);
 }
 
 #coffeeCup01 {
-  transform: translate3d(-174px, 74px, 230px) rotateX(0deg) rotateY(178deg) scaleX(0.25) scaleZ(0.25) scaleY(0.25);
+  transform: translate3d(502px, 74px, 230px) rotateX(0deg) rotateY(178deg) scaleX(0.25) scaleZ(0.25) scaleY(0.25);
 }
 
 #cupSteam {
-  transform: translate3d(633px, -258px, -115px) rotateX(0deg) rotateY(-90deg) scaleX(0.2) scaleY(0.2);
+  transform: translate3d(-12px, -284px, -115px) rotateX(0deg) rotateY(-90deg) scaleX(0.2) scaleY(0.2);
 }
 
 #cupSteam img {
@@ -1063,11 +1059,12 @@ transform: translate3d(707px, 20px, 518px) rotateY(-90deg) rotateZ(39deg);
 /* HEALTH - Cube Hearts Position and Animations */
 .cubeHeart {
   animation-duration: 4s;
-  animation-iteration-count: infinite;
+  animation-iteration-count: 1;
   animation-timing-function: linear;
 }
 #cubeHeart01 .cubeHeart {
   animation-name: rotateHeart01;
+  transform: translate3d(-75px,0px,0px) rotateY(0deg) rotateX(0deg) rotateZ(0deg) scaleX(0.1) scaleZ(0.1) scaleY(0.1);;
 }
 @keyframes rotateHeart01 {
   from {
@@ -1080,6 +1077,7 @@ transform: translate3d(707px, 20px, 518px) rotateY(-90deg) rotateZ(39deg);
 
 #cubeHeart02 .cubeHeart {
   animation-name: rotateHeart02;
+  transform: translate3d(0px,0px,0px) rotateY(0deg) rotateX(0deg) rotateZ(0deg) scaleX(0.1) scaleZ(0.1) scaleY(0.1);
 }
 
 @keyframes rotateHeart02 {
@@ -1093,6 +1091,7 @@ transform: translate3d(707px, 20px, 518px) rotateY(-90deg) rotateZ(39deg);
 
 #cubeHeart03 .cubeHeart {
   animation-name: rotateHeart03;
+  transform: translate3d(75px,0px,0px) rotateY(0deg) rotateX(0deg) rotateZ(0deg) scaleX(0.1) scaleZ(0.1) scaleY(0.1);
 }
 
 @keyframes rotateHeart03 {

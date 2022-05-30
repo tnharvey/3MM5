@@ -424,7 +424,7 @@ function userAction (input) {
       }
     }
     else if (orientation=="face-lBack"){
-      cube.addEventListener("transitionend",switchOrientation);
+      cube.addEventListener("transitionend",switchOrientation); //accounts for end of 360 rotation
       if(uAction === "ArrowLeft") {
         updateOrientation("face-lRight");
       }
@@ -441,7 +441,7 @@ function userAction (input) {
       }
     }
     else if (orientation=="face-rBack"){
-      cube.addEventListener("transitionend",switchOrientation);
+      cube.addEventListener("transitionend",switchOrientation); //accounts for end of 360 rotation
       if(uAction === "ArrowLeft") {
         updateOrientation("face-right");
       }
@@ -449,26 +449,10 @@ function userAction (input) {
         updateOrientation("face-rLeft");
       }
     }
-    else if (orientation=="face-equipment"){
-      if(uAction === "ArrowLeft") {}
-      else if (uAction === "ArrowRight"){}
-    }
-    else if (orientation=="face-resources"){
-      if(uAction === "ArrowLeft") {}
-      else if (uAction === "ArrowRight"){}
-    }
-    else if (orientation=="face-computer"){
-      if(uAction === "ArrowLeft") {
-        updateOrientation("face-forms");
-      }
-      else if (uAction === "ArrowRight"){}
-    }
-    else if (orientation=="face-forms"){
-      if(uAction === "ArrowLeft") {}
-      else if (uAction === "ArrowRight"){
-        updateOrientation("face-computer");
-      }
-    }
+    else if (orientation=="face-equipment"){}
+    else if (orientation=="face-resources"){}
+    else if (orientation=="face-computer"){}
+    else if (orientation=="face-forms"){}
     if(uAction.search("face-")==0){
       // If returning to the main area from one of the focus areas
       if(uAction == "face-front"||uAction == "face-right"||uAction == "face-left"){
@@ -477,6 +461,11 @@ function userAction (input) {
         //document.getElementById("backButton").style.opacity="0";
         if (uAction=="face-front" && document.getElementById("afssDoor01").classList.contains("afssDoor-open")){
           document.getElementById("afssDoor01").classList.remove("afssDoor-open");
+        }
+        if (uAction=="face-left"){
+          hideCurrentPopup();
+          toggleBook("#manualSm01");
+          updateOrienation(uAction);
         }
       }
       else {
@@ -500,6 +489,7 @@ function userAction (input) {
           cube.addEventListener("transitionend",transitionPopup);
         }
         if(uAction=="face-resources") {
+          toggleBook("#manualSm01");
           currentPopup = "popupOption04"
           cube.addEventListener("transitionend",transitionPopup);
         }
@@ -597,7 +587,7 @@ function loadModels (modelsJson) {
   var cubeHeart1 = $('<div id="cubeHeart01" class="c3dContainer healthHeart healthy">');
   var cubeHeart2 = $('<div id="cubeHeart02" class="c3dContainer healthHeart healthy">');
   var cubeHeart3 = $('<div id="cubeHeart03" class="c3dContainer healthHeart healthy">');
-  var manualSm1 = $('<div id="manualSm01" class="c3dContainer">');
+  var manualSm1 = $('<div id="manualSm01" class="c3dContainer moveBackward">');
   var keyboardSimp1 = $('<div id="keyboardSimp01" class="c3dContainer">');
   var laptop1 = $('<div id="laptop01" class="c3dContainer">');
   var mouse1 = $('<div id="mouse01" class="c3dContainer">');
@@ -740,6 +730,23 @@ function restartAnims () {
   restartAnim("cubeHeart02");
   restartAnim("cubeHeart03");
 }
+
+function toggleBook (targetId) {
+  var target = $(targetId)[0];
+  if(target.classList.contains("moveBackward")) {
+      target.classList.remove("moveBackward");
+      target.children[1].classList.remove("closed");
+      target.classList.add("moveForward");
+      target.children[1].classList.add("opened");
+  }
+  else if (target.classList.contains("moveForward")) {
+      target.classList.remove("moveForward");
+      target.children[1].classList.remove("opened");
+      target.classList.add("moveBackward");
+      target.children[1].classList.add("closed");
+  }
+}
+
 
 /* SLIDE CONTROLS */
   function nextSlide01() {
