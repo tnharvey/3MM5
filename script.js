@@ -105,11 +105,11 @@ var answers = {
   challenge05:1,
 };
 const messages = {
-  1:"<b>Next Step:</b><br><span>What is the first step in the equipment repair process once you've received a request? Look around the room, pay attention to the areas with a glowing card.</span>",
-  2:"<b>Next Step:</b><br><span>You need to be timely, economical, and professional. What will help you process the equipment this way?</span>",
-  3:"<b>Next Step:</b><br><span>You're able to see that the costs are not going to exceed the MEL. What now?</span>",
-  4:"<b>Next Step:</b><br><span>You have received the equipment back. What do you do now?</span>",
-  5:"<b>Next Step:</b><br><span>There are still a few deficiencies with the equipment. What should you do?</span>",
+  1:"<br><span>What is the first step in the equipment repair process once you've received a request? Look around the room, pay attention to the areas with a glowing card.</span>",
+  2:"<br><span>You need to be timely, economical, and professional. What will help you process the equipment this way?</span>",
+  3:"<br><span>You're able to see that the costs are not going to exceed the MEL. What now?</span>",
+  4:"<br><span>You have received the equipment back. What do you do now?</span>",
+  5:"<br><span>There are still a few deficiencies with the equipment. What should you do?</span>",
 };
 var popups = {
   chal: {
@@ -552,7 +552,8 @@ function transitionPopup(event) {
 
 /*CONTENT */
 function updateMessages() {
-  $("#message")[0].innerHTML=messages[currentChallenge];
+  $("#messageLabel")[0].innerHTML = "<b>Challenge " + currentChallenge + " of 5</b>";
+  $("#message")[0].innerHTML = messages[currentChallenge];
 }
 
 function loadContent (contentId, contentLoc, targetId, fileName, css) {
