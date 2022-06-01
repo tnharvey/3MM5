@@ -844,6 +844,15 @@ transform: translate3d(707px, 20px, 518px) rotateY(-90deg) rotateZ(39deg);
   width:60px;
   transform: translate3d(430px, 51px, 400px) rotateX(90deg) rotateZ(261deg);
 }
+
+#zombie-hand {
+  position:absolute;
+  transform-style: preserve-3d;
+  height: 197px;
+  width: 198px;
+  transform: translate3d(443px,-171px,698px) rotateY(181deg) scale(0.55);
+}
+
 .process-icon-img {
   height: 60px;
   background-color: white;
