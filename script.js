@@ -41,7 +41,6 @@ window.onload = function(){
 
 // Used when working from different server, doesn't always work that well
 const baseUrl = "";
-
 //global vars
 var currentChallenge = 1;
 var currentPopup = "";
@@ -555,11 +554,9 @@ function loadContent (contentId, contentLoc, targetId, fileName, css) {
   if (myFileName=="index"){
     styleName = "style";
   }
-  
   newElementCode.load(contentLoc + myFileName + ".html");
-  
   $('#'+targetId).append(newElementCode);
-
+  
   if(css) {
     $("head").append('<link rel="stylesheet" href="' + contentLoc + styleName+'.css" />');
   }
@@ -633,8 +630,17 @@ function loadModels (modelsJson) {
 
 /* Inline click funcions, need to set up with listeners */
 function showPopup (popupId) {
-  document.getElementById(popupId).style.display="flex";
-  currentPopup = document.getElementById(popupId);
+  $("#"+popupId)[0].style.display="flex";
+  checkIsDisplayed(popupId,()=>{$("#"+popupId)[0].style.opacity=1;})
+  currentPopup = $("#"+popupId)[0];
+}
+
+function checkIsDisplayed(elemId,funct) {
+    if ($("#" + elemId)[0].style.display == "flex") {
+        funct();
+    } else {
+        setTimeout(checkIsDisplayed, 500);
+    }
 }
 
 function hidePopup (popupId) {
@@ -643,8 +649,15 @@ function hidePopup (popupId) {
 }
 
 function hideCurrentPopup () {
-  currentPopup.style.display="none";
+  var cPop = currentPopup;
+  cPop.style.opacity=0;
+  cPop.addEventListener("transitionend",dispNonePop(cPop));
   currentPopup = "";
+}
+
+function dispNonePop (pop) {
+  pop.style.display="none";
+  pop.removeEventListener("transitionend",transitionPopup);
 }
 
 function browserCheck() {

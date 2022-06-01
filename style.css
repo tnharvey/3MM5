@@ -262,7 +262,7 @@ span.center {
 }
 
 #equipment-card{
-  transform: translate3d(762px,6px,210px) rotateY(1deg);
+  transform: translate3d(768px,6px,210px) rotateY(1deg);
 }
 #computer-card{
   transform: translate3d(884px,4px,418px) rotateY(-90deg);
@@ -271,7 +271,7 @@ span.center {
   transform: translate3d(660px,-10px,372px) rotateY(90deg);
 }
 #forms-card{
-  transform: translate3d(896px,4px,302px) rotateY(-90deg);
+  transform: translate3d(896px,4px,310px) rotateY(-90deg);
 }
 
 /* CSS Grid styles */
@@ -613,11 +613,12 @@ li.incomplete {
   background: var(--popup-bg);
   border: 1px solid black;
   color:white;
-  opacity: 1;
+  opacity: 0;
   align-items: center;
   justify-content: center;
   font-family: Arial, sans-serif;
   text-align: center;
+  transition: opacity 0.5s;
 }
 
 #option01 {
@@ -712,19 +713,19 @@ li.incomplete {
   transform: translate3d(517px, 12px, 866px) rotateY(180deg);
 }
 .face-right {
-  transform: translate3d(-20px, 12px, 724px) rotateY(90deg);
+  transform: translate3d(-14px, 12px, 724px) rotateY(90deg);
 }
 .face-lRight {
   transform: translate3d(-20px, 12px, 724px) rotateY(-270deg);
 }
 .face-equipment {
-  transform: translate3d(238px, -1px, 596px) rotateX(-12deg) rotateY(0deg);
+  transform: translate3d(225px, -1px, 596px) rotateX(-12deg) rotateY(0deg);
 }
 .face-computer {
-  transform: translate3d(-109px, -27px, 1098px) rotateY(90deg);
+  transform: translate3d(-109px, -27px, 1084px) rotateY(90deg);
 }
 .face-forms {
-transform: translate3d(120px, 86px, 946px) rotateY(90deg) rotateZ(-14deg);
+transform: translate3d(112px, 86px, 946px) rotateY(90deg) rotateZ(-14deg);
 }
 .face-resources {
 transform: translate3d(707px, 20px, 518px) rotateY(-90deg) rotateZ(39deg);
@@ -979,7 +980,7 @@ transform: translate3d(707px, 20px, 518px) rotateY(-90deg) rotateZ(39deg);
 }
 
 #table01 {
-  transform: translate3d(418px,224px,600px) scale(0.75) rotateY(90deg);
+  transform: translate3d(390px,224px,600px) scale(0.75) rotateY(90deg);
 }
 
 #table02 {
