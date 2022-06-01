@@ -20,6 +20,27 @@
   width:31.5em;
   height:18em;
 }
+.monitor-screen .rt {
+  background: url(https://cdn.jsdelivr.net/gh/tnharvey/3DCSSTrainingRoom@scenarioStart/models/monitor/Monitor-Atlas.png) 0px 0px;
+}
+.monitor-screen .lt {
+  background: url(https://cdn.jsdelivr.net/gh/tnharvey/3DCSSTrainingRoom@scenarioStart/models/monitor/Monitor-Atlas.png) 0px 0px;
+}
+.monitor-screen .tp {
+  background: url(https://cdn.jsdelivr.net/gh/tnharvey/3DCSSTrainingRoom@scenarioStart/models/monitor/Monitor-Atlas.png) 0px -288px;
+}
+.monitor-screen .bm {
+  background: url(https://cdn.jsdelivr.net/gh/tnharvey/3DCSSTrainingRoom@scenarioStart/models/monitor/Monitor-Atlas.png) 0px 0px;
+}
+.monitor-screen .ft {
+  background: url(https://cdn.jsdelivr.net/gh/tnharvey/3DCSSTrainingRoom@scenarioStart/models/monitor/Monitor-Atlas.png) 0px -599px;
+}
+.monitor-screen .bk {
+  background: url(https://cdn.jsdelivr.net/gh/tnharvey/3DCSSTrainingRoom@scenarioStart/models/monitor/Monitor-Atlas.png) 0px -575px;
+}
+.monitor-screen .cr .side {
+  background: url(https://cdn.jsdelivr.net/gh/tnharvey/3DCSSTrainingRoom@scenarioStart/models/monitor/Monitor-Atlas.png) -504px -575px;
+}
 .monitor-screen .face {
   background-color:#5c5c5c;
 }
@@ -92,122 +113,161 @@
 .monitor-screen .side {
   width:0.2929491924311227em;
 }
-/* .cub-1 styles */
-.cub-1 {
+/* .monitor-base styles */
+.monitor-base {
   transform:translate3D(0em, -0.5em, 0em) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
   opacity:1;
   width:17em;
   height:1em;
   margin:-0.5em 0 0 -8.5em;
 }
-.cub-1 .ft {
+.monitor-base .ft {
   transform:translateZ(4.125em);
 }
-.cub-1 .bk {
+.monitor-base .bk {
   transform:translateZ(-4.125em) rotateY(180deg);
 }
-.cub-1 .rt, .cub-1 .lt {
+.monitor-base .rt, .monitor-base .lt {
   width:8.25em;
   height:1em;
 }
-.cub-1 .tp, .cub-1 .bm {
+.monitor-base .tp, .monitor-base .bm {
   width:17em;
   height:8.25em;
 }
-.cub-1 .face {
+.monitor-base .face {
   background-color:#5c5c5c;
 }
-.cub-1 .ft {
+.monitor-base .ft {
   width:16em;
   margin-left:0.5em;
 }
-.cub-1 .bk {
+.monitor-base .bk {
   width:16em;
   margin-left:-0.5em;
 }
-.cub-1 .rt, .cub-1 .lt {
+.monitor-base .rt, .monitor-base .lt {
   width:7.25em;
 }
-.cub-1 .tp, .cub-1 .bm, .cub-1 .tp .photon-shader, .cub-1 .bm .photon-shader {
+.monitor-base .rt {
+  background: url(https://cdn.jsdelivr.net/gh/tnharvey/3DCSSTrainingRoom@scenarioStart/models/monitor/Monitor-Atlas.png) -256px -788px;
+}
+.monitor-base .lt {
+  background: url(https://cdn.jsdelivr.net/gh/tnharvey/3DCSSTrainingRoom@scenarioStart/models/monitor/Monitor-Atlas.png) -256px -772px;
+}
+.monitor-base .tp {
+  background: url(https://cdn.jsdelivr.net/gh/tnharvey/3DCSSTrainingRoom@scenarioStart/models/monitor/Monitor-Atlas.png) 0px -640px;
+}
+.monitor-base .bm {
+  background: url(https://cdn.jsdelivr.net/gh/tnharvey/3DCSSTrainingRoom@scenarioStart/models/monitor/Monitor-Atlas.png) -272px -640px;
+}
+.monitor-base .ft {
+  background: url(https://cdn.jsdelivr.net/gh/tnharvey/3DCSSTrainingRoom@scenarioStart/models/monitor/Monitor-Atlas.png) 0px -772px;
+}
+.monitor-base .bk {
+  background: url(https://cdn.jsdelivr.net/gh/tnharvey/3DCSSTrainingRoom@scenarioStart/models/monitor/Monitor-Atlas.png) 0px -788px;
+}
+.monitor-base .cr .side {
+  background: url(https://cdn.jsdelivr.net/gh/tnharvey/3DCSSTrainingRoom@scenarioStart/models/monitor/Monitor-Atlas.png) -372px -772px;
+}
+.monitor-base .tp, .monitor-base .bm, .monitor-base .tp .photon-shader, .monitor-base .bm .photon-shader {
   border-radius:0.5em;
 }
-.cub-1 .cr {
+.monitor-base .cr {
   width:0.5em;
   left:0.25em;
 }
-.cub-1 .cr-0 {
+.monitor-base .cr-0 {
   transform: translate3D(16em, 0, 3.625em);
 }
-.cub-1 .cr-1 {
+.monitor-base .cr-1 {
   transform: translate3D(16em, 0, -3.625em);
 }
-.cub-1 .cr-2 {
+.monitor-base .cr-2 {
   transform: translate3D(0, 0, -3.625em);
 }
-.cub-1 .cr-3 {
+.monitor-base .cr-3 {
   transform: translate3D(0, 0, 3.625em);
 }
-.cub-1 .cr-0 .s0 {
+.monitor-base .cr-0 .s0 {
   transform: rotateY(15deg) translate3D(-50%, 0, 0.475em);
 }
-.cub-1 .cr-0 .s1 {
+.monitor-base .cr-0 .s1 {
   transform: rotateY(45deg) translate3D(-50%, 0, 0.475em);
 }
-.cub-1 .cr-0 .s2 {
+.monitor-base .cr-0 .s2 {
   transform: rotateY(75deg) translate3D(-50%, 0, 0.475em);
 }
-.cub-1 .cr-1 .s0 {
+.monitor-base .cr-1 .s0 {
   transform: rotateY(105deg) translate3D(-50%, 0, 0.475em);
 }
-.cub-1 .cr-1 .s1 {
+.monitor-base .cr-1 .s1 {
   transform: rotateY(135deg) translate3D(-50%, 0, 0.475em);
 }
-.cub-1 .cr-1 .s2 {
+.monitor-base .cr-1 .s2 {
   transform: rotateY(165deg) translate3D(-50%, 0, 0.475em);
 }
-.cub-1 .cr-2 .s0 {
+.monitor-base .cr-2 .s0 {
   transform: rotateY(195deg) translate3D(-50%, 0, 0.475em);
 }
-.cub-1 .cr-2 .s1 {
+.monitor-base .cr-2 .s1 {
   transform: rotateY(225deg) translate3D(-50%, 0, 0.475em);
 }
-.cub-1 .cr-2 .s2 {
+.monitor-base .cr-2 .s2 {
   transform: rotateY(255deg) translate3D(-50%, 0, 0.475em);
 }
-.cub-1 .cr-3 .s0 {
+.monitor-base .cr-3 .s0 {
   transform: rotateY(285deg) translate3D(-50%, 0, 0.475em);
 }
-.cub-1 .cr-3 .s1 {
+.monitor-base .cr-3 .s1 {
   transform: rotateY(315deg) translate3D(-50%, 0, 0.475em);
 }
-.cub-1 .cr-3 .s2 {
+.monitor-base .cr-3 .s2 {
   transform: rotateY(345deg) translate3D(-50%, 0, 0.475em);
 }
-.cub-1 .side {
+.monitor-base .side {
   width:0.2929491924311227em;
 }
-/* .cub-2 styles */
-.cub-2 {
+/* .monitor-support styles */
+.monitor-support {
   transform:translate3D(0em, -10.25em, -1.375em) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
   opacity:1;
   width:4em;
   height:18.5em;
   margin:-9.25em 0 0 -2em;
 }
-.cub-2 .ft {
+.monitor-support .ft {
   transform:translateZ(0.75em);
 }
-.cub-2 .bk {
+.monitor-support .bk {
   transform:translateZ(-0.75em) rotateY(180deg);
 }
-.cub-2 .rt, .cub-2 .lt {
+.monitor-support .rt, .monitor-support .lt {
   width:1.5em;
   height:18.5em;
 }
-.cub-2 .tp, .cub-2 .bm {
+.monitor-support .tp, .monitor-support .bm {
   width:4em;
   height:1.5em;
 }
-.cub-2 .face {
+.monitor-support .rt {
+  background: url(https://cdn.jsdelivr.net/gh/tnharvey/3DCSSTrainingRoom@scenarioStart/models/monitor/Monitor-Atlas.png) 0px 0px;
+}
+.monitor-support .lt {
+  background: url(https://cdn.jsdelivr.net/gh/tnharvey/3DCSSTrainingRoom@scenarioStart/models/monitor/Monitor-Atlas.png) 0px 0px;
+}
+.monitor-support .tp {
+  background: url(https://cdn.jsdelivr.net/gh/tnharvey/3DCSSTrainingRoom@scenarioStart/models/monitor/Monitor-Atlas.png) 0px 0px;
+}
+.monitor-support .ft {
+  background: url(https://cdn.jsdelivr.net/gh/tnharvey/3DCSSTrainingRoom@scenarioStart/models/monitor/Monitor-Atlas.png) 0px 0px;
+}
+.monitor-support .bk {
+  background: url(https://cdn.jsdelivr.net/gh/tnharvey/3DCSSTrainingRoom@scenarioStart/models/monitor/Monitor-Atlas.png) 0px 0px;
+}
+.monitor-support .bm {
+  background: url(https://cdn.jsdelivr.net/gh/tnharvey/3DCSSTrainingRoom@scenarioStart/models/monitor/Monitor-Atlas.png) 0px 0px;
+}
+.monitor-support .face {
   background-color:#5c5c5c;
 }
