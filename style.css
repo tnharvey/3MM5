@@ -722,7 +722,7 @@ li.incomplete {
   transform: translate3d(225px, -1px, 596px) rotateX(-12deg) rotateY(0deg);
 }
 .face-computer {
-  transform: translate3d(-109px, -27px, 1084px) rotateY(90deg);
+  transform: translate3d(-109px, -10px, 1052px) rotateY(90deg);
 }
 .face-forms {
 transform: translate3d(112px, 86px, 946px) rotateY(90deg) rotateZ(-14deg);
@@ -1013,7 +1013,7 @@ transform: translate3d(707px, 20px, 518px) rotateY(-90deg) rotateZ(39deg);
 }
 
 #monitor01 {
-  transform: translate3d(1140px,90px,469px) rotateY(270deg) rotateX(0deg) scale(1.5);
+  transform: translate3d(1140px,90px,469px) rotateY(270deg) rotateX(0deg) scaleX(0.24) scaleY(0.24) scaleZ(0.24);
 }
 
 #afssBody01 {

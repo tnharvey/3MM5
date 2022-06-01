@@ -1,213 +1,213 @@
 /* .monitor-screen styles */
 .monitor-screen {
-  transform:translate3D(0em, -1.625em, 0em) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+  transform:translate3D(0em, -15em, 0.08333333333333337em) rotateX(94deg) rotateY(0deg) rotateZ(0deg);
   opacity:1;
-  width:3.5em;
-  height:2em;
-  margin:-1em 0 0 -1.75em;
+  width:31.5em;
+  height:1.5em;
+  margin:-0.75em 0 0 -15.75em;
 }
 .monitor-screen .ft {
-  transform:translateZ(0.075em);
+  transform:translateZ(9em);
 }
 .monitor-screen .bk {
-  transform:translateZ(-0.075em) rotateY(180deg);
+  transform:translateZ(-9em) rotateY(180deg);
 }
 .monitor-screen .rt, .monitor-screen .lt {
-  width:.15em;
-  height:2em;
+  width:18em;
+  height:1.5em;
 }
 .monitor-screen .tp, .monitor-screen .bm {
-  width:3.5em;
-  height:.15em;
+  width:31.5em;
+  height:18em;
 }
 .monitor-screen .face {
   background-color:#5c5c5c;
 }
 .monitor-screen .ft {
-  width:3.5em;
-  margin-left:0em;
+  width:30.5em;
+  margin-left:0.5em;
 }
 .monitor-screen .bk {
-  width:3.5em;
-  margin-left:0em;
+  width:30.5em;
+  margin-left:-0.5em;
 }
 .monitor-screen .rt, .monitor-screen .lt {
-  width:0.15em;
+  width:17em;
 }
 .monitor-screen .tp, .monitor-screen .bm, .monitor-screen .tp .photon-shader, .monitor-screen .bm .photon-shader {
-  border-radius:0em;
+  border-radius:0.5em;
 }
 .monitor-screen .cr {
-  width:0em;
-  left:0em;
+  width:0.5em;
+  left:0.25em;
 }
 .monitor-screen .cr-0 {
-  transform: translate3D(3.5em, 0, 0.075em);
+  transform: translate3D(30.5em, 0, 8.5em);
 }
 .monitor-screen .cr-1 {
-  transform: translate3D(3.5em, 0, -0.075em);
+  transform: translate3D(30.5em, 0, -8.5em);
 }
 .monitor-screen .cr-2 {
-  transform: translate3D(0, 0, -0.075em);
+  transform: translate3D(0, 0, -8.5em);
 }
 .monitor-screen .cr-3 {
-  transform: translate3D(0, 0, 0.075em);
+  transform: translate3D(0, 0, 8.5em);
 }
 .monitor-screen .cr-0 .s0 {
-  transform: rotateY(15deg) translate3D(-50%, 0, -0.025em);
+  transform: rotateY(15deg) translate3D(-50%, 0, 0.475em);
 }
 .monitor-screen .cr-0 .s1 {
-  transform: rotateY(45deg) translate3D(-50%, 0, -0.025em);
+  transform: rotateY(45deg) translate3D(-50%, 0, 0.475em);
 }
 .monitor-screen .cr-0 .s2 {
-  transform: rotateY(75deg) translate3D(-50%, 0, -0.025em);
+  transform: rotateY(75deg) translate3D(-50%, 0, 0.475em);
 }
 .monitor-screen .cr-1 .s0 {
-  transform: rotateY(105deg) translate3D(-50%, 0, -0.025em);
+  transform: rotateY(105deg) translate3D(-50%, 0, 0.475em);
 }
 .monitor-screen .cr-1 .s1 {
-  transform: rotateY(135deg) translate3D(-50%, 0, -0.025em);
+  transform: rotateY(135deg) translate3D(-50%, 0, 0.475em);
 }
 .monitor-screen .cr-1 .s2 {
-  transform: rotateY(165deg) translate3D(-50%, 0, -0.025em);
+  transform: rotateY(165deg) translate3D(-50%, 0, 0.475em);
 }
 .monitor-screen .cr-2 .s0 {
-  transform: rotateY(195deg) translate3D(-50%, 0, -0.025em);
+  transform: rotateY(195deg) translate3D(-50%, 0, 0.475em);
 }
 .monitor-screen .cr-2 .s1 {
-  transform: rotateY(225deg) translate3D(-50%, 0, -0.025em);
+  transform: rotateY(225deg) translate3D(-50%, 0, 0.475em);
 }
 .monitor-screen .cr-2 .s2 {
-  transform: rotateY(255deg) translate3D(-50%, 0, -0.025em);
+  transform: rotateY(255deg) translate3D(-50%, 0, 0.475em);
 }
 .monitor-screen .cr-3 .s0 {
-  transform: rotateY(285deg) translate3D(-50%, 0, -0.025em);
+  transform: rotateY(285deg) translate3D(-50%, 0, 0.475em);
 }
 .monitor-screen .cr-3 .s1 {
-  transform: rotateY(315deg) translate3D(-50%, 0, -0.025em);
+  transform: rotateY(315deg) translate3D(-50%, 0, 0.475em);
 }
 .monitor-screen .cr-3 .s2 {
-  transform: rotateY(345deg) translate3D(-50%, 0, -0.025em);
+  transform: rotateY(345deg) translate3D(-50%, 0, 0.475em);
 }
 .monitor-screen .side {
-  width:0.025em;
+  width:0.2929491924311227em;
 }
-/* .monitor-base styles */
-.monitor-base {
-  transform:translate3D(0em, 0em, 0em) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+/* .cub-1 styles */
+.cub-1 {
+  transform:translate3D(0em, -0.5em, 0em) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
   opacity:1;
-  width:2em;
-  height:0.12em;
-  margin:-0.06em 0 0 -1em;
+  width:17em;
+  height:1em;
+  margin:-0.5em 0 0 -8.5em;
 }
-.monitor-base .ft {
-  transform:translateZ(0.5em);
+.cub-1 .ft {
+  transform:translateZ(4.125em);
 }
-.monitor-base .bk {
-  transform:translateZ(-0.5em) rotateY(180deg);
+.cub-1 .bk {
+  transform:translateZ(-4.125em) rotateY(180deg);
 }
-.monitor-base .rt, .monitor-base .lt {
-  width:1em;
-  height:0.12em;
-}
-.monitor-base .tp, .monitor-base .bm {
-  width:2em;
+.cub-1 .rt, .cub-1 .lt {
+  width:8.25em;
   height:1em;
 }
-.monitor-base .face {
+.cub-1 .tp, .cub-1 .bm {
+  width:17em;
+  height:8.25em;
+}
+.cub-1 .face {
   background-color:#5c5c5c;
 }
-.monitor-base .ft {
-  width:1.5em;
-  margin-left:0.25em;
+.cub-1 .ft {
+  width:16em;
+  margin-left:0.5em;
 }
-.monitor-base .bk {
-  width:1.5em;
-  margin-left:-0.25em;
+.cub-1 .bk {
+  width:16em;
+  margin-left:-0.5em;
 }
-.monitor-base .rt, .monitor-base .lt {
+.cub-1 .rt, .cub-1 .lt {
+  width:7.25em;
+}
+.cub-1 .tp, .cub-1 .bm, .cub-1 .tp .photon-shader, .cub-1 .bm .photon-shader {
+  border-radius:0.5em;
+}
+.cub-1 .cr {
   width:0.5em;
+  left:0.25em;
 }
-.monitor-base .tp, .monitor-base .bm, .monitor-base .tp .photon-shader, .monitor-base .bm .photon-shader {
-  border-radius:0.25em;
+.cub-1 .cr-0 {
+  transform: translate3D(16em, 0, 3.625em);
 }
-.monitor-base .cr {
-  width:0.25em;
-  left:0.125em;
+.cub-1 .cr-1 {
+  transform: translate3D(16em, 0, -3.625em);
 }
-.monitor-base .cr-0 {
-  transform: translate3D(1.5em, 0, 0.25em);
+.cub-1 .cr-2 {
+  transform: translate3D(0, 0, -3.625em);
 }
-.monitor-base .cr-1 {
-  transform: translate3D(1.5em, 0, -0.25em);
+.cub-1 .cr-3 {
+  transform: translate3D(0, 0, 3.625em);
 }
-.monitor-base .cr-2 {
-  transform: translate3D(0, 0, -0.25em);
+.cub-1 .cr-0 .s0 {
+  transform: rotateY(15deg) translate3D(-50%, 0, 0.475em);
 }
-.monitor-base .cr-3 {
-  transform: translate3D(0, 0, 0.25em);
+.cub-1 .cr-0 .s1 {
+  transform: rotateY(45deg) translate3D(-50%, 0, 0.475em);
 }
-.monitor-base .cr-0 .s0 {
-  transform: rotateY(15deg) translate3D(-50%, 0, 0.225em);
+.cub-1 .cr-0 .s2 {
+  transform: rotateY(75deg) translate3D(-50%, 0, 0.475em);
 }
-.monitor-base .cr-0 .s1 {
-  transform: rotateY(45deg) translate3D(-50%, 0, 0.225em);
+.cub-1 .cr-1 .s0 {
+  transform: rotateY(105deg) translate3D(-50%, 0, 0.475em);
 }
-.monitor-base .cr-0 .s2 {
-  transform: rotateY(75deg) translate3D(-50%, 0, 0.225em);
+.cub-1 .cr-1 .s1 {
+  transform: rotateY(135deg) translate3D(-50%, 0, 0.475em);
 }
-.monitor-base .cr-1 .s0 {
-  transform: rotateY(105deg) translate3D(-50%, 0, 0.225em);
+.cub-1 .cr-1 .s2 {
+  transform: rotateY(165deg) translate3D(-50%, 0, 0.475em);
 }
-.monitor-base .cr-1 .s1 {
-  transform: rotateY(135deg) translate3D(-50%, 0, 0.225em);
+.cub-1 .cr-2 .s0 {
+  transform: rotateY(195deg) translate3D(-50%, 0, 0.475em);
 }
-.monitor-base .cr-1 .s2 {
-  transform: rotateY(165deg) translate3D(-50%, 0, 0.225em);
+.cub-1 .cr-2 .s1 {
+  transform: rotateY(225deg) translate3D(-50%, 0, 0.475em);
 }
-.monitor-base .cr-2 .s0 {
-  transform: rotateY(195deg) translate3D(-50%, 0, 0.225em);
+.cub-1 .cr-2 .s2 {
+  transform: rotateY(255deg) translate3D(-50%, 0, 0.475em);
 }
-.monitor-base .cr-2 .s1 {
-  transform: rotateY(225deg) translate3D(-50%, 0, 0.225em);
+.cub-1 .cr-3 .s0 {
+  transform: rotateY(285deg) translate3D(-50%, 0, 0.475em);
 }
-.monitor-base .cr-2 .s2 {
-  transform: rotateY(255deg) translate3D(-50%, 0, 0.225em);
+.cub-1 .cr-3 .s1 {
+  transform: rotateY(315deg) translate3D(-50%, 0, 0.475em);
 }
-.monitor-base .cr-3 .s0 {
-  transform: rotateY(285deg) translate3D(-50%, 0, 0.225em);
+.cub-1 .cr-3 .s2 {
+  transform: rotateY(345deg) translate3D(-50%, 0, 0.475em);
 }
-.monitor-base .cr-3 .s1 {
-  transform: rotateY(315deg) translate3D(-50%, 0, 0.225em);
+.cub-1 .side {
+  width:0.2929491924311227em;
 }
-.monitor-base .cr-3 .s2 {
-  transform: rotateY(345deg) translate3D(-50%, 0, 0.225em);
-}
-.monitor-base .side {
-  width:0.15897459621556134em;
-}
-/* .monitor-stand styles */
-.monitor-stand {
-  transform:translate3D(0em, -1.125em, -0.125em) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+/* .cub-2 styles */
+.cub-2 {
+  transform:translate3D(0em, -10.25em, -1.375em) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
   opacity:1;
-  width:0.5em;
-  height:2.25em;
-  margin:-1.125em 0 0 -0.25em;
+  width:4em;
+  height:18.5em;
+  margin:-9.25em 0 0 -2em;
 }
-.monitor-stand .ft {
-  transform:translateZ(0.0625em);
+.cub-2 .ft {
+  transform:translateZ(0.75em);
 }
-.monitor-stand .bk {
-  transform:translateZ(-0.0625em) rotateY(180deg);
+.cub-2 .bk {
+  transform:translateZ(-0.75em) rotateY(180deg);
 }
-.monitor-stand .rt, .monitor-stand .lt {
-  width:0.125em;
-  height:2.25em;
+.cub-2 .rt, .cub-2 .lt {
+  width:1.5em;
+  height:18.5em;
 }
-.monitor-stand .tp, .monitor-stand .bm {
-  width:0.5em;
-  height:0.125em;
+.cub-2 .tp, .cub-2 .bm {
+  width:4em;
+  height:1.5em;
 }
-.monitor-stand .face {
+.cub-2 .face {
   background-color:#5c5c5c;
 }
