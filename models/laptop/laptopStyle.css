@@ -21,28 +21,28 @@
   height:10em;
 }
 .laptopBottom .tp {
-  background: url(https://cdn.jsdelivr.net/gh/tnharvey/3DCSSTrainingRoom@scenarioStart/models/laptop/Laptop-Atlas.png) 0px 0px;
+  background: url(https://cdn.jsdelivr.net/gh/tnharvey/3DCSSTrainingRoom@scenarioStart/models/laptop/Laptop-Atlas_v2.png) 0px 0px;
 }
 .laptopBottom .bm {
-  background: url(https://cdn.jsdelivr.net/gh/tnharvey/3DCSSTrainingRoom@scenarioStart/models/laptop/Laptop-Atlas.png) 0px 0px;
+  background: url(https://cdn.jsdelivr.net/gh/tnharvey/3DCSSTrainingRoom@scenarioStart/models/laptop/Laptop-Atlas_v2.png) 0px 0px;
 }
 .laptopBottom .lt {
-  background: url(https://cdn.jsdelivr.net/gh/tnharvey/3DCSSTrainingRoom@scenarioStart/models/laptop/Laptop-Atlas.png) 0px 0px;
+  background: url(https://cdn.jsdelivr.net/gh/tnharvey/3DCSSTrainingRoom@scenarioStart/models/laptop/Laptop-Atlas_v2.png) 0px 0px;
 }
 .laptopBottom .rt {
-  background: url(https://cdn.jsdelivr.net/gh/tnharvey/3DCSSTrainingRoom@scenarioStart/models/laptop/Laptop-Atlas.png) 0px 0px;
+  background: url(https://cdn.jsdelivr.net/gh/tnharvey/3DCSSTrainingRoom@scenarioStart/models/laptop/Laptop-Atlas_v2.png) 0px 0px;
 }
 .laptopBottom .ft {
-  background: url(https://cdn.jsdelivr.net/gh/tnharvey/3DCSSTrainingRoom@scenarioStart/models/laptop/Laptop-Atlas.png) 0px 0px;
+  background: url(https://cdn.jsdelivr.net/gh/tnharvey/3DCSSTrainingRoom@scenarioStart/models/laptop/Laptop-Atlas_v2.png) 0px 0px;
 }
 .laptopBottom .bk {
-  background: url(https://cdn.jsdelivr.net/gh/tnharvey/3DCSSTrainingRoom@scenarioStart/models/laptop/Laptop-Atlas.png) 0px 0px;
+  background: url(https://cdn.jsdelivr.net/gh/tnharvey/3DCSSTrainingRoom@scenarioStart/models/laptop/Laptop-Atlas_v2.png) 0px 0px;
 }
 .laptopBottom .tp {
-  background: url(https://cdn.jsdelivr.net/gh/tnharvey/3DCSSTrainingRoom@scenarioStart/models/laptop/Laptop-Atlas.png) 0px 0px;
+  background: url(https://cdn.jsdelivr.net/gh/tnharvey/3DCSSTrainingRoom@scenarioStart/models/laptop/Laptop-Atlas_v2.png) 0px 0px;
 }
 .laptopBottom .cr .side {
-  background: url(https://cdn.jsdelivr.net/gh/tnharvey/3DCSSTrainingRoom@scenarioStart/models/laptop/Laptop-Atlas.png) 0px 0px;
+  background: url(https://cdn.jsdelivr.net/gh/tnharvey/3DCSSTrainingRoom@scenarioStart/models/laptop/Laptop-Atlas_v2.png) 0px 0px;
 }
 .laptopBottom .face {
   background-color:#969696;
@@ -160,28 +160,25 @@
   left:0.125em;
 }
 .laptopTop .tp {
-  background: url(https://cdn.jsdelivr.net/gh/tnharvey/3DCSSTrainingRoom@scenarioStart/models/laptop/Laptop-Atlas.png) 0px 0px;
+  background: url(https://cdn.jsdelivr.net/gh/tnharvey/3DCSSTrainingRoom@scenarioStart/models/laptop/Laptop-Atlas_v2.png) 0px 0px;
 }
 .laptopTop .bm {
-  background: url(https://cdn.jsdelivr.net/gh/tnharvey/3DCSSTrainingRoom@scenarioStart/models/laptop/Laptop-Atlas.png) 0px 0px;
+  background: url(https://cdn.jsdelivr.net/gh/tnharvey/3DCSSTrainingRoom@scenarioStart/models/laptop/Laptop-Atlas_v2.png) -240px 0px;
 }
 .laptopTop .lt {
-  background: url(https://cdn.jsdelivr.net/gh/tnharvey/3DCSSTrainingRoom@scenarioStart/models/laptop/Laptop-Atlas.png) 0px 0px;
+  background: url(https://cdn.jsdelivr.net/gh/tnharvey/3DCSSTrainingRoom@scenarioStart/models/laptop/Laptop-Atlas_v2.png) 0px 0px;
 }
 .laptopTop .rt {
-  background: url(https://cdn.jsdelivr.net/gh/tnharvey/3DCSSTrainingRoom@scenarioStart/models/laptop/Laptop-Atlas.png) 0px 0px;
+  background: url(https://cdn.jsdelivr.net/gh/tnharvey/3DCSSTrainingRoom@scenarioStart/models/laptop/Laptop-Atlas_v2.png) 0px 0px;
 }
 .laptopTop .ft {
-  background: url(https://cdn.jsdelivr.net/gh/tnharvey/3DCSSTrainingRoom@scenarioStart/models/laptop/Laptop-Atlas.png) 0px 0px;
+  background: url(https://cdn.jsdelivr.net/gh/tnharvey/3DCSSTrainingRoom@scenarioStart/models/laptop/Laptop-Atlas_v2.png) 0px -160px;
 }
 .laptopTop .bk {
-  background: url(https://cdn.jsdelivr.net/gh/tnharvey/3DCSSTrainingRoom@scenarioStart/models/laptop/Laptop-Atlas.png) 0px 0px;
-}
-.laptopTop .tp {
-  background: url(https://cdn.jsdelivr.net/gh/tnharvey/3DCSSTrainingRoom@scenarioStart/models/laptop/Laptop-Atlas.png) 0px 0px;
+  background: url(https://cdn.jsdelivr.net/gh/tnharvey/3DCSSTrainingRoom@scenarioStart/models/laptop/Laptop-Atlas_v2.png) -240px -160px;
 }
 .laptopTop .cr .side {
-  background: url(https://cdn.jsdelivr.net/gh/tnharvey/3DCSSTrainingRoom@scenarioStart/models/laptop/Laptop-Atlas.png) 0px 0px;
+  background: url(https://cdn.jsdelivr.net/gh/tnharvey/3DCSSTrainingRoom@scenarioStart/models/laptop/Laptop-Atlas_v2.png) 0px 0px;
 }
 .laptopTop .cr-0 {
   transform: translate3D(14.5em, 0, 4.75em);
