@@ -21,28 +21,25 @@
   height:10em;
 }
 .laptopBottom .tp {
-  background: url(https://cdn.jsdelivr.net/gh/tnharvey/3DCSSTrainingRoom@scenarioStart/models/laptop/Laptop-Atlas_v2.png) 0px 0px;
+  background: url(https://cdn.jsdelivr.net/gh/tnharvey/3DCSSTrainingRoom@scenarioStart/models/laptop/Laptop-Atlas_v2.png) 0px -168px;
 }
 .laptopBottom .bm {
-  background: url(https://cdn.jsdelivr.net/gh/tnharvey/3DCSSTrainingRoom@scenarioStart/models/laptop/Laptop-Atlas_v2.png) 0px 0px;
+  background: url(https://cdn.jsdelivr.net/gh/tnharvey/3DCSSTrainingRoom@scenarioStart/models/laptop/Laptop-Atlas_v2.png) -241px -168px;
 }
 .laptopBottom .lt {
-  background: url(https://cdn.jsdelivr.net/gh/tnharvey/3DCSSTrainingRoom@scenarioStart/models/laptop/Laptop-Atlas_v2.png) 0px 0px;
+  background: url(https://cdn.jsdelivr.net/gh/tnharvey/3DCSSTrainingRoom@scenarioStart/models/laptop/Laptop-Atlas_v2.png) 0px 5px;
 }
 .laptopBottom .rt {
-  background: url(https://cdn.jsdelivr.net/gh/tnharvey/3DCSSTrainingRoom@scenarioStart/models/laptop/Laptop-Atlas_v2.png) 0px 0px;
+  background: url(https://cdn.jsdelivr.net/gh/tnharvey/3DCSSTrainingRoom@scenarioStart/models/laptop/Laptop-Atlas_v2.png) 0px 10px;
 }
 .laptopBottom .ft {
-  background: url(https://cdn.jsdelivr.net/gh/tnharvey/3DCSSTrainingRoom@scenarioStart/models/laptop/Laptop-Atlas_v2.png) 0px 0px;
+  background: url(https://cdn.jsdelivr.net/gh/tnharvey/3DCSSTrainingRoom@scenarioStart/models/laptop/Laptop-Atlas_v2.png) 0px -329px;
 }
 .laptopBottom .bk {
-  background: url(https://cdn.jsdelivr.net/gh/tnharvey/3DCSSTrainingRoom@scenarioStart/models/laptop/Laptop-Atlas_v2.png) 0px 0px;
-}
-.laptopBottom .tp {
-  background: url(https://cdn.jsdelivr.net/gh/tnharvey/3DCSSTrainingRoom@scenarioStart/models/laptop/Laptop-Atlas_v2.png) 0px 0px;
+  background: url(https://cdn.jsdelivr.net/gh/tnharvey/3DCSSTrainingRoom@scenarioStart/models/laptop/Laptop-Atlas_v2.png) -241px -329px;
 }
 .laptopBottom .cr .side {
-  background: url(https://cdn.jsdelivr.net/gh/tnharvey/3DCSSTrainingRoom@scenarioStart/models/laptop/Laptop-Atlas_v2.png) 0px 0px;
+  background: url(https://cdn.jsdelivr.net/gh/tnharvey/3DCSSTrainingRoom@scenarioStart/models/laptop/Laptop-Atlas_v2.png) 0px -168px;
 }
 .laptopBottom .face {
   background-color:#969696;
@@ -166,10 +163,10 @@
   background: url(https://cdn.jsdelivr.net/gh/tnharvey/3DCSSTrainingRoom@scenarioStart/models/laptop/Laptop-Atlas_v2.png) -240px 0px;
 }
 .laptopTop .lt {
-  background: url(https://cdn.jsdelivr.net/gh/tnharvey/3DCSSTrainingRoom@scenarioStart/models/laptop/Laptop-Atlas_v2.png) 0px 0px;
+  background: url(https://cdn.jsdelivr.net/gh/tnharvey/3DCSSTrainingRoom@scenarioStart/models/laptop/Laptop-Atlas_v2.png) 0px -166px;
 }
 .laptopTop .rt {
-  background: url(https://cdn.jsdelivr.net/gh/tnharvey/3DCSSTrainingRoom@scenarioStart/models/laptop/Laptop-Atlas_v2.png) 0px 0px;
+  background: url(https://cdn.jsdelivr.net/gh/tnharvey/3DCSSTrainingRoom@scenarioStart/models/laptop/Laptop-Atlas_v2.png) 0px -163px;
 }
 .laptopTop .ft {
   background: url(https://cdn.jsdelivr.net/gh/tnharvey/3DCSSTrainingRoom@scenarioStart/models/laptop/Laptop-Atlas_v2.png) 0px -160px;
