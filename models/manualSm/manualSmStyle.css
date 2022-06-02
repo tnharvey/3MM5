@@ -59,6 +59,24 @@
   width:20em;
   height:1em;
 }
+.manual-Bk .tp {
+  background: url(https://cdn.jsdelivr.net/gh/tnharvey/3DCSSTrainingRoom@scenarioStart/models/manualSm/ManualOpen-Atlas_v2.png) 0px 0px;
+}
+.manual-Bk .bm {
+  background: url(https://cdn.jsdelivr.net/gh/tnharvey/3DCSSTrainingRoom@scenarioStart/models/manualSm/ManualOpen-Atlas_v2.png) 0px 0px;
+}
+.manual-Bk .ft {
+  background: url(https://cdn.jsdelivr.net/gh/tnharvey/3DCSSTrainingRoom@scenarioStart/models/manualSm/ManualOpen-Atlas_v2.png) -672px 0px;
+}
+.manual-Bk .bk {
+  background: url(https://cdn.jsdelivr.net/gh/tnharvey/3DCSSTrainingRoom@scenarioStart/models/manualSm/ManualOpen-Atlas_v2.png) -992px 0px;
+}
+.manual-Bk .lt {
+  background: url(https://cdn.jsdelivr.net/gh/tnharvey/3DCSSTrainingRoom@scenarioStart/models/manualSm/ManualOpen-Atlas_v2.png) 0px 0px;
+}
+.manual-Bk .rt {
+  background: url(https://cdn.jsdelivr.net/gh/tnharvey/3DCSSTrainingRoom@scenarioStart/models/manualSm/ManualOpen-Atlas_v2.png) 0px 0px;
+}
 .manual-Bk .face {
   background-color:#AAAAAA;
 }
@@ -91,6 +109,24 @@
 .manual-Fr .tp, .manual-Fr .bm {
   width:20em;
   height:1em;
+}
+.manual-Fr .tp {
+  background: url(https://cdn.jsdelivr.net/gh/tnharvey/3DCSSTrainingRoom@scenarioStart/models/manualSm/ManualOpen-Atlas_v2.png) 0px 0px;
+}
+.manual-Fr .bm {
+  background: url(https://cdn.jsdelivr.net/gh/tnharvey/3DCSSTrainingRoom@scenarioStart/models/manualSm/ManualOpen-Atlas_v2.png) 0px 0px;
+}
+.manual-Fr .ft {
+  background: url(https://cdn.jsdelivr.net/gh/tnharvey/3DCSSTrainingRoom@scenarioStart/models/manualSm/ManualOpen-Atlas_v2.png) 0px 0px;
+}
+.manual-Fr .bk {
+  background: url(https://cdn.jsdelivr.net/gh/tnharvey/3DCSSTrainingRoom@scenarioStart/models/manualSm/ManualOpen-Atlas_v2.png) 0px 0px;
+}
+.manual-Fr .lt {
+  background: url(https://cdn.jsdelivr.net/gh/tnharvey/3DCSSTrainingRoom@scenarioStart/models/manualSm/ManualOpen-Atlas_v2.png) 0px 0px;
+}
+.manual-Fr .rt {
+  background: url(https://cdn.jsdelivr.net/gh/tnharvey/3DCSSTrainingRoom@scenarioStart/models/manualSm/ManualOpen-Atlas_v2.png) 0px 0px;
 }
 .manual-Fr .face {
   background-color:#AAAAAA;
