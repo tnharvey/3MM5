@@ -20,6 +20,24 @@
   width:14em;
   height:4.25em;
 }
+.keyboardBase .tp {
+  background: url(https://cdn.jsdelivr.net/gh/tnharvey/3DCSSTrainingRoom@scenarioStart/models/keyboardSimp/Keyboard-Atlas.png) 0px 0px;
+}
+.keyboardBase .bm {
+  background: url(https://cdn.jsdelivr.net/gh/tnharvey/3DCSSTrainingRoom@scenarioStart/models/keyboardSimp/Keyboard-Atlas.png) 0px -68px;
+}
+.keyboardBase .ft {
+  background: url(https://cdn.jsdelivr.net/gh/tnharvey/3DCSSTrainingRoom@scenarioStart/models/keyboardSimp/Keyboard-Atlas.png) 0px -136px;
+}
+.keyboardBase .bk {
+  background: url(https://cdn.jsdelivr.net/gh/tnharvey/3DCSSTrainingRoom@scenarioStart/models/keyboardSimp/Keyboard-Atlas.png) 0px -148px;
+}
+.keyboardBase .lt {
+  background: url(https://cdn.jsdelivr.net/gh/tnharvey/3DCSSTrainingRoom@scenarioStart/models/keyboardSimp/Keyboard-Atlas.png) 0px -172px;
+}
+.keyboardBase .rt {
+  background: url(https://cdn.jsdelivr.net/gh/tnharvey/3DCSSTrainingRoom@scenarioStart/models/keyboardSimp/Keyboard-Atlas.png) 0px -160px;
+}
 .keyboardBase .face {
   background-color:#616161;
 }
@@ -44,6 +62,24 @@
 .keyboardKeys .tp, .keyboardKeys .bm {
   width:13.5em;
   height:3.8125em;
+}
+.keyboardKeys .tp {
+  background: url(https://cdn.jsdelivr.net/gh/tnharvey/3DCSSTrainingRoom@scenarioStart/models/keyboardSimp/Keyboard-Atlas.png) 0px -184px;
+}
+.keyboardKeys .bm {
+  background: url(https://cdn.jsdelivr.net/gh/tnharvey/3DCSSTrainingRoom@scenarioStart/models/keyboardSimp/Keyboard-Atlas.png) 0px -245px;
+}
+.keyboardKeys .ft {
+  background: url(https://cdn.jsdelivr.net/gh/tnharvey/3DCSSTrainingRoom@scenarioStart/models/keyboardSimp/Keyboard-Atlas.png) 0px -306px;
+}
+.keyboardKeys .bk {
+  background: url(https://cdn.jsdelivr.net/gh/tnharvey/3DCSSTrainingRoom@scenarioStart/models/keyboardSimp/Keyboard-Atlas.png) 0px -318px;
+}
+.keyboardKeys .lt {
+  background: url(https://cdn.jsdelivr.net/gh/tnharvey/3DCSSTrainingRoom@scenarioStart/models/keyboardSimp/Keyboard-Atlas.png) 0px -342px;
+}
+.keyboardKeys .rt {
+  background: url(https://cdn.jsdelivr.net/gh/tnharvey/3DCSSTrainingRoom@scenarioStart/models/keyboardSimp/Keyboard-Atlas.png) 0px -330px;
 }
 .keyboardKeys .face {
   background-color:#919191;
