@@ -20,6 +20,24 @@
   width:1em;
   height:16em;
 }
+.cabSideL .tp {
+  background: url(https://cdn.jsdelivr.net/gh/tnharvey/3DCSSTrainingRoom@scenarioStart/models/documentCabinet/DocCab-Main-Atlas.png) 0px -704px;
+}
+.cabSideL .bm {
+  background: url(https://cdn.jsdelivr.net/gh/tnharvey/3DCSSTrainingRoom@scenarioStart/models/documentCabinet/DocCab-Main-Atlas.png) -256px -704px;
+}
+.cabSideL .ft {
+  background: url(https://cdn.jsdelivr.net/gh/tnharvey/3DCSSTrainingRoom@scenarioStart/models/documentCabinet/DocCab-Main-Atlas.png) 0px -960px;
+}
+.cabSideL .bk {
+  background: url(https://cdn.jsdelivr.net/gh/tnharvey/3DCSSTrainingRoom@scenarioStart/models/documentCabinet/DocCab-Main-Atlas.png) 0px -976px;
+}
+.cabSideL .lt {
+  background: url(https://cdn.jsdelivr.net/gh/tnharvey/3DCSSTrainingRoom@scenarioStart/models/documentCabinet/DocCab-Main-Atlas.png) -0px -928px;
+}
+.cabSideL .rt {
+  background: url(https://cdn.jsdelivr.net/gh/tnharvey/3DCSSTrainingRoom@scenarioStart/models/documentCabinet/DocCab-Main-Atlas.png) -256px -928px;
+}
 .cabSideL .face {
   background-color:#FFFFFF;
 }
@@ -62,6 +80,24 @@
 .cabSideR .tp, .cabSideR .bm {
   width:1em;
   height:16em;
+}
+.cabSideR .tp {
+  background: url(https://cdn.jsdelivr.net/gh/tnharvey/3DCSSTrainingRoom@scenarioStart/models/documentCabinet/DocCab-Main-Atlas.png) 0px -736px;
+}
+.cabSideR .bm {
+  background: url(https://cdn.jsdelivr.net/gh/tnharvey/3DCSSTrainingRoom@scenarioStart/models/documentCabinet/DocCab-Main-Atlas.png) 0px -736px;
+}
+.cabSideR .ft {
+  background: url(https://cdn.jsdelivr.net/gh/tnharvey/3DCSSTrainingRoom@scenarioStart/models/documentCabinet/DocCab-Main-Atlas.png) 0px -736px;
+}
+.cabSideR .bk {
+  background: url(https://cdn.jsdelivr.net/gh/tnharvey/3DCSSTrainingRoom@scenarioStart/models/documentCabinet/DocCab-Main-Atlas.png) 0px -736px;
+}
+.cabSideR .lt {
+  background: url(https://cdn.jsdelivr.net/gh/tnharvey/3DCSSTrainingRoom@scenarioStart/models/documentCabinet/DocCab-Main-Atlas.png) 0px -736px;
+}
+.cabSideR .rt {
+  background: url(https://cdn.jsdelivr.net/gh/tnharvey/3DCSSTrainingRoom@scenarioStart/models/documentCabinet/DocCab-Main-Atlas.png) 0px -736px;
 }
 .cabSideR .face {
   background-color:#FFFFFF;
@@ -106,6 +142,24 @@
   width:31.25em;
   height:16em;
 }
+.cabTop .tp {
+  background: url(https://cdn.jsdelivr.net/gh/tnharvey/3DCSSTrainingRoom@scenarioStart/models/documentCabinet/DocCab-Main-Atlas.png) 0px 0px;
+}
+.cabTop .bm {
+  background: url(https://cdn.jsdelivr.net/gh/tnharvey/3DCSSTrainingRoom@scenarioStart/models/documentCabinet/DocCab-Main-Atlas.png) -500px 0px;
+}
+.cabTop .ft {
+  background: url(https://cdn.jsdelivr.net/gh/tnharvey/3DCSSTrainingRoom@scenarioStart/models/documentCabinet/DocCab-Main-Atlas.png) 0px -256px;
+}
+.cabTop .bk {
+  background: url(https://cdn.jsdelivr.net/gh/tnharvey/3DCSSTrainingRoom@scenarioStart/models/documentCabinet/DocCab-Main-Atlas.png) -500px -256px;
+}
+.cabTop .lt {
+  background: url(https://cdn.jsdelivr.net/gh/tnharvey/3DCSSTrainingRoom@scenarioStart/models/documentCabinet/DocCab-Main-Atlas.png) -256px -288px;
+}
+.cabTop .rt {
+  background: url(https://cdn.jsdelivr.net/gh/tnharvey/3DCSSTrainingRoom@scenarioStart/models/documentCabinet/DocCab-Main-Atlas.png) 0px -288px;
+}
 .cabTop .face {
   background-color:#FFFFFF;
 }
@@ -148,6 +202,24 @@
 .cabBottom .tp, .cabBottom .bm {
   width:31.25em;
   height:16em;
+}
+.cabBottom .tp {
+  background: url(https://cdn.jsdelivr.net/gh/tnharvey/3DCSSTrainingRoom@scenarioStart/models/documentCabinet/DocCab-Main-Atlas.png) 0px -320px;
+}
+.cabBottom .bm {
+  background: url(https://cdn.jsdelivr.net/gh/tnharvey/3DCSSTrainingRoom@scenarioStart/models/documentCabinet/DocCab-Main-Atlas.png) -500px -320px;
+}
+.cabBottom .ft {
+  background: url(https://cdn.jsdelivr.net/gh/tnharvey/3DCSSTrainingRoom@scenarioStart/models/documentCabinet/DocCab-Main-Atlas.png) 0px -576px;
+}
+.cabBottom .bk {
+  background: url(https://cdn.jsdelivr.net/gh/tnharvey/3DCSSTrainingRoom@scenarioStart/models/documentCabinet/DocCab-Main-Atlas.png) -500px -576px;
+}
+.cabBottom .lt {
+  background: url(https://cdn.jsdelivr.net/gh/tnharvey/3DCSSTrainingRoom@scenarioStart/models/documentCabinet/DocCab-Main-Atlas.png) 0px -608px;
+}
+.cabBottom .rt {
+  background: url(https://cdn.jsdelivr.net/gh/tnharvey/3DCSSTrainingRoom@scenarioStart/models/documentCabinet/DocCab-Main-Atlas.png) -256px -608px;
 }
 .cabBottom .face {
   background-color:#FFFFFF;
@@ -192,6 +264,24 @@
   width:31.25em;
   height:1em;
 }
+.cabBack .tp {
+  background: url(https://cdn.jsdelivr.net/gh/tnharvey/3DCSSTrainingRoom@scenarioStart/models/documentCabinet/DocCab-Main-Atlas.png) 0px -640px;
+}
+.cabBack .bm {
+  background: url(https://cdn.jsdelivr.net/gh/tnharvey/3DCSSTrainingRoom@scenarioStart/models/documentCabinet/DocCab-Main-Atlas.png) -500px -640px;
+}
+.cabBack .ft {
+  background: url(https://cdn.jsdelivr.net/gh/tnharvey/3DCSSTrainingRoom@scenarioStart/models/documentCabinet/DocCab-Main-Atlas.png) 0px -672px;
+}
+.cabBack .bk {
+  background: url(https://cdn.jsdelivr.net/gh/tnharvey/3DCSSTrainingRoom@scenarioStart/models/documentCabinet/DocCab-Main-Atlas.png) -500px -672px;
+}
+.cabBack .lt {
+  background: url(https://cdn.jsdelivr.net/gh/tnharvey/3DCSSTrainingRoom@scenarioStart/models/documentCabinet/DocCab-Main-Atlas.png) 0px -688px;
+}
+.cabBack .rt {
+  background: url(https://cdn.jsdelivr.net/gh/tnharvey/3DCSSTrainingRoom@scenarioStart/models/documentCabinet/DocCab-Main-Atlas.png) -256px -688px;
+}
 .cabBack .face {
   background-color:#FFFFFF;
 }
@@ -234,6 +324,24 @@
 .cabShelf02 .tp, .cabShelf02 .bm {
   width:31.25em;
   height:15.25em;
+}
+.cabShelf02 .tp {
+  background: url(https://cdn.jsdelivr.net/gh/tnharvey/3DCSSTrainingRoom@scenarioStart/models/documentCabinet/DocCab-Shelves-Dividers-Atlas.png) 0px 0px;
+}
+.cabShelf02 .bm {
+  background: url(https://cdn.jsdelivr.net/gh/tnharvey/3DCSSTrainingRoom@scenarioStart/models/documentCabinet/DocCab-Shelves-Dividers-Atlas.png) 0px 0px;
+}
+.cabShelf02 .ft {
+  background: url(https://cdn.jsdelivr.net/gh/tnharvey/3DCSSTrainingRoom@scenarioStart/models/documentCabinet/DocCab-Shelves-Dividers-Atlas.png) 0px 0px;
+}
+.cabShelf02 .bk {
+  background: url(https://cdn.jsdelivr.net/gh/tnharvey/3DCSSTrainingRoom@scenarioStart/models/documentCabinet/DocCab-Shelves-Dividers-Atlas.png) 0px 0px;
+}
+.cabShelf02 .lt {
+  background: url(https://cdn.jsdelivr.net/gh/tnharvey/3DCSSTrainingRoom@scenarioStart/models/documentCabinet/DocCab-Shelves-Dividers-Atlas.png) 0px 0px;
+}
+.cabShelf02 .rt {
+  background: url(https://cdn.jsdelivr.net/gh/tnharvey/3DCSSTrainingRoom@scenarioStart/models/documentCabinet/DocCab-Shelves-Dividers-Atlas.png) 0px 0px;
 }
 .cabShelf02 .face {
   background-color:#FFFFFF;
@@ -278,6 +386,24 @@
   width:31.25em;
   height:15.25em;
 }
+.cabShelf01 .tp {
+  background: url(https://cdn.jsdelivr.net/gh/tnharvey/3DCSSTrainingRoom@scenarioStart/models/documentCabinet/DocCab-Shelves-Dividers-Atlas.png) 0px 0px;
+}
+.cabShelf01 .bm {
+  background: url(https://cdn.jsdelivr.net/gh/tnharvey/3DCSSTrainingRoom@scenarioStart/models/documentCabinet/DocCab-Shelves-Dividers-Atlas.png) 0px 0px;
+}
+.cabShelf01 .ft {
+  background: url(https://cdn.jsdelivr.net/gh/tnharvey/3DCSSTrainingRoom@scenarioStart/models/documentCabinet/DocCab-Shelves-Dividers-Atlas.png) 0px 0px;
+}
+.cabShelf01 .bk {
+  background: url(https://cdn.jsdelivr.net/gh/tnharvey/3DCSSTrainingRoom@scenarioStart/models/documentCabinet/DocCab-Shelves-Dividers-Atlas.png) 0px 0px;
+}
+.cabShelf01 .lt {
+  background: url(https://cdn.jsdelivr.net/gh/tnharvey/3DCSSTrainingRoom@scenarioStart/models/documentCabinet/DocCab-Shelves-Dividers-Atlas.png) 0px 0px;
+}
+.cabShelf01 .rt {
+  background: url(https://cdn.jsdelivr.net/gh/tnharvey/3DCSSTrainingRoom@scenarioStart/models/documentCabinet/DocCab-Shelves-Dividers-Atlas.png) 0px 0px;
+}
 .cabShelf01 .face {
   background-color:#FFFFFF;
 }
@@ -320,6 +446,24 @@
 .cabShelf03 .tp, .cabShelf03 .bm {
   width:31.25em;
   height:15.25em;
+}
+.cabShelf03 .tp {
+  background: url(https://cdn.jsdelivr.net/gh/tnharvey/3DCSSTrainingRoom@scenarioStart/models/documentCabinet/DocCab-Shelves-Dividers-Atlas.png) 0px 0px;
+}
+.cabShelf03 .bm {
+  background: url(https://cdn.jsdelivr.net/gh/tnharvey/3DCSSTrainingRoom@scenarioStart/models/documentCabinet/DocCab-Shelves-Dividers-Atlas.png) 0px 0px;
+}
+.cabShelf03 .ft {
+  background: url(https://cdn.jsdelivr.net/gh/tnharvey/3DCSSTrainingRoom@scenarioStart/models/documentCabinet/DocCab-Shelves-Dividers-Atlas.png) 0px 0px;
+}
+.cabShelf03 .bk {
+  background: url(https://cdn.jsdelivr.net/gh/tnharvey/3DCSSTrainingRoom@scenarioStart/models/documentCabinet/DocCab-Shelves-Dividers-Atlas.png) 0px 0px;
+}
+.cabShelf03 .lt {
+  background: url(https://cdn.jsdelivr.net/gh/tnharvey/3DCSSTrainingRoom@scenarioStart/models/documentCabinet/DocCab-Shelves-Dividers-Atlas.png) 0px 0px;
+}
+.cabShelf03 .rt {
+  background: url(https://cdn.jsdelivr.net/gh/tnharvey/3DCSSTrainingRoom@scenarioStart/models/documentCabinet/DocCab-Shelves-Dividers-Atlas.png) 0px 0px;
 }
 .cabShelf03 .face {
   background-color:#FFFFFF;
@@ -364,6 +508,24 @@
   width:0.5em;
   height:15.25em;
 }
+.cabDivider01 .tp {
+  background: url(https://cdn.jsdelivr.net/gh/tnharvey/3DCSSTrainingRoom@scenarioStart/models/documentCabinet/DocCab-Shelves-Dividers-Atlas.png) 0px 0px;
+}
+.cabDivider01 .bm {
+  background: url(https://cdn.jsdelivr.net/gh/tnharvey/3DCSSTrainingRoom@scenarioStart/models/documentCabinet/DocCab-Shelves-Dividers-Atlas.png) 0px 0px;
+}
+.cabDivider01 .ft {
+  background: url(https://cdn.jsdelivr.net/gh/tnharvey/3DCSSTrainingRoom@scenarioStart/models/documentCabinet/DocCab-Shelves-Dividers-Atlas.png) 0px 0px;
+}
+.cabDivider01 .bk {
+  background: url(https://cdn.jsdelivr.net/gh/tnharvey/3DCSSTrainingRoom@scenarioStart/models/documentCabinet/DocCab-Shelves-Dividers-Atlas.png) 0px 0px;
+}
+.cabDivider01 .lt {
+  background: url(https://cdn.jsdelivr.net/gh/tnharvey/3DCSSTrainingRoom@scenarioStart/models/documentCabinet/DocCab-Shelves-Dividers-Atlas.png) 0px 0px;
+}
+.cabDivider01 .rt {
+  background: url(https://cdn.jsdelivr.net/gh/tnharvey/3DCSSTrainingRoom@scenarioStart/models/documentCabinet/DocCab-Shelves-Dividers-Atlas.png) 0px 0px;
+}
 .cabDivider01 .face {
   background-color:#FFFFFF;
 }
@@ -406,6 +568,24 @@
 .cabDivider02 .tp, .cabDivider02 .bm {
   width:0.5em;
   height:15.5em;
+}
+.cabDivider02 .tp {
+  background: url(https://cdn.jsdelivr.net/gh/tnharvey/3DCSSTrainingRoom@scenarioStart/models/documentCabinet/DocCab-Shelves-Dividers-Atlas.png) 0px 0px;
+}
+.cabDivider02 .bm {
+  background: url(https://cdn.jsdelivr.net/gh/tnharvey/3DCSSTrainingRoom@scenarioStart/models/documentCabinet/DocCab-Shelves-Dividers-Atlas.png) 0px 0px;
+}
+.cabDivider02 .ft {
+  background: url(https://cdn.jsdelivr.net/gh/tnharvey/3DCSSTrainingRoom@scenarioStart/models/documentCabinet/DocCab-Shelves-Dividers-Atlas.png) 0px 0px;
+}
+.cabDivider02 .bk {
+  background: url(https://cdn.jsdelivr.net/gh/tnharvey/3DCSSTrainingRoom@scenarioStart/models/documentCabinet/DocCab-Shelves-Dividers-Atlas.png) 0px 0px;
+}
+.cabDivider02 .lt {
+  background: url(https://cdn.jsdelivr.net/gh/tnharvey/3DCSSTrainingRoom@scenarioStart/models/documentCabinet/DocCab-Shelves-Dividers-Atlas.png) 0px 0px;
+}
+.cabDivider02 .rt {
+  background: url(https://cdn.jsdelivr.net/gh/tnharvey/3DCSSTrainingRoom@scenarioStart/models/documentCabinet/DocCab-Shelves-Dividers-Atlas.png) 0px 0px;
 }
 .cabDivider02 .face {
   background-color:#FFFFFF;
