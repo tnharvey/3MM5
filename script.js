@@ -111,11 +111,11 @@ const messages = {
   5:"<br><span>There are still a few deficiencies with the equipment. What should you do?</span>",
 };
 const messages02 = {
-  1:"<br><span>What is the first step in the equipment repair process once you've received a request? Look around the room, pay attention to the areas with a glowing card.</span>",
-  2:"<br><span>You need to be timely, economical, and professional. What will help you process the equipment this way?</span>",
-  3:"<br><span>You're able to see that the costs are not going to exceed the MEL. What now?</span>",
-  4:"<br><span>You have received the equipment back. What do you do now?</span>",
-  5:"<br><span>There are still a few deficiencies with the equipment. What should you do?</span>",
+  1:"<br><span>(HINT VERSION) What is the first step in the equipment repair process once you've received a request?</span>",
+  2:"<br><span>(HINT VERSION) You need to be timely, economical, and professional. What will help you process the equipment this way?</span>",
+  3:"<br><span>(HINT VERSION) You're able to see that the costs are not going to exceed the MEL. What now?</span>",
+  4:"<br><span>(HINT VERSION) You have received the equipment back. What do you do now?</span>",
+  5:"<br><span>(HINT VERSION) There are still a few deficiencies with the equipment. What should you do?</span>",
 };
 var popups = {
   chal: {
@@ -548,8 +548,14 @@ function transitionPopup(event) {
 
 /*CONTENT */
 function updateMessages() {
-  $("#messageLabel")[0].innerHTML = "<b>Challenge " + currentChallenge + " of 5</b>";
-  $("#message")[0].innerHTML = messages[currentChallenge];
+  if (resets >=2){
+    $("#messageLabel")[0].innerHTML = "<b>Challenge " + currentChallenge + " of 5</b>";
+    $("#message")[0].innerHTML = messages02[currentChallenge];
+  }
+  else {
+    $("#messageLabel")[0].innerHTML = "<b>Challenge " + currentChallenge + " of 5</b>";
+    $("#message")[0].innerHTML = messages[currentChallenge];
+  }
 }
 
 function loadContent (contentId, contentLoc, targetId, fileName, css) {
@@ -769,22 +775,23 @@ function toggleBook (targetId) {
 
 
 /* SLIDE CONTROLS */
-  function nextSlide01() {
-    var currentSlide = findInList($(".loadedPContainer:visible")[0].classList,"state",false);
-    if(currentSlide=="state01"){
-      $(".slide01")[0].style.display = "none";
-      $(".slide02")[0].style.display = "block";
-      $(".loadedPContainer")[0].classList.remove("state01");
-      $(".loadedPContainer")[0].classList.add("state02");
-    }
-    else if(currentSlide=="state02"){
-      $(".slide01")[0].style.display = "none";
-      $(".slide02")[0].style.display = "none";
-      $(".slide03")[0].style.display = "block";
-      $(".loadedPContainer")[0].classList.remove("state02");
-      $(".loadedPContainer")[0].classList.add("state03");
-    }
+function nextSlide01() {
+  var targetDiv = $(".loadedPContainer:visible")[0]
+  var currentSlide = findInList(targetDiv.classList,"state",false);
+  if(currentSlide=="state01"){
+    targetDiv.children[0].style.display = "none";
+    targetDiv.children[1].style.display = "block";
+    targetDiv.classList.remove("state01");
+    targetDiv.classList.add("state02");
   }
+  else if(currentSlide=="state02"){
+    targetDiv.children[0].style.display = "none";
+    targetDiv.children[1].style.display = "none";
+    targetDiv.children[2].style.display = "block";
+    targetDiv.classList.remove("state02");
+    targetDiv.classList.add("state03");
+  }
+}
 
 /* MEL Calc Functions */
     
