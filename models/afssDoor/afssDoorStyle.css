@@ -22,11 +22,11 @@
 }
 
 .door .side {
-    background: url(https://cdn.jsdelivr.net/gh/tnharvey/3DCSSTrainingRoom@main/models/afssDoor/AFSS_Door_Atlas_v1_A1.png) -464px -320px;
+    background: url(https://cdn.jsdelivr.net/gh/tnharvey/3DCSSTrainingRoom@main/models/afssDoor/AFSS_Door_Atlas_v1_A1.png) -498px -320px;
 }
 
 .door .side {
-    width: 1.14746737195075em;
+    width: 1.15em;
     height: 3em;
 }
 

@@ -107,10 +107,10 @@ span.center {
 */
 #messagesContainer {
   height: 16px;
-  width: 112px;
+  width: 10vw;
   background-color: rgb(0,0,0,0.8);
   padding: 10px;
-  left: 45%;
+  left: 45vw;
   top: 6%;
   border-radius: 20px;
   overflow: hidden;
@@ -120,8 +120,8 @@ span.center {
 
 #messagesContainer:hover {
   height: auto;
-  width: 380px;
-  left: 500px;
+  width: 25vw;
+  left: 37vw;
   top: 30px;
   border-radius: 4px;
 }
@@ -1021,12 +1021,12 @@ transform: translate3d(707px, 20px, 518px) rotateY(-90deg) rotateZ(39deg);
 }
 
 #afssDoor01 {
-  transform: translate3d(758px,56px,-168px) rotateY(0deg) rotateX(0deg) rotateZ(0deg) scaleX(0.17) scaleZ(0.17) scaleY(0.17);
+  transform: translate3d(759px,55px,-168px) rotateY(0deg) rotateX(0deg) rotateZ(0deg) scaleX(0.17) scaleZ(0.17) scaleY(0.17);
   transition-duration: 2s;
 }
 
 #afssDoor01.afssDoor-open {
-  transform: translate3d(758px,56px,-162px) rotateY(-140deg) rotateX(0deg) rotateZ(0deg) scaleX(0.17) scaleZ(0.17) scaleY(0.17);
+  transform: translate3d(759px,55px,-162px) rotateY(-140deg) rotateX(0deg) rotateZ(0deg) scaleX(0.17) scaleZ(0.17) scaleY(0.17);
 }
 
 #afssStand01 {
