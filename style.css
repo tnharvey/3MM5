@@ -72,46 +72,31 @@ span.center {
 }
 
 #dashContainer {
-  height: 0px;
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-rows: 1fr 4fr;
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
 }
 
 .dashItem {
-  position: absolute;
+  
 }
 
 #helpContainer {
-  left: 20%;
-  top: 2%;
+  grid-area: 1 / 1 / 2 / 2;
   height: 30px;
   width: 20px;
   transition-duration: 1s;
   padding: 10px;
 }
-/*
-#helpContainer:hover {
-  border: 4px solid black;
-  border-radius: 4px;
-  width: 52px;
-}
 
-#helpContainer:hover #helpIcon {
-  opacity: 1;
-  left: 10px;
-  top: 0px;
-}
-
-#helpContainer:hover #mapIcon {
-  opacity: 1;
-  left: 34px;
-}
-*/
 #messagesContainer {
   height: 16px;
   width: 10vw;
   background-color: rgb(0,0,0,0.8);
   padding: 10px;
-  left: 45vw;
-  top: 6%;
+  grid-area: 1 / 2 / 2 / 3;
   border-radius: 20px;
   overflow: hidden;
   transition-duration: 0.5s;
@@ -121,8 +106,6 @@ span.center {
 #messagesContainer:hover {
   height: auto;
   width: 25vw;
-  left: 37vw;
-  top: 30px;
   border-radius: 4px;
 }
 
@@ -133,50 +116,34 @@ span.center {
   color: white;
 }
 
-
 #message {
   opacity: 0;
   transition: display 0.2s;
-  position: relative;  
+/*  position: relative;  */
 }
 
 #messagesContainer:hover #message {
   transition: opacity 0.25s 0.55s;
   opacity: 1;
-  position: relative;
-  left: 0;
+  /*position: relative;
+  left: 0;*/
 }
 
 #healthContainer {
-  display: inline-block;
+  grid-area: 1 / 3 / 2 / 4;
+  /*display: inline-block;*/
   width: 2%;
   height: 80px;
-  left: 62%;
-  top: 1%;
 }
 
 #health {
   perspective: 800px;
-  position: absolute;
+  /*position: absolute;*/
   width: 100%;
   height: 100%;
   background: transparent;
   font-size: 100%;
   transition: transform 1.3s;
-}
-
-#controlsContainer {
-  left: 400px;
-  top: -774px;
-  height: 100px;
-  width: 140px;
-}
-
-#devControls {
-  left: 778px;
-  top: -420px;
-  height: 100px;
-  width: 140px;
 }
 
 .grid-container {
@@ -203,27 +170,6 @@ span.center {
   transform: translate3d(80px, 16px, 10px)
 }
 
-#backButton {
-  color: white;
-  position: relative;
-  height:20px;
-  width:80px;
-  background-color: rgb(0,0,0,0.4);
-  border-radius: 4px;
-  text-align: center;
-  padding: 10px;
-  bottom:640px;
-  left:100px;
-  opacity:0;
-}
-#backButton:hover{
-  background-color: var(--lighter-orange);
-  box-shadow: 0px 0px 4px rgb(0 0 0 / 30%);
-}
-#backButton:active{
-  background-color: var(--darker-orange);
-  box-shadow: inset 0px 0px 4px rgb(0 0 0 / 30%);
-}
 .controlButton {
   color: white;
   position: relative;
