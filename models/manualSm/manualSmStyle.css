@@ -1,25 +1,140 @@
-/* .cub-1 styles */
-.cub-1 {
+
+#manualSm01.c3dContainer {
+  transition-duration: 2s;
+}
+#manualSm01.c3dContainer.moveBackward {
+  transform: translate3d(471px, 91px, 322px) rotateX(90deg) rotateY(0deg) rotateZ(270deg) scaleX(0.18) scaleZ(0.18) scaleY(0.18);
+}
+
+#manualSm01.c3dContainer.moveForward {
+  transform: translate3d(512px, 40px, 322px) rotateX(90deg) rotateY(49deg) rotateZ(270deg) scaleX(0.18) scaleZ(0.18) scaleY(0.18);
+}
+
+.manual-Fr {
+  transform-origin: 0% !important;
+  animation-duration: 2s;
+  animation-iteration-count: 1;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+}
+.manual-Fr.opened {animation-name: openBook;}
+.manual-Fr.closed {animation-name: closeBook;}
+
+@keyframes openBook {
+  0% {
+    transform: translate3d(0px, 0px, 16px) rotateY(0deg);
+  }
+  50% {
+    transform: translate3d(-6px, 0px, 8px) rotateY(-85deg);
+  }
+  100% {
+    transform: translate3d(0px, 0px, 0px) rotateX(0deg) rotateY(-170deg) rotateZ(0deg);
+  }
+}
+
+@keyframes closeBook {
+  0% {
+    transform: translate3d(0px, 0px, 0px) rotateX(0deg) rotateY(-170deg) rotateZ(0deg);
+  }
+  50% {
+    transform: translate3d(-6px, 0px, 8px) rotateY(-85deg);
+  }
+  100% {
+    transform: translate3d(0px, 0px, 16px) rotateY(0deg);
+  }
+}
+
+/* .manual-Bk styles */
+.manual-Bk {
   transform:translate3D(0em, 0em, 0em) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
   opacity:1;
-  width:4em;
-  height:0.1em;
-  margin:-0.05em 0 0 -2em;
+  width:20em;
+  height:25.75em;
+  margin:-12.875em 0 0 -10em;
 }
-.cub-1 .ft {
-  transform:translateZ(2.5em);
+.manual-Bk .ft {
+  transform:translateZ(0.5em);
 }
-.cub-1 .bk {
-  transform:translateZ(-2.5em) rotateY(180deg);
+.manual-Bk .bk {
+  transform:translateZ(-0.5em) rotateY(180deg);
 }
-.cub-1 .rt, .cub-1 .lt {
-  width:5em;
-  height:0.1em;
+.manual-Bk .rt, .manual-Bk .lt {
+  width:1em;
+  height:25.75em;
 }
-.cub-1 .tp, .cub-1 .bm {
-  width:4em;
-  height:5em;
+.manual-Bk .tp, .manual-Bk .bm {
+  width:20em;
+  height:1em;
 }
-.cub-1 .face {
-  background-color:#FFFFFF;
+.manual-Bk .tp {
+  background: url(https://cdn.jsdelivr.net/gh/tnharvey/3DCSSTrainingRoom@scenarioStart/models/manualSm/ManualOpen-Atlas.png) -672px -412px;
+}
+.manual-Bk .bm {
+  background: url(https://cdn.jsdelivr.net/gh/tnharvey/3DCSSTrainingRoom@scenarioStart/models/manualSm/ManualOpen-Atlas.png) -992px -412px;
+}
+.manual-Bk .ft {
+  background: url(https://cdn.jsdelivr.net/gh/tnharvey/3DCSSTrainingRoom@scenarioStart/models/manualSm/ManualOpen-Atlas.png) -672px 0px;
+}
+.manual-Bk .bk {
+  background: url(https://cdn.jsdelivr.net/gh/tnharvey/3DCSSTrainingRoom@scenarioStart/models/manualSm/ManualOpen-Atlas.png) -992px 0px;
+}
+.manual-Bk .lt {
+  background: url(https://cdn.jsdelivr.net/gh/tnharvey/3DCSSTrainingRoom@scenarioStart/models/manualSm/ManualOpen-Atlas.png) -656px 0px;
+}
+.manual-Bk .rt {
+  background: url(https://cdn.jsdelivr.net/gh/tnharvey/3DCSSTrainingRoom@scenarioStart/models/manualSm/ManualOpen-Atlas.png) -640px 0px;
+}
+.manual-Bk .face {
+  background-color:#AAAAAA;
+}
+
+.manual-Fr .bk {
+  background-color: white !important;
+}
+
+.manual-Bk .ft {
+  background-color: white !important;
+}
+/* .manual-Fr styles */
+.manual-Fr {
+  transform:translate3D(0em, 0em, 1em) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+  opacity:1;
+  width:20em;
+  height:25.75em;
+  margin:-12.875em 0 0 -10em;
+}
+.manual-Fr .ft {
+  transform:translateZ(0.5em);
+}
+.manual-Fr .bk {
+  transform:translateZ(-0.5em) rotateY(180deg);
+}
+.manual-Fr .rt, .manual-Fr .lt {
+  width:1em;
+  height:25.75em;
+}
+.manual-Fr .tp, .manual-Fr .bm {
+  width:20em;
+  height:1em;
+}
+.manual-Fr .tp {
+  background: url(https://cdn.jsdelivr.net/gh/tnharvey/3DCSSTrainingRoom@scenarioStart/models/manualSm/ManualOpen-Atlas.png) -320px -412px;
+}
+.manual-Fr .bm {
+  background: url(https://cdn.jsdelivr.net/gh/tnharvey/3DCSSTrainingRoom@scenarioStart/models/manualSm/ManualOpen-Atlas.png) 0px -412px;
+}
+.manual-Fr .ft {
+  background: url(https://cdn.jsdelivr.net/gh/tnharvey/3DCSSTrainingRoom@scenarioStart/models/manualSm/ManualOpen-Atlas.png) 0px 0px;
+}
+.manual-Fr .bk {
+  background: url(https://cdn.jsdelivr.net/gh/tnharvey/3DCSSTrainingRoom@scenarioStart/models/manualSm/ManualOpen-Atlas.png) -320px 0px;
+}
+.manual-Fr .lt {
+  background: url(https://cdn.jsdelivr.net/gh/tnharvey/3DCSSTrainingRoom@scenarioStart/models/manualSm/ManualOpen-Atlas.png) 32px 0px;
+}
+.manual-Fr .rt {
+  background: url(https://cdn.jsdelivr.net/gh/tnharvey/3DCSSTrainingRoom@scenarioStart/models/manualSm/ManualOpen-Atlas.png) 16px 0px;
+}
+.manual-Fr .face {
+  background-color:#AAAAAA;
 }

@@ -1,0 +1,200 @@
+/* .keyboardBase styles */
+.keyboardBase {
+  transform:translate3D(0em, 0em, 0em) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+  opacity:1;
+  width:14em;
+  height:0.75em;
+  margin:-0.375em 0 0 -7em;
+}
+.keyboardBase .ft {
+  transform:translateZ(2em);
+}
+.keyboardBase .bk {
+  transform:translateZ(-2em) rotateY(180deg);
+}
+.keyboardBase .rt, .keyboardBase .lt {
+  width:4em;
+  height:0.75em;
+}
+.keyboardBase .tp, .keyboardBase .bm {
+  width:14em;
+  height:4em;
+}
+.keyboardBase .face {
+  background-color:#505050;
+}
+/* .keyboardNumPad styles */
+.keyboardNumPad {
+  transform:translate3D(5.7274247491638794em, -0.3em, 0.4749163879598661em) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+  opacity:1;
+  width:1.9em;
+  height:0.75em;
+  margin:-0.375em 0 0 -0.95em;
+}
+.keyboardNumPad .ft {
+  transform:translateZ(1.285em);
+}
+.keyboardNumPad .bk {
+  transform:translateZ(-1.285em) rotateY(180deg);
+}
+.keyboardNumPad .rt, .keyboardNumPad .lt {
+  width:2.57em;
+  height:0.75em;
+}
+.keyboardNumPad .tp, .keyboardNumPad .bm {
+  width:1.9em;
+  height:2.57em;
+}
+.keyboardNumPad .face {
+  background-color:#949494;
+}
+/* .keyboardLetters styles */
+.keyboardLetters {
+  transform:translate3D(-2.063545150501673em, -0.3em, 0.4364548494983277em) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+  opacity:1;
+  width:9em;
+  height:0.75em;
+  margin:-0.375em 0 0 -4.5em;
+}
+.keyboardLetters .ft {
+  transform:translateZ(1.285em);
+}
+.keyboardLetters .bk {
+  transform:translateZ(-1.285em) rotateY(180deg);
+}
+.keyboardLetters .rt, .keyboardLetters .lt {
+  width:2.57em;
+  height:0.75em;
+}
+.keyboardLetters .tp, .keyboardLetters .bm {
+  width:9em;
+  height:2.57em;
+}
+.keyboardLetters .face {
+  background-color:#949494;
+}
+/* .keyboardFKeys styles */
+.keyboardFKeys {
+  transform:translate3D(-2.0250836120401337em, -0.3em, -1.386153846153846em) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+  opacity:1;
+  width:9em;
+  height:0.75em;
+  margin:-0.375em 0 0 -4.5em;
+}
+.keyboardFKeys .ft {
+  transform:translateZ(0.336em);
+}
+.keyboardFKeys .bk {
+  transform:translateZ(-0.336em) rotateY(180deg);
+}
+.keyboardFKeys .rt, .keyboardFKeys .lt {
+  width:0.672em;
+  height:0.75em;
+}
+.keyboardFKeys .tp, .keyboardFKeys .bm {
+  width:9em;
+  height:0.672em;
+}
+.keyboardFKeys .face {
+  background-color:#949494;
+}
+/* .keyboardLockKeys styles */
+.keyboardLockKeys {
+  transform:translate3D(3.663879598662207em, -0.3em, -1.3871538461538462em) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+  opacity:1;
+  width:1.9em;
+  height:0.75em;
+  margin:-0.375em 0 0 -0.95em;
+}
+.keyboardLockKeys .ft {
+  transform:translateZ(0.336em);
+}
+.keyboardLockKeys .bk {
+  transform:translateZ(-0.336em) rotateY(180deg);
+}
+.keyboardLockKeys .rt, .keyboardLockKeys .lt {
+  width:0.672em;
+  height:0.75em;
+}
+.keyboardLockKeys .tp, .keyboardLockKeys .bm {
+  width:1.9em;
+  height:0.672em;
+}
+.keyboardLockKeys .face {
+  background-color:#949494;
+}
+/* .keyboardArrows styles */
+.keyboardArrows {
+  transform:translate3D(3.6254180602006687em, -0.3em, 1.4088327759197325em) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+  opacity:1;
+  width:1.9em;
+  height:0.75em;
+  margin:-0.375em 0 0 -0.95em;
+}
+.keyboardArrows .ft {
+  transform:translateZ(0.336em);
+}
+.keyboardArrows .bk {
+  transform:translateZ(-0.336em) rotateY(180deg);
+}
+.keyboardArrows .rt, .keyboardArrows .lt {
+  width:0.672em;
+  height:0.75em;
+}
+.keyboardArrows .tp, .keyboardArrows .bm {
+  width:1.9em;
+  height:0.672em;
+}
+.keyboardArrows .face {
+  background-color:#949494;
+}
+/* .keyboardPagingKeys styles */
+.keyboardPagingKeys {
+  transform:translate3D(3.663879598662208em, -0.3em, -0.3018695652173907em) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+  opacity:1;
+  width:1.9em;
+  height:0.75em;
+  margin:-0.375em 0 0 -0.95em;
+}
+.keyboardPagingKeys .ft {
+  transform:translateZ(0.5284280936454849em);
+}
+.keyboardPagingKeys .bk {
+  transform:translateZ(-0.5284280936454849em) rotateY(180deg);
+}
+.keyboardPagingKeys .rt, .keyboardPagingKeys .lt {
+  width:1.0568561872909699em;
+  height:0.75em;
+}
+.keyboardPagingKeys .tp, .keyboardPagingKeys .bm {
+  width:1.9em;
+  height:1.0568561872909699em;
+}
+.keyboardPagingKeys .face {
+  background-color:#949494;
+}
+/* .keyboardUpArrow styles */
+.keyboardUpArrow {
+  transform:translate3D(3.6254180602006683em, -0.3em, 0.7717090301003346em) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+  opacity:1;
+  width:0.7679765886287591em;
+  height:0.75em;
+  margin:-0.375em 0 0 -0.38398829431437953em;
+}
+.keyboardUpArrow .ft {
+  transform:translateZ(0.336em);
+}
+.keyboardUpArrow .bk {
+  transform:translateZ(-0.336em) rotateY(180deg);
+}
+.keyboardUpArrow .rt, .keyboardUpArrow .lt {
+  width:0.672em;
+  height:0.75em;
+}
+.keyboardUpArrow .tp, .keyboardUpArrow .bm {
+  width:0.7679765886287591em;
+  height:0.672em;
+}
+.keyboardUpArrow .face {
+  background-color:#949494;
+}

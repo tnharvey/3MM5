@@ -3,21 +3,25 @@
         <link rel="stylesheet" href="style.css" />
         <script src="script.js" ></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" ></script>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css" />
     </head>
     <body>
       <div id="appContainer">
         <div class="container">
-          <div id="scene1" class="scene face-front">
+          <div id="scene1" class="scene face-right">
             <div class="my-cube myCube-show">
               <div class="myCube-bt myCube-top"></div>
               <div class="myCube-bt myCube-bottom"></div>
-              <div class="myCube-face myCube-left"><img class="interactive" style="margin: auto; width:10%; height: auto;" src="https://cdn.jsdelivr.net/gh/tnharvey/3DCSSTrainingRoom/imgs/floatingWallObject.jpg" onclick="showPopup('popupA');"></div>
+              <div class="myCube-face myCube-left"></div>
               <div class="myCube-face myCube-right"></div>
               <div class="myCube-face myCube-front"></div>
               <div class="myCube-face myCube-back"></div>
             </div>
             <div id="bertha-manual" class="img-container interactive" onclick="showPopup('popup-bertha-manual');">
               <img class="img-card-3d" src="imgs/Bertha-M-138-Manual.jpg">
+            </div>
+            <div id="zombie-hand" class="img-container">
+              <img class="img-card-3d" src="imgs/zombie-hand-on-glass.gif">
             </div>
             <div id="cards" class="popup3d-Container">
               <div id="equipment-card" data-target-dir="face-equipment" class="popup3d interactive">
@@ -29,97 +33,146 @@
               <div id="resources-card" data-target-dir="face-resources" class="popup3d interactive">
                 Resources
               </div>
-              <div id="references-card" data-target-dir="face-references" class="popup3d interactive">
+              <div id="forms-card" data-target-dir="face-forms" class="popup3d interactive">
                 Forms
               </div>
             </div>
           </div>
         </div>
         <div id="popupContainer">
-          <div id="popupA" class="popup interactive">
-            <div class="buttonChoice close" onclick="hidePopup('popupA');">X</div>
-            <div class="gridContainer">
-            <div class="buttonChoice gridItem2 btn-part-control" onclick="updateScenario(1,-1);">Fail P1</div>
-            <div class="buttonChoice gridItem2 btn-part-control" onclick="updateScenario(1,1);">Complete P1</div>
-            <div class="buttonChoice gridItem2 btn-part-control" onclick="updateScenario(2,-1);">Fail P2</div>
-            <div class="buttonChoice gridItem2 btn-part-control" onclick="updateScenario(2,1);">Complete P2</div>
-            <div class="buttonChoice gridItem2 btn-part-control" onclick="updateScenario(3,-1);">Fail P3</div>
-            <div class="buttonChoice gridItem2 btn-part-control" onclick="updateScenario(3,1);">Complete P3</div>
-            <div class="buttonChoice gridItem2 btn-scenario-control" onclick="resetScenario();">Reset Scenarios</div>
-            <div class="buttonChoice gridItem2 btn-scenario-control" onclick="endScenario();">Complete Scenario</div>
-            </div>
+          <div id="popupIntro" class="popup intro"></div>
+          <div id="popupHelp" class="popup" onclick="hideCurrentPopup();">
+            <span>insert help image</span>
+            <div class="buttonChoice respond-yes" onclick="relaunchIntro();">Click to relaunch the Introduction</div>
           </div>
-          <div id="popupB" class="popup" onclick="hidePopup('popupB');">
-            <div class="buttonChoice close" onclick="hidePopup('popupB');">X</div>
-            <img class="interactive" src="https://cdn.jsdelivr.net/gh/tnharvey/3DCSSTrainingRoom/imgs/floatingWallObject.jpg">
-          </div>
-          <div id="popupC" class="popup">
-            <div class="buttonChoice close" onclick="hidePopup('popupC');removeContent('popTest');">X</div>
-          </div>
-          <div id="popupD" class="popup">
-            <div class="buttonChoice close" onclick="hidePopup('popupD');">X</div>
-            <div class="grid-1col">
-              <span>Are you ready to start the scenario?</span>
-              <div class="gridContainer">
-                <div id="cancelStart" class="buttonChoice gridItem2 btn-cancel" data-target-dir="face-front" onclick="hidePopup('popupD');">No, wait!</div>
-                <div class="buttonChoice gridItem2 btn-confirm" onclick="startScenario();">Yes</div>
+          <div id="popupProcessMap" class="popup">
+            <div class="buttonChoice close" onclick="hideCurrentPopup();">X</div>
+            <div id="processMap" class="gridParent">
+              <div class="pmap-icon1">
+                <img class="process-icon-img" src="imgs/icon-01.png">
+                <span class="stepInfo">Receive Request</span>
               </div>
-              <span>It looks like you still have a couple more areas to complete before starting the scenario:</span>
-              <ul id="training-checklist">
-                <li class="complete">References</li>
-                <li class="incomplete">Resources</li>
-                <li class="incomplete">Computer</li>
-              </ul>
+              <div class="pmap-icon2">
+                <img class="process-arrow-img" src="imgs/arrow.png">
+              </div>
+              <div class="pmap-icon3">
+                <img class="process-icon-img" src="imgs/icon-02.png">
+                <span class="stepInfo">Review Request</span>
+              </div>
+              <div class="pmap-icon4">
+                <img class="process-arrow-img" src="imgs/arrow.png">
+              </div>
+              <div class="pmap-icon5">
+                <img class="process-icon-img" src="imgs/icon-03.png">
+                <span class="stepInfo">Calculate MEL</span>
+              </div>
+              <div class="pmap-icon6">
+                <img class="process-arrow-img" src="imgs/arrow.png">
+              </div>
+              <div class="pmap-icon7">
+                <img class="process-icon-img wide" src="imgs/icon-04.png">
+                <span class="stepInfo">Visual Inspection</span>
+              </div>
+              <div class="pmap-icon8">
+                <img class="process-arrow-img down" src="imgs/arrow.png">
+              </div>
+              <div class="pmap-icon9">
+                <img class="process-icon-img" src="imgs/icon-05.png">
+                <span class="stepInfo">Evaluate Cost vs MEL</span>
+              </div>
+              <div class="pmap-icon10">
+                <img class="process-arrow-img left" src="imgs/arrow.png">
+              </div>
+              <div class="pmap-icon11">
+                <img class="process-icon-img" src="imgs/icon-06.png">
+                <span class="stepInfo">Repair or Replace</span>
+              </div>
+              <div class="pmap-icon12">
+                <img class="process-arrow-img left" src="imgs/arrow.png">
+              </div>
+              <div class="pmap-icon13">
+                <img class="process-icon-img wide" src="imgs/icon-07.png">
+                <span class="stepInfo">Check Unit</span>
+              </div>
+              <div class="pmap-icon14">
+                <img class="process-arrow-img left" src="imgs/arrow.png">
+              </div>
+              <div class="pmap-icon15">
+                <img class="process-icon-img" src="imgs/icon-08.png">
+                <span class="stepInfo">Unit Disposition</span>
+              </div>
+              <div class="pmap-icon16">
+                <img class="process-arrow-img downR" src="imgs/arrow.png">
+              </div>
+              <div class="pmap-icon17">
+                <img class="process-icon-img wide" src="imgs/icon-09.png">
+                <span class="stepInfo">Test</span>
+              </div>
+              <div class="pmap-icon18">
+                <img class="process-arrow-img" src="imgs/arrow.png">
+              </div>
+              <div class="pmap-icon19">
+                <img class="process-icon-img" src="imgs/icon-10.png">
+                <span class="stepInfo">Decommission?</span>
+              </div>
+              <div class="pmap-icon20">
+                <img class="process-arrow-img" src="imgs/arrow.png">
+              </div>
+              <div class="pmap-icon21">
+                <img class="process-icon-img" src="imgs/icon-11.png">
+                <span class="stepInfo">Unit Decisions</span>
+              </div>
             </div>
+            <span id="process-map-instructions">* Hover over each step in the process for more information. The highlighted step shows the last step you took.</span>
           </div>
-          <div id="popup-bertha-manual" class="popup" onclick="hidePopup('popup-bertha-manual');">
-            <div class="buttonChoice close" onclick="hidePopup('popupB');updateContentView('resources');">X</div>
+          <div id="popup-bertha-manual" class="popup popupGeneric">
+            <div class="buttonChoice close" onclick="hidePopup('popup-bertha-manual');">X</div>
             <iframe src="MAI%20Bertha%20M138%20User%20manual.pdf#view=FitH&toolbar=0" height="94%" width="760px">
             </iframe>
           </div>
-          <div id="browser-error" class="popup">
+          <div id="popupGeneric" class="popup popupGeneric"></div>
+          <div id="popupChallenge" class="popup challenges"></div>
+          <div id="popupOption01" class="popup option"></div>
+          <div id="popupOption02" class="popup option"></div>
+          <div id="popupOption03" class="popup option"></div>
+          <div id="popupOption04" class="popup option"></div>
+          <div id="popupFeedback01" class="popup feedback"></div>
+          <div id="popupFeedback02" class="popup feedback"></div>
+          <div id="popupFeedback03" class="popup feedback"></div>
+          <div id="popupFeedback04" class="popup feedback"></div>
+          <div id="popupGameOver01" class="popup feedback">
+            
+          </div>
+          <div id="popupGameOver02" class="popup challenges">
+            
+          </div>
+          <div id="browser-error" class="popup challenges">
             <span style="color:white; font-size:1.5em;">This scenario will not run properly due to severe compatibility issues with your browser (Firefox). Please reopen the scenario in a compatible browser (i.e., Chrome, Edge, Safari).</span>
           </div>
         </div>
         <div id="dashContainer">
-          <div id="mapContainer" class="dashItem" style="visibility:hidden;">
-            <img id="mapIcon" src="https://cdn.jsdelivr.net/gh/tnharvey/3DCSSTrainingRoom/imgs/flowchart-icon.png" onclick="showPopup('popupB')" class="interactive">
+          <div id="helpContainer" class="dashItem">
+            <div class="btn expand-on-hover red">
+              <i class="bi bi-info-lg icon info"></i>
+              <i class="bi bi-diagram-3-fill text icon" onclick="showPopup('popupProcessMap')" ></i><i class="bi bi-question-lg icon text2" onclick="showPopup('popupHelp')" ></i>
+            </div>
           </div>
           <div id="healthContainer" class="dashItem" style="visibility:hidden;">
             <div id="scenarioScore" style="text-align: center; padding-left: 75px;" class="dev delete">
               3
             </div>
             <div class="containerSm">
-              <div id="health" class="sceneSm">
+              <div id="health" class="sceneSm" onclick="restartAnims();">
               </div>
             </div>
           </div>
           <div id="messagesContainer" class="dashItem">
+            <span id="messageLabel">Challenge 1 of 5</span>
             <span id="message"><b>Next Step:</b><br>Review the resources on the table to the left.</span>
           </div>
           <div id="backButton" data-target-dir="face-front" class="interactive">Back</div>
           <div id="leftButton" onclick="userAction('ArrowLeft')" class="controlButton interactive"><span>&#x25C0;</span></div>
           <div id="rightButton" onclick="userAction('ArrowRight')" class="controlButton interactive"><span>&#x25B6;</span></div>
-          <div id="controlsContainer" class="dashItem delete">
-              <div class="grid-container">
-                <div class="grid-item empty"></div>
-                <div id="ArrowUp" onclick="userAction('ArrowUp')" class="grid-item button interactive">&uarr;</div>
-                <div class="grid-item empty"></div>  
-                <div id="ArrowLeft" onclick="userAction('ArrowLeft')" class="grid-item button interactive">&larr;</div>
-                <div id="ArrowDown" onclick="userAction('ArrowDown')" class="grid-item button interactive">&darr;</div>
-                <div id="ArrowRight" onclick="userAction('ArrowRight')" class="grid-item button interactive">&rarr;</div>    
-              </div>
-          </div>
-          <div id="devControls" class="dev delete">
-            <div class="grid-container">
-              <div id="rotateLeft" onclick="userAction('rotLeft')" class="grid-item button interactive">&olarr;</div>
-              <div id="ArrowUp" onclick="userAction('ArrowUp')" class="grid-item button interactive">&uarr;</div>
-              <div id="rotateRight" onclick="userAction('ArrowRight')" class="grid-item button interactive">&orarr;</div>
-              <div id="ArrowLeft" onclick="userAction('ArrowLeft')" class="grid-item button interactive">&larr;</div>
-              <div id="ArrowDown" onclick="userAction('ArrowDown')" class="grid-item button interactive">&darr;</div>
-              <div id="ArrowRight" onclick="userAction('ArrowRight')" class="grid-item button interactive">&rarr;</div>    
-            </div>
-          </div>
         </div>
       </div>
     </body>

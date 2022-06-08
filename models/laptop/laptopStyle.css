@@ -1,0 +1,230 @@
+/* .laptopBottom styles */
+.laptopBottom {
+  transform:translate3D(0em, 0em, 0em) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+  opacity:1;
+  width:15em;
+  height:0.3em;
+  margin:-0.15em 0 0 -7.5em;
+}
+.laptopBottom .ft {
+  transform:translateZ(5em);
+}
+.laptopBottom .bk {
+  transform:translateZ(-5em) rotateY(180deg);
+}
+.laptopBottom .rt, .laptopBottom .lt {
+  width:10em;
+  height:0.3em;
+}
+.laptopBottom .tp, .laptopBottom .bm {
+  width:15em;
+  height:10em;
+}
+.laptopBottom .tp {
+  background: url(https://cdn.jsdelivr.net/gh/tnharvey/3DCSSTrainingRoom@scenarioStart/models/laptop/Laptop-Atlas_v2.png) 0px -168px;
+}
+.laptopBottom .bm {
+  background: url(https://cdn.jsdelivr.net/gh/tnharvey/3DCSSTrainingRoom@scenarioStart/models/laptop/Laptop-Atlas_v2.png) -241px -168px;
+}
+.laptopBottom .lt {
+  background: url(https://cdn.jsdelivr.net/gh/tnharvey/3DCSSTrainingRoom@scenarioStart/models/laptop/Laptop-Atlas_v2.png) 0px 5px;
+}
+.laptopBottom .rt {
+  background: url(https://cdn.jsdelivr.net/gh/tnharvey/3DCSSTrainingRoom@scenarioStart/models/laptop/Laptop-Atlas_v2.png) 0px 10px;
+}
+.laptopBottom .ft {
+  background: url(https://cdn.jsdelivr.net/gh/tnharvey/3DCSSTrainingRoom@scenarioStart/models/laptop/Laptop-Atlas_v2.png) 0px -329px;
+}
+.laptopBottom .bk {
+  background: url(https://cdn.jsdelivr.net/gh/tnharvey/3DCSSTrainingRoom@scenarioStart/models/laptop/Laptop-Atlas_v2.png) -241px -329px;
+}
+.laptopBottom .cr .side {
+  background: url(https://cdn.jsdelivr.net/gh/tnharvey/3DCSSTrainingRoom@scenarioStart/models/laptop/Laptop-Atlas_v2.png) 0px -168px;
+}
+.laptopBottom .face {
+  background-color:#969696;
+}
+.laptopBottom .ft {
+  width:14.5em;
+  margin-left:0.25em;
+}
+.laptopBottom .bk {
+  width:14.5em;
+  margin-left:-0.25em;
+}
+.laptopBottom .rt, .laptopBottom .lt {
+  width:9.5em;
+}
+.laptopBottom .tp, .laptopBottom .bm, .laptopBottom .tp .photon-shader, .laptopBottom .bm .photon-shader {
+  border-radius:0.25em;
+}
+.laptopBottom .cr {
+  width:0.25em;
+  left:0.125em;
+}
+.laptopBottom .cr-0 {
+  transform: translate3D(14.5em, 0, 4.75em);
+}
+.laptopBottom .cr-1 {
+  transform: translate3D(14.5em, 0, -4.75em);
+}
+.laptopBottom .cr-2 {
+  transform: translate3D(0, 0, -4.75em);
+}
+.laptopBottom .cr-3 {
+  transform: translate3D(0, 0, 4.75em);
+}
+.laptopBottom .cr-0 .s0 {
+  transform: rotateY(15deg) translate3D(-50%, 0, 0.225em);
+}
+.laptopBottom .cr-0 .s1 {
+  transform: rotateY(45deg) translate3D(-50%, 0, 0.225em);
+}
+.laptopBottom .cr-0 .s2 {
+  transform: rotateY(75deg) translate3D(-50%, 0, 0.225em);
+}
+.laptopBottom .cr-1 .s0 {
+  transform: rotateY(105deg) translate3D(-50%, 0, 0.225em);
+}
+.laptopBottom .cr-1 .s1 {
+  transform: rotateY(135deg) translate3D(-50%, 0, 0.225em);
+}
+.laptopBottom .cr-1 .s2 {
+  transform: rotateY(165deg) translate3D(-50%, 0, 0.225em);
+}
+.laptopBottom .cr-2 .s0 {
+  transform: rotateY(195deg) translate3D(-50%, 0, 0.225em);
+}
+.laptopBottom .cr-2 .s1 {
+  transform: rotateY(225deg) translate3D(-50%, 0, 0.225em);
+}
+.laptopBottom .cr-2 .s2 {
+  transform: rotateY(255deg) translate3D(-50%, 0, 0.225em);
+}
+.laptopBottom .cr-3 .s0 {
+  transform: rotateY(285deg) translate3D(-50%, 0, 0.225em);
+}
+.laptopBottom .cr-3 .s1 {
+  transform: rotateY(315deg) translate3D(-50%, 0, 0.225em);
+}
+.laptopBottom .cr-3 .s2 {
+  transform: rotateY(345deg) translate3D(-50%, 0, 0.225em);
+}
+.laptopBottom .side {
+  width:0.15897459621556134em;
+}
+/* .laptopTop styles */
+.laptopTop {
+  transform:translate3D(0em, -0.23076923076923084em, 0em) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+  opacity:1;
+  width:15em;
+  height:0.15em;
+  margin:-0.075em 0 0 -7.5em;
+}
+.laptopTop .ft {
+  transform:translateZ(5em);
+}
+.laptopTop .bk {
+  transform:translateZ(-5em) rotateY(180deg);
+}
+.laptopTop .rt, .laptopTop .lt {
+  width:10em;
+  height:0.15em;
+}
+.laptopTop .tp, .laptopTop .bm {
+  width:15em;
+  height:10em;
+}
+.laptopTop .face {
+  background-color:#c9c9c9;
+}
+.laptopTop .ft {
+  width:14.5em;
+  margin-left:0.25em;
+}
+.laptopTop .bk {
+  width:14.5em;
+  margin-left:-0.25em;
+}
+.laptopTop .rt, .laptopTop .lt {
+  width:9.5em;
+}
+.laptopTop .tp, .laptopTop .bm, .laptopTop .tp .photon-shader, .laptopTop .bm .photon-shader {
+  border-radius:0.25em;
+}
+.laptopTop .cr {
+  width:0.25em;
+  left:0.125em;
+}
+.laptopTop .tp {
+  background: url(https://cdn.jsdelivr.net/gh/tnharvey/3DCSSTrainingRoom@scenarioStart/models/laptop/Laptop-Atlas_v2.png) 0px 0px;
+}
+.laptopTop .bm {
+  background: url(https://cdn.jsdelivr.net/gh/tnharvey/3DCSSTrainingRoom@scenarioStart/models/laptop/Laptop-Atlas_v2.png) -240px 0px;
+}
+.laptopTop .lt {
+  background: url(https://cdn.jsdelivr.net/gh/tnharvey/3DCSSTrainingRoom@scenarioStart/models/laptop/Laptop-Atlas_v2.png) 0px -166px;
+}
+.laptopTop .rt {
+  background: url(https://cdn.jsdelivr.net/gh/tnharvey/3DCSSTrainingRoom@scenarioStart/models/laptop/Laptop-Atlas_v2.png) 0px -163px;
+}
+.laptopTop .ft {
+  background: url(https://cdn.jsdelivr.net/gh/tnharvey/3DCSSTrainingRoom@scenarioStart/models/laptop/Laptop-Atlas_v2.png) 0px -160px;
+}
+.laptopTop .bk {
+  background: url(https://cdn.jsdelivr.net/gh/tnharvey/3DCSSTrainingRoom@scenarioStart/models/laptop/Laptop-Atlas_v2.png) -240px -160px;
+}
+.laptopTop .cr .side {
+  background: url(https://cdn.jsdelivr.net/gh/tnharvey/3DCSSTrainingRoom@scenarioStart/models/laptop/Laptop-Atlas_v2.png) 0px 0px;
+}
+.laptopTop .cr-0 {
+  transform: translate3D(14.5em, 0, 4.75em);
+}
+.laptopTop .cr-1 {
+  transform: translate3D(14.5em, 0, -4.75em);
+}
+.laptopTop .cr-2 {
+  transform: translate3D(0, 0, -4.75em);
+}
+.laptopTop .cr-3 {
+  transform: translate3D(0, 0, 4.75em);
+}
+.laptopTop .cr-0 .s0 {
+  transform: rotateY(15deg) translate3D(-50%, 0, 0.225em);
+}
+.laptopTop .cr-0 .s1 {
+  transform: rotateY(45deg) translate3D(-50%, 0, 0.225em);
+}
+.laptopTop .cr-0 .s2 {
+  transform: rotateY(75deg) translate3D(-50%, 0, 0.225em);
+}
+.laptopTop .cr-1 .s0 {
+  transform: rotateY(105deg) translate3D(-50%, 0, 0.225em);
+}
+.laptopTop .cr-1 .s1 {
+  transform: rotateY(135deg) translate3D(-50%, 0, 0.225em);
+}
+.laptopTop .cr-1 .s2 {
+  transform: rotateY(165deg) translate3D(-50%, 0, 0.225em);
+}
+.laptopTop .cr-2 .s0 {
+  transform: rotateY(195deg) translate3D(-50%, 0, 0.225em);
+}
+.laptopTop .cr-2 .s1 {
+  transform: rotateY(225deg) translate3D(-50%, 0, 0.225em);
+}
+.laptopTop .cr-2 .s2 {
+  transform: rotateY(255deg) translate3D(-50%, 0, 0.225em);
+}
+.laptopTop .cr-3 .s0 {
+  transform: rotateY(285deg) translate3D(-50%, 0, 0.225em);
+}
+.laptopTop .cr-3 .s1 {
+  transform: rotateY(315deg) translate3D(-50%, 0, 0.225em);
+}
+.laptopTop .cr-3 .s2 {
+  transform: rotateY(345deg) translate3D(-50%, 0, 0.225em);
+}
+.laptopTop .side {
+  width:0.15897459621556134em;
+}
