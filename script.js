@@ -394,6 +394,7 @@ function updateHealth() {
 }
 
 /*INTERFACE CONTROL */
+
 function userAction (input) {
 /* Primary user action handler. Checks for type of input as some are currently inline pasing strings.
    Depending on action, triggers/toggles CSS clases or styles to effect 3D movement. */
