@@ -44,12 +44,13 @@ const baseUrl = "";
 //global vars
 var currentChallenge = 1;
 var currentPopup = "";
+var currentOrientation = "face-right";
 var score = 5;
 var resets = 0;
 var started = 0;
 
 // Data Objects
-var activeAreas = {
+const activeAreas = {
   challenge01: {
     resources:0,
     forms:1,
@@ -96,12 +97,54 @@ var choices = {
   challenge05:0,
 };
 var allChoices = {};
-var answers = {
+const answers = {
   challenge01:1,
   challenge02:1,
   challenge03:2,
   challenge04:4,
   challenge05:1,
+};
+const termAnswers = {
+  challenge01:2,
+  challenge02:3,
+  challenge03:3,
+  challenge04:0,
+  challenge05:3,
+};
+const feedbackMessages = {
+  part01: {
+    a1b1: "<span>Excellent decision to review the work request in GCSS-A and to calculate the maintenance expenditure limits along with the visual inspection.</span><br /><span> You are ready to move on to the next step in the process.</span>",
+    a1b2: "<span>Excellent decision to review the work request.</span><br /><span>Remember that you should conduct a visual inspection as well as calculate the MEL before processing the equipment.</span>",
+    a1b3: "<span>Great decision to review the work request in GCSS-A.</span><br /><span>Remember that you should calculate the MEL and conduct a visual inspection before procesing the equipment for repair. By skipping these steps, you could have issues down the line when getting the repair paid for as well as missing documentation.</span>",
+    a2: "<span>Hold your horses.</span><br /><span>Remember to follow the process because if you send the equipment off without completing a visual inspection or determine the MEL you could cost your unit and the Army a lot of money down the line.</span>",
+    a3b1: "<span>These are both excellent decisions, however remember that if you don't review the work request in GCSS-A first this can cause issues with the documentation of the work order.</span>",
+    a3b2: "<span>It is important to conduct the visual inspection and the MEL. You may not necessarily need DA form 2404 if you have access to GCSS-A.</span><br /><span>By not reviewing the work request first in GCSS-A there could be problems down the line with the documentation of the repair.</span>",
+    a3b3: "<span>It is important to conduct a visual inspection of the equipment, however before you send the equipment off repair remember to review the work request in GCSS-A.</span><br /><span>By not having a look at the work order it could cause issues doen the line when documenting the repair.</span>",
+  },
+  part02: {
+    a1b1: "<span>Excellent decision to document the equipment, however remember that before you approve the release of the equipment that you must conduct a function check.</span><br /><span>Also remember that every part of the work request should be entered in GCSS-A.</span>",
+    a1b3: "<span>Wait just a second.</span><br /><span>It is great that you were able to document the equipment in GCSS-A, however remember that you should conduct a function check before releasing the equipment. This is important to do because there could still be potential issues with the equipment that could cost lives.</span>",
+    a1b4: "<span>Excellent decision to document the equipment and to return the equipment back to the customer after conducting a function check.</span><br /><span>Also remember that every part of the work request should be entered in GCSS-A.</span>",
+    a2b1: "<span>Great call to enter the paperwork in GCSS-A and to send the device off for repair.</span><br /><span>Don't forget to conduct a function check before releasing the equipment back to the customer.</span><br /><span>Without conduct the function check, you could potentially send back a piece of equipment that isn't functioning correctly which could malfunction while in the field.</span>",
+    a2b3: "<span>Great call to enter the paperwork into GCSS-A and to send the device off for repair.</span><br /><span>Remember to conduct a function check before releasing the equipment back to the customer.</span>",
+    a2b4: "<span>Great call to enter the paperwork in GCSS-A and to send the device off for repair.</span><br /><span>Fantastic choice to conduct a function check using the manufacturer's manual.</span>",
+    a3: "<span>If you send the equipment immediately off for repair without ensuring that the paperwork is entered in GCSS-A, you could have issues when the equipment is returned for not following the SOP.</span><br /><span>Remember that you manage the repair process and not necessarily conducting the repair.</span>",
+  },
+  part03: {
+    a1: "<span>This is definitely not the correct path to take as your job is to ensure that all medical equipment is functioning properly.</span>",
+    a3: "<span>This is the correct path.</span><br /><span>Fortunately you were able repair the device after conducting the function check.</span><br /><span>It looks like PFC Humble will make a full recovery. Great job!</span>",
+    a4: "<span>You should never release a device to the customer if it presents any type of danger.</span>",
+  },
+};
+const debrief = {
+// 1-0 answers incorrect
+  1:"<br><span>Awesome job! PFC Humble looks like he is going to make it after all. It looks like you really know the repair process flow. You're practically an expert now. From initially receiving the work request all the way to returning the unit to the customer, you've got it down. </span>",
+// Skipping the process, avoiding GCSS-A, or not using SOP
+  2:"<br><span>That was a close call! PFC Humble was just about to turn and you saved him just in time. You have a pretty strong understanding of the process, however there were some points where you wanted to skip ahead. Remember that we have SOPs for a reason. Make sure that you are documenting everything in GCSS-A. Without doing this, you could cost the Army more money and potentially lives. </span>",
+// Sending equipment out too early
+  3:"<br><span>Woah! You really dodged one there. You've got a really good grasp of what needs to happen as you process a work order. Don't forget that to follow every step in the repair process and don't send the equipment either out for repair or back to the customer without completing the process. Sending the equipment out without calculating the MEL, entering information in GCSS-A or giving the device back to the customer before following each step in the process could cost someone their life. </span>",
+// Mix of 2 and 3
+  4:"<br><span>PFC Humble looks drenched in sweat but fortunately still human. You've got a pretty solid understanding of the repair process. There are a few areas that you should be aware of when you are processing a device for repair. Don't forget to follow the SOP, document everything in GCSS-A, and don't send the device back to the customer without conducting a function check. </span>",
 };
 const messages = {
   1:"<br><span>What is the first step in the equipment repair process once you've received a request? Look around the room, pay attention to the areas with a glowing card.</span>",
@@ -111,13 +154,13 @@ const messages = {
   5:"<br><span>There are still a few deficiencies with the equipment. What should you do?</span>",
 };
 const messages02 = {
-  1:"<br><span>(HINT VERSION) What is the first step in the equipment repair process once you've received a request?</span>",
-  2:"<br><span>(HINT VERSION) You need to be timely, economical, and professional. What will help you process the equipment this way?</span>",
-  3:"<br><span>(HINT VERSION) You're able to see that the costs are not going to exceed the MEL. What now?</span>",
-  4:"<br><span>(HINT VERSION) You have received the equipment back. What do you do now?</span>",
-  5:"<br><span>(HINT VERSION) There are still a few deficiencies with the equipment. What should you do?</span>",
+  1:"<br><span>All work requests should be reviewed first in GCSS-A.</span>",
+  2:"<br><span>The next step in the process is to determine the MEL and to conduct a visual inspection of the device.</span>",
+  3:"<br><span>Once you have entered all of the paperwork in GCSS-A, then you can send the equipment off for repair.</span>",
+  4:"<br><span>Once you receive the equipment back, then you should conduct a function check before returning the equipment back to the customer.</span>",
+  5:"<br><span>You should conduct another function check and repair the device. Once this is resolved then you can release the device to the customer.</span>",
 };
-var popups = {
+const popups = {
   chal: {
     loc: "popups/challenges/challenge0",
     id: "challenge0",
@@ -155,6 +198,44 @@ var popups = {
     fName: "index",
   },
 };
+const orientations = {
+  right: {
+    return: "",
+  },
+  left: {
+    return: "",
+  },
+  front: {
+    return: "",
+  },
+  back: {
+    return: "",
+  },
+  rBack: {
+    return: "",
+  },
+  lBack: {
+    return: "",
+  },
+  rLeft: {
+    return: "",
+  },
+  lRight: {
+    return: "",
+  },
+  equipment: {
+    return: "face-front",
+  },
+  computer: {
+    return: "face-right",
+  },
+  forms: {
+    return: "face-right",
+  },
+  resources: {
+    return: "face-left",
+  },
+}
 var heartsState = {
   cubeHeart01: {
     topState: "",
@@ -202,7 +283,7 @@ function updateScenario(){
     
     for (var i=1;i<=4;i++) {
       removeContent(popups.opt.id+i);
-      removeContent(popups.fdbk.id+i);
+      //removeContent(popups.fdbk.id+i);
     }
   }
    loadContent(popups.chal.id+currentChallenge,popups.chal.loc+currentChallenge+"/",popups.chal.target,popups.chal.fName+currentChallenge);
@@ -217,7 +298,7 @@ function updateScenario(){
     }
   
   updateMessages();
-  if (currentChallenge > 1) {
+  if (currentChallenge > 1 && currentPopup != "") {
     hideCurrentPopup();
   }
   cube.addEventListener("transitionend",showPopup(popups.chal.target));
@@ -294,8 +375,14 @@ function checkAnswer(challenge) {
     showPopup(popups.gameOverF.target);
   }
   else {
-    hideCurrentPopup();
-    showPopup(popups.fdbk.target+choices["challenge0"+currentChallenge]);
+    if (choices["challenge0"+challenge] == termAnswers["challenge0"+challenge]) {
+      hideCurrentPopup();
+      showPopup(popups.gameOverF.target);
+    }
+    else {
+      hideCurrentPopup();
+      loadFeedback();
+    }
   }
 }
 
@@ -304,9 +391,8 @@ function resetScenario(){
   removeContent("option01");
   removeContent("option02");
   removeContent("option03");
-  removeContent("feedback01");
-  removeContent("feedback02");
-  removeContent("feedback03");
+  removeContent("option04");
+  
   loadContent (popups.intro.id,popups.intro.loc,popups.intro.target,popups.intro.fName,true);
   
   resets = resets + 1;
@@ -325,6 +411,36 @@ function resetScenario(){
   showPopup("popupIntro");
   updateOrientation("face-right");
   updateHealth();  
+}
+
+function loadFeedback (){
+  // loads customized feedback in the #feedbackText div based on user choices
+  var feedback = document.getElementById("feedbackText");
+
+  if (currentChallenge == 2) {
+    feedback.innerHTML = feedbackMessages.part01["a"+choices.challenge01+"b"+choices.challenge02];
+    showPopup("popupFeedback");
+  }
+  else if (currentChallenge == 4) {
+    feedback.innerHTML = feedbackMessages.part02["a"+choices.challenge03+"b"+choices.challenge04];
+    showPopup("popupFeedback");
+  }
+  else if (currentChallenge == 5) {
+    feedback.innerHTML = feedbackMessages.part03["a"+choices.challenge05];
+    showPopup("popupFeedback");
+  }
+  else {
+    currentChallenge=currentChallenge + 1;
+    var tempOr = currentOrientation.substr(currentOrientation.search("-")+1);
+    if (orientations[tempOr].return=="") {
+      updateOrientation(currentOrientation);
+    }
+    else {
+      updateOrientation(orientations[tempOr].return);
+    }
+    
+    updateScenario();
+  }
 }
 
 function loadResults(){
@@ -509,6 +625,7 @@ function updateOrientation(newOrientation) {
   //var cube = document.querySelector('#scene1');
   cube.classList.remove(findInList(cube.classList,"face-"));
   cube.classList.add(newOrientation);
+  currentOrientation = newOrientation;
   if(newOrientation == "face-front"||newOrientation == "face-right"||newOrientation == "face-left"){
     document.getElementById("cards").style.visibility="visible";
     //document.getElementById("backButton").style.opacity="0";

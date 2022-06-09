@@ -1,8 +1,24 @@
-<div class="grid-1col">
-  <span>Looking for some light reading? Something to snuggle up with, you and a cup of cocoa and a warm blanket?</span>
-  <br />
-  <span>Try the manual for the M-138 Bertha, or maybe the TB MED 750-1?</span>
-  <br />
-  <span style="text-align:center;">Delightful!</span>
+<div class="grid-2col">
+  <div class="grid-1col">
+    <div>
+      <span>Looking for some light reading? Something to snuggle up with, you and a cup of cocoa and a warm blanket?</span>
+      <br />
+      <span>Try the manual for the M-138 Bertha, or maybe the TB MED 750-1?</span>
+      <br />
+      <span style="text-align:center;">Delightful!</span>
+    </div>
+  </div>
+  <div class="responseBtns">
+    <div class="buttonChoice respond-no" onclick="userAction('face-left');">Back</div>
+  </div>
 </div>
-<div class="buttonChoice respond-no" onclick="userAction('face-left');">Back</div>
+
+<div class="grid-2col">
+  <div class="grid-1col">
+    <span>Conduct a visual inspection of the equipment and ensure that the serial numbers are visible?</span>
+  </div>
+  <div class="responseBtns">
+    <div class="buttonChoice respond-no" onclick="userAction('face-front');">No</div>
+    <div class="buttonChoice respond-yes" onclick="updateChoice(3);">Yes</div>
+  </div>
+</div>
