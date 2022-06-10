@@ -293,6 +293,7 @@ span.center {
 
 #popupProcessMap {
   background-color: white;
+  left: 12px;
 }
 
 #processMap {
@@ -304,11 +305,9 @@ span.center {
   align-items: center;
   justify-items: center;
   position: absolute;
-  top: 10px;
-  left: 78px;
-  padding: 20px;
+  top: 48px;
+  left: 98px;
 }
-
 .pmap-icon1 {
   position: relative;  
   grid-area: 1 / 1 / 2 / 2;
@@ -642,12 +641,21 @@ li.incomplete {
   background: rgb(0,0,0,0.6);
   border: 1px solid black;
 }
+#feedbackText h2 {
+  align-self: end;
+}
 .documents{}
 .outro{
   background: var(--darker-orange);
   border: 1px solid black;
 }
 
+#gameOverSuccess {
+  width: 90%;
+}
+#gameOverFail {
+  width: 90%;
+}
 /* 3D element styling */
 
 /* Primary Scene styling */
