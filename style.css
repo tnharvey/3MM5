@@ -266,6 +266,10 @@ span.center {
   margin-right: auto;
 }
 
+.popup.feedback .grid-1col span {
+  padding: 26px;
+}
+
 .grid-2col .grid-1col {
   grid-area: 1 / 1 / 2 / 3;
   align-self: end;
@@ -288,15 +292,15 @@ span.center {
 }
 
 #popupProcessMap {
-  background-color: lightgray;
+  background-color: white;
 }
 
 #processMap {
-  display: grid !important;
-  grid-template-columns: repeat(7, 1fr);
-  grid-template-rows: repeat(5, 80px);
-  grid-column-gap: 10px;
-  grid-row-gap: 10px;
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-column-gap: 20px;
+  grid-row-gap: 40px;
   align-items: center;
   justify-items: center;
   position: absolute;
@@ -306,89 +310,73 @@ span.center {
 }
 
 .pmap-icon1 {
+  position: relative;  
   grid-area: 1 / 1 / 2 / 2;
-  position: relative;
 }
 .pmap-icon2 {
-  grid-area: 1 / 2 / 2 / 3;
-  position: relative;
+  position: relative;  
+  grid-area: 1 / 2 / 2 / 4;
 }
 .pmap-icon3 {
-  grid-area: 1 / 3 / 2 / 4;
-  position: relative;
+  position: relative;  
+  grid-area: 1 / 4 / 2 / 5;
 }
 .pmap-icon4 {
-  grid-area: 1 / 4 / 2 / 5;
-  position: relative;
+  position: relative;  
+  grid-area: 1 / 5 / 2 / 7;
 }
 .pmap-icon5 {
-  grid-area: 1 / 5 / 2 / 6;
-  position: relative;
+  position: relative;  
+  grid-area: 1 / 7 / 2 / 8;
 }
 .pmap-icon6 {
-  grid-area: 1 / 6 / 2 / 7;
-  position: relative;
+  position: relative;  
+  grid-area: 1 / 8 / 3 / 9;
 }
 .pmap-icon7 {
-  grid-area: 1 / 7 / 2 / 8;
-  position: relative;
+  position: relative;  
+  grid-area: 2 / 7 / 3 / 8;
 }
 .pmap-icon8 {
-  grid-area: 2 / 7 / 3 / 8;
-  position: relative;
+  position: relative;  
+  grid-area: 2 / 5 / 3 / 7;
 }
 .pmap-icon9 {
-  grid-area: 3 / 7 / 4 / 8;
-  position: relative;
+  position: relative;  
+  grid-area: 2 / 4 / 3 / 5;
 }
 .pmap-icon10 {
-  grid-area: 3 / 6 / 4 / 7;
-  position: relative;
-}
+  position: relative;  
+  grid-area: 2 / 2 / 3 / 4;
+ }
 .pmap-icon11 {
-  grid-area: 3 / 5 / 4 / 6;
   position: relative;
-}
+  grid-area: 2 / 1 / 3 / 2;
+ }
 .pmap-icon12 {
-  grid-area: 3 / 4 / 4 / 5;
   position: relative;
-}
-.pmap-icon13 {
-  grid-area: 3 / 3 / 4 / 4;
-  position: relative;
-}
-.pmap-icon14 {
-  grid-area: 3 / 2 / 4 / 3;
-  position: relative;
-}
-.pmap-icon15 {
   grid-area: 3 / 1 / 4 / 2;
+ }
+.pmap-icon13 {
   position: relative;
-}
+  grid-area: 3 / 2 / 4 / 3;
+ }
+.pmap-icon14 {
+  position: relative;
+  grid-area: 3 / 3 / 4 / 5;
+ }
+.pmap-icon15 {
+  position: relative;
+  grid-area: 3 / 5 / 4 / 6;
+ }
 .pmap-icon16 {
-  grid-area: 4 / 2 / 5 / 3;
   position: relative;
-}
+  grid-area: 3 / 6 / 4 / 7;
+ }
 .pmap-icon17 {
-  grid-area: 5 / 3 / 6 / 4;
   position: relative;
-}
-.pmap-icon18 {
-  grid-area: 5 / 4 / 6 / 5;
-  position: relative;
-}
-.pmap-icon19 {
-  grid-area: 5 / 5 / 6 / 6;
-  position: relative;
-}
-.pmap-icon20 {
-  grid-area: 5 / 6 / 6 / 7;
-  position: relative;
-}
-.pmap-icon21 {
-  grid-area: 5 / 7 / 6 / 8;
-  position: relative;
-}
+  grid-area: 3 / 7 / 4 / 8;
+ }
 
 /* Interactive element styles (buttons, etc.) */
 .interactive {
@@ -878,7 +866,8 @@ transform: translate3d(707px, 20px, 518px) rotateY(-90deg) rotateZ(39deg);
 
 #process-map-instructions {
   position: absolute;
-  bottom: 36px;
+  bottom: 20px;
+  color: black;
 }
 
 #processMap div .stepInfo {
@@ -1095,12 +1084,12 @@ transform: translate3d(707px, 20px, 518px) rotateY(-90deg) rotateZ(39deg);
 
 @keyframes glow {
     0% {
-		border-color: #929933;
-		box-shadow: 0 0 2px rgba(238,255,0,.4);
+		border-color: #d79942;
+		box-shadow: 0 0 2px rgba(215, 153, 66, 0.4);
     }	
     100% {
-		border-color: #fcff66;
-		box-shadow: 0 0 6px rgba(238,255,0,.8);
+		border-color: #fdff85;
+		box-shadow: 0 0 8px rgba(253, 255, 133, 0.8);
     }
 }
 
@@ -1267,4 +1256,107 @@ transform: translate3d(707px, 20px, 518px) rotateY(-90deg) rotateZ(39deg);
 
 .slide:nth-of-type(1){
   display:block;
+}
+
+/* CSS Arrow Styling */
+.lArrowContainer {
+  padding: 40px;
+  margin: auto;
+  width: 140px;
+}
+.rArrowContainer {
+  padding: 40px;
+  margin: auto;
+  width: 140px;
+  transform: rotate(180deg);
+}
+.dArrowContainer {
+  padding: 40px;
+  margin: auto;
+  width: 140px;
+  transform: rotate(270deg);
+}
+.arrow-icon {
+    transform: translateX(0) translateZ(0);
+}
+.arrow-bar {
+    width: 130px;
+    height: 5px;
+    background-color: var(--lighter-orange);
+    position: absolute;
+    top: 2px;
+    transform: translateZ(0);
+}
+
+.arrow-triangle {
+    border-bottom: solid 6px transparent;
+    border-right: solid 6px transparent;
+    border-left: solid 6px var(--lighter-orange);
+    border-top: solid 6px var(--lighter-orange);
+    transform: rotate(-45deg) translateX(-6px);
+    transform-origin: calc(50% - 6px) 0;
+    width: 0;
+    height: 0;
+}
+
+/* Curved Arrow */
+
+/* Arrow */
+.curvedArrow {
+    position: relative;
+    margin: 0 auto;
+    width: 100px;
+    transform: rotate(322deg);
+    top: -69px;
+    left: 31px;
+}
+
+.curvedArrow .curve {
+    border: 6px solid var(--lighter-orange);
+    border-color: transparent transparent transparent var(--lighter-orange);
+    height: 113px;
+    width: 68px;
+    border-radius: 261px 0 0 200px;
+}
+
+.curvedArrow .point {
+    position: absolute;
+    border: 8px solid transparent;
+    border-bottom: 8px solid var(--lighter-orange);
+    border-right: 8px solid var(--lighter-orange);
+    left: 10px;
+    top: 97px;
+}
+
+.curvedRoundArrow {
+    position: relative;
+    margin: 0 auto;
+    width: 100px;
+}
+.flipped {
+    transform: translateX(-42px) scaleX(-1);
+}
+
+.curvedRoundArrow .curve {
+    border: 6px solid var(--lighter-orange);
+    border-color: transparent transparent transparent var(--lighter-orange);
+    height: 102px;
+    width: 45px;
+    border-radius: 200px 0 0 200px;
+}
+
+.curvedRoundArrow .point {
+    position: absolute;
+    border: 8px solid transparent;
+    border-bottom: 8px solid var(--lighter-orange);
+    border-right: 8px solid var(--lighter-orange);
+    left: 41px;
+    top: 102px;
+    transform: rotate(326deg);
+}
+
+#pmap-icon12 .curvedArrow {
+  top: -64px;
+  left: 35px;
+  transform: rotate(330deg);
 }

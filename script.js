@@ -1,10 +1,6 @@
 /* TO DO
 
-1. Update score/health (waiting for feedback from charles)
-- Refactor popup system to use array/object and allow for tracking the last popup and close it or close all popups
-Might also be able to use an object to load and track all popup info at once and load/unload individual ones
-- Refactor to have transition listener on transition between challenges. Maybe refactor to have a function that handles start/stop of listener.
-- Refactor to have relevant areas tracked in objects (i.e. all 3d cards have state stored in object and updated)
+
 - Refactor (someday!) to use React for state mgmt, etc. This would interfere with the SCORM/embedability.
 */
 
@@ -113,26 +109,26 @@ const termAnswers = {
 };
 const feedbackMessages = {
   part01: {
-    a1b1: "<span>Excellent decision to review the work request in GCSS-A and to calculate the maintenance expenditure limits along with the visual inspection.</span><br /><span> You are ready to move on to the next step in the process.</span>",
-    a1b2: "<span>Excellent decision to review the work request.</span><br /><span>Remember that you should conduct a visual inspection as well as calculate the MEL before processing the equipment.</span>",
-    a1b3: "<span>Great decision to review the work request in GCSS-A.</span><br /><span>Remember that you should calculate the MEL and conduct a visual inspection before procesing the equipment for repair. By skipping these steps, you could have issues down the line when getting the repair paid for as well as missing documentation.</span>",
-    a2: "<span>Hold your horses.</span><br /><span>Remember to follow the process because if you send the equipment off without completing a visual inspection or determine the MEL you could cost your unit and the Army a lot of money down the line.</span>",
+    a1b1: "<span>Excellent decision to review the work request in GCSS-A and to calculate the maintenance expenditure limits along with the visual inspection.</span><span> You are ready to move on to the next step in the process.</span>",
+    a1b2: "<span>Excellent decision to review the work request.</span><span>Remember that you should conduct a visual inspection as well as calculate the MEL before processing the equipment.</span>",
+    a1b3: "<span>Great decision to review the work request in GCSS-A.</span><span>Remember that you should calculate the MEL and conduct a visual inspection before procesing the equipment for repair. By skipping these steps, you could have issues down the line when getting the repair paid for as well as missing documentation.</span>",
+    a2: "<span>Hold your horses.</span><span>Remember to follow the process because if you send the equipment off without completing a visual inspection or determine the MEL you could cost your unit and the Army a lot of money down the line.</span>",
     a3b1: "<span>These are both excellent decisions, however remember that if you don't review the work request in GCSS-A first this can cause issues with the documentation of the work order.</span>",
-    a3b2: "<span>It is important to conduct the visual inspection and the MEL. You may not necessarily need DA form 2404 if you have access to GCSS-A.</span><br /><span>By not reviewing the work request first in GCSS-A there could be problems down the line with the documentation of the repair.</span>",
-    a3b3: "<span>It is important to conduct a visual inspection of the equipment, however before you send the equipment off repair remember to review the work request in GCSS-A.</span><br /><span>By not having a look at the work order it could cause issues doen the line when documenting the repair.</span>",
+    a3b2: "<span>It is important to conduct the visual inspection and the MEL. You may not necessarily need DA form 2404 if you have access to GCSS-A.</span><span>By not reviewing the work request first in GCSS-A there could be problems down the line with the documentation of the repair.</span>",
+    a3b3: "<span>It is important to conduct a visual inspection of the equipment, however before you send the equipment off repair remember to review the work request in GCSS-A.</span><span>By not having a look at the work order it could cause issues doen the line when documenting the repair.</span>",
   },
   part02: {
-    a1b1: "<span>Excellent decision to document the equipment, however remember that before you approve the release of the equipment that you must conduct a function check.</span><br /><span>Also remember that every part of the work request should be entered in GCSS-A.</span>",
-    a1b3: "<span>Wait just a second.</span><br /><span>It is great that you were able to document the equipment in GCSS-A, however remember that you should conduct a function check before releasing the equipment. This is important to do because there could still be potential issues with the equipment that could cost lives.</span>",
-    a1b4: "<span>Excellent decision to document the equipment and to return the equipment back to the customer after conducting a function check.</span><br /><span>Also remember that every part of the work request should be entered in GCSS-A.</span>",
-    a2b1: "<span>Great call to enter the paperwork in GCSS-A and to send the device off for repair.</span><br /><span>Don't forget to conduct a function check before releasing the equipment back to the customer.</span><br /><span>Without conduct the function check, you could potentially send back a piece of equipment that isn't functioning correctly which could malfunction while in the field.</span>",
-    a2b3: "<span>Great call to enter the paperwork into GCSS-A and to send the device off for repair.</span><br /><span>Remember to conduct a function check before releasing the equipment back to the customer.</span>",
-    a2b4: "<span>Great call to enter the paperwork in GCSS-A and to send the device off for repair.</span><br /><span>Fantastic choice to conduct a function check using the manufacturer's manual.</span>",
-    a3: "<span>If you send the equipment immediately off for repair without ensuring that the paperwork is entered in GCSS-A, you could have issues when the equipment is returned for not following the SOP.</span><br /><span>Remember that you manage the repair process and not necessarily conducting the repair.</span>",
+    a1b1: "<span>Excellent decision to document the equipment, however remember that before you approve the release of the equipment that you must conduct a function check.</span><span>Also remember that every part of the work request should be entered in GCSS-A.</span>",
+    a1b3: "<span>Wait just a second.</span><span>It is great that you were able to document the equipment in GCSS-A, however remember that you should conduct a function check before releasing the equipment. This is important to do because there could still be potential issues with the equipment that could cost lives.</span>",
+    a1b4: "<span>Excellent decision to document the equipment and to return the equipment back to the customer after conducting a function check.</span><span>Also remember that every part of the work request should be entered in GCSS-A.</span>",
+    a2b1: "<span>Great call to enter the paperwork in GCSS-A and to send the device off for repair.</span><span>Don't forget to conduct a function check before releasing the equipment back to the customer.</span><span>Without conduct the function check, you could potentially send back a piece of equipment that isn't functioning correctly which could malfunction while in the field.</span>",
+    a2b3: "<span>Great call to enter the paperwork into GCSS-A and to send the device off for repair.</span><span>Remember to conduct a function check before releasing the equipment back to the customer.</span>",
+    a2b4: "<span>Great call to enter the paperwork in GCSS-A and to send the device off for repair.</span><span>Fantastic choice to conduct a function check using the manufacturer's manual.</span>",
+    a3: "<span>If you send the equipment immediately off for repair without ensuring that the paperwork is entered in GCSS-A, you could have issues when the equipment is returned for not following the SOP.</span><span>Remember that you manage the repair process and not necessarily conducting the repair.</span>",
   },
   part03: {
     a1: "<span>This is definitely not the correct path to take as your job is to ensure that all medical equipment is functioning properly.</span>",
-    a3: "<span>This is the correct path.</span><br /><span>Fortunately you were able repair the device after conducting the function check.</span><br /><span>It looks like PFC Humble will make a full recovery. Great job!</span>",
+    a3: "<span>This is the correct path.</span><span>Fortunately you were able repair the device after conducting the function check.</span><span>It looks like PFC Humble will make a full recovery. Great job!</span>",
     a4: "<span>You should never release a device to the customer if it presents any type of danger.</span>",
   },
 };
@@ -368,6 +364,10 @@ function checkAnswer(challenge) {
   updateHealth();
   if (challenge == 5 && score >= 3) {
     hideCurrentPopup();
+    // debrief logic
+    if (score => 4) {
+      document.getElementById("successResults").innerHTML = debrief[1];
+    }
     showPopup(popups.gameOverS.target);
   }
   else if ((challenge == 5 && score < 3) || (score < 3)) {
@@ -416,6 +416,13 @@ function resetScenario(){
 function loadFeedback (){
   // loads customized feedback in the #feedbackText div based on user choices
   var feedback = document.getElementById("feedbackText");
+  var tempOr = currentOrientation.substr(currentOrientation.search("-")+1);
+  if (orientations[tempOr].return=="") {
+    updateOrientation(currentOrientation);
+  }
+  else {
+    updateOrientation(orientations[tempOr].return);
+  }
 
   if (currentChallenge == 2) {
     feedback.innerHTML = feedbackMessages.part01["a"+choices.challenge01+"b"+choices.challenge02];
@@ -431,14 +438,6 @@ function loadFeedback (){
   }
   else {
     currentChallenge=currentChallenge + 1;
-    var tempOr = currentOrientation.substr(currentOrientation.search("-")+1);
-    if (orientations[tempOr].return=="") {
-      updateOrientation(currentOrientation);
-    }
-    else {
-      updateOrientation(orientations[tempOr].return);
-    }
-    
     updateScenario();
   }
 }
