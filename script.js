@@ -40,6 +40,7 @@ const baseUrl = "";
 //global vars
 var currentChallenge = 1;
 var currentPopup = "";
+var currentModal = "";
 var currentOrientation = "face-right";
 var score = 5;
 var resets = 0;
@@ -185,6 +186,12 @@ const popups = {
     target: "popupIntro",
     fName: "index",
   },
+  introVid: {
+    loc: "popups/introVid/",
+    id: "introVid",
+    target: "popupIntroVid",
+    fName: "index",
+  },
   gameOverS: {
     loc: "popups/gameOverSuccess/",
     id: "gameOverSuccess",
@@ -295,6 +302,7 @@ function updateScenario(){
   if (currentChallenge==1 && resets == 0) {
     loadContent(popups.gameOverS.id,popups.gameOverS.loc,popups.gameOverS.target,popups.gameOverS.fName);
     loadContent(popups.gameOverF.id,popups.gameOverF.loc,popups.gameOverF.target,popups.gameOverF.fName);
+    loadContent(popups.introVid.id,popups.introVid.loc,popups.introVid.target,popups.introVid.fName);
     }
   
   updateMessages();
@@ -809,6 +817,12 @@ function showPopup (popupId) {
   currentPopup = $("#"+popupId)[0];
 }
 
+function showModal (modalId) {
+  $("#"+modalId)[0].style.display="flex";
+  checkIsDisplayed(modalId,()=>{$("#"+modalId)[0].style.opacity=1;})
+  currentModal = $("#"+modalId)[0];
+}
+
 function checkIsDisplayed(elemId,funct) {
     if ($("#" + elemId)[0].style.display == "flex") {
         funct();
@@ -820,6 +834,11 @@ function checkIsDisplayed(elemId,funct) {
 function hidePopup (popupId) {
   document.getElementById(popupId).style.display="none";
   currentPopup = "";
+}
+
+function hideModal (modalId) {
+  document.getElementById(modalId).style.display="none";
+  currentModal = "";
 }
 
 function hideCurrentPopup () {

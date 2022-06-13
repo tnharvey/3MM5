@@ -41,9 +41,50 @@
         </div>
         <div id="popupContainer">
           <div id="popupIntro" class="popup intro"></div>
+          <div id="popupIntroVid" class="popup intro"></div>
           <div id="popupHelp" class="popup" onclick="hideCurrentPopup();">
-            <span>insert help image</span>
-            <div class="buttonChoice respond-yes" onclick="relaunchIntro();">Click to relaunch the Introduction</div>
+            <div>
+              <div>
+                <img src="/imgs/helpMain.PNG" style="width:600px;">
+                <div id="helpInfoHoverArea" class="helpHover">
+                  <div class="helpAreaInfo">
+                    <img src="/imgs/helpInfo.PNG" style="width:300px;">
+                    <span>explanation of area</span>
+                  </div>
+                </div>
+                <div id="helpChallengeHoverArea" class="helpHover">
+                  <div class="helpAreaInfo">
+                    <img src="/imgs/helpInfo.PNG" style="width:300px;">
+                    <span>explanation of area</span>
+                  </div>
+                </div>
+                <div id="helpHealthHoverArea" class="helpHover">
+                  <div class="helpAreaInfo">
+                    <img src="/imgs/helpInfo.PNG" style="width:300px;">
+                    <span>explanation of area</span>
+                  </div>
+                </div>
+                <div id="helpArrowLHoverArea" class="helpHover">
+                  <div class="helpAreaInfo">
+                    <img src="/imgs/helpInfo.PNG" style="width:300px;">
+                    <span>explanation of area</span>
+                  </div>
+                </div>
+                <div id="helpCardHoverArea" class="helpHover">
+                  <div class="helpAreaInfo">
+                    <img src="/imgs/helpCard.PNG" style="width:300px;">
+                    <span>explanation of area</span>
+                  </div>
+                </div>
+                <div id="arrowRInfoHoverArea" class="helpHover">
+                  <div class="helpAreaInfo">
+                    <img src="/imgs/helpInfo.PNG" style="width:300px;">
+                    <span>explanation of area</span>
+                  </div>
+                </div>
+              </div>
+              <div class="buttonChoice respond-yes" onclick="showModal('popupIntroVid');">Rewatch Introduction Video</div>
+            </div>
           </div>
           <div id="popupProcessMap" class="popup">
             <div class="buttonChoice close" onclick="hideCurrentPopup();">X</div>
@@ -159,12 +200,8 @@
             </div>
             <div class="slideBtn respond-yes" onclick="currentChallenge=currentChallenge+1;updateOrientation(currentOrientation);updateScenario();">Continue</div>
           </div>
-          <div id="popupGameOver01" class="popup feedback">
-            
-          </div>
-          <div id="popupGameOver02" class="popup challenges">
-            
-          </div>
+          <div id="popupGameOver01" class="popup feedback"></div>
+          <div id="popupGameOver02" class="popup challenges"></div>
           <div id="browser-error" class="popup challenges">
             <span style="color:white; font-size:1.5em;">This scenario will not run properly due to severe compatibility issues with your browser (Firefox). Please reopen the scenario in a compatible browser (i.e., Chrome, Edge, Safari).</span>
           </div>

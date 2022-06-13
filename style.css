@@ -102,6 +102,29 @@ span.center {
   pointer-events: all;
 }
 
+.helpHover .helpAreaInfo {
+  visibility: hidden;
+  width: auto;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 6px 12px;
+  position: absolute;
+  z-index: 1;
+  top: 100%;
+  left: 50%;
+  margin-left: -40px;
+}
+
+.helpHover:hover + .helpAreaInfo {
+  visibility: visible !important;
+}
+
+.helpAreaInfo img {
+  width: 300px
+}
+
 #messagesContainer {
   grid-area: 1 / 2 / 2 / 3;
   justify-self: center;
@@ -380,6 +403,9 @@ span.center {
   grid-area: 3 / 7 / 4 / 8;
  }
 
+#popupIntroVid {
+  z-index: 1;
+}
 /* Interactive element styles (buttons, etc.) */
 .interactive {
   cursor: pointer;
@@ -622,6 +648,7 @@ li.incomplete {
 
 .popup.intro .loaded {
   background-color: rgb(0,0,0,0.9);
+  width: 700px;
 }
 
 .popup.challenges .loaded {
