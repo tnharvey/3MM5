@@ -308,6 +308,9 @@ span.center {
   top: 48px;
   left: 98px;
 }
+#processMap div.glow {
+  animation: mapglow 800ms ease-out infinite alternate;
+}
 .pmap-icon1 {
   position: relative;  
   grid-area: 1 / 1 / 2 / 2;
@@ -391,7 +394,7 @@ span.center {
   top: 4px;
 }
 
-    #mapIcon {
+#mapIcon {
   width: 25px;
   height: auto;
   left: 20px;
@@ -837,7 +840,7 @@ transform: translate3d(707px, 20px, 518px) rotateY(-90deg) rotateZ(39deg);
 }
 
 .process-icon-img.currentStep {
-  animation: glow 800ms ease-out infinite alternate;
+  animation: mapglow 800ms ease-out infinite alternate;
 }
 
 .process-icon-img.wide {
@@ -1100,7 +1103,16 @@ transform: translate3d(707px, 20px, 518px) rotateY(-90deg) rotateZ(39deg);
 		box-shadow: 0 0 8px rgba(253, 255, 133, 0.8);
     }
 }
-
+@keyframes mapglow {
+    0% {
+		border-color: #d79942;
+		box-shadow: 0 0 2px rgba(215, 153, 66, 0.4);
+    }	
+    100% {
+		border-color: #fdff85;
+		box-shadow: 0 0 8px rgba(253, 255, 133, 0.8);
+    }
+}
 .btn {
   background: #111;
   color: #fff;
