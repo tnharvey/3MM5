@@ -730,6 +730,17 @@ li.incomplete {
   background: rgb(0,0,0,0.6);
   border: 1px solid black;
 }
+
+.challenges .loaded .grid-1col div img {
+  position: relative;
+  float: left;
+}
+
+.challenges .loaded .grid-1col div img {
+  width: 336px;
+  top: 20px;
+  left: 8px;
+}
 .feedback{
   background: rgb(0,0,0,0.6);
   border: 1px solid black;
