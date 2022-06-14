@@ -80,11 +80,11 @@ const activeAreas = {
   },
 };
 var currentStep = {
-  challenge01: "",
-  challenge02: "",
-  challenge03: "",
-  challenge04: "",
-  challenge05: "",
+  challenge01: 1,
+  challenge02: 3,
+  challenge03: 5,
+  challenge04: 11,
+  challenge05: 13,
 };
 var choices = {
   challenge01:0,
@@ -276,11 +276,11 @@ function startScenario() {
   started = 1;
 }
 
-function relaunchIntro() {
+/*function relaunchIntro() {
   loadContent (popups.intro.id,popups.intro.loc,popups.intro.target,popups.intro.fName,true);
   hideCurrentPopup();
   showPopup("popupIntro");
-}
+}*/
 
 function updateScenario(){
   var cards = document.getElementsByClassName('popup3d');
@@ -311,6 +311,7 @@ function updateScenario(){
   }
   cube.addEventListener("transitionend",showPopup(popups.chal.target));
   updateCards();
+  updateProcessMap();
 }
 
 function updateCards () {
@@ -326,16 +327,10 @@ function updateCards () {
 }
 
 function updateProcessMap () {
-  var chal = "challenge0"+currentChallenge;
-  
-  for (var area in activeAreas[chal]) {
-    if(activeAreas[chal][area]==1) {
-      document.getElementById(area+"-card").classList.add("glow");
-    }
-    else if(activeAreas[chal][area]==0){
-      document.getElementById(area+"-card").classList.remove("glow");
-    }
+  if (currentChallenge > 1) {
+    $(".pmap-icon"+currentStep["challenge0"+(currentChallenge-1)]+" img")[0].classList.remove("currentStep");
   }
+  $(".pmap-icon"+currentStep["challenge0"+currentChallenge]+" img")[0].classList.add("currentStep");
 }
 
 function updateChoice (choice) {
@@ -466,41 +461,6 @@ function resetScenario(){
   updateHealth();  
 }
 
-function loadFeedback (){
-  // loads customized feedback in the #feedbackText div based on user choices
-  var feedback = document.getElementById("feedbackText");
-  var tempOr = currentOrientation.substr(currentOrientation.search("-")+1);
-  if (orientations[tempOr].return=="") {
-    updateOrientation(currentOrientation);
-  }
-  else {
-    updateOrientation(orientations[tempOr].return);
-  }
-
-  if (currentChallenge == 2) {
-    feedback.innerHTML = feedbackMessages.part01["a"+choices.challenge01+"b"+choices.challenge02];
-    showPopup("popupFeedback");
-  }
-  else if (currentChallenge == 4) {
-    feedback.innerHTML = feedbackMessages.part02["a"+choices.challenge03+"b"+choices.challenge04];
-    showPopup("popupFeedback");
-  }
-  else if (currentChallenge == 5) {
-    feedback.innerHTML = feedbackMessages.part03["a"+choices.challenge05];
-    showPopup("popupFeedback");
-  }
-  else {
-    currentChallenge=currentChallenge + 1;
-    updateScenario();
-  }
-}
-
-function loadResults(){
-  // loads customized results in the #results div based on user choices
-  var results = document.getElementById("results");
-  results.innerHTML = "Results";
-}
-
 function endScenario(){
   parent.postMessage("scenario complete","*");
   window.alert("Scenario Complete. You've helped to save PFC Bosky!")
@@ -561,7 +521,7 @@ function updateHealth() {
   }
 }
 
-/*INTERFACE CONTROL */
+/*INTERFACE and ORIENTATION CONTROL */
 
 function userAction (input) {
 /* Primary user action handler. Checks for type of input as some are currently inline pasing strings.
@@ -727,6 +687,41 @@ function updateMessages() {
   }
 }
 
+function loadFeedback (){
+  // loads customized feedback in the #feedbackText div based on user choices
+  var feedback = document.getElementById("feedbackText");
+  var tempOr = currentOrientation.substr(currentOrientation.search("-")+1);
+  if (orientations[tempOr].return=="") {
+    updateOrientation(currentOrientation);
+  }
+  else {
+    updateOrientation(orientations[tempOr].return);
+  }
+
+  if (currentChallenge == 2) {
+    feedback.innerHTML = feedbackMessages.part01["a"+choices.challenge01+"b"+choices.challenge02];
+    showPopup("popupFeedback");
+  }
+  else if (currentChallenge == 4) {
+    feedback.innerHTML = feedbackMessages.part02["a"+choices.challenge03+"b"+choices.challenge04];
+    showPopup("popupFeedback");
+  }
+  else if (currentChallenge == 5) {
+    feedback.innerHTML = feedbackMessages.part03["a"+choices.challenge05];
+    showPopup("popupFeedback");
+  }
+  else {
+    currentChallenge=currentChallenge + 1;
+    updateScenario();
+  }
+}
+
+function loadResults(){
+  // loads customized results in the #results div based on user choices
+  var results = document.getElementById("results");
+  results.innerHTML = "Results";
+}
+
 function loadContent (contentId, contentLoc, targetId, fileName, css) {
   /* Load content from local folder directory to target element ID */
   var newElementCode = $('<div id="'+contentId+'" class="loaded">');
@@ -810,7 +805,7 @@ function loadModels (modelsJson) {
   $("head").append('<link rel="stylesheet" href="'+baseUrl+'models/coffeeCup/coffeeCupStyle.css" />');
 }
 
-/* Inline click funcions, need to set up with listeners */
+/* POPUPS and MODALS */
 function showPopup (popupId) {
   $("#"+popupId)[0].style.display="flex";
   checkIsDisplayed(popupId,()=>{$("#"+popupId)[0].style.opacity=1;})
@@ -853,6 +848,7 @@ function dispNonePop (pop) {
   pop.removeEventListener("transitionend",transitionPopup);
 }
 
+/* UTILITY */
 function browserCheck() {
   // Uses computed style to detect browser. If browser if Moz, blocks interaction with popup.
   
@@ -982,9 +978,6 @@ function resetSlides () {
   targetDiv.classList.remove("state0"+currentSlide);
   targetDiv.classList.add("state01");
 }
-
-/* MEL Calc Functions */
-    
 
 // Functions in development
 /*

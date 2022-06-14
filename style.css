@@ -105,7 +105,7 @@ span.center {
   margin-top: 20px;
 }
 .helpHover .helpAreaInfo {
-  visibility: hidden;
+  opacity: 0;
   width: auto;
   background-color: black;
   color: #fff;
@@ -117,15 +117,25 @@ span.center {
   top: 100%;
   left: 50%;
   margin-left: -40px;
+  transition-duration: 0.5s;
+  pointer-events: none;
+}
+.helpAreaInfo img {
+    display: block;
+    margin: 10px auto;
+}
+.helpHover:hover {
+  border: 1px solid rgba(255,0,0,1);
 }
 
-.helpHover:hover + .helpAreaInfo {
-  visibility: visible !important;
+.helpHover:hover .helpAreaInfo {
+  opacity: 1;
 }
 
 .helpHover {
-  border: 1px solid red;
+  border: 1px solid rgba(255,0,0,0);
   position: relative;
+  transition-duration: 0.5s;
 }
 .helpGrid {
     display: grid;
@@ -166,12 +176,18 @@ span.center {
     width: 100%;
     justify-self: center;
 }
+#helpCardHoverArea .helpAreaInfo {
+    width: 500px;
+    top: -140px;
+    left: 90px;
+}
 #helpArrowRHoverArea {
     grid-area: 2 / 3 / 3 / 4;
     height: 146px;
     width: 40px;
     justify-self: end;
 }
+
 #messagesContainer {
   grid-area: 1 / 2 / 2 / 3;
   justify-self: center;
@@ -958,7 +974,7 @@ transform: translate3d(707px, 20px, 518px) rotateY(-90deg) rotateZ(39deg);
 #processMap div .stepInfo {
   visibility: hidden;
   width: auto;
-  background-color: black;
+  background-color: var(--darker-orange);
   color: #fff;
   text-align: center;
   border-radius: 6px;
@@ -1178,14 +1194,14 @@ transform: translate3d(707px, 20px, 518px) rotateY(-90deg) rotateZ(39deg);
     }
 }
 @keyframes mapglow {
-    0% {
-		border-color: #d79942;
-		box-shadow: 0 0 2px rgba(215, 153, 66, 0.4);
-    }	
-    100% {
-		border-color: #fdff85;
-		box-shadow: 0 0 8px rgba(253, 255, 133, 0.8);
-    }
+  0% {
+    border-color: rgb(238, 133, 63);
+    box-shadow: 0 0 2px rgb(238, 133, 63, 0.4);
+  }
+  100% {
+    border-color: rgb(255, 155, 61);
+    box-shadow: 0 0 12px rgb(255, 155, 61, 0.8);
+  }
 }
 .btn {
   background: #111;

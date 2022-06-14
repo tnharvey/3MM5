@@ -46,40 +46,41 @@
             <div>
               <div>
                 <div>
-                  <img src="/imgs/helpMain.PNG" style="width:600px;">
+                  <img src="/imgs/helpMain.png" style="width:600px;">
                 </div>
                 <div class="helpGrid">
                   <div id="helpInfoHoverArea" class="helpHover">
-                    <div class="helpAreaInfo">
-                      <img src="/imgs/helpInfo.PNG" style="width:180px;">
-                      <span>explanation of area</span>
+                    <div class="helpAreaInfo" style="width:300px;">
+                      <img src="/imgs/helpInfo.png" style="width:180px;">
+                      <span>Help and Process Map areas. The Process Map will show you an overview of the process and the last step you completed.</span>
                     </div>
                   </div>
                   <div id="helpChallengeHoverArea" class="helpHover">
-                    <div class="helpAreaInfo">
-                      <img src="/imgs/helpInfo.PNG" style="width:200px;">
-                      <span>explanation of area</span>
+                    <div class="helpAreaInfo" style="width:300px;">
+                      <img src="/imgs/helpChallenge.png" style="width:200px;">
+                      <span>Hovering here will show you a short reminder of the current challenge. Clicking will redisplay the full challenge explanation.</span>
                     </div>
                   </div>
                   <div id="helpHealthHoverArea" class="helpHover">
-                    <div class="helpAreaInfo">
-                      <img src="/imgs/helpInfo.PNG" style="width:180px;">
-                      <span>explanation of area</span>
+                    <div class="helpAreaInfo" style="width:300px; left:0px;">
+                      <img src="/imgs/helpHealth.png" style="width:180px;">
+                      <span>Health. With 5 challenges and SPC Boski's humanity on the line, you can only make a few mistakes! Click to replay the health animation.</span>
                     </div>
                   </div>
                   <div id="helpArrowLHoverArea" class="helpHover">
-                    <div class="helpAreaInfo">
+                    <div class="helpAreaInfo" style="width:300px;">
                       <span>Clicking on this tall left arrow button will turn you to look to the left.</span>
                     </div>
                   </div>
                   <div id="helpCardHoverArea" class="helpHover">
                     <div class="helpAreaInfo">
-                      <img src="/imgs/helpCard.PNG" style="width:200px;">
-                      <span>explanation of area</span>
+                      <img src="/imgs/helpCards.png" style="width:200px;">
+                      <img src="/imgs/helpPrompt.png" style="width:450px;">
+                      <span>These cards will glow to show which ones are relevant to the current challenge. <b>Clicking</b> on these will bring up the available choice for this area. Click "No" to back away and look at other options. Click "Yes" to move forward with that choice.</span>
                     </div>
                   </div>
                   <div id="helpArrowRHoverArea" class="helpHover">
-                    <div class="helpAreaInfo">
+                    <div class="helpAreaInfo" style="width:300px; left:-100px;">
                       <span>Clicking on this tall right arrow button will turn you to look to the right.</span>
                     </div>
                   </div>
@@ -91,8 +92,8 @@
           <div id="popupProcessMap" class="popup">
             <div class="buttonChoice close" onclick="hideCurrentPopup();">X</div>
             <div id="processMap" class="gridParent">
-              <div class="pmap-icon1 glow">
-                <img class="process-icon-img" src="imgs/icon-01.png">
+              <div class="pmap-icon1">
+                <img class="process-icon-img currentStep" src="imgs/icon-01.png">
                 <span class="stepInfo">Receive Request</span>
               </div>
               <div class="pmap-icon2">
@@ -184,7 +185,7 @@
                 <span class="stepInfo">Unit Decisions</span>
               </div>
             </div>
-            <span id="process-map-instructions">* Hover over each step in the process for more information. The highlighted step shows the last step you took.</span>
+            <span id="process-map-instructions">* The highlighted step shows the last step you completed. Hover over each step in the process for more information.</span>
           </div>
           <div id="popup-bertha-manual" class="popup popupGeneric">
             <div class="buttonChoice close" onclick="hidePopup('popup-bertha-manual');">X</div>
@@ -222,7 +223,7 @@
             </div>
           </div>
           <div id="messagesContainer" class="dashItem">
-            <div id="messageBox">
+            <div id="messageBox" class="interactive" onclick="showPopup('popupChallenge');">
               <span id="messageLabel">Challenge 1 of 5</span>
               <span id="message"><b>Next Step:</b><br>Review the resources on the table to the left.</span>
             </div>
