@@ -746,8 +746,36 @@ li.incomplete {
 #gameOverSuccess {
   width: 90%;
 }
+#gameOverSuccess .loadedPContainer .slide01 .slideBtn {
+  opacity: 0;
+  left: 46%;
+  right: unset;
+  top: 46%;
+}
+#gameOverSuccess .loadedPContainer .slide01 video {
+    width: 937px;
+    height: 528px;
+    border-radius: 5px;
+    top: -102px;
+    left: -92px;
+    position: relative;
+}
 #gameOverFail {
   width: 90%;
+}
+#gameOverFail .loadedPContainer .slide01 .slideBtn {
+  opacity: 0;
+  left: 46%;
+  right: unset;
+  top: 46%;
+}
+#gameOverFail .loadedPContainer .slide01 video {
+    width: 937px;
+    height: 528px;
+    border-radius: 5px;
+    top: -102px;
+    left: -92px;
+    position: relative;
 }
 /* 3D element styling */
 

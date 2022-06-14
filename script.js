@@ -302,6 +302,15 @@ function updateScenario(){
   if (currentChallenge==1 && resets == 0) {
     loadContent(popups.gameOverS.id,popups.gameOverS.loc,popups.gameOverS.target,popups.gameOverS.fName);
     loadContent(popups.gameOverF.id,popups.gameOverF.loc,popups.gameOverF.target,popups.gameOverF.fName);
+    // delay setting event listener, refactor to listen for video load
+    setTimeout(()=>{
+      document.querySelector("#"+popups.gameOverF.id + " .loadedPContainer .slide01 video").addEventListener('ended', function(e) {
+      document.querySelector("#"+popups.gameOverF.id + " .loadedPContainer .slide01 .slideBtn").style.opacity = 1;
+      },false);
+      document.querySelector("#"+popups.gameOverS.id + " .loadedPContainer .slide01 video").addEventListener('ended', function(e) {
+      document.querySelector("#"+popups.gameOverS.id + " .loadedPContainer .slide01 .slideBtn").style.opacity = 1;
+      },false);
+    },1000);
     loadContent(popups.introVid.id,popups.introVid.loc,popups.introVid.target,popups.introVid.fName);
     }
   
@@ -386,6 +395,7 @@ function checkAnswer(challenge) {
     
     hideCurrentPopup();
     showPopup(popups.gameOverF.target);
+    $("#"+popups.gameOverF.id + " .loadedPContainer .slide01 video")[0].play();
   }
   else if (challenge == 5 && score >= 3) {
     hideCurrentPopup();
@@ -405,6 +415,7 @@ function checkAnswer(challenge) {
       }
     }
     showPopup(popups.gameOverS.target);
+    $("#"+popups.gameOverS.id + " .loadedPContainer .slide01 video")[0].play();
   }
   else if ((challenge == 5 && score < 3) || (score < 3)) {
     if (choiceTypes.process > 0 && choiceTypes.quickRepair == 0) {
@@ -418,6 +429,7 @@ function checkAnswer(challenge) {
     }
     hideCurrentPopup();
     showPopup(popups.gameOverF.target);
+    $("#"+popups.gameOverF.id + " .loadedPContainer .slide01 video")[0].play();
   }
   else {
     hideCurrentPopup();
