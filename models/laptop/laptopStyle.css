@@ -21,25 +21,25 @@
   height:10em;
 }
 .laptopBottom .tp {
-  background: url(models/laptop/Laptop-Atlas_v0.png) 0px -168px;
+  background: url(../models/laptop/Laptop-Atlas_v0.png) 0px -168px;
 }
 .laptopBottom .bm {
-  background: url(models/laptop/Laptop-Atlas_v0.png) -241px -168px;
+  background: url(../models/laptop/Laptop-Atlas_v0.png) -241px -168px;
 }
 .laptopBottom .lt {
-  background: url(models/laptop/Laptop-Atlas_v0.png) 0px 5px;
+  background: url(../models/laptop/Laptop-Atlas_v0.png) 0px 5px;
 }
 .laptopBottom .rt {
-  background: url(models/laptop/Laptop-Atlas_v0.png) 0px 10px;
+  background: url(../models/laptop/Laptop-Atlas_v0.png) 0px 10px;
 }
 .laptopBottom .ft {
-  background: url(models/laptop/Laptop-Atlas_v0.png) 0px -329px;
+  background: url(../models/laptop/Laptop-Atlas_v0.png) 0px -329px;
 }
 .laptopBottom .bk {
-  background: url(models/laptop/Laptop-Atlas_v0.png) -241px -329px;
+  background: url(../models/laptop/Laptop-Atlas_v0.png) -241px -329px;
 }
 .laptopBottom .cr .side {
-  background: url(models/laptop/Laptop-Atlas_v0.png) 0px -168px;
+  background: url(../models/laptop/Laptop-Atlas_v0.png) 0px -168px;
 }
 .laptopBottom .face {
   background-color:#969696;
@@ -157,25 +157,25 @@
   left:0.125em;
 }
 .laptopTop .tp {
-  background: url(models/laptop/Laptop-Atlas_v0.png) 0px 0px;
+  background: url(../models/laptop/Laptop-Atlas_v0.png) 0px 0px;
 }
 .laptopTop .bm {
-  background: url(models/laptop/Laptop-Atlas_v0.png) -240px 0px;
+  background: url(../models/laptop/Laptop-Atlas_v0.png) -240px 0px;
 }
 .laptopTop .lt {
-  background: url(models/laptop/Laptop-Atlas_v0.png) 0px -166px;
+  background: url(../models/laptop/Laptop-Atlas_v0.png) 0px -166px;
 }
 .laptopTop .rt {
-  background: url(models/laptop/Laptop-Atlas_v0.png) 0px -163px;
+  background: url(../models/laptop/Laptop-Atlas_v0.png) 0px -163px;
 }
 .laptopTop .ft {
-  background: url(models/laptop/Laptop-Atlas_v0.png) 0px -160px;
+  background: url(../models/laptop/Laptop-Atlas_v0.png) 0px -160px;
 }
 .laptopTop .bk {
-  background: url(models/laptop/Laptop-Atlas_v0.png) -240px -160px;
+  background: url(../models/laptop/Laptop-Atlas_v0.png) -240px -160px;
 }
 .laptopTop .cr .side {
-  background: url(models/laptop/Laptop-Atlas_v0.png) 0px 0px;
+  background: url(../models/laptop/Laptop-Atlas_v0.png) 0px 0px;
 }
 .laptopTop .cr-0 {
   transform: translate3D(14.5em, 0, 4.75em);
