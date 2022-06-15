@@ -17,7 +17,7 @@
               <div class="myCube-face myCube-front"></div>
               <div class="myCube-face myCube-back"></div>
             </div>
-            <div id="bertha-manual" class="img-container interactive" onclick="showPopup('popup-bertha-manual');">
+            <div id="bertha-manual" class="img-container interactive">
               <img class="img-card-3d" src="imgs/Bertha-M-138-Manual.jpg">
             </div>
             <div id="zombie-hand" class="img-container">
@@ -42,7 +42,8 @@
         <div id="popupContainer">
           <div id="popupIntro" class="popup intro"></div>
           <div id="popupIntroVid" class="popup intro"></div>
-          <div id="popupHelp" class="popup" onclick="hideCurrentPopup();">
+          <div id="popupHelp" class="popup">
+            <div class="buttonChoice close" onclick="hideCurrentPopup();">X</div>
             <div>
               <div>
                 <div>
@@ -186,11 +187,6 @@
               </div>
             </div>
             <span id="process-map-instructions">* The highlighted step shows the last step you completed. Hover over each step in the process for more information.</span>
-          </div>
-          <div id="popup-bertha-manual" class="popup popupGeneric">
-            <div class="buttonChoice close" onclick="hidePopup('popup-bertha-manual');">X</div>
-            <iframe src="MAI%20Bertha%20M138%20User%20manual.pdf#view=FitH&toolbar=0" height="94%" width="760px">
-            </iframe>
           </div>
           <div id="popupGeneric" class="popup popupGeneric"></div>
           <div id="popupChallenge" class="popup challenges"></div>

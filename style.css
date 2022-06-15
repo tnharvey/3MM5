@@ -314,13 +314,13 @@ span.center {
   transform: translate3d(768px,6px,210px) rotateY(1deg);
 }
 #computer-card{
-  transform: translate3d(884px,4px,418px) rotateY(-90deg);
+  transform: translate3d(928px,4px,428px) rotateY(-90deg);
 }
 #resources-card{
-  transform: translate3d(660px,-10px,372px) rotateY(90deg);
+  transform: translate3d(660px,-10px,369px) rotateY(90deg);
 }
 #forms-card{
-  transform: translate3d(896px,4px,310px) rotateY(-90deg);
+  transform: translate3d(928px,4px,301px) rotateY(-90deg);
 }
 
 /* CSS Grid styles */
@@ -753,32 +753,37 @@ li.incomplete {
   background: var(--darker-orange);
   border: 1px solid black;
 }
-
+#popupGameOver01 {
+background: rgb(0,0,0,1);
+}
 #gameOverSuccess {
-  width: 90%;
+  width: 100%;
+  height: 90%;
 }
 #gameOverSuccess .loadedPContainer .slide01 .slideBtn {
   opacity: 0;
-  left: 46%;
+  left: 40%;
   right: unset;
-  top: 46%;
+  top: 42%;
+  padding: 30px 60px 36px 60px;
 }
 #gameOverSuccess .loadedPContainer .slide01 video {
-    width: 937px;
-    height: 528px;
-    border-radius: 5px;
-    top: -102px;
-    left: -92px;
-    position: relative;
+  width: 870px;
+  height: 490px;
+  border-radius: 5px;
+  top: -108px;
+  left: -31px;
+  position: relative;
 }
 #gameOverFail {
   width: 90%;
 }
 #gameOverFail .loadedPContainer .slide01 .slideBtn {
   opacity: 0;
-  left: 46%;
+  left: 40%;
   right: unset;
-  top: 46%;
+  top: 42%;
+  padding: 30px 60px 36px 60px;
 }
 #gameOverFail .loadedPContainer .slide01 video {
     width: 937px;

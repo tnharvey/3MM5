@@ -103,7 +103,7 @@ const answers = {
   challenge02:1,
   challenge03:2,
   challenge04:4,
-  challenge05:1,
+  challenge05:4,
 };
 const termAnswers = {
   challenge01:2,
@@ -987,6 +987,7 @@ function resetSlides () {
 
   targetDiv.children[currentSlide-1].style.display = "none";
   targetDiv.children[0].style.display = "block";
+  document.querySelector("#"+popups.gameOverF.id + " .loadedPContainer .slide01 .slideBtn").style.opacity = 1;
   targetDiv.classList.remove("state0"+currentSlide);
   targetDiv.classList.add("state01");
 }
