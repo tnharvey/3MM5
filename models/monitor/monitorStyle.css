@@ -21,25 +21,25 @@
   height:18em;
 }
 .monitor-screen .rt {
-  background: url(../models/monitor/Monitor-Atlas_v0.png) -295px -623px;
+  background: url(../monitor/Monitor-Atlas_v0.png) -295px -623px;
 }
 .monitor-screen .lt {
-  background: url(../models/monitor/Monitor-Atlas_v0.png) 0px -623px;
+  background: url(../monitor/Monitor-Atlas_v0.png) 0px -623px;
 }
 .monitor-screen .tp {
-  background: url(../models/monitor/Monitor-Atlas_v0.png) 0px -288px;
+  background: url(../monitor/Monitor-Atlas_v0.png) 0px -288px;
 }
 .monitor-screen .bm {
-  background: url(../models/monitor/Monitor-Atlas_v0.png) 0px 0px;
+  background: url(../monitor/Monitor-Atlas_v0.png) 0px 0px;
 }
 .monitor-screen .ft {
-  background: url(../models/monitor/Monitor-Atlas_v0.png) 0px -599px;
+  background: url(../monitor/Monitor-Atlas_v0.png) 0px -599px;
 }
 .monitor-screen .bk {
-  background: url(../models/monitor/Monitor-Atlas_v0.png) 0px -575px;
+  background: url(../monitor/Monitor-Atlas_v0.png) 0px -575px;
 }
 .monitor-screen .cr .side {
-  background: url(../models/monitor/Monitor-Atlas_v0.png) -570px -623px;
+  background: url(../monitor/Monitor-Atlas_v0.png) -570px -623px;
 }
 .monitor-screen .face {
   background-color:#5c5c5c;
@@ -150,25 +150,25 @@
   width:7.25em;
 }
 .monitor-base .rt {
-  background: url(../models/monitor/Monitor-Atlas_v0.png) -256px -796px;
+  background: url(../monitor/Monitor-Atlas_v0.png) -256px -796px;
 }
 .monitor-base .lt {
-  background: url(../models/monitor/Monitor-Atlas_v0.png) -254px -780px;
+  background: url(../monitor/Monitor-Atlas_v0.png) -254px -780px;
 }
 .monitor-base .tp {
-  background: url(../models/monitor/Monitor-Atlas_v0.png) 0px -648px;
+  background: url(../monitor/Monitor-Atlas_v0.png) 0px -648px;
 }
 .monitor-base .bm {
-  background: url(../models/monitor/Monitor-Atlas_v0.png) -272px -648px;
+  background: url(../monitor/Monitor-Atlas_v0.png) -272px -648px;
 }
 .monitor-base .ft {
-  background: url(../models/monitor/Monitor-Atlas_v0.png) 0px -782px;
+  background: url(../monitor/Monitor-Atlas_v0.png) 0px -782px;
 }
 .monitor-base .bk {
-  background: url(../models/monitor/Monitor-Atlas_v0.png) 0px -796px;
+  background: url(../monitor/Monitor-Atlas_v0.png) 0px -796px;
 }
 .monitor-base .cr .side {
-  background: url(../models/monitor/Monitor-Atlas_v0.png) -366px -796px;
+  background: url(../monitor/Monitor-Atlas_v0.png) -366px -796px;
 }
 .monitor-base .tp, .monitor-base .bm, .monitor-base .tp .photon-shader, .monitor-base .bm .photon-shader {
   border-radius:0.5em;
@@ -251,22 +251,22 @@
   height:1.5em;
 }
 .monitor-support .rt {
-  background: url(../models/monitor/Monitor-Atlas_v0.png) -528px -296px;
+  background: url(../monitor/Monitor-Atlas_v0.png) -528px -296px;
 }
 .monitor-support .lt {
-  background: url(../models/monitor/Monitor-Atlas_v0.png) -504px -296px;
+  background: url(../monitor/Monitor-Atlas_v0.png) -504px -296px;
 }
 .monitor-support .tp {
-  background: url(../models/monitor/Monitor-Atlas_v0.png) -568px -296px;
+  background: url(../monitor/Monitor-Atlas_v0.png) -568px -296px;
 }
 .monitor-support .ft {
-  background: url(../models/monitor/Monitor-Atlas_v0.png) -504px 0px;
+  background: url(../monitor/Monitor-Atlas_v0.png) -504px 0px;
 }
 .monitor-support .bk {
-  background: url(../models/monitor/Monitor-Atlas_v0.png) -568px 0px;
+  background: url(../monitor/Monitor-Atlas_v0.png) -568px 0px;
 }
 .monitor-support .bm {
-  background: url(../models/monitor/Monitor-Atlas_v0.png) -568px -320px;
+  background: url(../monitor/Monitor-Atlas_v0.png) -568px -320px;
 }
 .monitor-support .face {
   background-color:#5c5c5c;

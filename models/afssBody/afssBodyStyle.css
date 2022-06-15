@@ -17,22 +17,22 @@
   height:40em;
 }
 .afssBody .lt {
-  background: url(../models/afssBody/AFSS_Body_Atlas_v1_A1.png) 1092px 0px;
+  background: url(../afssBody/AFSS_Body_Atlas_v1_A1.png) 1092px 0px;
 }
 .afssBody .rt {
-  background: url(../models/afssBody/AFSS_Body_Atlas_v1_A1.png) 0px 0px;
+  background: url(../afssBody/AFSS_Body_Atlas_v1_A1.png) 0px 0px;
 }
 .afssBody .tp {
-  background: url(../models/afssBody/AFSS_Body_Atlas_v1_A1.png) -400px 480px;
+  background: url(../afssBody/AFSS_Body_Atlas_v1_A1.png) -400px 480px;
 }
 .afssBody .bm {
-  background: url(../models/afssBody/AFSS_Body_Atlas_v1_A1.png) 0px 0px;
+  background: url(../afssBody/AFSS_Body_Atlas_v1_A1.png) 0px 0px;
 }
 .afssBody .ft {
-  background: url(../models/afssBody/AFSS_Body_Atlas_v1_A1.png) 690px 0px;
+  background: url(../afssBody/AFSS_Body_Atlas_v1_A1.png) 690px 0px;
 }
 .afssBody .bk {
-  background: url(../models/afssBody/AFSS_Body_Atlas_v1_A1.png) -1120px 0px;
+  background: url(../afssBody/AFSS_Body_Atlas_v1_A1.png) -1120px 0px;
 }
 .afssBody .tp, .afssBody .bm {
   width:25em;

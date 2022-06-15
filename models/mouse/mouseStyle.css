@@ -21,25 +21,25 @@
   height:14em;
 }
 .mouse .rt {
-  background: url(../models/mouse/Mouse-Atlas_v0.png) 0px -224px;
+  background: url(../mouse/Mouse-Atlas_v0.png) 0px -224px;
 }
 .mouse .lt {
-  background: url(../models/mouse/Mouse-Atlas_v0.png) 0px -272px;
+  background: url(../mouse/Mouse-Atlas_v0.png) 0px -272px;
 }
 .mouse .ft {
-  background: url(../models/mouse/Mouse-Atlas_v0.png) -104px -224px;
+  background: url(../mouse/Mouse-Atlas_v0.png) -104px -224px;
 }
 .mouse .bk {
-  background: url(../models/mouse/Mouse-Atlas_v0.png) -103px -272px;
+  background: url(../mouse/Mouse-Atlas_v0.png) -103px -272px;
 }
 .mouse .tp {
-  background: url(../models/mouse/Mouse-Atlas_v0.png) 0px 0px;
+  background: url(../mouse/Mouse-Atlas_v0.png) 0px 0px;
 }
 .mouse .bm {
-  background: url(../models/mouse/Mouse-Atlas_v0.png) 0px 0px;
+  background: url(../mouse/Mouse-Atlas_v0.png) 0px 0px;
 }
 .mouse .cr .side {
-  background: url(../models/mouse/Mouse-Atlas_v0.png) -128px -272px;
+  background: url(../mouse/Mouse-Atlas_v0.png) -128px -272px;
 }
 .mouse .face {
   background-color:#707070;
@@ -154,13 +154,13 @@
   height:1em;
 }
 .wheel .tp {
-  background: url(../models/mouse/Mouse-Atlas_v0.png) -149px -272px;
+  background: url(../mouse/Mouse-Atlas_v0.png) -149px -272px;
 }
 .wheel .bm {
-  background: url(../models/mouse/Mouse-Atlas_v0.png) -197px -272px;
+  background: url(../mouse/Mouse-Atlas_v0.png) -197px -272px;
 }
 .wheel .side {
-  background: url(../models/mouse/Mouse-Atlas_v0.png) -246px -272px;
+  background: url(../mouse/Mouse-Atlas_v0.png) -246px -272px;
 }
 .wheel .s0 {
   transform: rotateY(12.857142857142858deg) translate3D(-50%, 0, 1.475em);
