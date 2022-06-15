@@ -475,7 +475,7 @@ function resetScenario(){
 
 function endScenario(){
   parent.postMessage("scenario complete","*");
-  window.alert("Scenario Complete. You've helped to save PFC Bosky!")
+  console.log("iframe: Scenario Complete.");
 }
 
 function updateHealth() {

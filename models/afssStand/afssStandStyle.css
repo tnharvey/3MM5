@@ -24,25 +24,25 @@
   background-color:#b6b17c;
 }
 .afss-stand .rt {
-  background: url(https://cdn.jsdelivr.net/gh/tnharvey/3DCSSTrainingRoom/models/afssStand/AFSS_Stand_Atlas_v1_A1.png) 0px 0px;
+  background: url(models/afssStand/AFSS_Stand_Atlas_v1_A1.png) 0px 0px;
 }
 .afss-stand .lt {
-  background: url(https://cdn.jsdelivr.net/gh/tnharvey/3DCSSTrainingRoom/models/afssStand/AFSS_Stand_Atlas_v1_A1.png) 0px -80px;
+  background: url(models/afssStand/AFSS_Stand_Atlas_v1_A1.png) 0px -80px;
 }
 .afss-stand .ft {
-  background: url(https://cdn.jsdelivr.net/gh/tnharvey/3DCSSTrainingRoom/models/afssStand/AFSS_Stand_Atlas_v1_A1.png) -424px 0px;
+  background: url(models/afssStand/AFSS_Stand_Atlas_v1_A1.png) -424px 0px;
 }
 .afss-stand .bk {
-  background: url(https://cdn.jsdelivr.net/gh/tnharvey/3DCSSTrainingRoom/models/afssStand/AFSS_Stand_Atlas_v1_A1.png) -424px -80px;
+  background: url(models/afssStand/AFSS_Stand_Atlas_v1_A1.png) -424px -80px;
 }
 .afss-stand .bm {
-  background: url(https://cdn.jsdelivr.net/gh/tnharvey/3DCSSTrainingRoom/models/afssStand/AFSS_Stand_Atlas_v1_A1.png) -400px -160px;
+  background: url(models/afssStand/AFSS_Stand_Atlas_v1_A1.png) -400px -160px;
 }
 .afss-stand .tp {
-  background: url(https://cdn.jsdelivr.net/gh/tnharvey/3DCSSTrainingRoom/models/afssStand/AFSS_Stand_Atlas_v1_A1.png) 0px -160px;
+  background: url(models/afssStand/AFSS_Stand_Atlas_v1_A1.png) 0px -160px;
 }
 .afss-stand .side {
-  background: url(https://cdn.jsdelivr.net/gh/tnharvey/3DCSSTrainingRoom/models/afssStand/AFSS_Stand_Atlas_v1_A1.png) -770px 0px;
+  background: url(models/afssStand/AFSS_Stand_Atlas_v1_A1.png) -770px 0px;
 }
 .afss-stand .ft {
   width:21.5em;
