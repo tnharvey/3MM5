@@ -1,7 +1,5 @@
 /* TO DO
-
-
-- Refactor (someday!) to use React for state mgmt, etc. This would interfere with the SCORM/embedability.
+- Add load service to check for loaded items, show load icon/animation, until items load. Currently finding occassional 404(-ish) errors on loaded items with slower servers
 */
 
 window.onload = function(){
