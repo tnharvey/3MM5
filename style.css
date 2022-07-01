@@ -1523,9 +1523,17 @@ transform: translate3d(707px, 20px, 518px) rotateY(-90deg) rotateZ(39deg);
 }
 
 .pmap-icon14 .rArrowContainer:nth-child(1) .arrow-icon {
-  transform: translateX(-54px) translateY(65px) rotate(21deg);
+    transform: translateX(-56px) translateY(65px) rotate(21deg);
+}
+
+.pmap-icon14 .rArrowContainer:nth-child(1) .arrow-icon .arrow-bar {
+width: 266px;
 }
 
 .pmap-icon14 .rArrowContainer:nth-child(2) .arrow-icon {
-  transform: translateX(-226px) translateY(171px) rotate(13deg);
+    transform: translateX(-342px) translateY(158px) rotate(13deg);
+}
+
+.pmap-icon14 .rArrowContainer:nth-child(2) .arrow-icon .arrow-bar {
+width: 536px;
 }
