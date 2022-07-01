@@ -122,17 +122,17 @@
   width:1.125em;
   height:1.125em;
 }
-[class*="handle"] .tp {
+[class^="handle"] .tp {
   background: url(../coffeeCup/CoffeeCup-Atlas_v1.png) 31px -96px;
 }
-[class*="handle"] .bm {
+[class^="handle"] .bm {
   background: url(../coffeeCup/CoffeeCup-Atlas_v1.png) 31px -114px;
 }
 .handleMain .side {
   width:0.2817739086889187em;
   height:2.75em;
 }
-[class*="handle"] .side {
+[class^="handle"] .side {
   background: url(../coffeeCup/CoffeeCup-Atlas_v1.png) -180px -96px;
 }
 .handleMain .s0 {

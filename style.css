@@ -451,17 +451,14 @@ span.center {
  }
 .pmap-icon14 {
   position: relative;
-  grid-area: 3 / 3 / 4 / 5;
- }
+  grid-area: 3 / 3 / 4 / 4;
+  height: 20px;
+}
 .pmap-icon15 {
   position: relative;
-  grid-area: 3 / 5 / 4 / 6;
+  grid-area: 3 / 4 / 4 / 5;
  }
 .pmap-icon16 {
-  position: relative;
-  grid-area: 3 / 6 / 4 / 7;
- }
-.pmap-icon17 {
   position: relative;
   grid-area: 3 / 7 / 4 / 8;
  }
@@ -1428,6 +1425,7 @@ transform: translate3d(707px, 20px, 518px) rotateY(-90deg) rotateZ(39deg);
   width: 140px;
   transform: rotate(180deg);
 }
+
 .dArrowContainer {
   padding: 40px;
   margin: auto;
@@ -1517,4 +1515,17 @@ transform: translate3d(707px, 20px, 518px) rotateY(-90deg) rotateZ(39deg);
   top: -64px;
   left: 35px;
   transform: rotate(330deg);
+}
+
+.pmap-icon14 .rArrowContainer {
+  width: 20px;
+  height: 10px;
+}
+
+.pmap-icon14 .rArrowContainer:nth-child(1) .arrow-icon {
+  transform: translateX(-54px) translateY(65px) rotate(21deg);
+}
+
+.pmap-icon14 .rArrowContainer:nth-child(2) .arrow-icon {
+  transform: translateX(-226px) translateY(171px) rotate(13deg);
 }
