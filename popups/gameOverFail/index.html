@@ -1,9 +1,9 @@
 <div class="loadedPContainer state01">
   <div class="slide01 slide">
     <h3>GAME OVER</h3>
-    <video src="/videos/3M_M4V3_Scenario_A_LOSER_v2.mp4" width=600px  height=338px controls poster="https://cdn.jsdelivr.net/gh/tnharvey/3DCSSTrainingRoom/popups/gameOverFail/gameoverfail.jpg">
+    <video src="videos/3M_M4V3_Scenario_A_LOSER_v2.mp4" width=600px  height=338px controls poster="popups/gameOverFail/gameoverfail.jpg">
     </video>
-    <div class="slideBtn" onclick="nextSlide01('#popupGameOver02');">Next</div>
+    <div class="slideBtn" onclick="$('#gameOverFail video')[0].pause();nextSlide01('#popupGameOver02');">Next</div>
   </div>
   <div class="slide02 slide">
     <h3>GAME OVER</h3>
