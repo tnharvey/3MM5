@@ -1,0 +1,350 @@
+/* .fieldXRay-Gen styles */
+.fieldXRay-Gen {
+  transform: translate3D(0em, 0em, 0em) rotateX(90deg) rotateY(0deg)
+    rotateZ(0deg);
+  opacity: 1;
+  width: 15em;
+  height: 20em;
+  margin: -10em 0 0 -7.5em;
+}
+.fieldXRay-Gen .ft {
+  transform: translateZ(7.5em);
+}
+.fieldXRay-Gen .bk {
+  transform: translateZ(-7.5em) rotateY(180deg);
+}
+.fieldXRay-Gen .rt,
+.fieldXRay-Gen .lt {
+  width: 15em;
+  height: 20em;
+}
+.fieldXRay-Gen .tp,
+.fieldXRay-Gen .bm {
+  width: 15em;
+  height: 15em;
+}
+.fieldXRay-Gen .face {
+  background-color: #fff700;
+}
+.fieldXRay-Gen .ft {
+  width: 12.5em;
+  margin-left: 1.25em;
+}
+.fieldXRay-Gen .bk {
+  width: 12.5em;
+  margin-left: -1.25em;
+}
+.fieldXRay-Gen .rt,
+.fieldXRay-Gen .lt {
+  width: 12.5em;
+}
+.fieldXRay-Gen .tp,
+.fieldXRay-Gen .bm,
+.fieldXRay-Gen .tp .photon-shader,
+.fieldXRay-Gen .bm .photon-shader {
+  border-radius: 1.25em;
+}
+.fieldXRay-Gen .cr {
+  width: 1.25em;
+  left: 0.625em;
+}
+.fieldXRay-Gen .cr-0 {
+  transform: translate3D(12.5em, 0, 6.25em);
+}
+.fieldXRay-Gen .cr-1 {
+  transform: translate3D(12.5em, 0, -6.25em);
+}
+.fieldXRay-Gen .cr-2 {
+  transform: translate3D(0, 0, -6.25em);
+}
+.fieldXRay-Gen .cr-3 {
+  transform: translate3D(0, 0, 6.25em);
+}
+.fieldXRay-Gen .cr-0 .s0 {
+  transform: rotateY(15deg) translate3D(-50%, 0, 1.225em);
+}
+.fieldXRay-Gen .cr-0 .s1 {
+  transform: rotateY(45deg) translate3D(-50%, 0, 1.225em);
+}
+.fieldXRay-Gen .cr-0 .s2 {
+  transform: rotateY(75deg) translate3D(-50%, 0, 1.225em);
+}
+.fieldXRay-Gen .cr-1 .s0 {
+  transform: rotateY(105deg) translate3D(-50%, 0, 1.225em);
+}
+.fieldXRay-Gen .cr-1 .s1 {
+  transform: rotateY(135deg) translate3D(-50%, 0, 1.225em);
+}
+.fieldXRay-Gen .cr-1 .s2 {
+  transform: rotateY(165deg) translate3D(-50%, 0, 1.225em);
+}
+.fieldXRay-Gen .cr-2 .s0 {
+  transform: rotateY(195deg) translate3D(-50%, 0, 1.225em);
+}
+.fieldXRay-Gen .cr-2 .s1 {
+  transform: rotateY(225deg) translate3D(-50%, 0, 1.225em);
+}
+.fieldXRay-Gen .cr-2 .s2 {
+  transform: rotateY(255deg) translate3D(-50%, 0, 1.225em);
+}
+.fieldXRay-Gen .cr-3 .s0 {
+  transform: rotateY(285deg) translate3D(-50%, 0, 1.225em);
+}
+.fieldXRay-Gen .cr-3 .s1 {
+  transform: rotateY(315deg) translate3D(-50%, 0, 1.225em);
+}
+.fieldXRay-Gen .cr-3 .s2 {
+  transform: rotateY(345deg) translate3D(-50%, 0, 1.225em);
+}
+.fieldXRay-Gen .side {
+  width: 0.6948729810778068em;
+}
+/* .fieldXRay-Focus styles */
+.fieldXRay-Focus {
+  transform: translate3D(0em, 0em, 15em) rotateX(90deg) rotateY(0deg)
+    rotateZ(0deg);
+  opacity: 1;
+  width: 14em;
+  height: 10em;
+  margin: -5em 0 0 -7em;
+}
+.fieldXRay-Focus .ft {
+  transform: translateZ(5em);
+}
+.fieldXRay-Focus .bk {
+  transform: translateZ(-5em) rotateY(180deg);
+}
+.fieldXRay-Focus .rt,
+.fieldXRay-Focus .lt {
+  width: 10em;
+  height: 10em;
+}
+.fieldXRay-Focus .tp,
+.fieldXRay-Focus .bm {
+  width: 14em;
+  height: 10em;
+}
+.fieldXRay-Focus .face {
+  background-color: #454545;
+}
+.fieldXRay-Focus .ft {
+  width: 12em;
+  margin-left: 1em;
+}
+.fieldXRay-Focus .bk {
+  width: 12em;
+  margin-left: -1em;
+}
+.fieldXRay-Focus .rt,
+.fieldXRay-Focus .lt {
+  width: 8em;
+}
+.fieldXRay-Focus .tp,
+.fieldXRay-Focus .bm,
+.fieldXRay-Focus .tp .photon-shader,
+.fieldXRay-Focus .bm .photon-shader {
+  border-radius: 1em;
+}
+.fieldXRay-Focus .cr {
+  width: 1em;
+  left: 0.5em;
+}
+.fieldXRay-Focus .cr-0 {
+  transform: translate3D(12em, 0, 4em);
+}
+.fieldXRay-Focus .cr-1 {
+  transform: translate3D(12em, 0, -4em);
+}
+.fieldXRay-Focus .cr-2 {
+  transform: translate3D(0, 0, -4em);
+}
+.fieldXRay-Focus .cr-3 {
+  transform: translate3D(0, 0, 4em);
+}
+.fieldXRay-Focus .cr-0 .s0 {
+  transform: rotateY(15deg) translate3D(-50%, 0, 0.975em);
+}
+.fieldXRay-Focus .cr-0 .s1 {
+  transform: rotateY(45deg) translate3D(-50%, 0, 0.975em);
+}
+.fieldXRay-Focus .cr-0 .s2 {
+  transform: rotateY(75deg) translate3D(-50%, 0, 0.975em);
+}
+.fieldXRay-Focus .cr-1 .s0 {
+  transform: rotateY(105deg) translate3D(-50%, 0, 0.975em);
+}
+.fieldXRay-Focus .cr-1 .s1 {
+  transform: rotateY(135deg) translate3D(-50%, 0, 0.975em);
+}
+.fieldXRay-Focus .cr-1 .s2 {
+  transform: rotateY(165deg) translate3D(-50%, 0, 0.975em);
+}
+.fieldXRay-Focus .cr-2 .s0 {
+  transform: rotateY(195deg) translate3D(-50%, 0, 0.975em);
+}
+.fieldXRay-Focus .cr-2 .s1 {
+  transform: rotateY(225deg) translate3D(-50%, 0, 0.975em);
+}
+.fieldXRay-Focus .cr-2 .s2 {
+  transform: rotateY(255deg) translate3D(-50%, 0, 0.975em);
+}
+.fieldXRay-Focus .cr-3 .s0 {
+  transform: rotateY(285deg) translate3D(-50%, 0, 0.975em);
+}
+.fieldXRay-Focus .cr-3 .s1 {
+  transform: rotateY(315deg) translate3D(-50%, 0, 0.975em);
+}
+.fieldXRay-Focus .cr-3 .s2 {
+  transform: rotateY(345deg) translate3D(-50%, 0, 0.975em);
+}
+.fieldXRay-Focus .side {
+  width: 0.5608983848622454em;
+}
+/* .fieldXRay-Knob styles */
+.fieldXRay-Knob {
+  transform: translate3D(2em, -5.125em, 15.125em) rotateX(0deg) rotateY(0deg)
+    rotateZ(0deg);
+  opacity: 1;
+  width: 2em;
+  height: 3em;
+  margin: -1.5em 0 0 -1em;
+}
+.fieldXRay-Knob .tp,
+.fieldXRay-Knob .bm {
+  width: 2em;
+  height: 2em;
+}
+.fieldXRay-Knob .side {
+  width: 0.4814869487802999em;
+  height: 3em;
+}
+.fieldXRay-Knob .s0 {
+  transform: rotateY(12.857142857142858deg) translate3D(-50%, 0, 0.975em);
+}
+.fieldXRay-Knob .s1 {
+  transform: rotateY(38.57142857142857deg) translate3D(-50%, 0, 0.975em);
+}
+.fieldXRay-Knob .s2 {
+  transform: rotateY(64.28571428571429deg) translate3D(-50%, 0, 0.975em);
+}
+.fieldXRay-Knob .s3 {
+  transform: rotateY(90deg) translate3D(-50%, 0, 0.975em);
+}
+.fieldXRay-Knob .s4 {
+  transform: rotateY(115.71428571428572deg) translate3D(-50%, 0, 0.975em);
+}
+.fieldXRay-Knob .s5 {
+  transform: rotateY(141.42857142857144deg) translate3D(-50%, 0, 0.975em);
+}
+.fieldXRay-Knob .s6 {
+  transform: rotateY(167.14285714285714deg) translate3D(-50%, 0, 0.975em);
+}
+.fieldXRay-Knob .s7 {
+  transform: rotateY(192.85714285714286deg) translate3D(-50%, 0, 0.975em);
+}
+.fieldXRay-Knob .s8 {
+  transform: rotateY(218.57142857142858deg) translate3D(-50%, 0, 0.975em);
+}
+.fieldXRay-Knob .s9 {
+  transform: rotateY(244.2857142857143deg) translate3D(-50%, 0, 0.975em);
+}
+.fieldXRay-Knob .s10 {
+  transform: rotateY(270deg) translate3D(-50%, 0, 0.975em);
+}
+.fieldXRay-Knob .s11 {
+  transform: rotateY(295.7142857142857deg) translate3D(-50%, 0, 0.975em);
+}
+.fieldXRay-Knob .s12 {
+  transform: rotateY(321.4285714285714deg) translate3D(-50%, 0, 0.975em);
+}
+.fieldXRay-Knob .s13 {
+  transform: rotateY(347.1428571428571deg) translate3D(-50%, 0, 0.975em);
+}
+.fieldXRay-Knob .face,
+.fieldXRay-Knob .side {
+  background-color: #303030;
+}
+/* .fieldXRay-shieldC styles */
+.fieldXRay-shieldC {
+  transform: translate3D(0em, 0em, 20.25em) rotateX(0deg) rotateY(0deg)
+    rotateZ(0deg);
+  opacity: 1;
+  width: 8em;
+  height: 8em;
+  margin: -4em 0 0 -4em;
+}
+.fieldXRay-shieldC .ft {
+  transform: translateZ(0.05em);
+}
+.fieldXRay-shieldC .bk {
+  transform: translateZ(-0.05em) rotateY(180deg);
+}
+.fieldXRay-shieldC .rt,
+.fieldXRay-shieldC .lt {
+  width: 0.1em;
+  height: 8em;
+}
+.fieldXRay-shieldC .tp,
+.fieldXRay-shieldC .bm {
+  width: 8em;
+  height: 0.1em;
+}
+.fieldXRay-shieldC .face {
+  background-color: #ffffff;
+}
+/* .fieldXRay-shieldL styles */
+.fieldXRay-shieldL {
+  transform: translate3D(-5.125em, 0em, 24em) rotateX(0deg) rotateY(74deg)
+    rotateZ(0deg);
+  opacity: 1;
+  width: 8em;
+  height: 8em;
+  margin: -4em 0 0 -4em;
+}
+.fieldXRay-shieldL .ft {
+  transform: translateZ(0.05em);
+}
+.fieldXRay-shieldL .bk {
+  transform: translateZ(-0.05em) rotateY(180deg);
+}
+.fieldXRay-shieldL .rt,
+.fieldXRay-shieldL .lt {
+  width: 0.1em;
+  height: 8em;
+}
+.fieldXRay-shieldL .tp,
+.fieldXRay-shieldL .bm {
+  width: 8em;
+  height: 0.1em;
+}
+.fieldXRay-shieldL .face {
+  background-color: #ffffff;
+}
+/* .fieldXRay-shieldR styles */
+.fieldXRay-shieldR {
+  transform: translate3D(5.125em, 0em, 24em) rotateX(0deg) rotateY(-74deg)
+    rotateZ(0deg);
+  opacity: 1;
+  width: 8em;
+  height: 8em;
+  margin: -4em 0 0 -4em;
+}
+.fieldXRay-shieldR .ft {
+  transform: translateZ(0.05em);
+}
+.fieldXRay-shieldR .bk {
+  transform: translateZ(-0.05em) rotateY(180deg);
+}
+.fieldXRay-shieldR .rt,
+.fieldXRay-shieldR .lt {
+  width: 0.1em;
+  height: 8em;
+}
+.fieldXRay-shieldR .tp,
+.fieldXRay-shieldR .bm {
+  width: 8em;
+  height: 0.1em;
+}
+.fieldXRay-shieldR .face {
+  background-color: #ffffff;
+}
