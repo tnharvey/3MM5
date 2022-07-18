@@ -711,9 +711,9 @@ function userAction(input) {
         //document.getElementById("backButton").style.opacity=1;
         if (uAction == "face-equipment") {
           currentPopup = "popupOption03";
-          afssDoor.classList.add("afssDoor-open");
-          afssDoor.addEventListener("transitionend", transitionPopup);
-
+          //afssDoor.classList.add("afssDoor-open");
+          //afssDoor.addEventListener("transitionend", transitionPopup);
+          transitionPopup();
           cube.addEventListener("transitionend", transitionPopup);
         }
         if (uAction == "face-computer") {
