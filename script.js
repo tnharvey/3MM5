@@ -895,9 +895,6 @@ function loadModels(modelsJson) {
   tableCode2.load(baseUrl + "models/table/tableDom.html");
   tableCode3.load(baseUrl + "models/table/tableDom.html");
   docCabCode.load(baseUrl + "models/documentCabinet/docCabDom.html");
-  flLightCode1.load(baseUrl + "models/flLight/flLightDom.html");
-  flLightCode2.load(baseUrl + "models/flLight/flLightDom.html");
-  flLightCode3.load(baseUrl + "models/flLight/flLightDom.html");
   monitorCode1.load(baseUrl + "models/monitor/monitorDom.html");
   //plugCode1.load(baseUrl+"models/plug/plugDom.html");
   fieldXRay1.load(baseUrl + "models/fieldXRay/fieldXRayDom.html");
@@ -915,9 +912,6 @@ function loadModels(modelsJson) {
     tableCode2,
     tableCode3,
     docCabCode,
-    flLightCode1,
-    flLightCode2,
-    flLightCode3,
     monitorCode1,
     fieldXRay1,
     toolkit1,
@@ -937,11 +931,6 @@ function loadModels(modelsJson) {
     '<link rel="stylesheet" href="' +
       baseUrl +
       'models/documentCabinet/docCabStyle.css" />'
-  );
-  $("head").append(
-    '<link rel="stylesheet" href="' +
-      baseUrl +
-      'models/flLight/flLightStyle.css" />'
   );
   $("head").append(
     '<link rel="stylesheet" href="' +
