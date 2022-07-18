@@ -713,7 +713,7 @@ function userAction(input) {
           currentPopup = "popupOption03";
           //afssDoor.classList.add("afssDoor-open");
           //afssDoor.addEventListener("transitionend", transitionPopup);
-          transitionPopup();
+          showPopup(currentPopup);
           cube.addEventListener("transitionend", transitionPopup);
         }
         if (uAction == "face-computer") {
