@@ -744,12 +744,12 @@ function updateOrientation(newOrientation) {
     newOrientation == "face-left"
   ) {
     document.getElementById("cards").style.visibility = "visible";
-    if (
+    /*if (
       newOrientation == "face-front" &&
       $("#afssDoor01")[0].classList.contains("afssDoor-open")
     ) {
       $("#afssDoor01")[0].classList.remove("afssDoor-open");
-    }
+    }*/
     if (
       currentOrientation == "face-resources" &&
       newOrientation == "face-left"
