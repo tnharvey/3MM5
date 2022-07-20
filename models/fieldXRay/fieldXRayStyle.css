@@ -1,3 +1,101 @@
+/* SKINS */
+.fieldXRay-Gen .tp {
+  background: url(https://cdn.jsdelivr.net/gh/tnharvey/3MM5@main/models/fieldXRay/Field-XRay-Atlas_A4.png)
+    0px 0px;
+}
+.fieldXRay-Gen .bm {
+  background: url(https://cdn.jsdelivr.net/gh/tnharvey/3MM5/models/fieldXRay/Field-XRay-Atlas_A4.png) -472px -1px;
+}
+.fieldXRay-Gen .ft {
+  background: url(https://cdn.jsdelivr.net/gh/tnharvey/3MM5/models/fieldXRay/Field-XRay-Atlas_A4.png) -20px -241px;
+}
+.fieldXRay-Gen .bk {
+  background: url(https://cdn.jsdelivr.net/gh/tnharvey/3MM5/models/fieldXRay/Field-XRay-Atlas_A4.png) -491px -241px;
+}
+.fieldXRay-Gen .lt {
+  background: url(https://cdn.jsdelivr.net/gh/tnharvey/3MM5/models/fieldXRay/Field-XRay-Atlas_A4.png) -728px -241px;
+}
+.fieldXRay-Gen .rt {
+  background: url(https://cdn.jsdelivr.net/gh/tnharvey/3MM5/models/fieldXRay/Field-XRay-Atlas_A4.png) -256px -241px;
+}
+.fieldXRay-Gen .side {
+  background: url(https://cdn.jsdelivr.net/gh/tnharvey/3MM5/models/fieldXRay/Field-XRay-Atlas_A4.png) -218px -241px;
+}
+.fieldXRay-Focus .ft {
+  background: url(https://cdn.jsdelivr.net/gh/tnharvey/3MM5/models/fieldXRay/Field-XRay-Atlas_A4.png) -17px -720px;
+}
+.fieldXRay-Focus .bk {
+  background: url(https://cdn.jsdelivr.net/gh/tnharvey/3MM5@main/models/fieldXRay/Field-XRay-Atlas_A4.png) -395px -720px;
+}
+.fieldXRay-Focus .lt {
+  background: url(https://cdn.jsdelivr.net/gh/tnharvey/3MM5@main/models/fieldXRay/Field-XRay-Atlas_A4.png) -618px -720px;
+}
+.fieldXRay-Focus .rt {
+  background: url(https://cdn.jsdelivr.net/gh/tnharvey/3MM5@main/models/fieldXRay/Field-XRay-Atlas_A4.png) -238px -720px;
+}
+.fieldXRay-Focus .tp {
+  background: url(https://cdn.jsdelivr.net/gh/tnharvey/3MM5@main/models/fieldXRay/Field-XRay-Atlas_A4.png)
+    0px -562px;
+}
+.fieldXRay-Focus .bm {
+  background: url(https://cdn.jsdelivr.net/gh/tnharvey/3MM5@main/models/fieldXRay/Field-XRay-Atlas_A4.png) -380px -562px;
+}
+.fieldXRay-Focus .side {
+  background: url(https://cdn.jsdelivr.net/gh/tnharvey/3MM5/models/fieldXRay/Field-XRay-Atlas_A4.png) -206px -720px;
+}
+.fieldXRay-Knob .tp {
+  background: url(https://cdn.jsdelivr.net/gh/tnharvey/3MM5/models/fieldXRay/Field-XRay-Atlas_A4.png) -668px -561px;
+}
+.fieldXRay-Knob .bm {
+  background: url(https://cdn.jsdelivr.net/gh/tnharvey/3MM5/models/fieldXRay/Field-XRay-Atlas_A4.png) -668px -561px;
+}
+.fieldXRay-Knob .side {
+  background: url(https://cdn.jsdelivr.net/gh/tnharvey/3MM5/models/fieldXRay/Field-XRay-Atlas_A4.png) -681px -594px;
+}
+.fieldXRay-shieldL .ft {
+  background: url(https://cdn.jsdelivr.net/gh/tnharvey/3MM5/models/fieldXRay/Field-XRay-Atlas_A4.png)
+    0px 130px;
+}
+.fieldXRay-shieldL .bk {
+  background: url(https://cdn.jsdelivr.net/gh/tnharvey/3MM5/models/fieldXRay/Field-XRay-Atlas_A4.png) -130px
+    130px;
+}
+.fieldXRay-shieldL .bm {
+  background: url(https://cdn.jsdelivr.net/gh/tnharvey/3MM5/models/fieldXRay/Field-XRay-Atlas_A4.png)
+    0px 130px;
+}
+.fieldXRay-shieldC .ft {
+  background: url(https://cdn.jsdelivr.net/gh/tnharvey/3MM5/models/fieldXRay/Field-XRay-Atlas_A4.png) -261px
+    130px;
+}
+.fieldXRay-shieldC .bk {
+  background: url(https://cdn.jsdelivr.net/gh/tnharvey/3MM5/models/fieldXRay/Field-XRay-Atlas_A4.png) -392px
+    130px;
+}
+.fieldXRay-shieldC .rt {
+  background: url(https://cdn.jsdelivr.net/gh/tnharvey/3MM5/models/fieldXRay/Field-XRay-Atlas_A4.png) -387px
+    130px;
+}
+.fieldXRay-shieldC .lt {
+  background: url(https://cdn.jsdelivr.net/gh/tnharvey/3MM5/models/fieldXRay/Field-XRay-Atlas_A4.png) -391px
+    130px;
+}
+.fieldXRay-shieldC .tp {
+  background: url(https://cdn.jsdelivr.net/gh/tnharvey/3MM5/models/fieldXRay/Field-XRay-Atlas_A4.png) -392px
+    2px;
+}
+.fieldXRay-shieldC .bm {
+  background: url(https://cdn.jsdelivr.net/gh/tnharvey/3MM5/models/fieldXRay/Field-XRay-Atlas_A4.png) -392px
+    3px;
+}
+.fieldXRay-shieldR .ft {
+  background: url(https://cdn.jsdelivr.net/gh/tnharvey/3MM5/models/fieldXRay/Field-XRay-Atlas_A4.png) -519px
+    130px;
+}
+.fieldXRay-shieldR .bk {
+  background: url(https://cdn.jsdelivr.net/gh/tnharvey/3MM5/models/fieldXRay/Field-XRay-Atlas_A4.png) -652px
+    130px;
+}
 /* .fieldXRay-Gen styles */
 .fieldXRay-Gen {
   transform: translate3D(0em, 0em, 0em) rotateX(90deg) rotateY(0deg)
@@ -289,9 +387,6 @@
   width: 8em;
   height: 0.1em;
 }
-.fieldXRay-shieldC .face {
-  background-color: #ffffff;
-}
 /* .fieldXRay-shieldL styles */
 .fieldXRay-shieldL {
   transform: translate3D(-5.125em, 0em, 24em) rotateX(0deg) rotateY(74deg)
@@ -317,9 +412,6 @@
   width: 8em;
   height: 0.1em;
 }
-.fieldXRay-shieldL .face {
-  background-color: #ffffff;
-}
 /* .fieldXRay-shieldR styles */
 .fieldXRay-shieldR {
   transform: translate3D(5.125em, 0em, 24em) rotateX(0deg) rotateY(-74deg)
@@ -344,7 +436,4 @@
 .fieldXRay-shieldR .bm {
   width: 8em;
   height: 0.1em;
-}
-.fieldXRay-shieldR .face {
-  background-color: #ffffff;
 }
