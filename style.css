@@ -1154,7 +1154,7 @@ li.incomplete {
 }
 
 #toolkit01 {
-  transform: translate3d(710px, 81px, -168px) rotateY(23deg) rotateX(0deg)
+  transform: translate3d(710px, 81px, -207px) rotateY(23deg) rotateX(0deg)
     rotateZ(0deg) scaleX(0.3) scaleZ(0.3) scaleY(0.3);
   transition-duration: 2s;
 }
