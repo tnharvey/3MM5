@@ -96,6 +96,7 @@ var choices = {
   challenge05: 0
 };
 var allChoices = {};
+
 var choiceTypes = {
   quickRepair: 0,
   process: 0
@@ -117,68 +118,72 @@ const termAnswers = {
 const feedbackMessages = {
   part01: {
     a1b1:
-      "<h2>Feedback</h2><p><span class='left'>These are both excellent decisions, however remember that, if you don't review the work request in GCSS-A first, this can cause issues with the documentation of the work order.</span></p>",
-    a1b2:
-      "<h2>Feedback</h2><p><span class='left'>Excellent decision to review the work request.</span><br /><span class='left'>Remember that you should conduct a visual inspection as well as calculate the MEL before processing the device.</span></p>",
+      "<h2>Feedback</h2><p><span class='left'>These two decisions could have possibly cost a life because the device won't be calibrated. </span></p>",
     a1b3:
-      "<h2>Feedback</h2><p><span class='left'>Great decision to review the work request in GCSS-A.</span><br /><span class='left'>Remember that you should calculate the MEL and conduct a visual inspection before procesing the device for repair.</span><br /><span class='left'>By skipping these steps, you could have issues down the line when getting the repair paid for, as well as missing documentation.</span></p>",
-    a2:
-      "<h2>Feedback</h2><p><span class='left'>Hold your horses.</span><br /><span class='left'>Remember to follow the process because, if you send the device off without completing a visual inspection or determining the MEL, you could cost your unit and the Army a lot of money down the line.</span></p>",
+      "<h2>Feedback</h2><p><span class='left'>Don't forget to look for patterns before creating the work order. You also should be sure to review the SOPs before calibrating according to the manufacturer's requirements.</span></p>",
+    a1b4:
+      "<h2>Feedback</h2><p><span class='left'>Don't forget to investigate and look for patterns before sending the equipment off for calibration. Great call to look at the SOPs and work orders when starting the process.</span></p>",
     a3b1:
-      "<h2>Feedback</h2><p><span class='left'>These are both excellent decisions.</span><br /><span class='left'>However, if you don't review the work request in GCSS-A first, this can cause issues with the documentation of the work order.</span></p>",
-    a3b2:
-      "<h2>Feedback</h2><p><span class='left'>It is important to conduct the visual inspection and the MEL. You may not necessarily need DA form 2404 if you have access to GCSS-A.</span><br /><span class='left'>By not reviewing the work request first in GCSS-A, there could be problems down the line with the documentation of the repair.</span></p>",
+      "<h2>Feedback</h2><p><span class='left'>Great call to talk to a technician. Remember that calibrating equipment is an important part of your job and that you have to make time or else it could cost lives.</span></p>",
     a3b3:
-      "<h2>Feedback</h2><p><span class='left'>It is important to conduct a visual inspection of the device, however, before you send the device off for repair, remember to review the work request in GCSS-A.</span><br /><span class='left'>By not having a look at the work order it could cause issues down the line when documenting the repair.</span></p>"
+      "<h2>Feedback</h2><p><span class='left'>Good call to get in touch with a technician. Don't forget to review the requirements for calibration when you are going through the process.</span></p>",
+    a3b4:
+      "<h2>Feedback</h2><p><span class='left'>You definitely make great decisions when it comes to calibration.</span></p>",
+    a4:
+      "<h2>Feedback</h2><p><span class='left'>Never hope for something to happen. Remember to verify more than once.</span></p>"
   },
   part02: {
     a1b1:
-      "<h2>Feedback</h2><p><span class='left'>Excellent decision to document the device.</span><br /><span class='left'>However, before you approve the release of the device, you must conduct a function check.</span><br /><span class='left'>Also, remember that every part of the work request should be entered in GCSS-A.</span></p>",
+      "<h2>Feedback</h2><p><span class='left'>Great call to follow the work order. Remember that even though a device is new, you should still follow the calibration schedule.</span></p>",
     a1b3:
-      "<h2>Feedback</h2><p><span class='left'>Wait just a second.</span><br /><span class='left'>It is great that you were able to document the device in GCSS-A, however, remember that you should conduct a function check before releasing the device.</span><br /><span class='left'>This is important to do because there could still be potential issues with the device that could cost lives.</span></p>",
+      "<h2>Feedback</h2><p><span class='left'>Great call to look at work orders, however that wasn't a good move to follow your own instincts.</span></p>",
     a1b4:
-      "<h2>Feedback</h2><p><span class='left'>Excellent decision to document the device and return it back to the customer after conducting a function check.</span><br /><span class='left'>Also, remember that every part of the work request should be entered in GCSS-A.</span></p>",
+      "<h2>Feedback</h2><p><span class='left'>Great call to follow the work order and calibrate equipment according to the SOP.</span></p>",
     a2b1:
-      "<h2>Feedback</h2><p><span class='left'>Great call to enter the paperwork in GCSS-A and to send the device off for repair.</span><br /><span class='left'>Don't forget to conduct a function check before releasing the device back to the customer.</span><br /><span class='left'>Without conducting the function check, you could potentially send back a device that is not functioning correctly, which could malfunction while in the field (and cost a life!).</span></p>",
+      "<h2>Feedback</h2><p><span class='left'>Don't forget that work orders give you information that is necessary to complete your job. Even though a device is new, you still need to make sure that you following the maintenance guidelines.</span></p>",
     a2b3:
-      "<h2>Feedback</h2><p><span class='left'>Great call to enter the paperwork into GCSS-A and to send the device off for repair.</span><br /><span class='left'>Remember to conduct a function check before releasing the device back to the customer.</span></p>",
+      "<h2>Feedback</h2><p><span class='left'>Don't forget to follow the SOP and work order process because following your own instincts could cost lives.</span></p>",
     a2b4:
-      "<h2>Feedback</h2><p><span class='left'>Great call to enter the paperwork in GCSS-A and to send the device off for repair.</span><br /><span class='left'>Fantastic choice to conduct a function check using the manufacturer's manual.</span></p>",
-    a3:
-      "<h2>Feedback</h2><p><span class='left'>If you send the device immediately off for repair without ensuring that the paperwork is entered in GCSS-A, you could have issues when the device is returned for not following the SOP.</span><br /><span class='left'>Remember that you manage the repair process and not necessarily conducting the repair.</span></p>"
+      "<h2>Feedback</h2><p><span class='left'>Good call to calibrate the equipment in line with the manfacturer's literature and Army Regulations. Don't forget that you should use work orders to set up your routine for each device.</span></p>",
+    a4b1:
+      "<h2>Feedback</h2><p><span class='left'>Don't forget that it is important to calibrate according to the SOPs.</span></p>",
+    a4b3:
+      "<h2>Feedback</h2><p><span class='left'>Remember to follow the SOPs and other manuals. Trusting your instincts can help you in certain situations but you want to try to stick to the process.</span></p>",
+    a4b4:
+      "<h2>Feedback</h2><p><span class='left'>Work orders give you information that is necessary to complete your job. Great call to calibrate according to the regulations laid out in the SOPs.</span></p>"
   },
   part03: {
     a1:
-      "<h2>Feedback</h2><p><span class='left'>This is definitely not the correct choice, as your job is to ensure that all medical devices are functioning properly.</span></p>",
+      "<h2>Feedback</h2><p><span class='left'>Good call to enter all of the information into GCSS-A so that you can monitor any changes.</span></p>",
     a3:
-      "<h2>Feedback</h2><p><span class='left'>You should never release a device to the customer if it presents any type of danger.</span></p>",
+      "<h2>Feedback</h2><p><span class='left'>Don't forget to follow the process and even though the task is complete you should still read and document to keep the device up to date.</span></p>",
     a4:
-      "<h2>Feedback</h2><p><span class='left'>This is the correct path.</span><br /><span class='left'>Fortunately you were able to borrow the same device from another unit, so PFC Humble will make a full recovery.</span></p>"
+      "<h2>Feedback</h2><p><span class='left'>Don't forget that you will still need to input the information into GCSS-A.</span></p>"
   }
 };
 const debrief = {
   // 1-0 answers incorrect
-  1: "<br><span class='left'>Awesome job! PFC Humble looks like he is going to make it after all.</span><br /><span class='left'>It looks like you really know the repair process flow. You're practically an expert now. From initially receiving the work request all the way to returning the device to the customer, you've got it down.</span>",
+  1: "<br><span class='left'>Great job with everything. You've got the process for calibration all the way in the bag. It looks like both of the Soldier's were able to be diagnosed. You don't have to worry about more vampires walking the streets at midnight.</span>",
   // Skipping the process, avoiding GCSS-A, or not using SOP
-  2: "<br><span class='left'>PFC Humble was just about to turn, but you saved him just in time.</span><br /><span class='left'>You have a pretty strong understanding of the process, however, there were some points where you wanted to skip ahead. Remember that:</span><ul><li>We have SOPs for a reason. Make sure that you are documenting everything in GCSS-A.</li></ul><span class='left'>Without doing this, you could cost the Army more money,</span><span class='center'><b>and potentially <u>lives</u>.</b></span>",
+  2: "<br><span class='left'>Are those two fangs that I see? What are you doing with those? Don't forget to review work orders and SOPs which will help you as you are conducting a calibration.</span>",
   // Sending equipment out too early
-  3: "<br><span class='left'>Woah! You've got a really good grasp of what needs to happen as you process a work order.</span><br /><span class='left'>Don't forget to:</span><ul><li>Follow every step in the repair process and don't send the device either out for repair or back to the customer without completing the process. </li></ul><span class='left'>Sending the device out without calculating the MEL, entering information in GCSS-A, or giving the device back to the customer before following each step in the process</span><span class='center'>could cost someone their life.</span>",
+  3: "<br><span class='left'>Whoosh?!? Where did that bat come from? Don't forget that every device has it's own calibration and maintenance schedule. Make sure that you maintain that schedule and save Soldiers from joining the undead.</span>",
   // Mix of 2 and 3
-  4: "<br><span class='left'>PFC Humble looks drenched in sweat but fortunately still human.</span><span class='left'>You've got a pretty solid understanding of the repair process. There are a few areas that you should be aware of when you are processing a device for repair. Don't forget to:</span><ul><li>Follow the SOP<li></li>Document everything in GCSS-A<li></li>The higher unit shouldn't send the device back to the customer without conducting a function check.</li></ul>"
+  4: "<br><span class='left'>There's blood everywhere! You better get that cleaned up quick. Don't forget to follow SOPs, work orders and to never ignore problems that come up with devices.</li></ul>"
 };
 const messages = {
-  1: "<br><span>What is the first step in the equipment repair process, once you've received a request? Look around the room, pay attention to the areas with a glowing card.</span>",
-  2: "<br><span>You need to be timely, economical, and professional. What will help you process the equipment this way?</span>",
-  3: "<br><span>You're able to see that the costs are not going to exceed the MEL. What now?</span>",
-  4: "<br><span>You have received the equipment back. What do you do now?</span>",
-  5: "<br><span>There are still a few deficiencies with the equipment. What should you do?</span>"
+  1: "<br><span>What would you advise SPC Van Helsing to do with the Portable Digital Radiography System? Look around the room, pay attention to the areas with a glowing card.</span>",
+  2: "<br><span>Do you think that SPC Van Helsing should calibrate the device?</span>",
+  3: "<br><span>Why are work orders important to your position?</span>",
+  4: "<br><span>What do you think will happen if she doesn't recommend that the PDRS gets calibrated?</span>",
+  5: "<br><span>You're almost to the end of the scenario. What should SPC Van Helsing do after the calibration is completed?</span>"
 };
 const messages02 = {
-  1: "<br><span>All work requests should be reviewed first in GCSS-A. You can't send the repair off as it is above the 10/20 level.</span>",
-  2: "<br><span>The next step in the process is to determine the MEL and to conduct a visual inspection of the device.</span>",
-  3: "<br><span>Once you have entered all of the paperwork in GCSS-A, then you can send the device off to the next level for repair.</span>",
-  4: "<br><span>Once you receive the device back, then you should conduct a function check before returning the device back to the customer.</span>",
-  5: "<br><span>You should conduct another function check and repair the device or refer it to the next level. Once this is resolved, then you can release the device to the customer.</span>"
+  1: "<br><span>Always remember to look for patterns and verify with multiple devices before recommending calibration and/or a repair.</span>",
+  2: "<br><span> Don't forget to review the manufacturer's guidance or the SOPs depending on what is more stringent to determine the correct path to take.</span>",
+  3: "<br><span>Don't forget that although it is important to prioritize certain parts of your day it is equally as important to review work orders and the manuals that go along with equipment.</span>",
+  4: "<br><span>You should always calibrate equipment according to the operating manuals/SOPs.</span>",
+  5: "<br><span>Make sure to follow the manufacturer's guidelines to determine when you need to calibrate devices and enter all documentation in GCSS-A.</span>"
 };
 const popups = {
   chal: {
