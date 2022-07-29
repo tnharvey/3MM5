@@ -57,22 +57,22 @@ var started = 0;
 // Data Objects
 const activeAreas = {
   challenge01: {
-    resources: 0,
-    forms: 1,
+    resources: 1,
+    forms: 0,
     computer: 1,
     equipment: 1
   },
   challenge02: {
-    resources: 0,
-    forms: 1,
+    resources: 1,
+    forms: 0,
     computer: 1,
     equipment: 1
   },
   challenge03: {
-    resources: 0,
+    resources: 1,
     forms: 1,
     computer: 1,
-    equipment: 1
+    equipment: 0
   },
   challenge04: {
     resources: 1,
@@ -81,19 +81,13 @@ const activeAreas = {
     equipment: 1
   },
   challenge05: {
-    resources: 0,
+    resources: 1,
     forms: 0,
-    computer: 0,
-    equipment: 0
+    computer: 1,
+    equipment: 1
   }
 };
-var currentStep = {
-  challenge01: 1,
-  challenge02: 3,
-  challenge03: 5,
-  challenge04: 11,
-  challenge05: 13
-};
+
 var choices = {
   challenge01: 0,
   challenge02: 0,
@@ -107,18 +101,18 @@ var choiceTypes = {
   process: 0
 };
 const answers = {
-  challenge01: 1,
-  challenge02: 1,
-  challenge03: 2,
+  challenge01: 3,
+  challenge02: 4,
+  challenge03: 1,
   challenge04: 4,
-  challenge05: 4
+  challenge05: 1
 };
 const termAnswers = {
-  challenge01: 2,
-  challenge02: 3,
-  challenge03: 3,
-  challenge04: 0,
-  challenge05: 3
+  challenge01: 4,
+  challenge02: 1,
+  challenge03: 0,
+  challenge04: 3,
+  challenge05: 0
 };
 const feedbackMessages = {
   part01: {
