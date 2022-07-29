@@ -1,19 +1,37 @@
 <div class="loadedPContainer state01">
   <div class="slide01 slide">
     <h3>MISSION COMPLETE</h3>
-    <video src="videos/3M_M4V3_Scenario_B_WINNER_v1.mp4" width=600px  height=338px controls poster="popups/gameOverSuccess/gameoversuccess.jpg">
-    </video>
-    <div class="slideBtn" onclick="$('#gameOverSuccess video')[0].pause();nextSlide01('#popupGameOver01');">Next</div>
+    <video
+      src="videos/Game_Over_WIN_v2.mp4"
+      width="600px"
+      height="338px"
+      controls
+      poster="popups/gameOverSuccess/gameoversuccess.jpg"
+    ></video>
+    <div
+      class="slideBtn"
+      onclick="$('#gameOverSuccess video')[0].pause();nextSlide01('#popupGameOver01');"
+    >
+      Next
+    </div>
   </div>
   <div class="slide02 slide">
     <h3>MISSION COMPLETE</h3>
-    <span>Way to go! Due to your diligent work, SPC Bosky has recovered from the virus and will not spend the rest of his days mindlessly roaming the earth.</span>
+    <span>
+      Way to go! Due to your diligent work, SPC Bosky has recovered from the
+      virus and will not spend the rest of his days mindlessly roaming the
+      earth.
+    </span>
     <div id="successResults"></div>
     <div class="slideBtn" onclick="nextSlide01('#popupGameOver01');">Next</div>
   </div>
   <div class="slide03 slide">
     <h3>MISSION COMPLETE</h3>
-    <span>You have successfully completed the scenario! Click the End Scenario button below and you will see the forward arrow on the timeline below this area is enabled, allowing you to continue with the training.</span>
+    <span>
+      You have successfully completed the scenario! Click the End Scenario
+      button below and you will see the forward arrow on the timeline below this
+      area is enabled, allowing you to continue with the training.
+    </span>
     <div class="slideBtn" onclick="endScenario();">End Scenario</div>
   </div>
 </div>

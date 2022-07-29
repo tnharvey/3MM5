@@ -1,15 +1,30 @@
 <div class="loadedPContainer state01">
   <div class="slide01 slide">
     <h3>GAME OVER</h3>
-    <video src="videos/3M_M4V3_Scenario_A_LOSER_v2.mp4" width=600px  height=338px controls poster="popups/gameOverFail/gameoverfail.jpg">
-    </video>
-    <div class="slideBtn" onclick="$('#gameOverFail video')[0].pause();nextSlide01('#popupGameOver02');">Next</div>
+    <video
+      src="videos/Game_Over_LOSE_v2.mp4"
+      width="600px"
+      height="338px"
+      controls
+      poster="popups/gameOverFail/gameoverfail.jpg"
+    ></video>
+    <div
+      class="slideBtn"
+      onclick="$('#gameOverFail video')[0].pause();nextSlide01('#popupGameOver02');"
+    >
+      Next
+    </div>
   </div>
   <div class="slide02 slide">
     <h3>GAME OVER</h3>
     <h4>SPC Bosky didn't recover from the virus.</h4>
     <span id="failResults"></span>
-    <span>Restart the scenario and see if you can save SPC Bosky from being turned into a zombie!</span>
-    <div class="slideBtn" onclick="resetSlides();resetScenario();">Restart Scenario</div>
+    <span
+      >Restart the scenario and see if you can save SPC Bosky from being turned
+      into a zombie!</span
+    >
+    <div class="slideBtn" onclick="resetSlides();resetScenario();">
+      Restart Scenario
+    </div>
   </div>
 </div>
