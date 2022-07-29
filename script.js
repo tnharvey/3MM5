@@ -697,15 +697,7 @@ function userAction(input) {
         hideCurrentPopup();
         updateOrientation(uAction);
         $("#cards")[0].style.visibility = "visible";
-        //document.getElementById("backButton").style.opacity="0";
-        if (
-          uAction == "face-front" &&
-          $("#afssDoor01")[0].classList.contains("afssDoor-open")
-        ) {
-          $("#afssDoor01")[0].classList.remove("afssDoor-open");
-        }
       } else {
-        //document.getElementById("backButton").dataset.targetDir = cube.classList[1];
         updateOrientation(uAction);
         document.getElementById("cards").style.visibility = "hidden";
         //document.getElementById("backButton").style.opacity=1;
@@ -981,7 +973,7 @@ function loadModels(modelsJson) {
 
 /* POPUPS and MODALS */
 function showPopup(popupId) {
-  $("#" + popupId)[0].style.display = "flex";
+  $("#" + popupId)[0].style.display = "grid";
   checkIsDisplayed(popupId, () => {
     $("#" + popupId)[0].style.opacity = 1;
   });
@@ -989,7 +981,7 @@ function showPopup(popupId) {
 }
 
 function showModal(modalId) {
-  $("#" + modalId)[0].style.display = "flex";
+  $("#" + modalId)[0].style.display = "grid";
   checkIsDisplayed(modalId, () => {
     $("#" + modalId)[0].style.opacity = 1;
   });
@@ -997,7 +989,7 @@ function showModal(modalId) {
 }
 
 function checkIsDisplayed(elemId, funct) {
-  if ($("#" + elemId)[0].style.display == "flex") {
+  if ($("#" + elemId)[0].style.display == "grid") {
     funct();
   } else {
     setTimeout(checkIsDisplayed, 1000);
@@ -1036,7 +1028,7 @@ function browserCheck() {
     .match(/-(moz|webkit|ms)-/)[1];
 
   if (prefix == "moz") {
-    document.getElementById("browser-error").style.display = "flex";
+    document.getElementById("browser-error").style.display = "grid";
   }
 }
 

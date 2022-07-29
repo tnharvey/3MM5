@@ -1,100 +1,161 @@
 <html>
-    <head>
-        <link rel="stylesheet" href="style.css" />
-        <script src="script.js" ></script>
-        <script src="jquery.min.js" ></script>
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css" />
-    </head>
-    <body>
-      <div id="appContainer">
-        <div class="container">
-          <div id="scene1" class="scene face-right">
-            <div class="my-cube myCube-show">
-              <div class="myCube-bt myCube-top"></div>
-              <div class="myCube-bt myCube-bottom"></div>
-              <div class="myCube-face myCube-left"></div>
-              <div class="myCube-face myCube-right"></div>
-              <div class="myCube-face myCube-front"></div>
-              <div class="myCube-face myCube-back"></div>
+  <head>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js"></script>
+    <script src="jquery.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css"
+    />
+  </head>
+  <body>
+    <div id="appContainer">
+      <div class="container">
+        <div id="scene1" class="scene face-right">
+          <div class="my-cube myCube-show">
+            <div class="myCube-bt myCube-top"></div>
+            <div class="myCube-bt myCube-bottom"></div>
+            <div class="myCube-face myCube-left"></div>
+            <div class="myCube-face myCube-right"></div>
+            <div class="myCube-face myCube-front"></div>
+            <div class="myCube-face myCube-back"></div>
+          </div>
+          <div id="bertha-manual" class="img-container interactive">
+            <img class="img-card-3d" src="imgs/Bertha-M-138-Manual.jpg" />
+          </div>
+          <div id="zombie-hand" class="img-container">
+            <img class="img-card-3d" src="imgs/zombie-hand-on-glass.gif" />
+          </div>
+          <div id="cards" class="popup3d-Container">
+            <div
+              id="equipment-card"
+              data-target-dir="face-equipment"
+              class="popup3d interactive"
+            >
+              M-138
             </div>
-            <div id="bertha-manual" class="img-container interactive">
-              <img class="img-card-3d" src="imgs/Bertha-M-138-Manual.jpg">
+            <div
+              id="computer-card"
+              data-target-dir="face-computer"
+              class="popup3d interactive"
+            >
+              Computer
             </div>
-            <div id="zombie-hand" class="img-container">
-              <img class="img-card-3d" src="imgs/zombie-hand-on-glass.gif">
+            <div
+              id="resources-card"
+              data-target-dir="face-resources"
+              class="popup3d interactive"
+            >
+              Resources
             </div>
-            <div id="cards" class="popup3d-Container">
-              <div id="equipment-card" data-target-dir="face-equipment" class="popup3d interactive">
-                M-138
-              </div>
-              <div id="computer-card" data-target-dir="face-computer" class="popup3d interactive">
-                Computer
-              </div>
-              <div id="resources-card" data-target-dir="face-resources" class="popup3d interactive">
-                Resources
-              </div>
-              <div id="forms-card" data-target-dir="face-forms" class="popup3d interactive">
-                Forms
-              </div>
+            <div
+              id="forms-card"
+              data-target-dir="face-forms"
+              class="popup3d interactive"
+            >
+              Forms
             </div>
           </div>
         </div>
-        <div id="popupContainer">
-          <div id="popupIntro" class="popup intro"></div>
-          <div id="popupIntroVid" class="popup intro"></div>
-          <div id="popupHelp" class="popup">
-            <div class="buttonChoice close" onclick="hideCurrentPopup();">X</div>
+      </div>
+      <div id="popupContainer">
+        <div id="popupIntro" class="popup popup-grid pg-center intro"></div>
+        <div id="popupIntroVid" class="popup popup-grid pg-center intro"></div>
+        <div id="popupHelp" class="popup popup-grid pg-center">
+          <div class="pop-grid-center">
+            <div class="buttonChoice close" onclick="hideCurrentPopup();">
+              X
+            </div>
             <div>
               <div>
                 <div>
-                  <img src="imgs/helpMain.png" style="width:600px;">
+                  <img src="imgs/helpMain.png" style="width: 600px;" />
                 </div>
                 <div class="helpGrid">
                   <div id="helpInfoHoverArea" class="helpHover">
-                    <div class="helpAreaInfo" style="width:300px;">
-                      <img src="imgs/helpInfo.png" style="width:180px;">
-                      <span>Help and Process Map areas. The Process Map will show you an overview of the process and the last step you completed.</span>
+                    <div class="helpAreaInfo" style="width: 300px;">
+                      <img src="imgs/helpInfo.png" style="width: 180px;" />
+                      <span
+                        >Help and Process Map areas. The Process Map will show
+                        you an overview of the process and the last step you
+                        completed.</span
+                      >
                     </div>
                   </div>
                   <div id="helpChallengeHoverArea" class="helpHover">
-                    <div class="helpAreaInfo" style="width:300px;">
-                      <img src="imgs/helpChallenge.png" style="width:200px;">
-                      <span>Hovering here will show you a short reminder of the current challenge. Clicking will redisplay the full challenge explanation.</span>
+                    <div class="helpAreaInfo" style="width: 300px;">
+                      <img src="imgs/helpChallenge.png" style="width: 200px;" />
+                      <span
+                        >Hovering here will show you a short reminder of the
+                        current challenge. Clicking will redisplay the full
+                        challenge explanation.</span
+                      >
                     </div>
                   </div>
                   <div id="helpHealthHoverArea" class="helpHover">
-                    <div class="helpAreaInfo" style="width:300px; left:0px;">
-                      <img src="imgs/helpHealth.png" style="width:180px;">
-                      <span>Health. With 5 challenges and SPC Boski's humanity on the line, you can only make a few mistakes! Click to replay the health animation.</span>
+                    <div class="helpAreaInfo" style="width: 300px; left: 0px;">
+                      <img src="imgs/helpHealth.png" style="width: 180px;" />
+                      <span
+                        >Health. With 5 challenges and SPC Boski's humanity on
+                        the line, you can only make a few mistakes! Click to
+                        replay the health animation.</span
+                      >
                     </div>
                   </div>
                   <div id="helpArrowLHoverArea" class="helpHover">
-                    <div class="helpAreaInfo" style="width:300px;">
-                      <span>Clicking on this tall left arrow button will turn you to look to the left.</span>
+                    <div class="helpAreaInfo" style="width: 300px;">
+                      <span
+                        >Clicking on this tall left arrow button will turn you
+                        to look to the left.</span
+                      >
                     </div>
                   </div>
                   <div id="helpCardHoverArea" class="helpHover">
                     <div class="helpAreaInfo">
-                      <img src="imgs/helpCards.png" style="width:200px;">
-                      <img src="imgs/helpPrompt.png" style="width:450px;">
-                      <span>These cards will glow to show which ones are relevant to the current challenge. <b>Clicking</b> on these will bring up the available choice for this area. Click "No" to back away and look at other options. Click "Yes" to move forward with that choice.</span>
+                      <img src="imgs/helpCards.png" style="width: 200px;" />
+                      <img src="imgs/helpPrompt.png" style="width: 450px;" />
+                      <span
+                        >These cards will glow to show which ones are relevant
+                        to the current challenge. <b>Clicking</b> on these will
+                        bring up the available choice for this area. Click "No"
+                        to back away and look at other options. Click "Yes" to
+                        move forward with that choice.</span
+                      >
                     </div>
                   </div>
                   <div id="helpArrowRHoverArea" class="helpHover">
-                    <div class="helpAreaInfo" style="width:300px; left:-100px;">
-                      <span>Clicking on this tall right arrow button will turn you to look to the right.</span>
+                    <div
+                      class="helpAreaInfo"
+                      style="width: 300px; left: -100px;"
+                    >
+                      <span
+                        >Clicking on this tall right arrow button will turn you
+                        to look to the right.</span
+                      >
                     </div>
                   </div>
                 </div>
               </div>
-              <div class="buttonChoice respond-yes" onclick="showModal('popupIntroVid');">Rewatch Introduction Video</div>
+              <div
+                class="buttonChoice respond-yes"
+                onclick="showModal('popupIntroVid');"
+              >
+                Rewatch Introduction Video
+              </div>
             </div>
           </div>
-          <div id="popupProcessMap" class="popup">
-            <div class="buttonChoice close" onclick="hideCurrentPopup();">X</div>
+        </div>
+        <div id="popupProcessMap" class="popup popup-grid pg-center">
+          <div class="pop-grid-center">
+            <div class="buttonChoice close" onclick="hideCurrentPopup();">
+              X
+            </div>
             <div id="processMap" class="gridParent">
               <div class="pmap-icon1">
-                <img class="process-icon-img currentStep" src="imgs/icon-01.png">
+                <img
+                  class="process-icon-img currentStep"
+                  src="imgs/icon-01.png"
+                />
                 <span class="stepInfo">Receive Request</span>
               </div>
               <div class="pmap-icon2">
@@ -106,7 +167,7 @@
                 </div>
               </div>
               <div class="pmap-icon3">
-                <img class="process-icon-img" src="imgs/icon-02.png">
+                <img class="process-icon-img" src="imgs/icon-02.png" />
                 <span class="stepInfo">Review Request</span>
               </div>
               <div class="pmap-icon4">
@@ -118,7 +179,7 @@
                 </div>
               </div>
               <div class="pmap-icon5">
-                <img class="process-icon-img wide" src="imgs/icon-04.png">
+                <img class="process-icon-img wide" src="imgs/icon-04.png" />
                 <span class="stepInfo">Visual Inspection</span>
               </div>
               <div class="pmap-icon6">
@@ -128,7 +189,7 @@
                 </div>
               </div>
               <div class="pmap-icon7">
-                <img class="process-icon-img" src="imgs/icon-03.png">
+                <img class="process-icon-img" src="imgs/icon-03.png" />
                 <span class="stepInfo">Calculate MEL</span>
               </div>
               <div class="pmap-icon8">
@@ -140,7 +201,7 @@
                 </div>
               </div>
               <div class="pmap-icon9">
-                <img class="process-icon-img" src="imgs/icon-05.png">
+                <img class="process-icon-img" src="imgs/icon-05.png" />
                 <span class="stepInfo">Evaluate Cost vs MEL</span>
               </div>
               <div class="pmap-icon10">
@@ -152,7 +213,7 @@
                 </div>
               </div>
               <div class="pmap-icon11">
-                <img class="process-icon-img" src="imgs/icon-06.png">
+                <img class="process-icon-img" src="imgs/icon-06.png" />
                 <span class="stepInfo">Repair or Replace</span>
               </div>
               <div class="pmap-icon12">
@@ -162,7 +223,7 @@
                 </div>
               </div>
               <div class="pmap-icon13">
-                <img class="process-icon-img" src="imgs/icon-10.png">
+                <img class="process-icon-img" src="imgs/icon-10.png" />
                 <span class="stepInfo">Decommission?</span>
               </div>
               <div class="pmap-icon14">
@@ -180,56 +241,107 @@
                 </div>
               </div>
               <div class="pmap-icon15">
-                <img class="process-icon-img wide" src="imgs/icon-09.png">
+                <img class="process-icon-img wide" src="imgs/icon-09.png" />
                 <span class="stepInfo">Test</span>
               </div>
               <div class="pmap-icon16">
-                <img class="process-icon-img" src="imgs/icon-11.png">
-                <span class="stepInfo">Unit Decisions</span>                
+                <img class="process-icon-img" src="imgs/icon-11.png" />
+                <span class="stepInfo">Unit Decisions</span>
               </div>
             </div>
-            <span id="process-map-instructions">* The highlighted step shows the last step you completed. Hover over each step in the process for more information.</span>
-          </div>
-          <div id="popupGeneric" class="popup popupGeneric"></div>
-          <div id="popupChallenge" class="popup challenges"></div>
-          <div id="popupOption01" class="popup option"></div>
-          <div id="popupOption02" class="popup option"></div>
-          <div id="popupOption03" class="popup option"></div>
-          <div id="popupOption04" class="popup option"></div>
-          <div id="popupFeedback" class="popup feedback">
-            <div id="feedbackText" class="grid-1col loaded">
-            </div>
-            <div class="slideBtn respond-yes" onclick="currentChallenge=currentChallenge+1;updateOrientation(currentOrientation);updateScenario();">Continue</div>
-          </div>
-          <div id="popupGameOver01" class="popup feedback"></div>
-          <div id="popupGameOver02" class="popup challenges"></div>
-          <div id="browser-error" class="popup challenges">
-            <span style="color:white; font-size:1.5em;">This scenario will not run properly due to severe compatibility issues with your browser (Firefox). Please reopen the scenario in a compatible browser (i.e., Chrome, Edge, Safari).</span>
+            <span id="process-map-instructions"
+              >* The highlighted step shows the last step you completed. Hover
+              over each step in the process for more information.</span
+            >
           </div>
         </div>
-        <div id="dashContainer">
-          <div id="helpContainer" class="dashItem">
-            <div id="infoBtn" class="btn expand-on-hover red">
-              <i class="bi bi-info-lg icon info"></i>
-              <i class="bi bi-diagram-3-fill text icon" onclick="showPopup('popupProcessMap')" ></i><i class="bi bi-question-lg icon text2" onclick="showPopup('popupHelp')" ></i>
-            </div>
+        <div
+          id="popupGeneric"
+          class="popup popup-grid pg-center popupGeneric"
+        ></div>
+        <div
+          id="popupChallenge"
+          class="popup popup-grid pg-center challenges"
+        ></div>
+        <div id="popupOption01" class="popup popup-grid pg-right option"></div>
+        <div id="popupOption02" class="popup popup-grid pg-bottom option"></div>
+        <div id="popupOption03" class="popup popup-grid pg-left option"></div>
+        <div id="popupOption04" class="popup popup-grid pg-top option"></div>
+        <div id="popupFeedback" class="popup popup-grid pg-center feedback">
+          <div id="feedbackText" class="loaded"></div>
+          <div
+            class="slideBtn respond-yes"
+            onclick="currentChallenge=currentChallenge+1;updateOrientation(currentOrientation);updateScenario();"
+          >
+            Continue
           </div>
-          <div id="healthContainer" class="dashItem">
-            <div class="containerSm">
-              <div id="health" class="sceneSm" onclick="restartAnims();">
-              </div>
-            </div>
+        </div>
+        <div
+          id="popupGameOver01"
+          class="popup popup-grid pg-center feedback"
+        ></div>
+        <div
+          id="popupGameOver02"
+          class="popup popup-grid pg-center challenges"
+        ></div>
+        <div id="browser-error" class="popup popup-grid pg-center challenges">
+          <div class="pop-grid-center">
+            <span style="color: white; font-size: 1.5em;">
+              This scenario will not run properly due to severe compatibility
+              issues with your browser (Firefox). Please reopen the scenario in
+              a compatible browser (i.e., Chrome, Edge, Safari).
+            </span>
           </div>
-          <div id="messagesContainer" class="dashItem">
-            <div id="messageBox" class="interactive" onclick="showPopup('popupChallenge');">
-              <span id="messageLabel">Challenge 1 of 5</span>
-              <span id="message"><b>Next Step:</b><br>Review the resources on the table to the left.</span>
-            </div>
-          </div>
-          <div id="leftButton" onclick="userAction('ArrowLeft')" class="controlButton interactive"><span>&#x25C0;</span></div>
-          <div class="emptyGridBlock"></div>
-          <div id="rightButton" onclick="userAction('ArrowRight')" class="controlButton interactive"><span>&#x25B6;</span></div>
         </div>
       </div>
-    </body>
+      <div id="dashContainer">
+        <div id="helpContainer" class="dashItem">
+          <div id="infoBtn" class="btn expand-on-hover red">
+            <i class="bi bi-info-lg icon info"></i>
+            <i
+              class="bi bi-diagram-3-fill text icon"
+              onclick="showPopup('popupProcessMap')"
+            ></i>
+            <i
+              class="bi bi-question-lg icon text2"
+              onclick="showPopup('popupHelp')"
+            ></i>
+          </div>
+        </div>
+        <div id="healthContainer" class="dashItem">
+          <div class="containerSm">
+            <div id="health" class="sceneSm" onclick="restartAnims();"></div>
+          </div>
+        </div>
+        <div id="messagesContainer" class="dashItem">
+          <div
+            id="messageBox"
+            class="interactive"
+            onclick="showPopup('popupChallenge');"
+          >
+            <span id="messageLabel">Challenge 1 of 5</span>
+            <span id="message">
+              <b>Next Step:</b><br />Review the resources on the table to the
+              left.
+            </span>
+          </div>
+        </div>
+        <div
+          id="leftButton"
+          onclick="userAction('ArrowLeft')"
+          class="controlButton interactive"
+        >
+          <span>&#x25C0;</span>
+        </div>
+        <div class="emptyGridBlock"></div>
+        <div
+          id="rightButton"
+          onclick="userAction('ArrowRight')"
+          class="controlButton interactive"
+        >
+          <span>&#x25B6;</span>
+        </div>
+      </div>
+    </div>
+  </body>
 </html>

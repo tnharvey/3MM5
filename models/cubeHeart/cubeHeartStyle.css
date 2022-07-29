@@ -1,4 +1,3 @@
-
 /*#cubeHeart01 {
   animation-name: rotateHeart;
   animation-duration: 4s;
@@ -16,287 +15,353 @@
 }
 */
 @keyframes heart04Rot {
-    from {
-      transform:translate3D(0em, 0em, 0em) rotateX(0deg) rotateY(0deg) rotateZ(45deg);
-    }
-    to {
-      transform:translate3D(0em, 0em, 0em) rotateX(360deg) rotateY(0deg) rotateZ(45deg);
-    }
+  from {
+    transform: translate3D(0em, 0em, 0em) rotateX(0deg) rotateY(0deg)
+      rotateZ(45deg);
   }
+  to {
+    transform: translate3D(0em, 0em, 0em) rotateX(360deg) rotateY(0deg)
+      rotateZ(45deg);
+  }
+}
 
-.heart01 {animation: heart01Rot 1.5s ease-in-out 0s 1;}
-.heart02 {animation: heart02Rot 1.5s ease-in-out 0s 1;}
-.heart03 {animation: heart03Rot 1.5s ease-in-out 0.1s 1;}
-.heart04 {animation: heart04Rot 1.5s ease-in-out 0.1s 1;}
-.heart05 {animation: heart05Rot 1.5s ease-in-out 0.1s 1;}
-.heart06 {animation: heart06Rot 1.5s ease-in-out 0.2s 1;}
-.heart07 {animation: heart07Rot 1.5s ease-in-out 0.2s 1;}
-.heart08 {animation: heart08Rot 1.5s ease-in-out 0.2s 1;}
+.heart01 {
+  animation: heart01Rot 1.5s ease-in-out 0s 1;
+}
+.heart02 {
+  animation: heart02Rot 1.5s ease-in-out 0s 1;
+}
+.heart03 {
+  animation: heart03Rot 1.5s ease-in-out 0.1s 1;
+}
+.heart04 {
+  animation: heart04Rot 1.5s ease-in-out 0.1s 1;
+}
+.heart05 {
+  animation: heart05Rot 1.5s ease-in-out 0.1s 1;
+}
+.heart06 {
+  animation: heart06Rot 1.5s ease-in-out 0.2s 1;
+}
+.heart07 {
+  animation: heart07Rot 1.5s ease-in-out 0.2s 1;
+}
+.heart08 {
+  animation: heart08Rot 1.5s ease-in-out 0.2s 1;
+}
 
 @keyframes heart01Rot {
-    to {
-      transform:translate3D(-3.5em, -3.5em, 0em) rotateX(360deg) rotateY(0deg) rotateZ(45deg);
-    }
+  to {
+    transform: translate3D(-3.5em, -3.5em, 0em) rotateX(360deg) rotateY(0deg)
+      rotateZ(45deg);
   }
+}
 
 @keyframes heart02Rot {
-    to {
-      transform:translate3D(3.5625em, -3.5em, 0em) rotateX(360deg) rotateY(0deg) rotateZ(45deg);
-    }
+  to {
+    transform: translate3D(3.5625em, -3.5em, 0em) rotateX(360deg) rotateY(0deg)
+      rotateZ(45deg);
   }
+}
 
 @keyframes heart03Rot {
-    to {
-      transform:translate3D(-7em, -0.125em, 0em) rotateX(360deg) rotateY(0deg) rotateZ(45deg);
-    }
+  to {
+    transform: translate3D(-7em, -0.125em, 0em) rotateX(360deg) rotateY(0deg)
+      rotateZ(45deg);
   }
+}
 
 @keyframes heart04Rot {
-    to {
-      transform:translate3D(0em, 0em, 0em) rotateX(360deg) rotateY(0deg) rotateZ(45deg);
-    }
+  to {
+    transform: translate3D(0em, 0em, 0em) rotateX(360deg) rotateY(0deg)
+      rotateZ(45deg);
   }
+}
 @keyframes heart05Rot {
-    to {
-      transform:translate3D(7em, 0em, 0em) rotateX(360deg) rotateY(0deg) rotateZ(45deg);
-    }
+  to {
+    transform: translate3D(7em, 0em, 0em) rotateX(360deg) rotateY(0deg)
+      rotateZ(45deg);
   }
+}
 @keyframes heart06Rot {
-    to {
-      transform:translate3D(-3.5em, 3.5em, 0em) rotateX(360deg) rotateY(0deg) rotateZ(45deg);
-    }
+  to {
+    transform: translate3D(-3.5em, 3.5em, 0em) rotateX(360deg) rotateY(0deg)
+      rotateZ(45deg);
   }
+}
 @keyframes heart07Rot {
-    to {
-      transform:translate3D(3.5em, 3.5em, 0em) rotateX(360deg) rotateY(0deg) rotateZ(45deg);
-    }
+  to {
+    transform: translate3D(3.5em, 3.5em, 0em) rotateX(360deg) rotateY(0deg)
+      rotateZ(45deg);
   }
+}
 @keyframes heart08Rot {
-    to {
-      transform:translate3D(0.0625em, 7em, 0em) rotateX(360deg) rotateY(0deg) rotateZ(45deg);
-    }
+  to {
+    transform: translate3D(0.0625em, 7em, 0em) rotateX(360deg) rotateY(0deg)
+      rotateZ(45deg);
   }
-
-  .shape .face.sick {
-    background-color: #FF0000;
-    animation-name: heart01Sick;
 }
 
-  .shape .face.healthy {
-    background-color: #619423;
-    animation-name: heart01Heal;
+.shape .face.sick {
+  background-color: #ff0000;
+  animation-name: heart01Sick;
 }
 
-  .shape .face {
-    animation-duration: 0.5s;
-    animation-timing-function: ease-in-out;
-    animation-iteration-count: 1;
-    animation-fill-mode:  forwards;
+.shape .face.healthy {
+  background-color: #000000;
+  animation-name: heart01Heal;
 }
 
-.heart01 .face {animation-delay: 1s;}
-.heart02 .face {animation-delay: 1s;}
-.heart03 .face {animation-delay: 0.7s;}
-.heart04 .face {animation-delay: 0.7s;}
-.heart05 .face {animation-delay: 0.7s;}
-.heart06 .face {animation-delay: 0.5s;}
-.heart07 .face {animation-delay: 0.5s;}
-.heart08 .face {animation-delay: 0.2s;}
+.shape .face {
+  animation-duration: 0.5s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+.heart01 .face {
+  animation-delay: 1s;
+}
+.heart02 .face {
+  animation-delay: 1s;
+}
+.heart03 .face {
+  animation-delay: 0.7s;
+}
+.heart04 .face {
+  animation-delay: 0.7s;
+}
+.heart05 .face {
+  animation-delay: 0.7s;
+}
+.heart06 .face {
+  animation-delay: 0.5s;
+}
+.heart07 .face {
+  animation-delay: 0.5s;
+}
+.heart08 .face {
+  animation-delay: 0.2s;
+}
 
 @keyframes heart01Sick {
-    to {
-      background-color: #619423;
-    }
+  to {
+    background-color: #000000;
   }
+}
 
 /* Heal ---------------- */
 
 @keyframes heart01Heal {
-    to {
-      background-color: #ff0000;
-    }
+  to {
+    background-color: #ff0000;
   }
+}
 
 /* .heart01 styles */
-  .heart01 {
-    transform:translate3D(-3.5em, -3.5em, 0em) rotateX(0deg) rotateY(0deg) rotateZ(45deg);
-    opacity:1;
-    width:5em;
-    height:5em;
-    margin:-2.5em 0 0 -2.5em;
-  }
-  .heart01 .ft {
-    transform:translateZ(1.25em);
-  }
-  .heart01 .bk {
-    transform:translateZ(-1.25em) rotateY(180deg);
-  }
-  .heart01 .rt, .heart01 .lt {
-    width:2.5em;
-    height:5em;
-  }
-  .heart01 .tp, .heart01 .bm {
-    width:5em;
-    height:2.5em;
-  }
+.heart01 {
+  transform: translate3D(-3.5em, -3.5em, 0em) rotateX(0deg) rotateY(0deg)
+    rotateZ(45deg);
+  opacity: 1;
+  width: 5em;
+  height: 5em;
+  margin: -2.5em 0 0 -2.5em;
+}
+.heart01 .ft {
+  transform: translateZ(1.25em);
+}
+.heart01 .bk {
+  transform: translateZ(-1.25em) rotateY(180deg);
+}
+.heart01 .rt,
+.heart01 .lt {
+  width: 2.5em;
+  height: 5em;
+}
+.heart01 .tp,
+.heart01 .bm {
+  width: 5em;
+  height: 2.5em;
+}
 
 /* .heart02 styles */
-  .heart02 {
-    transform:translate3D(3.5625em, -3.5em, 0em) rotateX(0deg) rotateY(0deg) rotateZ(45deg);
-    opacity:1;
-    width:5em;
-    height:5em;
-    margin:-2.5em 0 0 -2.5em;
-  }
-  .heart02 .ft {
-    transform:translateZ(1.25em);
-  }
-  .heart02 .bk {
-    transform:translateZ(-1.25em) rotateY(180deg);
-  }
-  .heart02 .rt, .heart02 .lt {
-    width:2.5em;
-    height:5em;
-  }
-  .heart02 .tp, .heart02 .bm {
-    width:5em;
-    height:2.5em;
-  }
+.heart02 {
+  transform: translate3D(3.5625em, -3.5em, 0em) rotateX(0deg) rotateY(0deg)
+    rotateZ(45deg);
+  opacity: 1;
+  width: 5em;
+  height: 5em;
+  margin: -2.5em 0 0 -2.5em;
+}
+.heart02 .ft {
+  transform: translateZ(1.25em);
+}
+.heart02 .bk {
+  transform: translateZ(-1.25em) rotateY(180deg);
+}
+.heart02 .rt,
+.heart02 .lt {
+  width: 2.5em;
+  height: 5em;
+}
+.heart02 .tp,
+.heart02 .bm {
+  width: 5em;
+  height: 2.5em;
+}
 
 /* .heart03 styles */
-  .heart03 {
-    transform:translate3D(-7em, -0.125em, 0em) rotateX(0deg) rotateY(0deg) rotateZ(45deg);
-    opacity:1;
-    width:5em;
-    height:5em;
-    margin:-2.5em 0 0 -2.5em;
-  }
-  .heart03 .ft {
-    transform:translateZ(1.25em);
-  }
-  .heart03 .bk {
-    transform:translateZ(-1.25em) rotateY(180deg);
-  }
-  .heart03 .rt, .heart03 .lt {
-    width:2.5em;
-    height:5em;
-  }
-  .heart03 .tp, .heart03 .bm {
-    width:5em;
-    height:2.5em;
-  }
+.heart03 {
+  transform: translate3D(-7em, -0.125em, 0em) rotateX(0deg) rotateY(0deg)
+    rotateZ(45deg);
+  opacity: 1;
+  width: 5em;
+  height: 5em;
+  margin: -2.5em 0 0 -2.5em;
+}
+.heart03 .ft {
+  transform: translateZ(1.25em);
+}
+.heart03 .bk {
+  transform: translateZ(-1.25em) rotateY(180deg);
+}
+.heart03 .rt,
+.heart03 .lt {
+  width: 2.5em;
+  height: 5em;
+}
+.heart03 .tp,
+.heart03 .bm {
+  width: 5em;
+  height: 2.5em;
+}
 
 /* .heart04 styles */
-  .heart04 {
-    transform:translate3D(0em, 0em, 0em) rotateX(0deg) rotateY(0deg) rotateZ(45deg);
-    opacity:1;
-    width:5em;
-    height:5em;
-    margin:-2.5em 0 0 -2.5em;
-  }
-  .heart04 .ft {
-    transform:translateZ(1.25em);
-  }
-  .heart04 .bk {
-    transform:translateZ(-1.25em) rotateY(180deg);
-  }
-  .heart04 .rt, .heart04 .lt {
-    width:2.5em;
-    height:5em;
-  }
-  .heart04 .tp, .heart04 .bm {
-    width:5em;
-    height:2.5em;
-  }
+.heart04 {
+  transform: translate3D(0em, 0em, 0em) rotateX(0deg) rotateY(0deg)
+    rotateZ(45deg);
+  opacity: 1;
+  width: 5em;
+  height: 5em;
+  margin: -2.5em 0 0 -2.5em;
+}
+.heart04 .ft {
+  transform: translateZ(1.25em);
+}
+.heart04 .bk {
+  transform: translateZ(-1.25em) rotateY(180deg);
+}
+.heart04 .rt,
+.heart04 .lt {
+  width: 2.5em;
+  height: 5em;
+}
+.heart04 .tp,
+.heart04 .bm {
+  width: 5em;
+  height: 2.5em;
+}
 
 /* .heart05 styles */
-  .heart05 {
-    transform:translate3D(7em, 0em, 0em) rotateX(0deg) rotateY(0deg) rotateZ(45deg);
-    opacity:1;
-    width:5em;
-    height:5em;
-    margin:-2.5em 0 0 -2.5em;
-  }
-  .heart05 .ft {
-    transform:translateZ(1.25em);
-  }
-  .heart05 .bk {
-    transform:translateZ(-1.25em) rotateY(180deg);
-  }
-  .heart05 .rt, .heart05 .lt {
-    width:2.5em;
-    height:5em;
-  }
-  .heart05 .tp, .heart05 .bm {
-    width:5em;
-    height:2.5em;
-  }
+.heart05 {
+  transform: translate3D(7em, 0em, 0em) rotateX(0deg) rotateY(0deg)
+    rotateZ(45deg);
+  opacity: 1;
+  width: 5em;
+  height: 5em;
+  margin: -2.5em 0 0 -2.5em;
+}
+.heart05 .ft {
+  transform: translateZ(1.25em);
+}
+.heart05 .bk {
+  transform: translateZ(-1.25em) rotateY(180deg);
+}
+.heart05 .rt,
+.heart05 .lt {
+  width: 2.5em;
+  height: 5em;
+}
+.heart05 .tp,
+.heart05 .bm {
+  width: 5em;
+  height: 2.5em;
+}
 
 /* .heart06 styles */
-  .heart06 {
-    transform:translate3D(-3.5em, 3.5em, 0em) rotateX(0deg) rotateY(0deg) rotateZ(45deg);
-    opacity:1;
-    width:5em;
-    height:5em;
-    margin:-2.5em 0 0 -2.5em;
-  }
-  .heart06 .ft {
-    transform:translateZ(1.25em);
-  }
-  .heart06 .bk {
-    transform:translateZ(-1.25em) rotateY(180deg);
-  }
-  .heart06 .rt, .heart06 .lt {
-    width:2.5em;
-    height:5em;
-  }
-  .heart06 .tp, .heart06 .bm {
-    width:5em;
-    height:2.5em;
-  }
+.heart06 {
+  transform: translate3D(-3.5em, 3.5em, 0em) rotateX(0deg) rotateY(0deg)
+    rotateZ(45deg);
+  opacity: 1;
+  width: 5em;
+  height: 5em;
+  margin: -2.5em 0 0 -2.5em;
+}
+.heart06 .ft {
+  transform: translateZ(1.25em);
+}
+.heart06 .bk {
+  transform: translateZ(-1.25em) rotateY(180deg);
+}
+.heart06 .rt,
+.heart06 .lt {
+  width: 2.5em;
+  height: 5em;
+}
+.heart06 .tp,
+.heart06 .bm {
+  width: 5em;
+  height: 2.5em;
+}
 
 /* .heart07 styles */
-  .heart07 {
-    transform:translate3D(3.5em, 3.5em, 0em) rotateX(0deg) rotateY(0deg) rotateZ(45deg);
-    opacity:1;
-    width:5em;
-    height:5em;
-    margin:-2.5em 0 0 -2.5em;
-  }
-  .heart07 .ft {
-    transform:translateZ(1.25em);
-  }
-  .heart07 .bk {
-    transform:translateZ(-1.25em) rotateY(180deg);
-  }
-  .heart07 .rt, .heart07 .lt {
-    width:2.5em;
-    height:5em;
-  }
-  .heart07 .tp, .heart07 .bm {
-    width:5em;
-    height:2.5em;
-  }
+.heart07 {
+  transform: translate3D(3.5em, 3.5em, 0em) rotateX(0deg) rotateY(0deg)
+    rotateZ(45deg);
+  opacity: 1;
+  width: 5em;
+  height: 5em;
+  margin: -2.5em 0 0 -2.5em;
+}
+.heart07 .ft {
+  transform: translateZ(1.25em);
+}
+.heart07 .bk {
+  transform: translateZ(-1.25em) rotateY(180deg);
+}
+.heart07 .rt,
+.heart07 .lt {
+  width: 2.5em;
+  height: 5em;
+}
+.heart07 .tp,
+.heart07 .bm {
+  width: 5em;
+  height: 2.5em;
+}
 
 /* .heart08 styles */
-  .heart08 {
-    transform:translate3D(0.0625em, 7em, 0em) rotateX(0deg) rotateY(0deg) rotateZ(45deg);
-    opacity:1;
-    width:5em;
-    height:5em;
-    margin:-2.5em 0 0 -2.5em;
-  }
-  .heart08 .ft {
-    transform:translateZ(1.25em);
-  }
-  .heart08 .bk {
-    transform:translateZ(-1.25em) rotateY(180deg);
-  }
-  .heart08 .rt, .heart08 .lt {
-    width:2.5em;
-    height:5em;
-  }
-  .heart08 .tp, .heart08 .bm {
-    width:5em;
-    height:2.5em;
-  }
+.heart08 {
+  transform: translate3D(0.0625em, 7em, 0em) rotateX(0deg) rotateY(0deg)
+    rotateZ(45deg);
+  opacity: 1;
+  width: 5em;
+  height: 5em;
+  margin: -2.5em 0 0 -2.5em;
+}
+.heart08 .ft {
+  transform: translateZ(1.25em);
+}
+.heart08 .bk {
+  transform: translateZ(-1.25em) rotateY(180deg);
+}
+.heart08 .rt,
+.heart08 .lt {
+  width: 2.5em;
+  height: 5em;
+}
+.heart08 .tp,
+.heart08 .bm {
+  width: 5em;
+  height: 2.5em;
+}

@@ -7,7 +7,8 @@
   --bg-gray: #e6e6e6;
   --element-bg-gray: #c8c8c8;
   --drop-shadow: #8e8e8e;
-  --popup-bg: rgb(0, 0, 0, 0.6);
+  --popup-bg: rgb(0, 0, 0, 0.3);
+  --3d-card-bg: rgb(0, 0, 0, 0.6);
 }
 
 /* DOM styles */
@@ -576,7 +577,7 @@ span.center {
   border: none;
   padding: 7px 10px;
 }
-
+/*
 .keys {
   position: relative;
   width: 80px;
@@ -620,6 +621,7 @@ span.center {
 .key :nth-child(4n) {
   left: -104%;
 }
+*/
 #message {
   color: white;
 }
@@ -676,6 +678,39 @@ li.incomplete {
   transition: opacity 0.5s;
 }
 
+/* Popup Grid Style */
+.popup-grid {
+  grid-template-columns: 10px repeat(2, 437px) 10px;
+  grid-template-rows: 10px repeat(2, 260px) 10px;
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+}
+
+/* Center Full */
+.popup-grid.pg-center > div {
+  grid-area: 2 / 2 / 4 / 4;
+}
+
+/* Left Half */
+.popup-grid.pg-left > div {
+  grid-area: 2 / 2 / 4 / 3;
+}
+
+/* Right Half */
+.popup-grid.pg-right > div {
+  grid-area: 2 / 3 / 4 / 4;
+}
+
+/* Top Half */
+.popup-grid.pg-top > div {
+  grid-area: 2 / 2 / 3 / 4;
+}
+
+/* Bottom Half */
+.popup-grid.pg-bottom > div {
+  grid-area: 3 / 2 / 4 / 4;
+}
+
 .popup3d-Container {
   transform-style: preserve-3d;
   position: absolute;
@@ -684,7 +719,7 @@ li.incomplete {
   position: absolute;
   height: 10px;
   width: 44px;
-  background-color: var(--popup-bg);
+  background-color: var(--3d-card-bg);
   border-radius: 4px;
   text-align: center;
   padding: 2px;
@@ -707,7 +742,6 @@ li.incomplete {
 
 .popup.intro .loaded {
   background-color: rgb(0, 0, 0, 0.9);
-  width: 700px;
 }
 
 .popup.challenges .loaded {
@@ -838,7 +872,7 @@ li.incomplete {
   transform: translate3d(-20px, 12px, 724px) rotateY(-270deg);
 }
 .face-equipment {
-  transform: translate3d(225px, -1px, 596px) rotateX(-12deg) rotateY(0deg);
+  transform: translate3d(227px, -1px, 448px) rotateX(-12deg) rotateY(-38deg);
 }
 .face-computer {
   transform: translate3d(-109px, -10px, 1052px) rotateY(90deg);
@@ -1018,7 +1052,9 @@ li.incomplete {
 #process-map-instructions {
   position: absolute;
   bottom: 20px;
+  left: 40px;
   color: black;
+  width: 90%;
 }
 
 #processMap div .stepInfo {
