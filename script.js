@@ -398,7 +398,6 @@ function updateScenario() {
   }
   cube.addEventListener("transitionend", showPopup(popups.chal.target));
   updateCards();
-  updateProcessMap();
 }
 
 function updateCards() {
@@ -410,17 +409,6 @@ function updateCards() {
       document.getElementById(area + "-card").classList.remove("glow");
     }
   }
-}
-
-function updateProcessMap() {
-  if (currentChallenge > 1) {
-    $(
-      ".pmap-icon" + currentStep["challenge0" + (currentChallenge - 1)] + " img"
-    )[0].classList.remove("currentStep");
-  }
-  $(
-    ".pmap-icon" + currentStep["challenge0" + currentChallenge] + " img"
-  )[0].classList.add("currentStep");
 }
 
 function updateChoice(choice) {
