@@ -1,0 +1,407 @@
+#cards {
+  visibility: visible;
+  transition: visibility 0.5s ease-in-out 1s;
+}
+
+#equipment-card {
+  transform: translate3d(768px, 6px, 210px) rotateY(1deg);
+}
+#computer-card {
+  transform: translate3d(928px, 4px, 428px) rotateY(-90deg);
+}
+#resources-card {
+  transform: translate3d(660px, -10px, 369px) rotateY(90deg);
+}
+#forms-card {
+  transform: translate3d(928px, 4px, 301px) rotateY(-90deg);
+}
+/* Primary Scene styling */
+.scene,
+.c3dContainer,
+.shape,
+.face,
+.face-wrapper,
+.cr {
+  position: absolute;
+  transform-style: preserve-3d;
+}
+.scene {
+  width: 80em;
+  height: 80em;
+  top: 90%;
+  left: 10%;
+  margin: -40em 0 0 -40em;
+  transition: transform 1.3s;
+}
+
+/* Movement Classes */
+.face-front {
+  transform: translate3d(206px, 0px, 250px) rotateY(0deg);
+}
+.face-left {
+  transform: translate3d(730px, 20px, 450px) rotateY(-90deg);
+}
+.face-rLeft {
+  transform: translate3d(730px, 20px, 450px) rotateY(270deg);
+}
+.face-lBack {
+  transform: translate3d(517px, 12px, 866px) rotateY(-180deg);
+}
+.face-rBack {
+  transform: translate3d(517px, 12px, 866px) rotateY(180deg);
+}
+.face-right {
+  transform: translate3d(-14px, 12px, 724px) rotateY(90deg);
+}
+.face-lRight {
+  transform: translate3d(-20px, 12px, 724px) rotateY(-270deg);
+}
+.face-equipment {
+  transform: translate3d(227px, -1px, 448px) rotateX(-12deg) rotateY(-38deg);
+}
+.face-computer {
+  transform: translate3d(367px, -17px, 1173px) rotateY(138deg);
+}
+.face-forms {
+  transform: translate3d(112px, 86px, 946px) rotateY(90deg) rotateZ(-14deg);
+}
+.face-resources {
+  transform: translate3d(699px, 36px, 422px) rotateY(-62deg) rotateZ(11deg);
+}
+
+.notransition {
+  transition: none !important;
+}
+/* END movement classes */
+
+/* background cube */
+.shape {
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  transform-origin: 50%;
+  transform: rotateX(30deg) translateY(-20px);
+}
+
+.face,
+.face-wrapper {
+  overflow: hidden;
+  transform-origin: 0 0;
+  backface-visibility: hidden;
+  /* hidden by default, prevent blinking and other weird rendering glitchs */
+}
+
+.face {
+  background-position: center;
+}
+
+.my-cube {
+  position: relative;
+  width: 800px;
+  height: 400px;
+  left: 30%;
+  transform-style: preserve-3d;
+  transform: translate3d(10px, 200px, 200px);
+}
+.myCube-hide {
+  visibility: hidden;
+}
+.myCube-show {
+  visibility: visible;
+}
+
+.myCube-face {
+  width: 800px;
+  height: 400px;
+  background: skyblue;
+  border: 0px solid black;
+  position: absolute;
+  opacity: 0.9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: Arial, sans-serif;
+  font-size: 2rem;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.myCube-bt {
+  width: 800px;
+  height: 1000px;
+  background: skyblue;
+  border: 0px solid black;
+  position: absolute;
+  opacity: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: Arial, sans-serif;
+  font-size: 2rem;
+}
+
+.myCube-front {
+  transform: translateZ(500px) rotateY(180deg);
+  background-image: url(../imgs/backFaceTexture.jpg);
+}
+
+.myCube-back {
+  transform: translateZ(-500px);
+  background-image: url(../imgs/frontFaceTexture.jpg);
+}
+
+.myCube-left {
+  transform: translateX(-500px) rotateY(-270deg);
+  width: 1000px;
+  background-image: url(../imgs/Container-Wall-Long-Left.jpg);
+}
+
+.myCube-right {
+  transform: translateX(300px) rotateY(270deg);
+  width: 1000px;
+  background-image: url(../imgs/Container-Wall-Long-Right.jpg);
+}
+
+.myCube-top {
+  transform: translateY(-500px) rotateX(270deg);
+  background-image: url(../imgs/ceilingTexture2-longdk.png);
+}
+
+.myCube-bottom {
+  transform: translateY(-100px) rotateX(-270deg);
+  background-image: url(../imgs/floorTexture.png);
+  background-size: contain;
+  background-repeat: repeat;
+}
+
+#bertha-manual {
+  position: absolute;
+  transform-style: preserve-3d;
+  height: 80px;
+  width: 60px;
+  transform: translate3d(430px, 51px, 400px) rotateX(90deg) rotateZ(261deg);
+}
+
+#zombie-hand {
+  position: absolute;
+  transform-style: preserve-3d;
+  height: 197px;
+  width: 198px;
+  transform: translate3d(804px, -171px, 698px) rotateY(181deg) scale(0.55);
+}
+/* tridiv styles */
+
+.face-wrapper .face {
+  left: 100%;
+  width: 100%;
+  height: 100%;
+}
+.photon-shader {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+.side {
+  left: 50%;
+}
+.cr,
+.cr .side {
+  height: 100%;
+}
+[class*="cuboid"] .ft,
+[class*="cuboid"] .bk {
+  width: 100%;
+  height: 100%;
+}
+[class*="cuboid"] .bk {
+  left: 100%;
+}
+[class*="cuboid"] .rt {
+  transform: rotateY(-90deg) translateX(-50%);
+}
+[class*="cuboid"] .lt {
+  transform: rotateY(90deg) translateX(-50%);
+}
+[class*="cuboid"] .tp {
+  transform: rotateX(90deg) translateY(-50%);
+}
+[class*="cuboid"] .bm {
+  transform: rotateX(-90deg) translateY(-50%);
+}
+[class*="cuboid"] .lt {
+  left: 100%;
+}
+[class*="cuboid"] .bm {
+  top: 100%;
+}
+
+[class*="cylinder"] .tp {
+  transform: rotateX(90deg) translateY(-50%);
+}
+[class*="cylinder"] .bm {
+  transform: rotateX(-90deg) translateY(-50%);
+}
+[class*="cylinder"] .tp,
+[class*="cylinder"] .bm,
+[class*="cylinder"] .tp .photon-shader,
+[class*="cylinder"] .bm .photon-shader {
+  border-radius: 50%;
+}
+[class*="cylinder"] .bm {
+  top: 100%;
+}
+/* Object Styles */
+.tp,
+.bm {
+  backface-visibility: visible;
+}
+
+#table01 {
+  transform: translate3d(390px, 224px, 600px) scale(0.75) rotateY(90deg);
+}
+
+#table02 {
+  transform: translate3d(1050px, 224px, 600px) scale(0.75) rotateY(90deg);
+}
+
+#table03 {
+  transform: translate3d(575px, 224px, -304px) scale(0.75) rotateY(0deg);
+}
+
+#docCab01 {
+  transform: translate3d(1128px, 54px, 257px) rotateY(-90deg) scaleX(0.3)
+    scaleY(0.3) scaleZ(0.3);
+}
+
+#flLight01 {
+  transform: translate3d(-92px, -193px, 329px) rotateY(90deg) rotateX(180deg);
+}
+
+#flLight02 {
+  transform: translate3d(164px, -193px, 329px) rotateY(90deg) rotateX(180deg);
+}
+
+#flLight03 {
+  transform: translate3d(410px, -193px, 329px) rotateY(90deg) rotateX(180deg);
+}
+
+#monitor01 {
+  transform: translate3d(1140px, 90px, 469px) rotateY(270deg) rotateX(0deg)
+    scaleX(0.24) scaleY(0.24) scaleZ(0.24);
+}
+
+#fieldXRay01 {
+  transform: translate3d(824px, 70px, -182px) rotateY(340deg) rotateX(0deg)
+    rotateZ(0deg) scaleX(0.17) scaleY(0.17) scaleZ(0.17);
+}
+
+#toolkit01 {
+  transform: translate3d(710px, 81px, -207px) rotateY(23deg) rotateX(0deg)
+    rotateZ(0deg) scaleX(0.3) scaleZ(0.3) scaleY(0.3);
+  transition-duration: 2s;
+}
+
+#manualSm01 {
+  transform: translate3d(-174px, 91px, 322px) rotateX(0deg) rotateY(65deg)
+    scaleX(0.75) scaleZ(0.75) scaleY(0.75);
+}
+
+#keyboardSimp01 {
+  transform: translate3d(1090px, 90px, 469px) rotateX(0deg) rotateY(90deg)
+    scaleX(0.4) scaleZ(0.4) scaleY(0.4);
+}
+
+#laptop01 {
+  transform: translate3d(1138px, 90px, 566px) rotateX(0deg) rotateY(90deg)
+    scaleX(0.3) scaleZ(0.3) scaleY(0.3);
+}
+
+#mouse01 {
+  transform: translate3d(1086px, 91px, 538px) rotateX(0deg) rotateY(-90deg)
+    scaleX(0.125) scaleZ(0.125) scaleY(0.125);
+}
+
+#coffeeCup01 {
+  transform: translate3d(502px, 74px, 230px) rotateX(0deg) rotateY(139deg)
+    scaleX(0.25) scaleZ(0.25) scaleY(0.25);
+}
+
+#cupSteam {
+  transform: translate3d(-12px, -284px, -115px) rotateX(0deg) rotateY(-90deg)
+    scaleX(0.2) scaleY(0.2);
+}
+
+#cupSteam img {
+  width: auto;
+  height: auto;
+}
+
+/* HEALTH - Cube Hearts Position and Animations */
+.cubeHeart {
+  animation-duration: 4s;
+  animation-iteration-count: 1;
+  animation-timing-function: linear;
+}
+#cubeHeart01 .cubeHeart {
+  animation-name: rotateHeart01;
+  transform: translate3d(-75px, 0px, 0px) rotateY(0deg) rotateX(0deg)
+    rotateZ(0deg) scaleX(0.1) scaleZ(0.1) scaleY(0.1);
+}
+@keyframes rotateHeart01 {
+  from {
+    transform: translate3d(-75px, 0px, 0px) rotateY(0deg) rotateX(0deg)
+      rotateZ(0deg) scaleX(0.1) scaleZ(0.1) scaleY(0.1);
+  }
+  to {
+    transform: translate3d(-75px, 0px, 0px) rotateY(360deg) rotateX(0deg)
+      rotateZ(0deg) scaleX(0.1) scaleZ(0.1) scaleY(0.1);
+  }
+}
+
+#cubeHeart02 .cubeHeart {
+  animation-name: rotateHeart02;
+  transform: translate3d(0px, 0px, 0px) rotateY(0deg) rotateX(0deg)
+    rotateZ(0deg) scaleX(0.1) scaleZ(0.1) scaleY(0.1);
+}
+
+@keyframes rotateHeart02 {
+  from {
+    transform: translate3d(0px, 0px, 0px) rotateY(0deg) rotateX(0deg)
+      rotateZ(0deg) scaleX(0.1) scaleZ(0.1) scaleY(0.1);
+  }
+  to {
+    transform: translate3d(0px, 0px, 0px) rotateY(360deg) rotateX(0deg)
+      rotateZ(0deg) scaleX(0.1) scaleZ(0.1) scaleY(0.1);
+  }
+}
+
+#cubeHeart03 .cubeHeart {
+  animation-name: rotateHeart03;
+  transform: translate3d(75px, 0px, 0px) rotateY(0deg) rotateX(0deg)
+    rotateZ(0deg) scaleX(0.1) scaleZ(0.1) scaleY(0.1);
+}
+
+@keyframes rotateHeart03 {
+  from {
+    transform: translate3d(75px, 0px, 0px) rotateY(0deg) rotateX(0deg)
+      rotateZ(0deg) scaleX(0.1) scaleZ(0.1) scaleY(0.1);
+  }
+  to {
+    transform: translate3d(75px, 0px, 0px) rotateY(360deg) rotateX(0deg)
+      rotateZ(0deg) scaleX(0.1) scaleZ(0.1) scaleY(0.1);
+  }
+}
+
+@keyframes glow {
+  0% {
+    border-color: #d79942;
+    box-shadow: 0 0 2px rgba(215, 153, 66, 0.4);
+  }
+  100% {
+    border-color: #fdff85;
+    box-shadow: 0 0 8px rgba(253, 255, 133, 0.8);
+  }
+}

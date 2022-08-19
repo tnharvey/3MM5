@@ -617,8 +617,8 @@
 .claspR .face {
   background-color: #e3e3e3;
 }
-/* .handleMain styles */
-.handleMain {
+/* .tk-handleMain styles */
+.tk-handleMain {
   transform: translate3D(0em, 1.3em, 12.25em) rotateX(0deg) rotateY(0deg)
     rotateZ(90deg);
   opacity: 1;
@@ -626,96 +626,96 @@
   height: 3em;
   margin: -1.5em 0 0 -0.375em;
 }
-.handleMain .ft {
+.tk-handleMain .ft {
   transform: translateZ(0.25em);
 }
-.handleMain .bk {
+.tk-handleMain .bk {
   transform: translateZ(-0.25em) rotateY(180deg);
 }
-.handleMain .rt,
-.handleMain .lt {
+.tk-handleMain .rt,
+.tk-handleMain .lt {
   width: 0.5em;
   height: 3em;
 }
-.handleMain .tp,
-.handleMain .bm {
+.tk-handleMain .tp,
+.tk-handleMain .bm {
   width: 0.75em;
   height: 0.5em;
 }
-.handleMain .face {
+.tk-handleMain .face {
   background-color: #292929;
 }
-.handleMain .ft {
+.tk-handleMain .ft {
   width: 0.375em;
   margin-left: 0.1875em;
 }
-.handleMain .bk {
+.tk-handleMain .bk {
   width: 0.375em;
   margin-left: -0.1875em;
 }
-.handleMain .rt,
-.handleMain .lt {
+.tk-handleMain .rt,
+.tk-handleMain .lt {
   width: 0.125em;
 }
-.handleMain .tp,
-.handleMain .bm,
-.handleMain .tp .photon-shader,
-.handleMain .bm .photon-shader {
+.tk-handleMain .tp,
+.tk-handleMain .bm,
+.tk-handleMain .tp .photon-shader,
+.tk-handleMain .bm .photon-shader {
   border-radius: 0.1875em;
 }
-.handleMain .cr {
+.tk-handleMain .cr {
   width: 0.1875em;
   left: 0.09375em;
 }
-.handleMain .cr-0 {
+.tk-handleMain .cr-0 {
   transform: translate3D(0.375em, 0, 0.0625em);
 }
-.handleMain .cr-1 {
+.tk-handleMain .cr-1 {
   transform: translate3D(0.375em, 0, -0.0625em);
 }
-.handleMain .cr-2 {
+.tk-handleMain .cr-2 {
   transform: translate3D(0, 0, -0.0625em);
 }
-.handleMain .cr-3 {
+.tk-handleMain .cr-3 {
   transform: translate3D(0, 0, 0.0625em);
 }
-.handleMain .cr-0 .s0 {
+.tk-handleMain .cr-0 .s0 {
   transform: rotateY(15deg) translate3D(-50%, 0, 0.1625em);
 }
-.handleMain .cr-0 .s1 {
+.tk-handleMain .cr-0 .s1 {
   transform: rotateY(45deg) translate3D(-50%, 0, 0.1625em);
 }
-.handleMain .cr-0 .s2 {
+.tk-handleMain .cr-0 .s2 {
   transform: rotateY(75deg) translate3D(-50%, 0, 0.1625em);
 }
-.handleMain .cr-1 .s0 {
+.tk-handleMain .cr-1 .s0 {
   transform: rotateY(105deg) translate3D(-50%, 0, 0.1625em);
 }
-.handleMain .cr-1 .s1 {
+.tk-handleMain .cr-1 .s1 {
   transform: rotateY(135deg) translate3D(-50%, 0, 0.1625em);
 }
-.handleMain .cr-1 .s2 {
+.tk-handleMain .cr-1 .s2 {
   transform: rotateY(165deg) translate3D(-50%, 0, 0.1625em);
 }
-.handleMain .cr-2 .s0 {
+.tk-handleMain .cr-2 .s0 {
   transform: rotateY(195deg) translate3D(-50%, 0, 0.1625em);
 }
-.handleMain .cr-2 .s1 {
+.tk-handleMain .cr-2 .s1 {
   transform: rotateY(225deg) translate3D(-50%, 0, 0.1625em);
 }
-.handleMain .cr-2 .s2 {
+.tk-handleMain .cr-2 .s2 {
   transform: rotateY(255deg) translate3D(-50%, 0, 0.1625em);
 }
-.handleMain .cr-3 .s0 {
+.tk-handleMain .cr-3 .s0 {
   transform: rotateY(285deg) translate3D(-50%, 0, 0.1625em);
 }
-.handleMain .cr-3 .s1 {
+.tk-handleMain .cr-3 .s1 {
   transform: rotateY(315deg) translate3D(-50%, 0, 0.1625em);
 }
-.handleMain .cr-3 .s2 {
+.tk-handleMain .cr-3 .s2 {
   transform: rotateY(345deg) translate3D(-50%, 0, 0.1625em);
 }
-.handleMain .side {
+.tk-handleMain .side {
   width: 0.12548094716167102em;
 }
 /* .handleLinkR1 styles */
