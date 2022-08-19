@@ -176,11 +176,11 @@ span.center {
 }
 
 .buttonChoice.respond-yes {
-  background-color: green;
+  background-color: #345973;
 }
 
 .buttonChoice.respond-no {
-  background-color: red;
+  background-color: #e75e26;
 }
 
 .buttonChoice:hover {
@@ -188,35 +188,35 @@ span.center {
 }
 
 .btn-part-control {
-  background-color: #4caf50; /* Green */
+  background-color: #345973;
   border: none;
   color: white;
   padding: 15px 32px;
 }
 
 .btn-confirm {
-  background-color: #4caf50; /* Green */
+  background-color: #345973;
   border: none;
   color: white;
   padding: 15px 32px;
 }
 
 .btn-cancel {
-  background-color: #b12020; /* Red */
+  background-color: #e75e26;
   border: none;
   color: white;
   padding: 15px 32px;
 }
 
 .btn-scenario-control {
-  background-color: #4c72ae; /* Green */
+  background-color: #4c72ae;
   border: none;
   color: white;
   padding: 15px 32px;
 }
 
 .close {
-  background-color: #a71616;
+  background-color: #e75e26;
   color: white;
   font-weight: bold;
   position: absolute;
@@ -225,29 +225,6 @@ span.center {
   border: none;
   padding: 7px 10px;
 }
-/* May remove, test first */
-#training-checklist {
-  text-align: left;
-  margin-left: 30%;
-}
-
-li.complete {
-  list-style: none;
-}
-
-li.incomplete {
-  list-style: none;
-}
-.complete:before {
-  color: green;
-  content: "\2713\0020";
-}
-.incomplete:before {
-  color: red;
-  content: "X";
-  margin-right: 8px;
-}
-/* End Removal Note */
 
 .img-card-3d {
   height: 100%;

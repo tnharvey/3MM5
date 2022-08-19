@@ -35,13 +35,13 @@
 }
 
 .slideBtn.respond-yes {
-  background-color: darkgreen !important;
+  background-color: #345973 !important;
 }
 .slideBtn.respond-yes:hover {
-  background-color: green !important;
+  background-color: #224056 !important;
 }
 .slideBtn.respond-yes:active {
-  background-color: darkgreen !important;
+  background-color: #345973 !important;
 }
 .slide {
   display: none;
