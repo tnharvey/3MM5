@@ -1,105 +1,105 @@
 /* SKINS */
 .toolkitTop .ft {
-  background: url(https://cdn.jsdelivr.net/gh/tnharvey/3MM5@main/models/toolkit/Toolkit-Atlas_A4.png)
+  background: url(../toolkit/Toolkit-Atlas_A4.png)
     0px 0px;
 }
 .toolkitBot .bk {
-  background: url(https://cdn.jsdelivr.net/gh/tnharvey/3MM5@main/models/toolkit/Toolkit-Atlas_A4.png)
+  background: url(../toolkit/Toolkit-Atlas_A4.png)
     0px 0px;
 }
 .toolkitTop .tp {
-  background: url(https://cdn.jsdelivr.net/gh/tnharvey/3MM5@main/models/toolkit/Toolkit-Atlas_A4.png)
+  background: url(../toolkit/Toolkit-Atlas_A4.png)
     0px -31px;
 }
 .toolkitTop .bm {
-  background: url(https://cdn.jsdelivr.net/gh/tnharvey/3MM5@main/models/toolkit/Toolkit-Atlas_A4.png) -256px -31px;
+  background: url(../toolkit/Toolkit-Atlas_A4.png) -256px -31px;
 }
 .toolkitTop .rt {
-  background: url(https://cdn.jsdelivr.net/gh/tnharvey/3MM5@main/models/toolkit/Toolkit-Atlas_A4.png) -15px -288px;
+  background: url(../toolkit/Toolkit-Atlas_A4.png) -15px -288px;
 }
 .toolkitTop .lt {
-  background: url(https://cdn.jsdelivr.net/gh/tnharvey/3MM5@main/models/toolkit/Toolkit-Atlas_A4.png) -14px -256px;
+  background: url(../toolkit/Toolkit-Atlas_A4.png) -14px -256px;
 }
 .toolkitTop .ft {
-  background: url(https://cdn.jsdelivr.net/gh/tnharvey/3MM5@main/models/toolkit/Toolkit-Atlas_A4.png) -8px -224px;
+  background: url(../toolkit/Toolkit-Atlas_A4.png) -8px -224px;
 }
 .toolkitTop .bk {
-  background: url(https://cdn.jsdelivr.net/gh/tnharvey/3MM5@main/models/toolkit/Toolkit-Atlas_A4.png) -8px
+  background: url(../toolkit/Toolkit-Atlas_A4.png) -8px
     0px;
 }
 .toolkitTop .side {
-  background: url(https://cdn.jsdelivr.net/gh/tnharvey/3MM5@main/models/toolkit/Toolkit-Atlas_A4.png)
+  background: url(../toolkit/Toolkit-Atlas_A4.png)
     0px -256px;
 }
 .toolkitBot .tp {
-  background: url(https://cdn.jsdelivr.net/gh/tnharvey/3MM5@main/models/toolkit/Toolkit-Atlas_A4.png)
+  background: url(../toolkit/Toolkit-Atlas_A4.png)
     0px -353px;
 }
 .toolkitBot .bm {
-  background: url(https://cdn.jsdelivr.net/gh/tnharvey/3MM5@main/models/toolkit/Toolkit-Atlas_A4.png) -256px -353px;
+  background: url(../toolkit/Toolkit-Atlas_A4.png) -256px -353px;
 }
 .toolkitBot .lt {
-  background: url(https://cdn.jsdelivr.net/gh/tnharvey/3MM5@main/models/toolkit/Toolkit-Atlas_A4.png) -14px -578px;
+  background: url(../toolkit/Toolkit-Atlas_A4.png) -14px -578px;
 }
 .toolkitBot .rt {
-  background: url(https://cdn.jsdelivr.net/gh/tnharvey/3MM5@main/models/toolkit/Toolkit-Atlas_A4.png) -14px -610px;
+  background: url(../toolkit/Toolkit-Atlas_A4.png) -14px -610px;
 }
 .toolkitBot .ft {
-  background: url(https://cdn.jsdelivr.net/gh/tnharvey/3MM5@main/models/toolkit/Toolkit-Atlas_A4.png) -9px -546px;
+  background: url(../toolkit/Toolkit-Atlas_A4.png) -9px -546px;
 }
 .toolkitBot .bk {
-  background: url(https://cdn.jsdelivr.net/gh/tnharvey/3MM5@main/models/toolkit/Toolkit-Atlas_A4.png) -9px -322px;
+  background: url(../toolkit/Toolkit-Atlas_A4.png) -9px -322px;
 }
 .toolkitBot .side {
-  background: url(https://cdn.jsdelivr.net/gh/tnharvey/3MM5@main/models/toolkit/Toolkit-Atlas_A4.png) -1px -578px;
+  background: url(../toolkit/Toolkit-Atlas_A4.png) -1px -578px;
 }
 .claspR .ft {
-  background: url(https://cdn.jsdelivr.net/gh/tnharvey/3MM5@main/models/toolkit/Toolkit-Atlas_A4.png)
+  background: url(../toolkit/Toolkit-Atlas_A4.png)
     0px 24px;
 }
 .claspR .bk {
-  background: url(https://cdn.jsdelivr.net/gh/tnharvey/3MM5@main/models/toolkit/Toolkit-Atlas_A4.png) -20px
+  background: url(../toolkit/Toolkit-Atlas_A4.png) -20px
     24px;
 }
 .claspR .lt {
-  background: url(https://cdn.jsdelivr.net/gh/tnharvey/3MM5@main/models/toolkit/Toolkit-Atlas_A4.png) -16px
+  background: url(../toolkit/Toolkit-Atlas_A4.png) -16px
     24px;
 }
 .claspR .rt {
-  background: url(https://cdn.jsdelivr.net/gh/tnharvey/3MM5@main/models/toolkit/Toolkit-Atlas_A4.png) -16px
+  background: url(../toolkit/Toolkit-Atlas_A4.png) -16px
     24px;
 }
 .claspR .tp {
-  background: url(https://cdn.jsdelivr.net/gh/tnharvey/3MM5@main/models/toolkit/Toolkit-Atlas_A4.png)
+  background: url(../toolkit/Toolkit-Atlas_A4.png)
     0px 28px;
 }
 .claspR .bm {
-  background: url(https://cdn.jsdelivr.net/gh/tnharvey/3MM5@main/models/toolkit/Toolkit-Atlas_A4.png) -20px
+  background: url(../toolkit/Toolkit-Atlas_A4.png) -20px
     4px;
 }
 
 .claspL .ft {
-  background: url(https://cdn.jsdelivr.net/gh/tnharvey/3MM5@main/models/toolkit/Toolkit-Atlas_A4.png)
+  background: url(../toolkit/Toolkit-Atlas_A4.png)
     0px 24px;
 }
 .claspL .bk {
-  background: url(https://cdn.jsdelivr.net/gh/tnharvey/3MM5@main/models/toolkit/Toolkit-Atlas_A4.png) -20px
+  background: url(../toolkit/Toolkit-Atlas_A4.png) -20px
     24px;
 }
 .claspL .lt {
-  background: url(https://cdn.jsdelivr.net/gh/tnharvey/3MM5@main/models/toolkit/Toolkit-Atlas_A4.png) -16px
+  background: url(../toolkit/Toolkit-Atlas_A4.png) -16px
     24px;
 }
 .claspL .rt {
-  background: url(https://cdn.jsdelivr.net/gh/tnharvey/3MM5@main/models/toolkit/Toolkit-Atlas_A4.png) -16px
+  background: url(../toolkit/Toolkit-Atlas_A4.png) -16px
     24px;
 }
 .claspL .tp {
-  background: url(https://cdn.jsdelivr.net/gh/tnharvey/3MM5@main/models/toolkit/Toolkit-Atlas_A4.png)
+  background: url(../toolkit/Toolkit-Atlas_A4.png)
     0px 28px;
 }
 .claspL .bm {
-  background: url(https://cdn.jsdelivr.net/gh/tnharvey/3MM5@main/models/toolkit/Toolkit-Atlas_A4.png) -20px
+  background: url(../toolkit/Toolkit-Atlas_A4.png) -20px
     4px;
 }
 
